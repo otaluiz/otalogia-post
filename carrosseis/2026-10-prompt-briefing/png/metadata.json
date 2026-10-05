@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-prompt-briefing",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-05",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 16,
+  "serie": "IA SEM HYPE",
+  "tema": "A IA NÃO SABE O QUE VOCÊ quer.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "A IA NÃO SABE O QUE VOCÊ quer."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "PROMPT BOM NÃO SALVA briefing ruim."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE FALTA NO BRIEFING Quem vai ler o resultado O que já existe e o que muda Como você vai saber que ficou bom O que fica de fora"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "A IA RESPONDE O QUE VOCÊ perguntou."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "ANTES DO PROMPT O objetivo, em uma frase Pra quem é Um exemplo do que você aprova Um exemplo do que você recusa"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "BRIEFING CLARO ECONOMIZA retrabalho."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "ESCREVA UM BRIEFING CURTO. e só depois peça pra IA."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER UM MODELO DE briefing? Comenta BRIEFING que eu te mando o modelo no direct"
+    }
+  ],
+  "legenda": "Prompt bom ajuda, mas não conserta um pedido mal pensado. Antes de escrever o prompt, responda: qual é o objetivo, pra quem é, o que você aprova e o que você recusa.\n\nEscreva um briefing curto e só depois peça pra IA.\n\nComenta BRIEFING que eu te mando o modelo no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#ia",
+    "#inteligenciaartificial",
+    "#pequenosnegocios",
+    "#produtividade"
+  ],
+  "handle": "@otalogia"
+}

@@ -1,0 +1,174 @@
+{
+ "id": "2026-10-prompt-briefing",
+ "meta": {
+  "serie": "IA SEM HYPE",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "A IA NÃO SABE",
+    "O QUE VOCÊ"
+   ],
+   "emocao": {
+    "texto": "[quer].",
+    "posicao": "depois"
+   },
+   "imagem": "capa.png",
+   "tecido": true,
+   "recorte": "capa_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     0,
+     585,
+     929,
+     786
+    ],
+    "caixa": [
+     0,
+     593,
+     1079,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "PROMPT BOM",
+    "NÃO SALVA"
+   ],
+   "emocao": {
+    "texto": "[briefing] ruim.",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     0,
+     0,
+     968,
+     329
+    ],
+    "caixa": [
+     0,
+     0,
+     1079,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 800,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE FALTA",
+    "NO {BRIEFING}"
+   ],
+   "lista": [
+    "Quem vai ler o resultado",
+    "O que já existe e o que muda",
+    "Como você vai saber que ficou bom",
+    "O que fica de fora"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "A IA RESPONDE",
+    "O QUE VOCÊ"
+   ],
+   "emocao": {
+    "texto": "{perguntou}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "ANTES DO",
+    "{PROMPT}"
+   ],
+   "lista": [
+    "O objetivo, em uma frase",
+    "Pra quem é",
+    "Um exemplo do que você aprova",
+    "Um exemplo do que você recusa"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "BRIEFING CLARO",
+    "ECONOMIZA"
+   ],
+   "emocao": {
+    "texto": "{retrabalho}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "ESCREVA UM",
+    "BRIEFING {CURTO}."
+   ],
+   "emocao": {
+    "texto": "e só depois peça pra IA.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER UM MODELO",
+    "DE"
+   ],
+   "emocao": {
+    "texto": "[briefing]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta BRIEFING",
+    "texto": "que eu te mando o modelo no direct"
+   },
+   "imagem": "cta.png",
+   "recorte": "cta_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     694,
+     35,
+     860,
+     162
+    ],
+    "caixa": [
+     395,
+     40,
+     923,
+     574
+    ]
+   },
+   "bloco": {
+    "y": 500,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  }
+ ]
+}
