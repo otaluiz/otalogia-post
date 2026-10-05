@@ -25,3 +25,6 @@ Siga `automation/daily-carousel-prompt.txt` do início ao fim, com estas diferen
 
 ## 3. Resumo final
 Tema, variante, imagens geradas e créditos gastos, checagens feitas, bloqueios.
+
+## CTA com personagem (regra de 2026-10-05)
+No CTA (T4) com o Luiz, gere a foto com enquadramento grande, do peito pra cima, igual ao hook: cabeça no terço de cima, corpo preenchendo a metade de baixo. Nada de figura pequena de corpo inteiro. Composição: `recorte` (motor/recorte.py), `"texto_frente": true`, `bloco` manual (`y` logo abaixo do queixo, ~740, `largura` 720 ou 560 para o bloco caber acima do rodapé, `manual: true`) e `sujeito.cabeca_manual` cobrindo o rosto. O texto pode passar na frente do corpo, nunca do rosto. Confira o slide em tamanho cheio.

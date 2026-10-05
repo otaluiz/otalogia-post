@@ -70,7 +70,7 @@
       if ((t === 'T2' || t === 'T4') && s.imagem === null) warnings.push(p + t + ' com imagem null (usando placeholder)');
       if (s.recorte && ['T1', 'T1b', 'T2', 'T4'].indexOf(t) < 0) errors.push(p + 'recorte só no T1/T1b/T2/T4');
       if (s.bloco && (typeof s.bloco.y !== 'number' || (s.bloco.alinhar && ['esquerda', 'direita', 'centro'].indexOf(s.bloco.alinhar) < 0))) errors.push(p + 'bloco exige y numérico e alinhar esquerda|direita|centro');
-      if (s.textura && (s.textura !== 'led' || ['T2', 'T2c', 'T3'].indexOf(t) < 0)) errors.push(p + 'textura: só "led", em T2/T2c/T3');
+      if (s.textura && (['led', 'grain'].indexOf(s.textura) < 0 || ['T2', 'T2c', 'T3'].indexOf(t) < 0)) errors.push(p + 'textura: só "led" ou "grain", em T2/T2c/T3');
       if (s.gancho && t !== 'T1' && t !== 'T1b') errors.push(p + 'gancho só no T1/T1b');
       if (s.diagrama && s.diagrama.tipo !== 'barra') errors.push(p + 'diagrama.tipo desconhecido "' + s.diagrama.tipo + '"');
       if (t === 'T1' && !s.imagem) warnings.push(p + 'T1 sem imagem (usando placeholder)');
@@ -207,13 +207,14 @@
 
   function montarSlide(s, i, total, data) {
     var el = document.createElement('div');
-    el.className = 'slide ' + String(s.template).toLowerCase() + (s.template === 'T2' && s.imagem !== undefined ? ' com-foto' : '') + (s.template === 'T4' && s.imagem !== undefined ? ' com-foto' : '') + (s.recorte && ['T1', 'T1b', 'T2', 'T4'].indexOf(s.template) >= 0 ? ' camadas' : '') + (s.template === 'T4' && s.recorte && s.texto === 'topo' ? ' texto-topo' : '') + (s.bloco || s.sujeito ? ' lay' : '') + (s.recorte && (s.template === 'T1' || s.template === 'T2' || s.bloco || s.sujeito) ? ' cam2' : '') + (s.template === 'T1b' ? ' fundo-' + (s.fundo === 'papel' ? 'papel' : 'ink') : '') + (s.rodape === 'claro' ? ' rodape-claro' : '');
+    el.className = 'slide ' + String(s.template).toLowerCase() + (s.template === 'T2' && s.imagem !== undefined ? ' com-foto' : '') + (s.template === 'T4' && s.imagem !== undefined ? ' com-foto' : '') + (s.recorte && ['T1', 'T1b', 'T2', 'T4'].indexOf(s.template) >= 0 ? ' camadas' : '') + (s.template === 'T4' && s.recorte && s.texto === 'topo' ? ' texto-topo' : '') + (s.bloco || s.sujeito ? ' lay' : '') + (s.recorte && (s.template === 'T1' || s.template === 'T2' || s.bloco || s.sujeito) ? ' cam2' : '') + (s.template === 'T1b' ? ' fundo-' + (s.fundo === 'papel' ? 'papel' : 'ink') : '') + (s.rodape === 'claro' ? ' rodape-claro' : '') + (s.texto_frente ? ' texto-frente' : '');
     el.dataset.n = i + 1;
     var meta = data.meta || {}, tm = tema();
     // topo só com ano/mês; a posição no carrossel fica nas bolinhas do rodapé
     var dots = '';
     for (var k = 0; k < total; k++) dots += '<i' + (k === i ? ' class="on"' : '') + '></i>';
-    var led = s.textura === 'led' && ['T2', 'T2c', 'T3'].indexOf(s.template) >= 0 ? '<div class="tex-led"></div>' : '';
+    var led = ['T2', 'T2c', 'T3'].indexOf(s.template) < 0 ? '' : s.textura === 'led' ? '<div class="tex-led"></div>' : s.textura === 'grain' ? '<div class="tex-grain"></div>' : '';
+    if (s.textura === 'grain') el.classList.add('grain');
     el.innerHTML = '<div class="s">' + led + corpoSlide(s) +
       '<div class="meta">' + tm.topo.map(function (bl) {
         return '<span>' + esc(String(bl).replace('{nome}', tm.nome_meta).replace('{serie}', meta.serie || '').replace('{data}', meta.data || '')) + '</span>';

@@ -355,9 +355,11 @@ def compor(jp, a):
         marcados.add(ult[-1])
     for k, x in enumerate(data["slides"]):
         x.pop("textura", None)
-        if k in marcados:
+        if k == 2 and k in txt:
+            x["textura"] = "grain"  # slide 3: gradiente granulado (padrão das marcas desde 2026-10-05)
+        elif k in marcados:
             x["textura"] = "led"
-    print("textura led nos slides:", sorted(k + 1 for k in marcados))
+    print("textura led nos slides:", sorted(k + 1 for k in marcados if k != 2), "| grain no slide 3" if 2 in txt else "")
     jp.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
