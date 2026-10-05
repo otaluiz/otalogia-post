@@ -20,8 +20,8 @@ Siga `automation/daily-carousel-prompt.txt` do início ao fim, com estas diferen
 - `status: "rascunho"` no `png/metadata.json` (aprovação é humana).
 - Atualize `roteiro-carrosseis.md` (linha em "Já produzidos" com a capa usada; tire o tema de "Próximos").
 - `git add` da pasta do carrossel e do roteiro, commit `content: <slug> (rotina nuvem)` e `git push`.
-  Não envie PNG para o Drive por MCP (base64 estoura o contexto): o PC do Luiz roda `automation/sync-drive.ps1`
-  de hora em hora, puxa este commit e copia a pasta para `Clientes/otalogia/04-Carrosseis` no Drive.
+  Não envie PNG para o Drive por MCP (base64 estoura o contexto): o workflow `.github/workflows/entregar.yml`
+  leva o seu push para a main e sobe a pasta para `Clientes/otalogia/04-Carrosseis` no Drive sozinho.
 
 ## 3. Resumo final
 Tema, variante, imagens geradas e créditos gastos, checagens feitas, bloqueios.

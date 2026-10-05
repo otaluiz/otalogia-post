@@ -1,0 +1,41 @@
+# A rotina da nuvem só consegue dar push numa branch própria (ex.: main-lx8n0x).
+# Este workflow traz esse commit para a main e depois sobe os carrosséis novos (status "rascunho")
+# para o Drive em Clientes/otalogia/04-Carrosseis. Tudo num job só: push feito com o GITHUB_TOKEN
+# não dispara outro workflow.
+name: rotina -> main -> drive
+on:
+  push:
+  schedule:
+    - cron: "0 11 * * *"  # 8h BRT, reforço caso algum push não tenha disparado
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: drive
+jobs:
+  entregar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: merge da branch da rotina
+        if: github.event_name == 'push' && github.ref_name != 'main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git merge --no-edit "origin/${GITHUB_REF_NAME}"
+          git push origin main
+          git push origin --delete "${GITHUB_REF_NAME}"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q google-api-python-client google-auth
+      - name: sobe para o Drive
+        env:
+          GOOGLE_DRIVE_CLIENT_ID: ${{ secrets.GOOGLE_DRIVE_CLIENT_ID }}
+          GOOGLE_DRIVE_CLIENT_SECRET: ${{ secrets.GOOGLE_DRIVE_CLIENT_SECRET }}
+          GOOGLE_DRIVE_REFRESH_TOKEN: ${{ secrets.GOOGLE_DRIVE_REFRESH_TOKEN }}
+        run: |
+          [ -n "$GOOGLE_DRIVE_REFRESH_TOKEN" ] || { echo "secrets do Drive ainda não cadastrados"; exit 0; }
+          python automation/upload_drive.py
