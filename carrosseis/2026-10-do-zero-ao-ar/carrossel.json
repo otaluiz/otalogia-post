@@ -1,0 +1,115 @@
+{
+  "id": "2026-10-do-zero-ao-ar",
+  "meta": {
+    "serie": "DO ZERO AO AR",
+    "data": "2026/10"
+  },
+  "slides": [
+    {
+      "template": "T1",
+      "display": [
+        "UM SITE",
+        "NO AR EM",
+        "UM DIA."
+      ],
+      "emocao": {
+        "texto": "dá, com [limite].",
+        "posicao": "depois"
+      },
+      "imagem": "capa.png",
+      "tecido": true
+    },
+    {
+      "template": "T2",
+      "display": [
+        "UM DIA",
+        "CABE O"
+      ],
+      "emocao": {
+        "texto": "[essencial].",
+        "posicao": "depois"
+      },
+      "imagem": "slide2_led.png"
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE DÁ PRA",
+        "FAZER NUM {DIA}"
+      ],
+      "lista": [
+        "Uma página com serviços, cidade e contato",
+        "Textos escritos a partir do que você já sabe do negócio",
+        "Layout e código gerados com IA e revisados à mão",
+        "Publicado num endereço de teste para você ver"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "A IA FAZ O",
+        "RASCUNHO."
+      ],
+      "emocao": {
+        "texto": "você faz a {revisão}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE FICA",
+        "PRA {DEPOIS}"
+      ],
+      "lista": [
+        "Fotos reais do seu negócio",
+        "Domínio próprio e e-mail",
+        "Uma página para cada serviço",
+        "Perfil no Google ajustado"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "UM DIA NÃO",
+        "ENTREGA TUDO."
+      ],
+      "emocao": {
+        "texto": "entrega o {começo}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "TENHA ISSO",
+        "{PRONTO} ANTES"
+      ],
+      "lista": [
+        "Nome, serviços e cidade",
+        "Horário e forma de contato",
+        "Duas ou três fotos suas",
+        "Três linhas sobre o negócio"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER VER O QUE",
+        "CABE NO SEU"
+      ],
+      "emocao": {
+        "texto": "primeiro [dia]?",
+        "posicao": "depois"
+      },
+      "cta": {
+        "acao": "Comenta SITE",
+        "texto": "que eu te conto por onde começar"
+      },
+      "imagem": "cta.png"
+    }
+  ]
+}

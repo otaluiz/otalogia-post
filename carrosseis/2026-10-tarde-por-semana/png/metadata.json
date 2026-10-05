@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-tarde-por-semana",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 11,
+  "serie": "CUSTO REAL",
+  "tema": "UMA TARDE POR SEMANA. isso pode estar te custando",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "UMA TARDE POR SEMANA. isso pode estar te custando"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "NINGUÉM ANOTA O TEMPO QUE vai embora."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "ONDE A TARDE SOME Responder a mesma pergunta no WhatsApp Copiar pedido da conversa pra planilha Montar orçamento do zero toda vez Procurar o arquivo que você sabe que existe"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "CINCO MINUTOS, DEZ VEZES AO DIA. dá uma tarde na semana."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "NUMA SEMANA DE 40 HORAS"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "A SEMANA TEM UM vazamento."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "COMO MEDIR Escolha uma tarefa que se repete Anote cada vez que fizer, por 5 dias Multiplique pelos minutos de cada vez Some e veja quantas horas deu"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER ACHAR A SUA TARDE perdida? Comenta TEMPO e eu te ajudo a achar a tarefa que mais come sua semana"
+    }
+  ],
+  "legenda": "Cinco minutos não parecem nada. Repetidos dez vezes por dia, cinco dias por semana, viram umas quatro horas. Uma tarde inteira respondendo a mesma pergunta, copiando pedido pra planilha, refazendo orçamento.\n\nA conta acima é um exemplo. A sua pode dar mais ou menos, e só dá pra saber anotando: escolha uma tarefa, marque cada vez que fizer durante uma semana e multiplique pelos minutos.\n\nComenta TEMPO que eu te ajudo a achar a tarefa que mais come a sua semana.",
+  "hashtags": [
+    "#otalogia",
+    "#automacao",
+    "#pequenosnegocios",
+    "#produtividade",
+    "#gestaodotempo"
+  ],
+  "handle": "@otalogia"
+}

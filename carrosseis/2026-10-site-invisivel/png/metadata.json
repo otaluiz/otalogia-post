@@ -1,0 +1,68 @@
+{
+  "carousel_id": "2026-10-site-invisivel",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": null,
+  "serie": "DIAGNÓSTICO",
+  "tema": "SEU SITE NÃO É FEIO. ele é invisível.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SEU SITE NÃO É FEIO. ele é invisível."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "NINGUÉM PROCURA o seu nome."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O CLIENTE DIGITA O PROBLEMA. \"dentista perto de mim\" \"conserto de celular aberto agora\" \"bolo de aniversário sob encomenda\" \"contador para MEI\""
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "E O SEU SITE SÓ FALA DE você."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE DEIXA UM SITE INVISÍVEL Título da página é só o nome da empresa Uma página para todos os serviços Sem cidade, bairro ou endereço escrito Perfil no Google sem horário nem foto"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "SITE QUE VENDE RESPONDE À pergunta."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "UMA PÁGINA POR SERVIÇO. com a cidade no título."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER QUE EU OLHE O seu site? Comenta SITE que eu te mando 3 ajustes no direct"
+    }
+  ],
+  "legenda": "Quem procura no Google digita o problema que tem: \"dentista perto de mim\", \"contador para MEI\". Se o título do seu site é só o nome da empresa, ele não aparece pra essa pessoa.\n\nComece por uma página para cada serviço, com a cidade no título.\n\nComenta SITE que eu te mando 3 ajustes pro seu.",
+  "hashtags": [],
+  "handle": "@otalogia"
+}

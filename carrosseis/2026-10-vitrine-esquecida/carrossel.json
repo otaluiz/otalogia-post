@@ -1,0 +1,112 @@
+{
+  "id": "2026-10-vitrine-esquecida",
+  "meta": {
+    "serie": "DIAGNÓSTICO",
+    "data": "2026/10"
+  },
+  "slides": [
+    {
+      "template": "T1",
+      "display": [
+        "A VITRINE",
+        "QUE VOCÊ"
+      ],
+      "emocao": {
+        "texto": "esqueceu [aberta].",
+        "posicao": "depois"
+      },
+      "imagem": "capa.png",
+      "tecido": true
+    },
+    {
+      "template": "T2",
+      "display": [
+        "O GOOGLE MOSTRA",
+        "SEU NEGÓCIO"
+      ],
+      "emocao": {
+        "texto": "antes do seu [site].",
+        "posicao": "depois"
+      },
+      "imagem": "slide2_led.png"
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE O CLIENTE",
+        "{ENCONTRA}"
+      ],
+      "lista": [
+        "Horário de funcionamento desatualizado",
+        "Telefone que ninguém atende",
+        "Fotos antigas, ou nenhuma",
+        "Avaliações sem resposta"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "AVALIAÇÃO SEM",
+        "RESPOSTA PARECE"
+      ],
+      "emocao": {
+        "texto": "{descaso}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE EU",
+        "{CONFIRO}"
+      ],
+      "lista": [
+        "Nome, endereço e telefone iguais em todo lugar",
+        "Horário certo, inclusive em feriado",
+        "Categoria e serviços preenchidos",
+        "Fotos reais do lugar e do trabalho"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "PERFIL CUIDADO",
+        "É A SUA"
+      ],
+      "emocao": {
+        "texto": "{placa} na rua.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "UMA VEZ",
+        "POR {SEMANA}."
+      ],
+      "emocao": {
+        "texto": "abre, confere, responde.",
+        "posicao": "depois"
+      },
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER QUE EU",
+        "OLHE O"
+      ],
+      "emocao": {
+        "texto": "seu perfil?",
+        "posicao": "depois"
+      },
+      "cta": {
+        "acao": "Comenta GOOGLE",
+        "texto": "que eu te mando o que ajustar no direct"
+      },
+      "imagem": "cta.png"
+    }
+  ]
+}

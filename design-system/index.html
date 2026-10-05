@@ -1,0 +1,360 @@
+<!-- Mapa de publicação (artifact): index.html + motor/carrossel.css, motor/carrossel.js, motor/assets/{papel-dobra,halftone,pano}.png, motor/assets/led-grade.css
+     (da pasta motor/ do repo) + tema/tema.css, tema/tema.json, tema/exemplo.json, tema/assets/t1b-retrato{,-recorte}.png.
+     Os caminhos relativos abaixo (motor/..., tema/...) são os caminhos publicados. -->
+<title>Otalogia Design System</title>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="motor/carrossel.css">
+<link rel="stylesheet" href="motor/assets/led-grade.css">
+<link rel="stylesheet" href="tema/tema.css">
+<style>
+:root {
+  color-scheme: dark;
+  --ink: #0B0B12; --papel: #ECE6DA; --branco: #F5F5FA; --grafite: #111111;
+  --laranja: #FF5A1F; --tinta: #D2410F; --azul: #2563EB; --ciano: #22D3EE; --roxo: #7C3AED;
+  --linha: color-mix(in srgb, var(--branco) 14%, transparent);
+  --suave: color-mix(in srgb, var(--branco) 62%, transparent);
+  --card: color-mix(in srgb, var(--branco) 4%, transparent);
+  --f-display: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --f-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --f-mono: "JetBrains Mono", Consolas, "Courier New", monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--ink); color: var(--branco); margin: 0; font: 400 17px/1.55 var(--f-display); -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .09;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+:focus-visible { outline: 2px solid var(--ciano); outline-offset: 3px; }
+
+.wrap { max-width: 1280px; margin-inline: auto; padding-inline: clamp(16px, 4vw, 40px); padding-block: clamp(32px, 6vw, 72px); }
+.wrap > * { min-width: 0; }
+.mono { font: 400 13px/1.4 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--suave); }
+.hot { color: var(--laranja); }
+p { margin: 0 0 1em; max-width: 68ch; }
+code { font: 400 .9em var(--f-mono); color: var(--ciano); }
+
+header.top { padding-block-end: clamp(32px, 6vw, 72px); border-bottom: 1px solid var(--linha); }
+header.top .hmeta { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; margin-bottom: clamp(32px, 7vw, 88px); }
+h1 { margin: 0; font: 900 clamp(44px, 10.5vw, 150px)/.88 var(--f-display); letter-spacing: -.035em; text-transform: uppercase; overflow-wrap: anywhere; }
+h1 em, h2 em { font: italic 400 1.12em/.9 var(--f-serif); letter-spacing: -.01em; text-transform: none; color: var(--laranja); }
+header.top .dir { margin-top: 32px; font: italic 400 clamp(22px, 3vw, 32px)/1.2 var(--f-serif); color: var(--suave); max-width: 40ch; }
+
+section { padding-block-start: clamp(48px, 8vw, 104px); }
+h2 { margin: 6px 0 clamp(20px, 3vw, 36px); font: 900 clamp(32px, 6vw, 68px)/.92 var(--f-display); letter-spacing: -.035em; text-transform: uppercase; overflow-wrap: anywhere; }
+h3 { margin: 0 0 8px; font: 500 14px/1.3 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ciano); }
+
+/* princípio */
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.spec { border: 1px solid var(--linha); background: var(--card); padding: clamp(20px, 3vw, 36px); min-width: 0; }
+.spec .big-d { font: 900 clamp(48px, 9vw, 120px)/.86 var(--f-display); letter-spacing: -.035em; text-transform: uppercase; margin: 16px 0; overflow-wrap: anywhere; }
+.spec .big-s { font: italic 400 clamp(52px, 10vw, 132px)/.95 var(--f-serif); letter-spacing: -.01em; margin: 16px 0; overflow-wrap: anywhere; }
+.rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; padding: 0; list-style: none; }
+.rules li { border-top: 1px solid var(--linha); padding-top: 12px; color: var(--suave); }
+.rules b { display: block; color: var(--branco); font-weight: 700; }
+
+/* paleta */
+.sw { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+.sw div.c { border: 1px solid var(--linha); min-width: 0; }
+.sw .chip { height: 96px; }
+.sw .info { padding: 12px 14px 14px; }
+.sw .info b { display: block; font: 700 17px/1.2 var(--f-display); }
+.sw .info .mono { display: block; margin-top: 4px; font-size: 12px; text-transform: none; letter-spacing: .02em; }
+.sw .info p { margin: 8px 0 0; font-size: 14px; line-height: 1.4; color: var(--suave); }
+.chip.on-light { box-shadow: inset 0 0 0 1px var(--linha); }
+.tw { overflow-x: auto; margin-top: 32px; }
+table { border-collapse: collapse; width: 100%; min-width: 640px; }
+th { text-align: left; font: 500 12px/1.3 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--suave); padding: 10px 12px; border-bottom: 1px solid var(--linha); }
+td { padding: 10px 12px; border-bottom: 1px solid var(--linha); vertical-align: middle; font-size: 15px; }
+td.r { font-family: var(--f-mono); }
+.live { display: inline-block; padding: 10px 16px; font: 900 26px/1 var(--f-display); letter-spacing: -.02em; min-width: 150px; }
+.live.forb { position: relative; }
+.live.forb::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top right, transparent calc(50% - 1.5px), var(--ink) calc(50% - 1.5px) calc(50% + 1.5px), transparent calc(50% + 1.5px)); }
+.v { font: 500 12px/1 var(--f-mono); letter-spacing: .05em; text-transform: uppercase; padding: 6px 9px; border: 1px solid; white-space: nowrap; display: inline-block; }
+.v.ok { color: var(--ciano); border-color: var(--ciano); }
+.v.lg { color: var(--branco); border-color: var(--suave); }
+.v.no { color: var(--ink); background: var(--laranja); border-color: var(--laranja); font-weight: 500; }
+
+/* tipografia */
+.roles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.role { border: 1px solid var(--linha); background: var(--card); padding: 24px; min-width: 0; }
+.role .sample { margin: 8px 0 20px; overflow-wrap: anywhere; }
+.s-disp { font: 900 clamp(40px, 6vw, 72px)/.86 var(--f-display); letter-spacing: -.035em; text-transform: uppercase; }
+.s-emo { font: italic 400 clamp(44px, 6.5vw, 80px)/.95 var(--f-serif); letter-spacing: -.01em; color: var(--laranja); }
+.s-corpo { font: 400 22px/1.35 var(--f-display); }
+.s-tec { font: 400 17px/1.5 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; }
+dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; margin: 0; font-size: 14px; }
+dt { font: 400 12px/1.8 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--suave); }
+dd { margin: 0; min-width: 0; }
+
+/* grid */
+.gridbox { display: grid; grid-template-columns: minmax(0, 460px) 1fr; gap: clamp(24px, 4vw, 56px); align-items: start; }
+.gridbox svg { width: 100%; height: auto; display: block; border: 1px solid var(--linha); }
+.gridbox ul { list-style: none; padding: 0; margin: 0; }
+.gridbox li { display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--linha); }
+.gridbox li span:first-child { font: 500 13px/1.5 var(--f-mono); color: var(--ciano); }
+
+/* templates */
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.card { min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.card .slot { border: 1px solid var(--linha); }
+.card .slot .slide { width: 100%; display: block; }
+.card h3 { margin: 4px 0 0; font-size: 15px; }
+.card h3 span { color: var(--suave); }
+.card p { margin: 0; font-size: 15px; color: var(--suave); line-height: 1.45; }
+.card p b { color: var(--branco); font-weight: 500; }
+
+/* exemplo */
+.row { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-block-end: 16px; -webkit-overflow-scrolling: touch; }
+.row figure { flex: none; width: 320px; margin: 0; scroll-snap-align: start; }
+.row figure .slide { width: 320px; }
+.row figcaption { margin-top: 10px; }
+.row figcaption b { display: block; font: 700 16px/1.3 var(--f-display); }
+.msg { border: 1px solid var(--laranja); color: var(--branco); padding: 16px 20px; font: 400 15px/1.5 var(--f-mono); max-width: 68ch; }
+
+/* proibido / geração */
+.nope { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.nope li { border-top: 1px solid var(--linha); padding: 14px 0; }
+.gen { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.gen div { border-top: 1px solid var(--linha); padding-top: 12px; min-width: 0; }
+.gen b { display: block; font: 500 12px/1.8 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ciano); }
+
+footer { margin-top: clamp(48px, 8vw, 104px); padding-top: 24px; border-top: 1px solid var(--linha); }
+
+@media (max-width: 960px) {
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gridbox, .roles, .pair { grid-template-columns: 1fr; }
+  .rules { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .cards, .nope { grid-template-columns: 1fr; }
+  .row figure, .row figure .slide { width: min(320px, 80vw); }
+  .gridbox li { grid-template-columns: 1fr; gap: 2px; }
+}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="hmeta mono"><span>OTALOGIA</span><span>DESIGN SYSTEM</span><span>v1.0 — 2026/10</span></div>
+  <h1>Otalogia design system <em>do carrossel</em></h1>
+  <p class="dir">Direção: editorial de engenheiro. Capa cinematográfica, miolo só tipográfico, CTA.</p>
+  <p class="mono" style="margin:24px 0 0">Formato 1080 × 1440 px (3:4) · zona segura 4:5 · fonte: tokens.json</p>
+</header>
+
+<section id="principio">
+  <div class="mono">01 · Princípio</div>
+  <h2>Princípio <em>duas vozes</em></h2>
+  <div class="pair">
+    <div class="spec"><h3>Fato · Inter Tight 900</h3><div class="big-d">A IA entrega <span class="hot">80%</span></div><p>Caixa alta, tracking −0,035em, entrelinha 0,86. Carrega o que é verificável.</p></div>
+    <div class="spec"><h3>Emoção · Instrument Serif itálico</h3><div class="big-s">o resto <span class="hot">é seu.</span></div><p>Minúsculas, no máximo uma por slide. Pode encostar ou sobrepor o display.</p></div>
+  </div>
+  <ul class="rules">
+    <li><b>Fato = grotesca</b>Inter Tight 900 em caixa alta.</li>
+    <li><b>Emoção = serifada itálica</b>Instrument Serif, no máximo 1 por slide.</li>
+    <li><b>Cor quente só na palavra-chave</b>#FF5A1F sobre ink e foto, #D2410F sobre papel.</li>
+  </ul>
+</section>
+
+<section id="paleta">
+  <div class="mono">02 · Paleta</div>
+  <h2>Paleta <em>e contraste</em></h2>
+  <p>Base neutra domina. O laranja é a única cor que grita. Roxo só em selo e assinatura, menos de 5%.</p>
+  <div class="sw" id="sw"></div>
+  <div class="tw"><table>
+    <thead><tr><th>Amostra</th><th>Par</th><th>Razão</th><th>Veredito</th></tr></thead>
+    <tbody id="ct"></tbody>
+  </table></div>
+  <p class="mono" style="margin-top:16px">Laranja #FF5A1F sobre papel: proibido (2.51:1). Usar laranja_tinta.</p>
+</section>
+
+<section id="tipografia">
+  <div class="mono">03 · Tipografia</div>
+  <h2>Tipografia <em>quatro papéis</em></h2>
+  <div class="roles">
+    <div class="role"><h3>Display</h3><div class="sample s-disp">Ação, você, não</div>
+      <dl><dt>Família</dt><dd>Inter Tight</dd><dt>Peso</dt><dd>900 · caixa alta</dd><dt>Tracking</dt><dd>−0.035em</dd><dt>Entrelinha</dt><dd>0.86</dd><dt>Uso</dt><dd>O fato. Hook e títulos de slide.</dd></dl></div>
+    <div class="role"><h3>Emoção</h3><div class="sample s-emo">ação, você, não</div>
+      <dl><dt>Família</dt><dd>Instrument Serif</dd><dt>Estilo</dt><dd>Itálico 400</dd><dt>Tracking</dt><dd>−0.01em</dd><dt>Entrelinha</dt><dd>0.95</dd><dt>Uso</dt><dd>A palavra-emoção, no máximo 1 por slide, cerca de 1.15× a altura-x do display.</dd></dl></div>
+    <div class="role"><h3>Corpo</h3><div class="sample s-corpo">Automação boa não aparece: você só percebe que o trabalho acabou antes da hora.</div>
+      <dl><dt>Família</dt><dd>Inter Tight</dd><dt>Pesos</dt><dd>400, 500</dd><dt>Tamanho</dt><dd>30–36 px</dd><dt>Entrelinha</dt><dd>1.35</dd><dt>Uso</dt><dd>Frase de apoio, no máximo 2 linhas.</dd></dl></div>
+    <div class="role"><h3>Técnica</h3><div class="sample s-tec">OTALOGIA · PLANTA · 2026/10<br>ação · você · não</div>
+      <dl><dt>Família</dt><dd>JetBrains Mono</dd><dt>Pesos</dt><dd>400, 500</dd><dt>Tamanho</dt><dd>20–22 px</dd><dt>Tracking</dt><dd>0.06em · caixa alta</dd><dt>Uso</dt><dd>Metadados, rótulos de diagrama, numeração.</dd></dl></div>
+  </div>
+  <p style="margin-top:16px;color:var(--suave)">As três famílias têm glifos de português; não há troca de par por causa de acento.</p>
+</section>
+
+<section id="grid">
+  <div class="mono">04 · Grid</div>
+  <h2>Grid <em>e zona segura</em></h2>
+  <div class="gridbox">
+    <svg viewBox="0 0 1080 1440" role="img" aria-label="Diagrama do grid 1080 por 1440 com margens, 6 colunas, linha de metadados, rodapé, zona da headline e zona segura 4:5" font-family="JetBrains Mono, monospace" font-size="28">
+      <defs><pattern id="hach" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="14" stroke="#F5F5FA" stroke-opacity=".35" stroke-width="3"/></pattern></defs>
+      <rect width="1080" height="1440" fill="#0B0B12"/>
+      <g fill="#22D3EE" fill-opacity=".10">
+        <rect x="72" y="0" width="136" height="1440"/><rect x="232" y="0" width="136" height="1440"/><rect x="392" y="0" width="136" height="1440"/>
+        <rect x="552" y="0" width="136" height="1440"/><rect x="712" y="0" width="136" height="1440"/><rect x="872" y="0" width="136" height="1440"/>
+      </g>
+      <rect x="0" y="0" width="1080" height="45" fill="url(#hach)"/><rect x="0" y="1395" width="1080" height="45" fill="url(#hach)"/>
+      <rect x="72" y="300" width="936" height="700" fill="#FF5A1F" fill-opacity=".14" stroke="#FF5A1F" stroke-width="3" stroke-dasharray="14 10"/>
+      <g stroke="#22D3EE" stroke-width="2" stroke-dasharray="10 8"><line x1="72" y1="0" x2="72" y2="1440"/><line x1="1008" y1="0" x2="1008" y2="1440"/><line x1="0" y1="96" x2="1080" y2="96"/><line x1="0" y1="1344" x2="1080" y2="1344"/></g>
+      <g fill="#F5F5FA"><text x="72" y="84" font-size="22" letter-spacing="1.3">OTALOGIA</text><text x="540" y="84" font-size="22" text-anchor="middle" letter-spacing="1.3">SÉRIE</text><text x="1008" y="84" font-size="22" text-anchor="end" letter-spacing="1.3">2026/10</text></g>
+      <g fill="#F5F5FA" font-size="24"><text x="72" y="1332">@otalogia</text><text x="540" y="1332" text-anchor="middle">salva pra depois</text><text x="1008" y="1332" text-anchor="end">→</text></g>
+      <g fill="#22D3EE" font-size="30"><text x="84" y="500">72px</text><text x="84" y="570">col 136px</text><text x="84" y="640">gutter 24px</text></g>
+      <g fill="#FF5A1F" font-size="30"><text x="540" y="650" text-anchor="middle">HEADLINE y 300–1000</text></g>
+      <g fill="#F5F5FA" font-size="28"><text x="540" y="34" text-anchor="middle">45px cortados</text><text x="540" y="1430" text-anchor="middle">45px cortados</text></g>
+      <g fill="#22D3EE" font-size="26"><text x="540" y="150" text-anchor="middle">y 96 · meta</text><text x="540" y="1384" text-anchor="middle" fill="#F5F5FA">base 96 · y 1344</text></g>
+    </svg>
+    <ul>
+      <li><span>MARGEM LATERAL</span><span>72 px, fixa em todo o carrossel. Área útil: 936 px.</span></li>
+      <li><span>TOPO / BASE</span><span>96 px. Linha de metadados em y 96, rodapé a 96 px da borda.</span></li>
+      <li><span>COLUNAS</span><span>6 colunas de 136 px com gutter de 24 px.</span></li>
+      <li><span>HEADLINE</span><span>Bloco central, y 300 a 1000. Posição fixa por template.</span></li>
+      <li><span>ZONA SEGURA 4:5</span><span>Faixa central de 1350 px. O grid do perfil corta 45 px em cima e 45 px embaixo; headline e rodapé nunca nessas bordas.</span></li>
+      <li><span>GRÃO</span><span>feTurbulence 0.9 em 100% dos slides: 0.10 papel, 0.14 ink, 0.18 foto.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="templates">
+  <div class="mono">05 · Templates</div>
+  <h2>Seis templates <em>vivos</em></h2>
+  <p>Cada slide abaixo é renderizado pelo mesmo <code>carrossel.js</code> que exporta os PNGs. Capa com foto e retrato aparecem com placeholder.</p>
+  <div class="cards" id="cards"></div>
+</section>
+
+<section id="exemplo">
+  <div class="mono">06 · Carrossel exemplo</div>
+  <h2>Carrossel <em>exemplo</em></h2>
+  <p>Os 7 slides de <code>tema/exemplo.json</code>. É o mesmo render que o <code>render.py</code> exporta para PNG 1080 × 1440. Deslize para o lado.</p>
+  <div class="row" id="row" tabindex="0" role="region" aria-label="Slides do carrossel exemplo"></div>
+  <div id="erro"></div>
+</section>
+
+<section id="regras">
+  <div class="mono">Regras da peça</div>
+  <h2>Regras <em>da peça</em></h2>
+  <ul class="nope">
+    <li>Textura LED: a foto do slide 2 (tensão) passa pelo filtro LED na paleta da marca (escuro, laranja e creme em retícula de pontos); nos slides de lista e de conclusão, grade de pontos laranja no fundo. Capa e CTA ficam com a foto natural.</li>
+    <li>Capa alterna T1 (foto cinematográfica) e T1b (Luiz, personagem @luizota). No T1b, pose e cenário sempre novos e o título atrás do recorte.</li>
+    <li>As duas capas (T1 e T1b) levam a trama de tecido por cima da foto e do título, como impresso em pano.</li>
+    <li>Slide 2 sempre com foto inteira, sangrada, com véu escuro de 35%. Nunca recortada numa caixa.</li>
+    <li>Slide só de texto ganha marca-texto na palavra-chave: caixa laranja com texto escuro. Slide com foto usa a palavra pintada de laranja. Um destaque por slide.</li>
+    <li>CTA com foto escurecida 70%, botão laranja com a palavra-comentário. Sem selo.</li>
+    <li>Topo: OTALOGIA · série · ano/mês. Rodapé: @otalogia, "salva pra depois" e bolinhas-guia, uma por slide.</li>
+    <li>3 imagens por carrossel (capa, slide 2, CTA) no gpt_image_2_5, mesmo color grading, sem texto. Copy pela copywriting + humanizer.</li>
+  </ul>
+</section>
+
+<section id="proibido">
+  <div class="mono">07 · Proibido</div>
+  <h2>Proibido <em>nunca</em></h2>
+  <ul class="nope">
+    <li>Gradiente na capa ou no CTA; gradiente roxo→azul como fundo principal em qualquer lugar.</li>
+    <li>Laranja #FF5A1F sobre papel (2.51:1).</li>
+    <li>Mais de uma palavra serifada por slide; serifada em frase inteira de corpo.</li>
+    <li>Texto gerado dentro da imagem de IA.</li>
+    <li>“Arraste para o lado”, “Confira”, “5 dicas para…”. As bolinhas do rodapé já fazem esse papel.</li>
+    <li>Mais de 3 slides seguidos com o mesmo fundo.</li>
+  </ul>
+</section>
+
+<section id="geracao">
+  <div class="mono">08 · Geração de imagem</div>
+  <h2>Geração <em>de imagem</em></h2>
+  <div class="gen">
+    <div><b>Modelo</b>gpt_image_2_5 (Higgsfield), 3 créditos por imagem. Exceção pedida pelo Luiz; o padrão soul_2 vale só para o aidealab.</div>
+    <div><b>Teto</b>3 imagens por carrossel (capa, slide 2 e CTA), no máximo 9 por rodada. Acima disso, pedir aprovação.</div>
+    <div><b>Sem texto</b>Imagem sempre sem texto. Color grading no prompt: sombras para o ink, altas para o laranja; nunca em pós.</div>
+    <div><b>Upscale</b>Local, Lanczos + unsharp. Nunca o upscaler pago. Recorte do retrato T1b com rembg local.</div>
+  </div>
+</section>
+
+<footer class="mono">Fonte: tokens.json + templates.md · render: motor/render.py</footer>
+</div>
+
+<script src="motor/carrossel.js"></script>
+<script>
+fetch('tema/tema.json').then(function (r) { return r.json(); }).catch(function () { return {}; }).then(function (t) {
+  window.__TEMA = t;
+  var $ = function (id) { return document.getElementById(id); };
+  var TITULO = 'Otalogia Design System'; /* o renderer escreve READY:... em document.title */
+
+  /* paleta e contraste (valores de tokens.json) */
+  var cores = [
+    ['ink', '#0B0B12', '11,11,18', 'Base escura: fundo T3/T4; texto de título sobre papel.'],
+    ['papel', '#ECE6DA', '236,230,218', 'Base clara: fundo T2.'],
+    ['branco', '#F5F5FA', '245,245,250', 'Texto sobre ink e sobre foto.'],
+    ['grafite', '#111111', '17,17,17', 'Texto sobre papel.'],
+    ['laranja', '#FF5A1F', '255,90,31', 'Hero sobre ink/foto: palavra-chave, números, marca-texto.'],
+    ['laranja_tinta', '#D2410F', '210,65,15', 'Hero sobre papel (o laranja reprova ali).'],
+    ['azul', '#2563EB', '37,99,235', 'Apoio sobre papel: margem do caderno, sublinhado, setas.'],
+    ['ciano', '#22D3EE', '34,211,238', 'Apoio sobre ink: linhas de diagrama, rótulos pequenos.'],
+    ['roxo', '#7C3AED', '124,58,237', 'Detalhe: selo FIG e assinatura. Nunca texto corrido sobre ink.']
+  ];
+  $('sw').innerHTML = cores.map(function (c) {
+    var claro = c[0] === 'papel' || c[0] === 'branco';
+    return '<div class="c"><div class="chip' + (claro ? ' on-light' : '') + '" style="background:' + c[1] + '"></div><div class="info"><b>' + c[0] + '</b><span class="mono">' + c[1] + '<br>RGB ' + c[2] + '</span><p>' + c[3] + '</p></div></div>';
+  }).join('');
+
+  var P = { ink: '#0B0B12', papel: '#ECE6DA', branco: '#F5F5FA', grafite: '#111111', laranja: '#FF5A1F', tinta: '#D2410F', azul: '#2563EB', ciano: '#22D3EE', roxo: '#7C3AED' };
+  var pares = [
+    ['branco', 'ink', 'branco sobre ink', '18.05', 'ok', 'aprovado'],
+    ['grafite', 'papel', 'grafite sobre papel', '15.19', 'ok', 'aprovado'],
+    ['laranja', 'ink', 'laranja sobre ink', '6.29', 'ok', 'aprovado'],
+    ['laranja', 'papel', 'laranja sobre papel', '2.51', 'no', 'proibido'],
+    ['tinta', 'papel', 'laranja_tinta sobre papel', '3.75', 'lg', 'só texto grande (≥ 72px em 1080)'],
+    ['azul', 'papel', 'azul sobre papel', '4.16', 'lg', 'só texto grande / linhas'],
+    ['azul', 'ink', 'azul sobre ink', '3.79', 'lg', 'só linha; usar ciano'],
+    ['ciano', 'ink', 'ciano sobre ink', '10.85', 'ok', 'aprovado'],
+    ['roxo', 'ink', 'roxo sobre ink', '3.44', 'lg', 'só elemento gráfico']
+  ];
+  $('ct').innerHTML = pares.map(function (p) {
+    return '<tr><td><span class="live' + (p[4] === 'no' ? ' forb' : '') + '" style="color:' + P[p[0]] + ';background:' + P[p[1]] + (p[1] === 'ink' ? ';box-shadow:inset 0 0 0 1px var(--linha)' : '') + '">Aa ação</span></td><td>' + p[2] + '</td><td class="r">' + p[3] + ':1</td><td><span class="v ' + p[4] + '">' + p[5] + '</span></td></tr>';
+  }).join('');
+
+  /* templates: um carrossel de 6 slides, renderizado slide a slide com opts.only (sem banner de validação) */
+  var demo = { id: 'demo', meta: { serie: 'IA SEM HYPE', data: '2026/10' }, slides: [
+    { template: 'T1', display: ['DESIGN COM'], emocao: { texto: '[critério].', posicao: 'sobreposta' }, imagem: null },
+    { template: 'T1b', fundo: 'ink', display: ['SEU SITE', 'NÃO É FEIO.'], emocao: { texto: 'ele é [invisível].', posicao: 'depois' }, imagem: 'tema/assets/t1b-retrato.png', recorte: 'tema/assets/t1b-retrato-recorte.png' },
+    { template: 'T2', display: ['AUTOMAÇÃO', 'SEM'], emocao: { texto: '{hype}.', posicao: 'depois' } },
+    { template: 'T2c', display: ['A IA ACELERA', 'MAS QUEM'], emocao: { texto: '{decide} é você.', posicao: 'sobreposta' } },
+    { template: 'T3', display: ['AUTOMAÇÃO', 'LIBERA {6H}.'], emocao: { texto: 'por semana.', posicao: 'depois' }, lista: ['Relatório semanal', 'Resposta padrão de e-mail', 'Cópia entre planilhas'] },
+    { template: 'T4', display: ['QUER O PASSO', 'A PASSO?'], emocao: { texto: 'completo.', posicao: 'depois' }, cta: { acao: 'Comenta DESIGN', texto: 'que eu te mando no direct' }, imagem: null }
+  ] };
+  var info = [
+    ['T1', 'Capa foto', 'Slide 1 (hook). Funciona como thumbnail: foto cinematográfica sem texto, lockup de 5–10 palavras com a palavra-chave em laranja.', 'Abrir qualquer carrossel.'],
+    ['T1b', 'Capa retrato', 'Luiz (personagem @luizota no Higgsfield) em foto sangrada; o título fica atrás do recorte (rembg) e a serifada na frente, no peito. A cabeça cobre no máximo parte de 1 letra.', 'Posts de opinião e capas de Reels.'],
+    ['T2', 'Papel', 'Miolo tipográfico em papel: até 2 blocos de frase, alinhado à esquerda, no terço central.', 'Tensão, desenvolvimento e estrutura em paralelo.'],
+    ['T2c', 'Caderno', 'Papel quadriculado com margem laranja-tinta em x=200; a palavra-emoção fica pendurada na margem.', 'A virada ou o insight do carrossel.'],
+    ['T3', 'Ink', 'Miolo técnico sobre ink com grão: display branco, dado em laranja, diagramas em ciano, lista numerada de até 4 itens.', 'Prova, números, processo e listas.'],
+    ['T4', 'CTA', 'Último slide: headline de convite, pill laranja com a ação,', 'Fechar com palavra-comentário, salvar ou compartilhar.']
+  ];
+  var cards = $('cards');
+  info.forEach(function (it, i) {
+    var c = document.createElement('div'); c.className = 'card';
+    c.innerHTML = '<div class="slot"></div><h3>' + it[0] + ' <span>· ' + it[1] + '</span></h3><p>' + it[2] + '</p><p><b>Quando usar:</b> ' + it[3] + '</p>';
+    cards.appendChild(c);
+    Carrossel.render(demo, c.firstChild, { only: i + 1 }).then(function () { document.title = TITULO; });
+  });
+
+  /* carrossel exemplo */
+  var arco = ['Hook', 'Tensão', 'Virada', 'Prova', 'Desenvolvimento', 'Conclusão', 'CTA'];
+  fetch('tema/exemplo.json').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (data) {
+    var row = $('row');
+    return Carrossel.render(data, row).then(function () {
+      document.title = TITULO;
+      Array.prototype.slice.call(row.querySelectorAll('.slide')).forEach(function (s, i) {
+        var f = document.createElement('figure');
+        row.insertBefore(f, s); f.appendChild(s);
+        var cap = document.createElement('figcaption');
+        cap.innerHTML = '<b>' + (i + 1) + ' · ' + (arco[i] || '') + '</b><span class="mono">' + data.slides[i].template + '</span>';
+        f.appendChild(cap);
+      });
+    });
+  }).catch(function () {
+    $('erro').innerHTML = '<div class="msg">Não foi possível carregar tema/exemplo.json. Abra via servidor http: python -m http.server</div>';
+  });
+});
+</script>

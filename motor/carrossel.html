@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>carrossel</title>
+<link rel="stylesheet" href="carrossel.css">
+<link rel="stylesheet" href="assets/led-grade.css">
+<!-- tema.css entra DEPOIS do carrossel.css (render.py ou ?tema=<url-da-pasta-do-tema>) -->
+</head>
+<body>
+<div id="carrossel"></div>
+<script src="carrossel.js"></script>
+<script>
+// Tema: window.__TEMA (+ window.__TEMA_CSS, uri do tema.css) injetados pelo render.py,
+// ou ?tema=<url da pasta do tema> (busca tema.json e tema.css). Sem tema = defaults neutros.
+// Dados: window.__CARROSSEL (render.py) ou ?data=<url>. ?slide=N (1-based) = slide único, 1080x1440 exatos.
+function addLink(href, id) {
+  return new Promise(function (ok) {
+    var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = href; if (id) l.id = id;
+    l.onload = l.onerror = function () { ok(); };
+    document.head.appendChild(l);
+  });
+}
+(async function () {
+  var q = new URLSearchParams(location.search);
+  var n = parseInt(q.get('slide') || '0', 10) || 0;
+  if (n) { document.body.classList.add('single'); document.getElementById('carrossel').classList.add('single'); }
+  var base = q.get('tema');
+  if (base && !window.__TEMA) {
+    base = base.replace(/\/?$/, '/');
+    window.__TEMA = await (await fetch(base + 'tema.json')).json();
+    window.__TEMA_CSS = base + 'tema.css';
+  }
+  if (window.__TEMA) {
+    if (window.__TEMA.google_fonts) await addLink(window.__TEMA.google_fonts);
+    if (window.__TEMA_CSS) await addLink(window.__TEMA_CSS, 'tema-css');
+  }
+  var data = window.__CARROSSEL;
+  if (!data && q.get('data')) data = await (await fetch(q.get('data'))).json();
+  if (!data) { document.getElementById('carrossel').textContent = 'sem dados: use ?data=<url>&tema=<url>'; return; }
+  await Carrossel.render(data, document.getElementById('carrossel'), { only: n });
+})();
+</script>
+</body>
+</html>

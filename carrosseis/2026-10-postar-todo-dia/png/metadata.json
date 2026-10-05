@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-postar-todo-dia",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 14,
+  "serie": "PERGUNTA DO DONO",
+  "tema": "PRECISO POSTAR TODO DIA?",
+  "familia_cor": "ink-laranja",
+  "template": "T1b-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "PRECISO POSTAR TODO DIA?"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "QUEM POSTA TODO DIA SEM PLANO cansa antes do cliente notar."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE PESA MAIS Manter o mesmo ritmo por meses Falar do que o seu cliente procura Post que dá vontade de salvar ou mandar Responder quem comenta"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "TRÊS POR SEMANA, O ANO INTEIRO: 156 posts."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "UM RITMO POSSÍVEL Escolha os dias e não mude Produza tudo num dia só Um assunto pode virar três posts Deixe agendado e saia do app"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "CONSTÂNCIA GANHA DE volume."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "POSTE O QUE VOCÊ AGUENTA pra sempre."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER UMA SEMANA DE POSTS possível? Comenta POSTAR que eu te mando um modelo de calendário no direct"
+    }
+  ],
+  "legenda": "Não precisa. Quem começa postando todo dia sem plano costuma parar em poucas semanas, e o perfil fica com um buraco maior do que se tivesse ido devagar.\n\nTrês posts por semana, mantidos o ano inteiro, dão 156 posts. O que pesa é o ritmo durar, o assunto ser o que o seu cliente procura e o post dar vontade de salvar ou mandar pra alguém.\n\nUm jeito que funciona: escolher os dias, produzir tudo num dia só, transformar um assunto em três posts e deixar agendado.\n\nComenta POSTAR que eu te mando um modelo de calendário no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#instagramparanegocios",
+    "#pequenosnegocios",
+    "#marketingdigital",
+    "#conteudo"
+  ],
+  "handle": "@otalogia"
+}

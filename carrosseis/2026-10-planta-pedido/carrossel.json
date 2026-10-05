@@ -1,0 +1,116 @@
+{
+  "id": "2026-10-planta-pedido",
+  "meta": {
+    "serie": "PLANTA",
+    "data": "2026/10"
+  },
+  "slides": [
+    {
+      "template": "T1b",
+      "fundo": "ink",
+      "display": [
+        "SEU PEDIDO",
+        "PASSA ATÉ [SAIR]?"
+      ],
+      "emocao": {
+        "texto": "quantas mãos",
+        "posicao": "antes",
+        "top": 0
+      },
+      "imagem": "capa.png",
+      "recorte": "capa_recorte.png"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "CHEGA NO WHATS,",
+        "SEGUE NA"
+      ],
+      "emocao": {
+        "texto": "[memória].",
+        "posicao": "depois"
+      },
+      "imagem": "slide2_led.png"
+    },
+    {
+      "template": "T3",
+      "display": [
+        "UM CAMINHO",
+        "{COMUM}"
+      ],
+      "lista": [
+        "O cliente manda a mensagem",
+        "Alguém anota num papel ou caderno",
+        "Outra pessoa confere o estoque",
+        "Mais uma cuida do pagamento e da entrega"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "CADA PASSAGEM",
+        "É UM LUGAR PRA"
+      ],
+      "emocao": {
+        "texto": "{errar}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE O",
+        "FLUXOGRAMA {MOSTRA}"
+      ],
+      "lista": [
+        "Onde o pedido fica esperando",
+        "Quem anota a mesma coisa duas vezes",
+        "Que passo só existe na cabeça de alguém",
+        "Onde o cliente fica sem resposta"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "DESENHAR O CAMINHO",
+        "VEM ANTES DE"
+      ],
+      "emocao": {
+        "texto": "{automatizar}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "COMECE PELO PASSO",
+        "QUE MAIS {REPETE}."
+      ],
+      "emocao": {
+        "texto": "um só, antes de tudo.",
+        "posicao": "depois"
+      },
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER VER O",
+        "CAMINHO DO"
+      ],
+      "emocao": {
+        "texto": "seu pedido?",
+        "posicao": "depois"
+      },
+      "cta": {
+        "acao": "Comenta PLANTA",
+        "texto": "que eu te mando um modelo de fluxo no direct"
+      },
+      "imagem": "cta.png",
+      "recorte": "cta_recorte.png",
+      "texto": "topo"
+    }
+  ]
+}

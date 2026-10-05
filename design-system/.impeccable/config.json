@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "instrument serif",
+        "createdAt": "2026-10-04T07:32:15.925Z",
+        "reason": "brand typography fixed in the approved otalogia plan (Inter Tight + Instrument Serif + JetBrains Mono); index.html is the brand's own spec page"
+      }
+    ]
+  }
+}

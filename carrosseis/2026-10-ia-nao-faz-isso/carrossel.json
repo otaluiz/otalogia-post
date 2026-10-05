@@ -1,0 +1,114 @@
+{
+  "id": "2026-10-ia-nao-faz-isso",
+  "meta": {
+    "serie": "IA NÃO FAZ ISSO",
+    "data": "2026/10"
+  },
+  "slides": [
+    {
+      "template": "T1b",
+      "fundo": "ink",
+      "display": [
+        "A IA ACERTOU",
+        "TUDO."
+      ],
+      "emocao": {
+        "texto": "e ficou [sem graça].",
+        "posicao": "depois"
+      },
+      "imagem": "capa.png",
+      "recorte": "capa_recorte.png"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "CERTINHO.",
+        "LIMPO."
+      ],
+      "emocao": {
+        "texto": "e ninguém [lembra].",
+        "posicao": "depois"
+      },
+      "imagem": "slide2_led.png"
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE A IA",
+        "{NÃO SABE}"
+      ],
+      "lista": [
+        "Quem vai olhar a sua arte",
+        "O que a sua marca nunca diria",
+        "Qual detalhe é a cara do seu negócio",
+        "Quando já está bom e é hora de parar"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "A IA TE DÁ",
+        "MUITAS OPÇÕES."
+      ],
+      "emocao": {
+        "texto": "alguém tem que {escolher}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE EU MEXO",
+        "NUMA ARTE {GERADA}"
+      ],
+      "lista": [
+        "Cor: tiro a que briga com a marca",
+        "Corte: aproximo até sobrar uma ideia",
+        "Tom: ajusto a frase pra voz do dono",
+        "Detalhe: o que a IA não vê, como mão e sombra"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "GOSTO NÃO",
+        "SAI DE"
+      ],
+      "emocao": {
+        "texto": "{prompt}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T2",
+      "display": [
+        "USE A IA",
+        "PRA FAZER."
+      ],
+      "emocao": {
+        "texto": "o olho pra {decidir}.",
+        "posicao": "depois"
+      },
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER UM OLHO",
+        "NA SUA"
+      ],
+      "emocao": {
+        "texto": "arte?",
+        "posicao": "depois"
+      },
+      "cta": {
+        "acao": "Comenta OLHO",
+        "texto": "e eu te digo o que cortar, mudar ou deixar"
+      },
+      "imagem": "cta.png",
+      "recorte": "cta_recorte.png"
+    }
+  ]
+}

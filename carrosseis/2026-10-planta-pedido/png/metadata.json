@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-planta-pedido",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 6,
+  "serie": "PLANTA",
+  "tema": "SEU PEDIDO PASSA ATÉ SAIR? quantas mãos",
+  "familia_cor": "ink-laranja",
+  "template": "T1b-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SEU PEDIDO PASSA ATÉ SAIR? quantas mãos"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "CHEGA NO WHATS, SEGUE NA memória."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "UM CAMINHO COMUM O cliente manda a mensagem Alguém anota num papel ou caderno Outra pessoa confere o estoque Mais uma cuida do pagamento e da entrega"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "CADA PASSAGEM É UM LUGAR PRA errar."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE O FLUXOGRAMA MOSTRA Onde o pedido fica esperando Quem anota a mesma coisa duas vezes Que passo só existe na cabeça de alguém Onde o cliente fica sem resposta"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "DESENHAR O CAMINHO VEM ANTES DE automatizar."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "COMECE PELO PASSO QUE MAIS REPETE. um só, antes de tudo."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER VER O CAMINHO DO seu pedido? Comenta PLANTA que eu te mando um modelo de fluxo no direct"
+    }
+  ],
+  "legenda": "Quando o pedido chega no WhatsApp, quase sempre ele passa por várias mãos: quem anota, quem confere o estoque, quem cobra, quem entrega. Cada passagem é um lugar onde algo se perde.\n\nDesenhar o caminho como fluxograma mostra onde o pedido espera, o que é anotado duas vezes e que passo só existe na cabeça de alguém. Só depois disso vale automatizar.\n\nComenta PLANTA que eu te mando um modelo de fluxo.",
+  "hashtags": [
+    "#otalogia",
+    "#processos",
+    "#fluxograma",
+    "#pequenosnegocios",
+    "#automacao"
+  ],
+  "handle": "@otalogia"
+}

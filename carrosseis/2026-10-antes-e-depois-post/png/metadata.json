@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-antes-e-depois-post",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 3,
+  "serie": "ANTES E DEPOIS",
+  "tema": "ESSE POST TINHA TUDO. menos um motivo pra parar.",
+  "familia_cor": "ink-laranja",
+  "template": "T1b-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "ESSE POST TINHA TUDO. menos um motivo pra parar."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "NO FEED, NINGUÉM para por educação."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE ESTAVA ERRADO Cinco informações brigando pela atenção Letra pequena demais pra ler no celular Foto de banco que serve pra qualquer loja Nenhuma frase que segure o polegar"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "REFAZER COMEÇA PELO corte."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE EU MUDEI Uma ideia só, em letra grande Foto real do produto, de perto Uma frase que fala com o cliente No fim, uma ação clara"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "MENOS COISA NA TELA, mais gente parando."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "UMA IDEIA POR POST. o resto vai pra legenda."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "O SEU POST TAMBÉM TEM TUDO, menos o motivo? Comenta REFAZ que eu te digo o que cortar e refaço um aqui no perfil"
+    }
+  ],
+  "legenda": "O post tinha produto bom, preço e promoção. Só faltava alguém parar pra ver. Quando cabe tudo numa arte só, o olho não acha por onde entrar e o polegar segue.\n\nQuando eu refaço um post, corto até sobrar uma ideia, em letra que dá pra ler no celular, com foto de verdade do produto. O resto vai pra legenda.\n\nComenta REFAZ que eu escolho um post pra refazer aqui no perfil.",
+  "hashtags": [
+    "#otalogia",
+    "#design",
+    "#pequenosnegocios",
+    "#antesedepois",
+    "#marketingdigital"
+  ],
+  "handle": "@otalogia"
+}

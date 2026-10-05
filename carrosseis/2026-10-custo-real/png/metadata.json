@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-custo-real",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 5,
+  "serie": "CUSTO REAL",
+  "tema": "QUANTO CUSTA PARAR DE responder na mão?",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "QUANTO CUSTA PARAR DE responder na mão?"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "O CUSTO NÃO APARECE NA fatura."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE ENTRA NA CONTA Tempo pra montar, uma vez Ferramenta, às vezes gratuita Ajustes nas primeiras semanas Uma revisão de vez em quando"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "QUEM FAZ NA MÃO TAMBÉM PAGA, EM horas."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE VOLTA PRA VOCÊ Horas por semana sem digitar a mesma coisa Resposta na hora, até fora do expediente Menos erro de copiar e colar Cabeça livre pro que só você faz"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "ANOTE O TEMPO DE UMA semana."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "COMECE PELA TAREFA MAIS CHATA A que você repete todo dia A que sempre tem o mesmo formato A que não pede julgamento Meça quanto ela leva hoje"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER FAZER A CONTA DO seu caso? Comenta CUSTO e eu te mostro, em horas por semana, o que dá pra tirar da mão"
+    }
+  ],
+  "legenda": "Automação simples tem custo: o tempo de montar, às vezes uma ferramenta, alguns ajustes no começo. O que costuma passar batido é o custo de continuar fazendo na mão, que não aparece em fatura nenhuma e sai em horas por semana.\n\nAntes de decidir qualquer coisa, anote por uma semana quanto tempo você gasta na tarefa mais repetitiva. Essa conta vale mais que qualquer promessa.\n\nComenta CUSTO que eu te mostro como fazer a conta do seu caso.",
+  "hashtags": [
+    "#otalogia",
+    "#automacao",
+    "#pequenosnegocios",
+    "#produtividade",
+    "#marketingdigital"
+  ],
+  "handle": "@otalogia"
+}

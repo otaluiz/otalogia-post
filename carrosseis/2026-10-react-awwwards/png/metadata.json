@@ -1,0 +1,86 @@
+{
+  "carousel_id": "2026-10-react-awwwards",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 13,
+  "serie": "REFERÊNCIA",
+  "tema": "nenhum site de prêmio NASCE DO ZERO.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T5-T5-T5-T2c-T5-T5-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "nenhum site de prêmio NASCE DO ZERO."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "A ANIMAÇÃO QUE TE PAROU talvez já viesse pronta."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "TEXTO E FUNDO"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "LANDING PAGE"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "EFEITO FINO"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "COMPONENTE É PEÇA. o site é a montagem."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "MOVI- MENTO"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "desenvolvimento",
+      "texto": "SCROLL QUE CONTA"
+    },
+    {
+      "ordem": 9,
+      "arquivo": "slide-09.png",
+      "papel": "desenvolvimento",
+      "texto": "PRA NÃO VIRAR TEMPLATE Uma animação forte por página Fonte e cor da marca, nunca as da demo Teste no celular antes de tudo Confira se a página abre rápido"
+    },
+    {
+      "ordem": 10,
+      "arquivo": "slide-10.png",
+      "papel": "cta",
+      "texto": "QUER OS LINKS E O MEU jeito de usar? Comenta REACT que eu te mando a lista no direct"
+    }
+  ],
+  "legenda": "Muito site premiado usa peça pronta. O texto que se monta letra por letra, o fundo que se mexe, a seção que anima no scroll: boa parte disso sai de bibliotecas abertas de React.\n\nAs que eu mais abro: React Bits pra texto e fundo animado, Aceternity UI e Magic UI pra blocos de landing, Motion pra animar qualquer componente e GSAP pro scroll.\n\nO que separa um site de prêmio de um template é a montagem. Uma animação forte por página, fonte e cor da marca no lugar das da demo, e teste no celular antes de mostrar pra alguém.\n\nComenta REACT que eu te mando a lista com os links no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#react",
+    "#webdesign",
+    "#awwwards",
+    "#frontend"
+  ],
+  "handle": "@otalogia"
+}

@@ -1,0 +1,77 @@
+Rotina diária automática (sem supervisão humana). Cliente: otalogia (Instagram pessoal do Luiz Ota).
+
+Gere 1 carrossel novo do otalogia por rodada, do início ao fim, no template do
+design system (motor `motor/` + tema `design-system/tema/`).
+
+Backlog (decida sozinho, não pergunte):
+- Conte as pastas em `C:\Users\luizr\Meu Drive (aidealabbr@gmail.com)\Clientes\otalogia\04-Carrosseis`
+  cujo `metadata.json` tem `"status": "rascunho"`. Se forem 6 ou mais, NÃO gere nada:
+  escreva "backlog cheio (N rascunhos), pulei a geração de hoje" e pare.
+
+Tema:
+- Pegue o primeiro tema da seção "Próximos" de `roteiro-carrosseis.md` que ainda não tem
+  pasta em `carrosseis/`. Se a lista acabar, crie um tema novo dentro dos pilares e das
+  séries do roteiro, sem repetir hook nem tema já usado (veja a tabela "Já produzidos").
+
+Variante (alterne, uma por dia, nesta ordem):
+1. T1 · capa cinematográfica sem o Luiz;
+2. T1b · capa com o Luiz (personagem @luizota);
+3. Referência · capa T1 + 3 a 5 slides T5 com print real de sites/ferramentas.
+Para saber a vez, olhe a coluna de capa da última linha de "Já produzidos" no roteiro:
+depois de T1 vem T1b, depois de T1b vem Referência, depois de Referência vem T1.
+
+Leia antes de começar (obrigatório):
+- `design-system/templates/templates.md`, `design-system/tokens.json`,
+  `design-system/esteticas-editoriais.md`, `roteiro-carrosseis.md`,
+  `motor/README.md`, `motor/carrossel.schema.md`.
+- Modelos prontos: `carrosseis/2026-10-site-invisivel` (T1), `carrosseis/2026-10-mesma-pergunta`
+  (T1b), `carrosseis/2026-10-react-awwwards` (referência).
+
+Estrutura (8 slides; referência pode ter até 10):
+1 capa T1 ou T1b → 2 T2 com imagem (a tensão) → miolo SÓ TEXTO (T3 listas, T2 papel,
+T2c caderno; destaque `{palavra}` em marca-texto, um por slide; nunca mais de 3 fundos
+iguais seguidos) → último T4 CTA com imagem e palavra-comentário.
+Marque com `"textura": "led"` os slides de lista e o de conclusão (último antes do CTA).
+
+Imagens (só capa, slide 2 e CTA; sempre "No text, no letters, no logos, no watermark"):
+- Sem o Luiz: Higgsfield `gpt_image_2_5`, 3:4, quality high, resolution 2k; surreal
+  cinematográfico editorial, sombras ink #0B0B12, luz laranja #FF5A1F.
+- Com o Luiz (capa T1b e o CTA desse carrossel): `soul_2` com soul_id
+  f752ac25-65a0-4930-a628-722af0508c5b, 3:4, quality 2k; prompt montado de
+  `design-system/esteticas-editoriais.md`, estética e pose DIFERENTES das já usadas;
+  manter o cabelo e o rosto dele ("keep his own short dark textured hair fully visible,
+  no hat, no glasses").
+- Referência: print real com `python motor/print_site.py <url> prints/<nome>.png --wait 3`.
+- Teto: 3 gerações por carrossel; pode refazer UMA se sair com texto ou defeito.
+- Corte 3:4 1080x1440 (Lanczos + unsharp local; nunca upscale pago).
+- Nenhuma imagem pode repetir outra já usada em `carrosseis/`.
+
+Composição e render (na pasta `carrosseis/<AAAA-MM>-<slug>/`):
+- `python ../../motor/compor.py carrossel.json` (recorte rembg só quando limpo, sujeito na
+  frente do título, manuscrito por cima, texto na área vazia, nenhum texto sobre rosto).
+- Filtro LED na foto do slide 2, na paleta da marca:
+  `python ../../motor/filtro_led.py slide2.png slide2_led.png --mapa "#1E1410,#7A3218,#D2410F,#FF7A3D,#F5EEE4" --forca 0.6 --gama 0.65`
+  e use `slide2_led.png` no slide 2. Capa e CTA ficam com a foto natural.
+- `python ../../motor/render.py carrossel.json png --tema ../../design-system/tema`.
+  Se falhar por "texto cobre cabeca/rosto", ajuste `bloco` e renderize de novo.
+- Olhe capa, slide 2 e CTA em tamanho cheio: título legível, nada cortado, nenhuma
+  palavra escondida atrás do sujeito.
+
+Copy: escreva com a skill `marketing-skills:copywriting` e revise com `humanizer:humanizer`
+(slides e legenda em `legenda.md`). Hook com no máximo 10 palavras, sem número inventado,
+português do Brasil natural.
+
+Metadata: `python ../../motor/metadata.py carrossel.json 0 --tema ../../design-system/tema #otalogia ...`
+(5 hashtags) e depois mude `status` para `"rascunho"` em `png/metadata.json`.
+
+Entrega:
+- Copie `png/` (slides + metadata.json) e `legenda.md` para
+  `C:\Users\luizr\Meu Drive (aidealabbr@gmail.com)\Clientes\otalogia\04-Carrosseis\<pasta>\`
+  com cópia de arquivo comum. NÃO copie para `06-Aprovados-para-Postar` (aprovação é humana).
+- Acrescente a linha do carrossel na tabela "Já produzidos" do `roteiro-carrosseis.md`
+  (com a capa usada, para a próxima rodada saber a variante) e tire o tema de "Próximos".
+- Faça `git add` só da pasta do carrossel e do roteiro e um commit
+  "content: <slug> (rotina diária)". Não faça push.
+
+Se algo travar de verdade, registre `status: "bloqueado"` com o motivo no metadata.json e pare.
+Ao final, escreva um resumo curto: tema, variante, imagens geradas, checagens e bloqueios.

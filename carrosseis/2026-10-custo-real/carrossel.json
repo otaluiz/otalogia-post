@@ -1,0 +1,114 @@
+{
+  "id": "2026-10-custo-real",
+  "meta": {
+    "serie": "CUSTO REAL",
+    "data": "2026/10"
+  },
+  "slides": [
+    {
+      "template": "T1",
+      "display": [
+        "QUANTO CUSTA",
+        "PARAR DE"
+      ],
+      "emocao": {
+        "texto": "responder [na mão]?",
+        "posicao": "depois"
+      },
+      "imagem": "capa.png",
+      "tecido": true
+    },
+    {
+      "template": "T2",
+      "display": [
+        "O CUSTO NÃO",
+        "APARECE NA"
+      ],
+      "emocao": {
+        "texto": "[fatura].",
+        "posicao": "depois"
+      },
+      "imagem": "slide2_led.png"
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE ENTRA",
+        "NA {CONTA}"
+      ],
+      "lista": [
+        "Tempo pra montar, uma vez",
+        "Ferramenta, às vezes gratuita",
+        "Ajustes nas primeiras semanas",
+        "Uma revisão de vez em quando"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "QUEM FAZ NA MÃO",
+        "TAMBÉM PAGA, EM"
+      ],
+      "emocao": {
+        "texto": "{horas}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE VOLTA",
+        "PRA {VOCÊ}"
+      ],
+      "lista": [
+        "Horas por semana sem digitar a mesma coisa",
+        "Resposta na hora, até fora do expediente",
+        "Menos erro de copiar e colar",
+        "Cabeça livre pro que só você faz"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "ANOTE O TEMPO",
+        "DE UMA"
+      ],
+      "emocao": {
+        "texto": "{semana}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "COMECE PELA TAREFA",
+        "MAIS {CHATA}"
+      ],
+      "lista": [
+        "A que você repete todo dia",
+        "A que sempre tem o mesmo formato",
+        "A que não pede julgamento",
+        "Meça quanto ela leva hoje"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER FAZER A",
+        "CONTA DO"
+      ],
+      "emocao": {
+        "texto": "seu caso?",
+        "posicao": "depois"
+      },
+      "cta": {
+        "acao": "Comenta CUSTO",
+        "texto": "e eu te mostro, em horas por semana, o que dá pra tirar da mão"
+      },
+      "imagem": "cta.png"
+    }
+  ]
+}

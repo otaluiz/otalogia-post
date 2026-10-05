@@ -1,0 +1,20 @@
+/* Tema otalogia — só custom properties. Entra depois do carrossel.css do motor. */
+:root {
+  --ink: #0B0B12; --papel: #ECE6DA; --branco: #F5F5FA; --grafite: #111111;
+  --quente: #FF5A1F;        /* destaque sobre ink/foto (antes: laranja) */
+  --quente-papel: #D2410F;  /* destaque sobre papel (antes: tinta) */
+  --apoio: #22D3EE;         /* apoio sobre ink (antes: ciano) */
+  --apoio-papel: #2563EB;   /* apoio sobre papel (antes: azul) */
+  --detalhe: #7C3AED;       /* selo/assinatura (antes: roxo) */
+  --papel-sombra: rgb(80, 60, 30);
+  --tex-dobra: .95; --tex-ht: .22; --tex-pano: .55;
+  --tex-led: .75;          /* grade LED nos slides de lista e conclusão */
+  --led-cor: var(--quente);        /* pontos laranja no ink */
+  --led-cor-papel: var(--quente-papel);  /* pontos laranja-tinta no papel */
+  --dot-tam: 14; --dot-on-w: 38;   /* guia do carrossel: bolinhas maiores, a atual vira pílula */
+  --dot-fundo: currentColor; --dot-opac: .4;  /* bolinhas preenchidas, não só contorno */
+  --f-display: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --f-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --f-body: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "JetBrains Mono", "Consolas", "Courier New", monospace;
+}

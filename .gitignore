@@ -1,0 +1,6 @@
+motor/.vendor_cv4/
+__pycache__/
+*.pyc
+*.bak
+_tmp/
+automation/logs/

@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-do-zero-ao-ar",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 9,
+  "serie": "DO ZERO AO AR",
+  "tema": "UM SITE NO AR EM UM DIA. dá, com limite.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "UM SITE NO AR EM UM DIA. dá, com limite."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "UM DIA CABE O essencial."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE DÁ PRA FAZER NUM DIA Uma página com serviços, cidade e contato Textos escritos a partir do que você já sabe do negócio Layout e código gerados com IA e revisados à mão Publicado num endereço de teste para você ver"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "A IA FAZ O RASCUNHO. você faz a revisão."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE FICA PRA DEPOIS Fotos reais do seu negócio Domínio próprio e e-mail Uma página para cada serviço Perfil no Google ajustado"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "UM DIA NÃO ENTREGA TUDO. entrega o começo."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "TENHA ISSO PRONTO ANTES Nome, serviços e cidade Horário e forma de contato Duas ou três fotos suas Três linhas sobre o negócio"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER VER O QUE CABE NO SEU primeiro dia? Comenta SITE que eu te conto por onde começar"
+    }
+  ],
+  "legenda": "Dá pra colocar um site simples no ar em um dia, mas não é um site completo. A IA ajuda a montar o rascunho e o código; você revisa, e o que depende de foto real, domínio e texto de cada serviço fica pra depois.\n\nSe quiser ver o que cabe no seu primeiro dia, tenha à mão o nome do negócio, os serviços, a cidade, o contato e duas ou três fotos.\n\nComenta SITE que eu te conto por onde começar.",
+  "hashtags": [
+    "#otalogia",
+    "#sitepraempresa",
+    "#iaparanegocios",
+    "#webdesign",
+    "#pequenosnegocios"
+  ],
+  "handle": "@otalogia"
+}

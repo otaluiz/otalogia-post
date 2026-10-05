@@ -1,0 +1,112 @@
+{
+  "id": "2026-10-site-invisivel",
+  "meta": {
+    "serie": "DIAGNÓSTICO",
+    "data": "2026/10"
+  },
+  "slides": [
+    {
+      "template": "T1",
+      "display": [
+        "SEU SITE",
+        "NÃO É FEIO."
+      ],
+      "emocao": {
+        "texto": "ele é [invisível].",
+        "posicao": "depois"
+      },
+      "imagem": "capa.png",
+      "tecido": true
+    },
+    {
+      "template": "T2",
+      "display": [
+        "NINGUÉM",
+        "PROCURA"
+      ],
+      "emocao": {
+        "texto": "o seu [nome].",
+        "posicao": "depois"
+      },
+      "imagem": "slide2_led.png"
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O CLIENTE DIGITA",
+        "O {PROBLEMA}."
+      ],
+      "lista": [
+        "\"dentista perto de mim\"",
+        "\"conserto de celular aberto agora\"",
+        "\"bolo de aniversário sob encomenda\"",
+        "\"contador para MEI\""
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "E O SEU SITE",
+        "SÓ FALA DE"
+      ],
+      "emocao": {
+        "texto": "{você}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE DEIXA",
+        "UM SITE {INVISÍVEL}"
+      ],
+      "lista": [
+        "Título da página é só o nome da empresa",
+        "Uma página para todos os serviços",
+        "Sem cidade, bairro ou endereço escrito",
+        "Perfil no Google sem horário nem foto"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "SITE QUE VENDE",
+        "RESPONDE À"
+      ],
+      "emocao": {
+        "texto": "{pergunta}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "UMA PÁGINA",
+        "POR {SERVIÇO}."
+      ],
+      "emocao": {
+        "texto": "com a cidade no título.",
+        "posicao": "depois"
+      },
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER QUE EU",
+        "OLHE O"
+      ],
+      "emocao": {
+        "texto": "seu site?",
+        "posicao": "depois"
+      },
+      "cta": {
+        "acao": "Comenta SITE",
+        "texto": "que eu te mando 3 ajustes no direct"
+      },
+      "imagem": "cta.png"
+    }
+  ]
+}

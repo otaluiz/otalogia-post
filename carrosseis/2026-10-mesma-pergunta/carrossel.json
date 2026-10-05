@@ -1,0 +1,113 @@
+{
+  "id": "2026-10-mesma-pergunta",
+  "meta": {
+    "serie": "PLANTA",
+    "data": "2026/10"
+  },
+  "slides": [
+    {
+      "template": "T1b",
+      "fundo": "ink",
+      "display": [
+        "A MESMA",
+        "PERGUNTA"
+      ],
+      "emocao": {
+        "texto": "o dia [inteiro].",
+        "posicao": "depois"
+      },
+      "imagem": "capa.png",
+      "recorte": "capa_recorte.png"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "\"QUANTO",
+        "CUSTA?\""
+      ],
+      "emocao": {
+        "texto": "de novo.",
+        "posicao": "depois"
+      },
+      "imagem": "slide2_led.png"
+    },
+    {
+      "template": "T3",
+      "display": [
+        "AS 4 QUE",
+        "MAIS {VOLTAM}"
+      ],
+      "lista": [
+        "Quanto custa?",
+        "Vocês abrem hoje?",
+        "Onde fica?",
+        "Faz entrega?"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "CADA UMA",
+        "TE TIRA"
+      ],
+      "emocao": {
+        "texto": "do {trabalho}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE EU",
+        "{MONTO}"
+      ],
+      "lista": [
+        "Boas-vindas com um menu de opções",
+        "Preço e horário respondidos na hora",
+        "Localização enviada com um toque",
+        "Só chega pra você o que precisa de você"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "VOCÊ PARA DE",
+        "RESPONDER E"
+      ],
+      "emocao": {
+        "texto": "volta a {vender}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "CONFIGURA",
+        "UMA VEZ."
+      ],
+      "emocao": {
+        "texto": "funciona {todo dia}.",
+        "posicao": "depois"
+      },
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER O MEU",
+        "MODELO DE"
+      ],
+      "emocao": {
+        "texto": "respostas?",
+        "posicao": "depois"
+      },
+      "cta": {
+        "acao": "Comenta WHATS",
+        "texto": "que eu te mando no direct"
+      },
+      "imagem": "cta.png"
+    }
+  ]
+}

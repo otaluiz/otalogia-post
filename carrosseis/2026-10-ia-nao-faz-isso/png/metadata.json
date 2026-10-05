@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-ia-nao-faz-isso",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 8,
+  "serie": "IA NÃO FAZ ISSO",
+  "tema": "A IA ACERTOU TUDO. e ficou sem graça.",
+  "familia_cor": "ink-laranja",
+  "template": "T1b-T2-T3-T2-T3-T2c-T2-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "A IA ACERTOU TUDO. e ficou sem graça."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "CERTINHO. LIMPO. e ninguém lembra."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE A IA NÃO SABE Quem vai olhar a sua arte O que a sua marca nunca diria Qual detalhe é a cara do seu negócio Quando já está bom e é hora de parar"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "A IA TE DÁ MUITAS OPÇÕES. alguém tem que escolher."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE EU MEXO NUMA ARTE GERADA Cor: tiro a que briga com a marca Corte: aproximo até sobrar uma ideia Tom: ajusto a frase pra voz do dono Detalhe: o que a IA não vê, como mão e sombra"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "GOSTO NÃO SAI DE prompt."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "USE A IA PRA FAZER. o olho pra decidir."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER UM OLHO NA SUA arte? Comenta OLHO e eu te digo o que cortar, mudar ou deixar"
+    }
+  ],
+  "legenda": "A IA entrega uma arte certinha em segundos. Certinha não é o mesmo que memorável.\n\nO que faz a peça ter cara de negócio é decisão: qual cor combina com a marca, onde cortar, qual tom fala com o seu cliente. Isso é olho, e olho se treina.\n\nComenta OLHO que eu olho uma arte sua e te digo o que cortar, mudar ou deixar.",
+  "hashtags": [
+    "#otalogia",
+    "#design",
+    "#ia",
+    "#pequenosnegocios",
+    "#marketingdigital"
+  ],
+  "handle": "@otalogia"
+}

@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-ia-sem-hype",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 4,
+  "serie": "IA SEM HYPE",
+  "tema": "POUCA GENTE SABE CORTAR. todo mundo usa IA.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "POUCA GENTE SABE CORTAR. todo mundo usa IA."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "A IA TE DÁ DEZ VERSÕES. quem escolhe é você."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE ELA NÃO FAZ Saber o que o seu cliente precisa ver primeiro Decidir o que fica de fora Perceber quando algo está genérico Responder pelo resultado"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "A IA ADICIONA COM FACILIDADE. design é tirar."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE EU CORTO Texto que repete o que a imagem já diz Enfeite que não ajuda a entender A segunda ideia do mesmo post A cor que briga com a marca"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "A IA FAZ O RASCUNHO. o critério é humano."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "EU USO IA PRA ACELERAR. não pra decidir."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER QUE EU EDITE O seu material? Comenta EDITAR que eu te mando 3 cortes no direct"
+    }
+  ],
+  "legenda": "Gerar dez versões de uma arte leva segundos. Escolher qual fica, e o que sai dela, continua sendo trabalho de quem entende do negócio.\n\nA IA acelera o rascunho. O corte é decisão: o que o cliente precisa ver primeiro, o que fica de fora, o que já está genérico.\n\nComenta EDITAR que eu te mando 3 cortes pro seu material.",
+  "hashtags": [
+    "#otalogia",
+    "#design",
+    "#inteligenciaartificial",
+    "#pequenosnegocios",
+    "#marketingdigital"
+  ],
+  "handle": "@otalogia"
+}

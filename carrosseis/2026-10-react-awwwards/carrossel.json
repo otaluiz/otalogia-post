@@ -1,0 +1,207 @@
+{
+  "id": "2026-10-react-awwwards",
+  "meta": {
+    "serie": "REFERÊNCIA",
+    "data": "2026/10"
+  },
+  "slides": [
+    {
+      "template": "T1",
+      "display": [
+        "NASCE DO",
+        "[ZERO]."
+      ],
+      "emocao": {
+        "texto": "nenhum site de prêmio",
+        "posicao": "antes"
+      },
+      "imagem": "capa.png",
+      "sujeito": {
+        "rostos": [],
+        "cabeca": [
+          308,
+          0,
+          686,
+          253
+        ],
+        "caixa": [
+          68,
+          0,
+          786,
+          1108
+        ]
+      },
+      "bloco": {
+        "y": 800,
+        "alinhar": "esquerda",
+        "largura": 936
+      },
+      "tecido": true
+    },
+    {
+      "template": "T2",
+      "display": [
+        "A ANIMAÇÃO",
+        "QUE TE PAROU"
+      ],
+      "emocao": {
+        "texto": "talvez já viesse [pronta].",
+        "posicao": "depois"
+      },
+      "imagem": "slide2_led.png",
+      "sujeito": {
+        "rostos": [
+          [
+            207,
+            902,
+            309,
+            1004
+          ]
+        ],
+        "cabeca": [
+          0,
+          756,
+          1080,
+          916
+        ],
+        "caixa": [
+          0,
+          762,
+          1079,
+          1439
+        ]
+      },
+      "bloco": {
+        "y": 200,
+        "alinhar": "esquerda",
+        "largura": 936
+      }
+    },
+    {
+      "template": "T5",
+      "display": [
+        "TEXTO",
+        "E FUNDO"
+      ],
+      "referencia": {
+        "site": "reactbits.dev",
+        "nome": "React Bits",
+        "descricao": "Textos animados e fundos com movimento. Grátis, copia e cola.",
+        "print": "ref-reactbits.png"
+      }
+    },
+    {
+      "template": "T5",
+      "display": [
+        "LANDING",
+        "PAGE"
+      ],
+      "referencia": {
+        "site": "ui.aceternity.com",
+        "nome": "Aceternity UI",
+        "descricao": "Blocos de landing com Tailwind e Motion, prontos pra adaptar.",
+        "print": "ref-aceternity.png"
+      }
+    },
+    {
+      "template": "T5",
+      "display": [
+        "EFEITO",
+        "FINO"
+      ],
+      "referencia": {
+        "site": "magicui.design",
+        "nome": "Magic UI",
+        "descricao": "Efeitos animados open source que encaixam no shadcn/ui.",
+        "print": "ref-magicui.png"
+      }
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "COMPONENTE",
+        "É PEÇA."
+      ],
+      "emocao": {
+        "texto": "o site é a {montagem}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T5",
+      "display": [
+        "MOVI-",
+        "MENTO"
+      ],
+      "referencia": {
+        "site": "motion.dev",
+        "nome": "Motion",
+        "descricao": "A biblioteca de animação do React, antes chamada Framer Motion.",
+        "print": "ref-motion.png"
+      }
+    },
+    {
+      "template": "T5",
+      "display": [
+        "SCROLL",
+        "QUE CONTA"
+      ],
+      "referencia": {
+        "site": "gsap.com",
+        "nome": "GSAP",
+        "descricao": "Timeline e animação no scroll. Tem hook oficial pra React.",
+        "print": "ref-gsap.png"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "PRA NÃO VIRAR",
+        "{TEMPLATE}"
+      ],
+      "lista": [
+        "Uma animação forte por página",
+        "Fonte e cor da marca, nunca as da demo",
+        "Teste no celular antes de tudo",
+        "Confira se a página abre rápido"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER OS LINKS",
+        "E O MEU"
+      ],
+      "emocao": {
+        "texto": "[jeito] de usar?",
+        "posicao": "depois"
+      },
+      "cta": {
+        "acao": "Comenta REACT",
+        "texto": "que eu te mando a lista no direct"
+      },
+      "imagem": "cta.png",
+      "sujeito": {
+        "rostos": [],
+        "cabeca": [
+          896,
+          6,
+          1046,
+          134
+        ],
+        "caixa": [
+          561,
+          11,
+          1041,
+          550
+        ]
+      },
+      "bloco": {
+        "y": 500,
+        "alinhar": "esquerda",
+        "largura": 936
+      }
+    }
+  ]
+}

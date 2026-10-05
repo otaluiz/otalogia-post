@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-preciso-de-site",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 10,
+  "serie": "PERGUNTA DO DONO",
+  "tema": "PRECISO MESMO DE site?",
+  "familia_cor": "ink-laranja",
+  "template": "T1b-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "PRECISO MESMO DE site?"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "O INSTAGRAM NÃO É SEU. você é inquilino."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "QUANDO O SITE FAZ SENTIDO O cliente te procura no Google Você vende ou agenda serviço A pessoa precisa confiar antes de chamar Você quer ser achado fora do seu círculo"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "SE SÓ VENDE PRA QUEM JÁ TE conhece."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O MÍNIMO ÚTIL O que você faz, em uma frase Onde fica e que horas abre Um botão pro WhatsApp Fotos reais do trabalho"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "NÃO PRECISA SER GRANDE, precisa ser achado."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "A PERGUNTA CERTA É o cliente te acha?"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "TEM UMA DÚVIDA DE dono? Comenta DUVIDA que eu respondo a sua em um próximo carrossel"
+    }
+  ],
+  "legenda": "\"Preciso mesmo de site?\" Depende de onde seu cliente te procura. Se ele pesquisa no Google, precisa confiar antes de chamar ou você quer ser achado fora do seu círculo, faz sentido.\n\nO mínimo útil cabe numa página: o que você faz, onde fica, horário, botão de WhatsApp e fotos reais.\n\nComenta DUVIDA que eu respondo a sua num próximo carrossel.",
+  "hashtags": [
+    "#otalogia",
+    "#precisodesite",
+    "#sitepranegocio",
+    "#pequenosnegocios",
+    "#marketingdigital"
+  ],
+  "handle": "@otalogia"
+}

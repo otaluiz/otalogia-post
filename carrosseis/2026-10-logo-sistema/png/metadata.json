@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-logo-sistema",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 12,
+  "serie": "ANTES E DEPOIS",
+  "tema": "o logo é A MENOR PARTE DA SUA MARCA.",
+  "familia_cor": "ink-laranja",
+  "template": "T1b-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "o logo é A MENOR PARTE DA SUA MARCA."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "LOGO BONITO, POST DE UM JEITO, fachada de outro."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE TINHA ANTES Um logo bom, usado de cinco jeitos Cada post numa cor diferente Fonte escolhida na hora, toda vez Fachada, cardápio e Instagram sem conversar"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "O CLIENTE NÃO LEMBRA DO LOGO. lembra do jeito."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE VIRA SISTEMA Duas ou três cores, sempre as mesmas Uma fonte pra título, outra pra texto Versões do logo pra cada tamanho Um modelo de post pronto pra repetir"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "MARCA É O QUE SE repete."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "COMECE PELAS CORES. escolha duas e não troque."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER VER SUA MARCA EM sistema? Comenta MARCA e eu te mostro o que fixar primeiro na sua"
+    }
+  ],
+  "legenda": "Muito negócio pequeno tem um logo bom e uma marca bagunçada. O logo aparece esticado num lugar, colorido no outro, cada post sai numa cor e a fachada não lembra o Instagram.\n\nO cliente não guarda o desenho do logo. Ele guarda a repetição: as mesmas cores, a mesma letra, o mesmo jeito de montar um post. Quando eu refaço uma marca, é isso que eu fixo primeiro: duas ou três cores, uma fonte pra título e outra pra texto, versões do logo pra cada tamanho e um modelo de post.\n\nComenta MARCA que eu te mostro o que fixar primeiro na sua.",
+  "hashtags": [
+    "#otalogia",
+    "#identidadevisual",
+    "#branding",
+    "#pequenosnegocios",
+    "#design"
+  ],
+  "handle": "@otalogia"
+}

@@ -1,0 +1,115 @@
+{
+  "id": "2026-10-ia-sem-hype-01",
+  "meta": {
+    "serie": "IA SEM HYPE",
+    "data": "2026/10"
+  },
+  "slides": [
+    {
+      "template": "T1",
+      "display": [
+        "TODO MUNDO"
+      ],
+      "emocao": {
+        "texto": "usa [IA].",
+        "posicao": "sobreposta"
+      },
+      "imagem": null,
+      "tecido": true
+    },
+    {
+      "template": "T2",
+      "display": [
+        "QUALQUER UM",
+        "GERA"
+      ],
+      "emocao": {
+        "texto": "uma imagem. / um [texto].",
+        "posicao": "depois"
+      },
+      "imagem": null
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "MAS POUCA",
+        "GENTE SABE",
+        "O QUE"
+      ],
+      "emocao": {
+        "texto": "{cortar}.",
+        "posicao": "sobreposta"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "A IA",
+        "ENTREGA {80%}."
+      ],
+      "emocao": {
+        "texto": "o resto é seu.",
+        "posicao": "depois"
+      },
+      "diagrama": {
+        "tipo": "barra",
+        "partes": [
+          {
+            "valor": 80,
+            "rotulo": "IA",
+            "nota": "rascunho, volume, variação"
+          },
+          {
+            "valor": 20,
+            "rotulo": "VOCÊ",
+            "nota": "corte, gosto, contexto",
+            "destaque": true
+          }
+        ]
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE EU",
+        "{CORTO}"
+      ],
+      "lista": [
+        "Frase que serviria pra qualquer marca",
+        "Detalhe que a IA inventou",
+        "Cor e fonte fora do sistema",
+        "Tudo que não soa como eu"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "IA É",
+        "NÃO É AUTOR."
+      ],
+      "emocao": {
+        "texto": "{ferramenta}.",
+        "posicao": "entre",
+        "apos_linha": 1
+      },
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER A MINHA",
+        "LISTA DE"
+      ],
+      "emocao": {
+        "texto": "corte?",
+        "posicao": "depois"
+      },
+      "cta": {
+        "acao": "Comenta EDITAR",
+        "texto": "que eu te mando no direct"
+      },
+      "imagem": null
+    }
+  ]
+}

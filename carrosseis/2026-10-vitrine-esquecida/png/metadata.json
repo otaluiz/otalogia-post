@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-vitrine-esquecida",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 7,
+  "serie": "DIAGNÓSTICO",
+  "tema": "A VITRINE QUE VOCÊ esqueceu aberta.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "A VITRINE QUE VOCÊ esqueceu aberta."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "O GOOGLE MOSTRA SEU NEGÓCIO antes do seu site."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE O CLIENTE ENCONTRA Horário de funcionamento desatualizado Telefone que ninguém atende Fotos antigas, ou nenhuma Avaliações sem resposta"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "AVALIAÇÃO SEM RESPOSTA PARECE descaso."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE EU CONFIRO Nome, endereço e telefone iguais em todo lugar Horário certo, inclusive em feriado Categoria e serviços preenchidos Fotos reais do lugar e do trabalho"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "PERFIL CUIDADO É A SUA placa na rua."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "UMA VEZ POR SEMANA. abre, confere, responde."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER QUE EU OLHE O seu perfil? Comenta GOOGLE que eu te mando o que ajustar no direct"
+    }
+  ],
+  "legenda": "Muita gente acha seu negócio no Google antes de ver o site ou o Instagram. Se o perfil tem horário errado, telefone antigo e avaliação sem resposta, parece loja de porta fechada.\n\nConfere hoje: nome, endereço e telefone iguais em todo lugar, horário certo, serviços preenchidos e fotos reais.\n\nComenta GOOGLE que eu te mando o que ajustar no seu perfil.",
+  "hashtags": [
+    "#otalogia",
+    "#perfildogoogle",
+    "#googlemeunegocio",
+    "#negociolocal",
+    "#marketingdigital"
+  ],
+  "handle": "@otalogia"
+}

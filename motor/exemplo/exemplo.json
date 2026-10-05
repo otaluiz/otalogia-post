@@ -1,0 +1,112 @@
+{
+  "id": "exemplo",
+  "meta": {
+    "serie": "SERIE EXEMPLO",
+    "data": "2026/01"
+  },
+  "slides": [
+    {
+      "template": "T1",
+      "display": [
+        "TITULO DA",
+        "CAPA"
+      ],
+      "emocao": {
+        "texto": "com [destaque].",
+        "posicao": "sobreposta"
+      },
+      "imagem": null
+    },
+    {
+      "template": "T2",
+      "display": [
+        "SLIDE DE",
+        "TENSÃO"
+      ],
+      "emocao": {
+        "texto": "uma frase. / outra [frase].",
+        "posicao": "depois"
+      },
+      "imagem": null
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "SLIDE",
+        "CADERNO"
+      ],
+      "emocao": {
+        "texto": "{virada}.",
+        "posicao": "sobreposta"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "DADO",
+        "EM {80%}."
+      ],
+      "emocao": {
+        "texto": "o resto.",
+        "posicao": "depois"
+      },
+      "diagrama": {
+        "tipo": "barra",
+        "partes": [
+          {
+            "valor": 80,
+            "rotulo": "A",
+            "nota": "parte um"
+          },
+          {
+            "valor": 20,
+            "rotulo": "B",
+            "nota": "parte dois",
+            "destaque": true
+          }
+        ]
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "LISTA DE",
+        "{ITENS}"
+      ],
+      "lista": [
+        "Primeiro item",
+        "Segundo item",
+        "Terceiro item"
+      ]
+    },
+    {
+      "template": "T2",
+      "display": [
+        "PAPEL",
+        "COM FOTO"
+      ],
+      "emocao": {
+        "texto": "{ferramenta}.",
+        "posicao": "entre",
+        "apos_linha": 1
+      },
+      "imagem": null
+    },
+    {
+      "template": "T4",
+      "display": [
+        "CHAMADA",
+        "PARA AÇÃO"
+      ],
+      "emocao": {
+        "texto": "final.",
+        "posicao": "depois"
+      },
+      "cta": {
+        "acao": "Comenta PALAVRA",
+        "texto": "que eu te mando no direct"
+      },
+      "imagem": null
+    }
+  ]
+}

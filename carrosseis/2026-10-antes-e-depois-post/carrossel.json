@@ -1,0 +1,115 @@
+{
+  "id": "2026-10-antes-e-depois-post",
+  "meta": {
+    "serie": "ANTES E DEPOIS",
+    "data": "2026/10"
+  },
+  "slides": [
+    {
+      "template": "T1b",
+      "fundo": "papel",
+      "display": [
+        "ESSE POST",
+        "TINHA TUDO."
+      ],
+      "emocao": {
+        "texto": "menos um motivo pra [parar].",
+        "posicao": "antes",
+        "top": 0
+      },
+      "imagem": "capa.png",
+      "recorte": "capa_recorte.png"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "NO FEED,",
+        "NINGUÉM"
+      ],
+      "emocao": {
+        "texto": "para por [educação].",
+        "posicao": "depois"
+      },
+      "imagem": "slide2_led.png"
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE ESTAVA",
+        "{ERRADO}"
+      ],
+      "lista": [
+        "Cinco informações brigando pela atenção",
+        "Letra pequena demais pra ler no celular",
+        "Foto de banco que serve pra qualquer loja",
+        "Nenhuma frase que segure o polegar"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "REFAZER",
+        "COMEÇA PELO"
+      ],
+      "emocao": {
+        "texto": "{corte}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE EU",
+        "{MUDEI}"
+      ],
+      "lista": [
+        "Uma ideia só, em letra grande",
+        "Foto real do produto, de perto",
+        "Uma frase que fala com o cliente",
+        "No fim, uma ação clara"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "MENOS COISA",
+        "NA TELA,"
+      ],
+      "emocao": {
+        "texto": "mais gente {parando}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "UMA IDEIA",
+        "POR {POST}."
+      ],
+      "emocao": {
+        "texto": "o resto vai pra legenda.",
+        "posicao": "depois"
+      },
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "O SEU POST",
+        "TAMBÉM TEM TUDO,"
+      ],
+      "emocao": {
+        "texto": "menos o [motivo]?",
+        "posicao": "depois"
+      },
+      "cta": {
+        "acao": "Comenta REFAZ",
+        "texto": "que eu te digo o que cortar e refaço um aqui no perfil"
+      },
+      "imagem": "cta.png",
+      "recorte": "cta_recorte.png"
+    }
+  ]
+}
