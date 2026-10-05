@@ -1,0 +1,23 @@
+# A rotina da nuvem só consegue dar push numa branch própria (ex.: main-lx8n0x).
+# Este workflow traz esse commit para a main na hora, para o sync-drive.ps1 e a
+# próxima rotina enxergarem o carrossel novo.
+name: merge rotina na main
+on:
+  push:
+    branches-ignore: [main]
+permissions:
+  contents: write
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git merge --no-edit "origin/${GITHUB_REF_NAME}"
+          git push origin main
+          git push origin --delete "${GITHUB_REF_NAME}"
