@@ -1,0 +1,127 @@
+{
+  "id": "2026-10-desiste-antes",
+  "meta": {
+    "serie": "DIAGNÓSTICO",
+    "data": "2026/10"
+  },
+  "slides": [
+    {
+      "template": "T1",
+      "display": [
+        "[DESISTE]",
+        "ANTES"
+      ],
+      "emocao": {
+        "texto": "seu cliente",
+        "posicao": "antes"
+      },
+      "gancho": "de te chamar.",
+      "imagem": "capa.png",
+      "tecido": true
+    },
+    {
+      "template": "T2",
+      "display": [
+        "LINK NA BIO,",
+        "MENU, FORMULÁRIO"
+      ],
+      "emocao": {
+        "texto": "e só então o [zap].",
+        "posicao": "depois"
+      },
+      "imagem": "slide2_led.png"
+    },
+    {
+      "template": "T5",
+      "display": [
+        "LINK",
+        "NA BIO"
+      ],
+      "referencia": {
+        "site": "linktr.ee",
+        "nome": "Linktree",
+        "descricao": "Uma página com vários botões. Cada botão é mais uma escolha.",
+        "print": "ref-linktree.png"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O CAMINHO DO",
+        "{CLIENTE}"
+      ],
+      "lista": [
+        "Vê o post e se interessa",
+        "Abre o perfil e procura o link",
+        "Escolhe um botão entre vários",
+        "Preenche um formulário"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T5",
+      "display": [
+        "CADA BOTÃO",
+        "UM TALVEZ"
+      ],
+      "referencia": {
+        "site": "linktr.ee/s/templates",
+        "nome": "Modelos de bio",
+        "descricao": "Bio bonita não encurta o caminho até a conversa.",
+        "print": "ref-linktree-templates.png"
+      }
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "UM TOQUE",
+        "BASTA."
+      ],
+      "emocao": {
+        "texto": "do post até o {zap}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T5",
+      "display": [
+        "O LEAD",
+        "NÃO ESFRIA"
+      ],
+      "referencia": {
+        "site": "zapier.com",
+        "nome": "Zapier",
+        "descricao": "Automatiza o que vem depois do clique: aviso, registro e resposta.",
+        "print": "ref-zapier.png"
+      }
+    },
+    {
+      "template": "T2",
+      "display": [
+        "MENOS PASSOS,",
+        "MAIS {CONVERSA}."
+      ],
+      "emocao": {
+        "texto": "quem chegou já queria falar.",
+        "posicao": "depois"
+      },
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER REVER",
+        "O SEU"
+      ],
+      "emocao": {
+        "texto": "[caminho]?",
+        "posicao": "depois"
+      },
+      "cta": {
+        "acao": "Comenta LINK",
+        "texto": "que eu te mando um checklist no direct"
+      },
+      "imagem": "cta.png"
+    }
+  ]
+}

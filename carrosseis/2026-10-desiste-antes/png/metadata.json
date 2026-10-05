@@ -1,0 +1,80 @@
+{
+  "carousel_id": "2026-10-desiste-antes",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-05",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 15,
+  "serie": "DIAGNÓSTICO",
+  "tema": "DESISTE ANTES seu cliente",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T5-T3-T5-T2c-T5-T2-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "DESISTE ANTES seu cliente"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "LINK NA BIO, MENU, FORMULÁRIO e só então o zap."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "LINK NA BIO"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "O CAMINHO DO CLIENTE Vê o post e se interessa Abre o perfil e procura o link Escolhe um botão entre vários Preenche um formulário"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "CADA BOTÃO UM TALVEZ"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "UM TOQUE BASTA. do post até o zap."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "O LEAD NÃO ESFRIA"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "desenvolvimento",
+      "texto": "MENOS PASSOS, MAIS CONVERSA. quem chegou já queria falar."
+    },
+    {
+      "ordem": 9,
+      "arquivo": "slide-09.png",
+      "papel": "cta",
+      "texto": "QUER REVER O SEU caminho? Comenta LINK que eu te mando um checklist no direct"
+    }
+  ],
+  "legenda": "Muita gente chega no seu perfil com vontade de falar com você e desiste no caminho. Link na bio, menu, formulário, e só depois o WhatsApp.\n\nCada passo a mais é uma chance de o cliente fechar o app. Uma página com vários botões obriga a escolher, e um formulário no meio pede tempo que ele não separou.\n\nO que costuma funcionar é encurtar: do post até a conversa em um toque, e uma automação cuidando do que vem depois do clique, com aviso, registro e resposta.\n\nComenta LINK que eu te mando um checklist pra rever o caminho do seu perfil.",
+  "hashtags": [
+    "#otalogia",
+    "#instagram",
+    "#whatsapp",
+    "#marketingdigital",
+    "#pequenosnegocios"
+  ],
+  "handle": "@otalogia"
+}

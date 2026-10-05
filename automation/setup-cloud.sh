@@ -8,4 +8,10 @@ python -m playwright install --with-deps chromium
 [ -d motor/.vendor_cv4/cv2 ] || python -m pip install -q --target motor/.vendor_cv4 opencv-python-headless==4.10.0.84
 # baixa o modelo do rembg uma vez (primeira chamada demora)
 python -c "from rembg import new_session; new_session('u2net')"
+# fontes do tema (o Chromium da nuvem não carrega o Google Fonts; sem isso o render sai em fallback)
+mkdir -p ~/.fonts && R=https://raw.githubusercontent.com/google/fonts/main/ofl
+for f in "intertight/InterTight%5Bwght%5D.ttf" "instrumentserif/InstrumentSerif-Italic.ttf" "instrumentserif/InstrumentSerif-Regular.ttf" "jetbrainsmono/JetBrainsMono%5Bwght%5D.ttf"; do
+  [ -f ~/.fonts/"$(basename "$f")" ] || curl -sSfL -o ~/.fonts/"$(basename "$f")" "$R/$f"
+done
+fc-cache -f
 echo "setup ok"
