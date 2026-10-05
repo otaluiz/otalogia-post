@@ -266,11 +266,6 @@ body.single #carrossel { padding: 0; gap: 0; display: block; }
 .slide:has(.tex-led) .foot .dots { padding: calc(10 * var(--u)) calc(14 * var(--u)); border-radius: 99px; background: color-mix(in srgb, var(--ink) 88%, transparent); }
 .slide.t2:has(.tex-led) .foot .dots, .slide.t2c:has(.tex-led) .foot .dots { background: color-mix(in srgb, var(--papel) 90%, transparent); }
 
-/* textura grain (slide 3, "textura": "grain"): gradiente granulado da paleta (brilho quente num canto, apoio no oposto) sob grão forte.
-   Exceção pedida à regra "sem gradiente": fica só nos slides de texto marcados. Força pelo tema (--tex-grain, padrão .55). */
-.tex-grain { position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: var(--tex-grain, .55);
-  background: radial-gradient(ellipse 80% 60% at 100% 0%, var(--grain-a, var(--quente)), transparent 70%),
-              radial-gradient(ellipse 90% 70% at 0% 100%, var(--grain-b, var(--apoio)), transparent 70%); }
-.t2 .tex-grain, .t2c .tex-grain { background: radial-gradient(ellipse 80% 60% at 100% 0%, var(--grain-a-papel, var(--quente-papel)), transparent 70%),
-              radial-gradient(ellipse 90% 70% at 0% 100%, var(--grain-b-papel, var(--apoio-papel)), transparent 70%); opacity: calc(var(--tex-grain, .55) * .5); }
+/* textura grain (slide 3, "textura": "grain"): só o grão forte sobre o fundo liso, sem gradiente nem brilho de cor. */
+.tex-grain { display: none; }
 .slide.grain { --grao: var(--grao-grain, .32); }

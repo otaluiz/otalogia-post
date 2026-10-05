@@ -31,7 +31,8 @@ Estrutura (8 slides; referência pode ter até 10):
 1 capa T1 ou T1b → 2 T2 com imagem (a tensão) → miolo SÓ TEXTO (T3 listas, T2 papel,
 T2c caderno; destaque `{palavra}` em marca-texto, um por slide; nunca mais de 3 fundos
 iguais seguidos) → último T4 CTA com imagem e palavra-comentário.
-Marque com `"textura": "led"` os slides de lista e o de conclusão (último antes do CTA).
+Marque com `"textura": "led"` os slides de lista e o de conclusão (último antes do CTA);
+o slide 3 leva `"textura": "grain"` (só grão forte no fundo liso, sem gradiente de cor; o compor.py já marca).
 
 Imagens (só capa, slide 2 e CTA; sempre "No text, no letters, no logos, no watermark"):
 - Sem o Luiz: Higgsfield `gpt_image_2_5`, 3:4, quality high, resolution 2k; surreal
