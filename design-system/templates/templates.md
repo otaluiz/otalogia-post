@@ -132,3 +132,5 @@ A foto do slide 2 entra **inteira e sangrada** (tela toda, véu ink 35%), nunca 
 ### Lista e conclusão
 
 Nos slides de lista (T3 com `lista`) e no slide de conclusão (o último antes do CTA), uma grade de pontos tipo painel de LED em laranja da marca (`#FF5A1F` no ink, `#D2410F` no papel), forte nas bordas e suave atrás do texto. No JSON: `"textura": "led"`. Intensidade no tema: `--tex-led: .75`.
+
+**Slide 3 sempre com textura grain** (2026-10-05): gradiente granulado da paleta (brilho laranja num canto, apoio no oposto, grão forte) em vez da grade LED. No JSON: `"textura": "grain"` (o `compor.py` marca sozinho). Força no tema: `--tex-grain` (padrão .55).

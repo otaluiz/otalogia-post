@@ -1,183 +1,183 @@
 {
-  "id": "2026-10-tarde-por-semana",
-  "meta": {
-    "serie": "CUSTO REAL",
-    "data": "2026/10"
+ "id": "2026-10-tarde-por-semana",
+ "meta": {
+  "serie": "CUSTO REAL",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "UMA TARDE",
+    "POR [SEMANA]."
+   ],
+   "emocao": {
+    "texto": "isso pode estar te custando",
+    "posicao": "antes"
+   },
+   "imagem": "capa.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     508,
+     873,
+     550,
+     905
+    ],
+    "caixa": [
+     484,
+     875,
+     609,
+     1010
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   },
+   "tecido": true
   },
-  "slides": [
-    {
-      "template": "T1",
-      "display": [
-        "UMA TARDE",
-        "POR [SEMANA]."
-      ],
-      "emocao": {
-        "texto": "isso pode estar te custando",
-        "posicao": "antes"
-      },
-      "imagem": "capa.png",
-      "sujeito": {
-        "rostos": [],
-        "cabeca": [
-          508,
-          873,
-          550,
-          905
-        ],
-        "caixa": [
-          484,
-          875,
-          609,
-          1010
-        ]
-      },
-      "bloco": {
-        "y": 200,
-        "alinhar": "esquerda",
-        "largura": 936
-      },
-      "tecido": true
-    },
-    {
-      "template": "T2",
-      "display": [
-        "NINGUÉM ANOTA",
-        "O TEMPO QUE"
-      ],
-      "emocao": {
-        "texto": "vai [embora].",
-        "posicao": "depois"
-      },
-      "imagem": "slide2_led.png",
-      "sujeito": {
-        "rostos": [],
-        "cabeca": [
-          411,
-          179,
-          1080,
-          475
-        ],
-        "caixa": [
-          107,
-          190,
-          1079,
-          1439
-        ]
-      },
-      "bloco": {
-        "y": 500,
-        "alinhar": "esquerda",
-        "largura": 936
-      }
-    },
-    {
-      "template": "T3",
-      "display": [
-        "ONDE A TARDE",
-        "{SOME}"
-      ],
-      "lista": [
-        "Responder a mesma pergunta no WhatsApp",
-        "Copiar pedido da conversa pra planilha",
-        "Montar orçamento do zero toda vez",
-        "Procurar o arquivo que você sabe que existe"
-      ],
-      "textura": "led"
-    },
-    {
-      "template": "T2",
-      "display": [
-        "CINCO MINUTOS,",
-        "DEZ VEZES AO DIA."
-      ],
-      "emocao": {
-        "texto": "dá {uma tarde} na semana.",
-        "posicao": "depois"
-      }
-    },
-    {
-      "template": "T3",
-      "display": [
-        "NUMA SEMANA",
-        "DE {40 HORAS}"
-      ],
-      "diagrama": {
-        "tipo": "barra",
-        "partes": [
-          {
-            "valor": 90,
-            "rotulo": "36H",
-            "nota": "exemplo: o trabalho que só você faz"
-          },
-          {
-            "valor": 10,
-            "rotulo": "4H",
-            "nota": "exemplo: 5 min × 10 × 5 dias",
-            "destaque": true
-          }
-        ]
-      }
-    },
-    {
-      "template": "T2c",
-      "display": [
-        "A SEMANA TEM",
-        "UM"
-      ],
-      "emocao": {
-        "texto": "{vazamento}.",
-        "posicao": "depois"
-      }
-    },
-    {
-      "template": "T3",
-      "display": [
-        "COMO",
-        "{MEDIR}"
-      ],
-      "lista": [
-        "Escolha uma tarefa que se repete",
-        "Anote cada vez que fizer, por 5 dias",
-        "Multiplique pelos minutos de cada vez",
-        "Some e veja quantas horas deu"
-      ],
-      "textura": "led"
-    },
-    {
-      "template": "T4",
-      "display": [
-        "QUER ACHAR A",
-        "SUA TARDE"
-      ],
-      "emocao": {
-        "texto": "[perdida]?",
-        "posicao": "depois"
-      },
-      "cta": {
-        "acao": "Comenta TEMPO",
-        "texto": "e eu te ajudo a achar a tarefa que mais come sua semana"
-      },
-      "imagem": "cta.png",
-      "sujeito": {
-        "rostos": [],
-        "cabeca": [
-          429,
-          299,
-          583,
-          347
-        ],
-        "caixa": [
-          387,
-          301,
-          635,
-          505
-        ]
-      },
-      "bloco": {
-        "y": 500,
-        "alinhar": "esquerda",
-        "largura": 936
-      }
-    }
-  ]
+  {
+   "template": "T2",
+   "display": [
+    "NINGUÉM ANOTA",
+    "O TEMPO QUE"
+   ],
+   "emocao": {
+    "texto": "vai [embora].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     411,
+     179,
+     1080,
+     475
+    ],
+    "caixa": [
+     107,
+     190,
+     1079,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 500,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "ONDE A TARDE",
+    "{SOME}"
+   ],
+   "lista": [
+    "Responder a mesma pergunta no WhatsApp",
+    "Copiar pedido da conversa pra planilha",
+    "Montar orçamento do zero toda vez",
+    "Procurar o arquivo que você sabe que existe"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "CINCO MINUTOS,",
+    "DEZ VEZES AO DIA."
+   ],
+   "emocao": {
+    "texto": "dá {uma tarde} na semana.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "NUMA SEMANA",
+    "DE {40 HORAS}"
+   ],
+   "diagrama": {
+    "tipo": "barra",
+    "partes": [
+     {
+      "valor": 90,
+      "rotulo": "36H",
+      "nota": "exemplo: o trabalho que só você faz"
+     },
+     {
+      "valor": 10,
+      "rotulo": "4H",
+      "nota": "exemplo: 5 min × 10 × 5 dias",
+      "destaque": true
+     }
+    ]
+   }
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "A SEMANA TEM",
+    "UM"
+   ],
+   "emocao": {
+    "texto": "{vazamento}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "COMO",
+    "{MEDIR}"
+   ],
+   "lista": [
+    "Escolha uma tarefa que se repete",
+    "Anote cada vez que fizer, por 5 dias",
+    "Multiplique pelos minutos de cada vez",
+    "Some e veja quantas horas deu"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER ACHAR A",
+    "SUA TARDE"
+   ],
+   "emocao": {
+    "texto": "[perdida]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta TEMPO",
+    "texto": "e eu te ajudo a achar a tarefa que mais come sua semana"
+   },
+   "imagem": "cta.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     429,
+     299,
+     583,
+     347
+    ],
+    "caixa": [
+     387,
+     301,
+     635,
+     505
+    ]
+   },
+   "bloco": {
+    "y": 500,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  }
+ ]
 }

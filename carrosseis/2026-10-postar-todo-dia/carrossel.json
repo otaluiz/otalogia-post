@@ -1,170 +1,170 @@
 {
-  "id": "2026-10-postar-todo-dia",
-  "meta": {
-    "serie": "PERGUNTA DO DONO",
-    "data": "2026/10"
+ "id": "2026-10-postar-todo-dia",
+ "meta": {
+  "serie": "PERGUNTA DO DONO",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1b",
+   "fundo": "ink",
+   "display": [
+    "PRECISO POSTAR",
+    "TODO [DIA]?"
+   ],
+   "imagem": "capa.png",
+   "recorte": "capa_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     170,
+     393,
+     818,
+     640
+    ],
+    "caixa": [
+     167,
+     403,
+     966,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
   },
-  "slides": [
-    {
-      "template": "T1b",
-      "fundo": "ink",
-      "display": [
-        "PRECISO POSTAR",
-        "TODO [DIA]?"
-      ],
-      "imagem": "capa.png",
-      "recorte": "capa_recorte.png",
-      "sujeito": {
-        "rostos": [],
-        "cabeca": [
-          170,
-          393,
-          818,
-          640
-        ],
-        "caixa": [
-          167,
-          403,
-          966,
-          1439
-        ]
-      },
-      "bloco": {
-        "y": 200,
-        "alinhar": "esquerda",
-        "largura": 936
-      }
-    },
-    {
-      "template": "T2",
-      "display": [
-        "QUEM POSTA TODO DIA",
-        "SEM PLANO"
-      ],
-      "emocao": {
-        "texto": "cansa antes do cliente [notar].",
-        "posicao": "depois"
-      },
-      "imagem": "slide2_led.png",
-      "sujeito": {
-        "rostos": [],
-        "cabeca": [
-          308,
-          374,
-          441,
-          448
-        ],
-        "caixa": [
-          288,
-          377,
-          472,
-          690
-        ]
-      },
-      "bloco": {
-        "y": 700,
-        "alinhar": "esquerda",
-        "largura": 936
-      }
-    },
-    {
-      "template": "T3",
-      "display": [
-        "O QUE PESA",
-        "{MAIS}"
-      ],
-      "lista": [
-        "Manter o mesmo ritmo por meses",
-        "Falar do que o seu cliente procura",
-        "Post que dá vontade de salvar ou mandar",
-        "Responder quem comenta"
-      ],
-      "textura": "led"
-    },
-    {
-      "template": "T2",
-      "display": [
-        "TRÊS POR SEMANA,",
-        "O ANO INTEIRO:"
-      ],
-      "emocao": {
-        "texto": "{156} posts.",
-        "posicao": "depois"
-      }
-    },
-    {
-      "template": "T3",
-      "display": [
-        "UM RITMO",
-        "{POSSÍVEL}"
-      ],
-      "lista": [
-        "Escolha os dias e não mude",
-        "Produza tudo num dia só",
-        "Um assunto pode virar três posts",
-        "Deixe agendado e saia do app"
-      ],
-      "textura": "led"
-    },
-    {
-      "template": "T2c",
-      "display": [
-        "CONSTÂNCIA",
-        "GANHA DE"
-      ],
-      "emocao": {
-        "texto": "{volume}.",
-        "posicao": "depois"
-      }
-    },
-    {
-      "template": "T3",
-      "display": [
-        "POSTE O QUE",
-        "VOCÊ AGUENTA"
-      ],
-      "emocao": {
-        "texto": "pra {sempre}.",
-        "posicao": "depois"
-      },
-      "textura": "led"
-    },
-    {
-      "template": "T4",
-      "display": [
-        "QUER UMA SEMANA",
-        "DE POSTS"
-      ],
-      "emocao": {
-        "texto": "[possível]?",
-        "posicao": "depois"
-      },
-      "cta": {
-        "acao": "Comenta POSTAR",
-        "texto": "que eu te mando um modelo de calendário no direct"
-      },
-      "imagem": "cta.png",
-      "sujeito": {
-        "rostos": [],
-        "cabeca": [
-          142,
-          121,
-          778,
-          409
-        ],
-        "caixa": [
-          0,
-          132,
-          1079,
-          1346
-        ]
-      },
-      "bloco": {
-        "y": 560,
-        "alinhar": "esquerda",
-        "largura": 936,
-        "manual": true
-      }
-    }
-  ]
+  {
+   "template": "T2",
+   "display": [
+    "QUEM POSTA TODO DIA",
+    "SEM PLANO"
+   ],
+   "emocao": {
+    "texto": "cansa antes do cliente [notar].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     308,
+     374,
+     441,
+     448
+    ],
+    "caixa": [
+     288,
+     377,
+     472,
+     690
+    ]
+   },
+   "bloco": {
+    "y": 700,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE PESA",
+    "{MAIS}"
+   ],
+   "lista": [
+    "Manter o mesmo ritmo por meses",
+    "Falar do que o seu cliente procura",
+    "Post que dá vontade de salvar ou mandar",
+    "Responder quem comenta"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "TRÊS POR SEMANA,",
+    "O ANO INTEIRO:"
+   ],
+   "emocao": {
+    "texto": "{156} posts.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "UM RITMO",
+    "{POSSÍVEL}"
+   ],
+   "lista": [
+    "Escolha os dias e não mude",
+    "Produza tudo num dia só",
+    "Um assunto pode virar três posts",
+    "Deixe agendado e saia do app"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "CONSTÂNCIA",
+    "GANHA DE"
+   ],
+   "emocao": {
+    "texto": "{volume}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "POSTE O QUE",
+    "VOCÊ AGUENTA"
+   ],
+   "emocao": {
+    "texto": "pra {sempre}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER UMA SEMANA",
+    "DE POSTS"
+   ],
+   "emocao": {
+    "texto": "[possível]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta POSTAR",
+    "texto": "que eu te mando um modelo de calendário no direct"
+   },
+   "imagem": "cta.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     142,
+     121,
+     778,
+     409
+    ],
+    "caixa": [
+     0,
+     132,
+     1079,
+     1346
+    ]
+   },
+   "bloco": {
+    "y": 560,
+    "alinhar": "esquerda",
+    "largura": 936,
+    "manual": true
+   }
+  }
+ ]
 }

@@ -1,110 +1,110 @@
 {
-  "id": "2026-10-preciso-de-site",
-  "meta": {
-    "serie": "PERGUNTA DO DONO",
-    "data": "2026/10"
+ "id": "2026-10-preciso-de-site",
+ "meta": {
+  "serie": "PERGUNTA DO DONO",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1b",
+   "fundo": "papel",
+   "display": [
+    "PRECISO",
+    "DE [SITE]?"
+   ],
+   "imagem": "capa.png",
+   "recorte": "capa_recorte.png"
   },
-  "slides": [
-    {
-      "template": "T1b",
-      "fundo": "papel",
-      "display": [
-        "PRECISO",
-        "DE [SITE]?"
-      ],
-      "imagem": "capa.png",
-      "recorte": "capa_recorte.png"
-    },
-    {
-      "template": "T2",
-      "display": [
-        "O INSTAGRAM",
-        "NÃO É SEU."
-      ],
-      "emocao": {
-        "texto": "você é [inquilino].",
-        "posicao": "depois"
-      },
-      "imagem": "slide2_led.png"
-    },
-    {
-      "template": "T3",
-      "display": [
-        "QUANDO O SITE",
-        "FAZ {SENTIDO}"
-      ],
-      "lista": [
-        "O cliente te procura no Google",
-        "Você vende ou agenda serviço",
-        "A pessoa precisa confiar antes de chamar",
-        "Você quer ser achado fora do seu círculo"
-      ],
-      "textura": "led"
-    },
-    {
-      "template": "T2",
-      "display": [
-        "SE SÓ VENDE",
-        "PRA QUEM JÁ TE"
-      ],
-      "emocao": {
-        "texto": "{conhece}.",
-        "posicao": "depois"
-      }
-    },
-    {
-      "template": "T3",
-      "display": [
-        "O MÍNIMO",
-        "{ÚTIL}"
-      ],
-      "lista": [
-        "O que você faz, em uma frase",
-        "Onde fica e que horas abre",
-        "Um botão pro WhatsApp",
-        "Fotos reais do trabalho"
-      ],
-      "textura": "led"
-    },
-    {
-      "template": "T2c",
-      "display": [
-        "NÃO PRECISA",
-        "SER GRANDE,"
-      ],
-      "emocao": {
-        "texto": "precisa ser {achado}.",
-        "posicao": "depois"
-      }
-    },
-    {
-      "template": "T3",
-      "display": [
-        "A PERGUNTA",
-        "CERTA É"
-      ],
-      "emocao": {
-        "texto": "o cliente {te acha}?",
-        "posicao": "depois"
-      },
-      "textura": "led"
-    },
-    {
-      "template": "T4",
-      "display": [
-        "TEM UMA",
-        "DÚVIDA DE"
-      ],
-      "emocao": {
-        "texto": "dono?",
-        "posicao": "depois"
-      },
-      "cta": {
-        "acao": "Comenta DUVIDA",
-        "texto": "que eu respondo a sua em um próximo carrossel"
-      },
-      "imagem": "cta.png",
-      "recorte": "cta_recorte.png"
-    }
-  ]
+  {
+   "template": "T2",
+   "display": [
+    "O INSTAGRAM",
+    "NÃO É SEU."
+   ],
+   "emocao": {
+    "texto": "você é [inquilino].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png"
+  },
+  {
+   "template": "T3",
+   "display": [
+    "QUANDO O SITE",
+    "FAZ {SENTIDO}"
+   ],
+   "lista": [
+    "O cliente te procura no Google",
+    "Você vende ou agenda serviço",
+    "A pessoa precisa confiar antes de chamar",
+    "Você quer ser achado fora do seu círculo"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "SE SÓ VENDE",
+    "PRA QUEM JÁ TE"
+   ],
+   "emocao": {
+    "texto": "{conhece}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O MÍNIMO",
+    "{ÚTIL}"
+   ],
+   "lista": [
+    "O que você faz, em uma frase",
+    "Onde fica e que horas abre",
+    "Um botão pro WhatsApp",
+    "Fotos reais do trabalho"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "NÃO PRECISA",
+    "SER GRANDE,"
+   ],
+   "emocao": {
+    "texto": "precisa ser {achado}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "A PERGUNTA",
+    "CERTA É"
+   ],
+   "emocao": {
+    "texto": "o cliente {te acha}?",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "TEM UMA",
+    "DÚVIDA DE"
+   ],
+   "emocao": {
+    "texto": "dono?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta DUVIDA",
+    "texto": "que eu respondo a sua em um próximo carrossel"
+   },
+   "imagem": "cta.png",
+   "recorte": "cta_recorte.png"
+  }
+ ]
 }

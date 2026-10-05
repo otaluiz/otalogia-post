@@ -1,112 +1,112 @@
 {
-  "id": "2026-10-ia-sem-hype",
-  "meta": {
-    "serie": "IA SEM HYPE",
-    "data": "2026/10"
+ "id": "2026-10-ia-sem-hype",
+ "meta": {
+  "serie": "IA SEM HYPE",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "POUCA GENTE",
+    "SABE [CORTAR]."
+   ],
+   "emocao": {
+    "texto": "todo mundo usa IA.",
+    "posicao": "antes"
+   },
+   "imagem": "capa.png",
+   "tecido": true
   },
-  "slides": [
-    {
-      "template": "T1",
-      "display": [
-        "POUCA GENTE",
-        "SABE [CORTAR]."
-      ],
-      "emocao": {
-        "texto": "todo mundo usa IA.",
-        "posicao": "antes"
-      },
-      "imagem": "capa.png",
-      "tecido": true
-    },
-    {
-      "template": "T2",
-      "display": [
-        "A IA TE DÁ",
-        "DEZ VERSÕES."
-      ],
-      "emocao": {
-        "texto": "quem escolhe é [você].",
-        "posicao": "depois"
-      },
-      "imagem": "slide2_led.png"
-    },
-    {
-      "template": "T3",
-      "display": [
-        "O QUE ELA",
-        "{NÃO} FAZ"
-      ],
-      "lista": [
-        "Saber o que o seu cliente precisa ver primeiro",
-        "Decidir o que fica de fora",
-        "Perceber quando algo está genérico",
-        "Responder pelo resultado"
-      ],
-      "textura": "led"
-    },
-    {
-      "template": "T2",
-      "display": [
-        "A IA ADICIONA",
-        "COM FACILIDADE."
-      ],
-      "emocao": {
-        "texto": "design é {tirar}.",
-        "posicao": "depois"
-      }
-    },
-    {
-      "template": "T3",
-      "display": [
-        "O QUE EU",
-        "{CORTO}"
-      ],
-      "lista": [
-        "Texto que repete o que a imagem já diz",
-        "Enfeite que não ajuda a entender",
-        "A segunda ideia do mesmo post",
-        "A cor que briga com a marca"
-      ],
-      "textura": "led"
-    },
-    {
-      "template": "T2c",
-      "display": [
-        "A IA FAZ",
-        "O RASCUNHO."
-      ],
-      "emocao": {
-        "texto": "o critério é {humano}.",
-        "posicao": "depois"
-      }
-    },
-    {
-      "template": "T3",
-      "display": [
-        "EU USO IA",
-        "PRA {ACELERAR}."
-      ],
-      "emocao": {
-        "texto": "não pra decidir.",
-        "posicao": "depois"
-      },
-      "textura": "led"
-    },
-    {
-      "template": "T4",
-      "display": [
-        "QUER QUE EU",
-        "EDITE O"
-      ],
-      "emocao": {
-        "texto": "seu material?",
-        "posicao": "depois"
-      },
-      "cta": {
-        "acao": "Comenta EDITAR",
-        "texto": "que eu te mando 3 cortes no direct"
-      },
-      "imagem": "cta.png"
-    }
-  ]
+  {
+   "template": "T2",
+   "display": [
+    "A IA TE DÁ",
+    "DEZ VERSÕES."
+   ],
+   "emocao": {
+    "texto": "quem escolhe é [você].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png"
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE ELA",
+    "{NÃO} FAZ"
+   ],
+   "lista": [
+    "Saber o que o seu cliente precisa ver primeiro",
+    "Decidir o que fica de fora",
+    "Perceber quando algo está genérico",
+    "Responder pelo resultado"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "A IA ADICIONA",
+    "COM FACILIDADE."
+   ],
+   "emocao": {
+    "texto": "design é {tirar}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE EU",
+    "{CORTO}"
+   ],
+   "lista": [
+    "Texto que repete o que a imagem já diz",
+    "Enfeite que não ajuda a entender",
+    "A segunda ideia do mesmo post",
+    "A cor que briga com a marca"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "A IA FAZ",
+    "O RASCUNHO."
+   ],
+   "emocao": {
+    "texto": "o critério é {humano}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "EU USO IA",
+    "PRA {ACELERAR}."
+   ],
+   "emocao": {
+    "texto": "não pra decidir.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER QUE EU",
+    "EDITE O"
+   ],
+   "emocao": {
+    "texto": "seu material?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta EDITAR",
+    "texto": "que eu te mando 3 cortes no direct"
+   },
+   "imagem": "cta.png"
+  }
+ ]
 }

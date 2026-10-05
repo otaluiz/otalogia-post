@@ -1,183 +1,183 @@
 {
-  "id": "2026-10-logo-sistema",
-  "meta": {
-    "serie": "ANTES E DEPOIS",
-    "data": "2026/10"
+ "id": "2026-10-logo-sistema",
+ "meta": {
+  "serie": "ANTES E DEPOIS",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1b",
+   "fundo": "papel",
+   "display": [
+    "A MENOR PARTE",
+    "DA SUA [MARCA]."
+   ],
+   "emocao": {
+    "texto": "o logo é",
+    "posicao": "antes"
+   },
+   "imagem": "capa_orig.png",
+   "recorte": "capa_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     360,
+     560,
+     740,
+     1010
+    ],
+    "caixa": [
+     0,
+     574,
+     1040,
+     1439
+    ],
+    "cabeca_manual": [
+     360,
+     560,
+     740,
+     1010
+    ]
+   },
+   "bloco": {
+    "y": 260,
+    "alinhar": "esquerda",
+    "largura": 936,
+    "manual": true
+   },
+   "rodape": "claro"
   },
-  "slides": [
-    {
-      "template": "T1b",
-      "fundo": "papel",
-      "display": [
-        "A MENOR PARTE",
-        "DA SUA [MARCA]."
-      ],
-      "emocao": {
-        "texto": "o logo é",
-        "posicao": "antes"
-      },
-      "imagem": "capa_orig.png",
-      "recorte": "capa_recorte.png",
-      "sujeito": {
-        "rostos": [],
-        "cabeca": [
-          360,
-          560,
-          740,
-          1010
-        ],
-        "caixa": [
-          0,
-          574,
-          1040,
-          1439
-        ],
-        "cabeca_manual": [
-          360,
-          560,
-          740,
-          1010
-        ]
-      },
-      "bloco": {
-        "y": 260,
-        "alinhar": "esquerda",
-        "largura": 936,
-        "manual": true
-      },
-      "rodape": "claro"
-    },
-    {
-      "template": "T2",
-      "display": [
-        "LOGO BONITO,",
-        "POST DE UM JEITO,"
-      ],
-      "emocao": {
-        "texto": "fachada de [outro].",
-        "posicao": "depois"
-      },
-      "imagem": "slide2_led.png",
-      "sujeito": {
-        "rostos": [],
-        "cabeca": [
-          113,
-          68,
-          482,
-          270
-        ],
-        "caixa": [
-          29,
-          76,
-          597,
-          925
-        ]
-      },
-      "bloco": {
-        "y": 900,
-        "alinhar": "esquerda",
-        "largura": 936
-      }
-    },
-    {
-      "template": "T3",
-      "display": [
-        "O QUE TINHA",
-        "{ANTES}"
-      ],
-      "lista": [
-        "Um logo bom, usado de cinco jeitos",
-        "Cada post numa cor diferente",
-        "Fonte escolhida na hora, toda vez",
-        "Fachada, cardápio e Instagram sem conversar"
-      ],
-      "textura": "led"
-    },
-    {
-      "template": "T2",
-      "display": [
-        "O CLIENTE NÃO",
-        "LEMBRA DO LOGO."
-      ],
-      "emocao": {
-        "texto": "lembra do {jeito}.",
-        "posicao": "depois"
-      }
-    },
-    {
-      "template": "T3",
-      "display": [
-        "O QUE VIRA",
-        "{SISTEMA}"
-      ],
-      "lista": [
-        "Duas ou três cores, sempre as mesmas",
-        "Uma fonte pra título, outra pra texto",
-        "Versões do logo pra cada tamanho",
-        "Um modelo de post pronto pra repetir"
-      ],
-      "textura": "led"
-    },
-    {
-      "template": "T2c",
-      "display": [
-        "MARCA É O",
-        "QUE SE"
-      ],
-      "emocao": {
-        "texto": "{repete}.",
-        "posicao": "depois"
-      }
-    },
-    {
-      "template": "T3",
-      "display": [
-        "COMECE PELAS",
-        "{CORES}."
-      ],
-      "emocao": {
-        "texto": "escolha duas e não troque.",
-        "posicao": "depois"
-      },
-      "textura": "led"
-    },
-    {
-      "template": "T4",
-      "display": [
-        "QUER VER SUA",
-        "MARCA EM"
-      ],
-      "emocao": {
-        "texto": "[sistema]?",
-        "posicao": "depois"
-      },
-      "cta": {
-        "acao": "Comenta MARCA",
-        "texto": "e eu te mostro o que fixar primeiro na sua"
-      },
-      "imagem": "cta_orig.png",
-      "sujeito": {
-        "rostos": [],
-        "cabeca": [
-          238,
-          665,
-          798,
-          847
-        ],
-        "caixa": [
-          255,
-          672,
-          992,
-          1439
-        ],
-        "rostos_so_manual": true
-      },
-      "bloco": {
-        "y": 200,
-        "alinhar": "esquerda",
-        "largura": 936,
-        "manual": true
-      }
-    }
-  ]
+  {
+   "template": "T2",
+   "display": [
+    "LOGO BONITO,",
+    "POST DE UM JEITO,"
+   ],
+   "emocao": {
+    "texto": "fachada de [outro].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     113,
+     68,
+     482,
+     270
+    ],
+    "caixa": [
+     29,
+     76,
+     597,
+     925
+    ]
+   },
+   "bloco": {
+    "y": 900,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE TINHA",
+    "{ANTES}"
+   ],
+   "lista": [
+    "Um logo bom, usado de cinco jeitos",
+    "Cada post numa cor diferente",
+    "Fonte escolhida na hora, toda vez",
+    "Fachada, cardápio e Instagram sem conversar"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "O CLIENTE NÃO",
+    "LEMBRA DO LOGO."
+   ],
+   "emocao": {
+    "texto": "lembra do {jeito}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE VIRA",
+    "{SISTEMA}"
+   ],
+   "lista": [
+    "Duas ou três cores, sempre as mesmas",
+    "Uma fonte pra título, outra pra texto",
+    "Versões do logo pra cada tamanho",
+    "Um modelo de post pronto pra repetir"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "MARCA É O",
+    "QUE SE"
+   ],
+   "emocao": {
+    "texto": "{repete}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "COMECE PELAS",
+    "{CORES}."
+   ],
+   "emocao": {
+    "texto": "escolha duas e não troque.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER VER SUA",
+    "MARCA EM"
+   ],
+   "emocao": {
+    "texto": "[sistema]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta MARCA",
+    "texto": "e eu te mostro o que fixar primeiro na sua"
+   },
+   "imagem": "cta_orig.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     238,
+     665,
+     798,
+     847
+    ],
+    "caixa": [
+     255,
+     672,
+     992,
+     1439
+    ],
+    "rostos_so_manual": true
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936,
+    "manual": true
+   }
+  }
+ ]
 }
