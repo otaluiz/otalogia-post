@@ -2,7 +2,7 @@
 
 Guia de temas para a rotina de carrosséis. Cada linha vira um `carrossel.json` no motor `motor/` (submódulo carrossel-engine; ver `motor/carrossel.schema.md`; tema da marca em `design-system/tema/`; render: `python ../../motor/render.py carrossel.json png --tema ../../design-system/tema`, a partir da pasta do carrossel). Atualizar a seção "Já publicados/produzidos" a cada carrossel novo, para não repetir tema nem pose do T1b.
 
-Atualizado em 2026-10-05.
+Atualizado em 2026-10-06.
 
 ## Regras fixas de produção
 
@@ -35,8 +35,9 @@ Atualizado em 2026-10-05.
 | 15 | postar-todo-dia | Pergunta do Dono | Preciso postar todo *dia*? | T1b (E8 jornal em branco, fundo marinho com pincelada laranja) | Identificação | POSTAR | 14 | aprovado |
 | 14 | desiste-antes | Diagnóstico | Seu cliente *desiste* antes de te chamar. | T1 (escada até porta acesa, figura de costas) + 3 T5 (Linktree, modelos de bio, Zapier) | Descoberta | LINK | 15 | rascunho |
 | 16 | prompt-briefing | IA sem hype | A IA não sabe o que você *quer*. | T1 (megafone de pedra num cânion, figura na beirada) | Opinião | BRIEFING | 16 | rascunho |
+| 17 | agenda-caderno | Planta | O cliente voltaria. Só faltou *lembrar*. | T1b (E3 miniatura sobre agenda gigante em branco; sem recorte, fica como T1) | Autoridade | AGENDA | 17 | rascunho |
 
-Poses de T1b já usadas: olho de peixe de cima com celulares (#2); mão estendida pra câmera, agachado (CTA #2); olho de peixe com caneca laranja (#3); cadeira flutuando sobre névoa (CTA #3); spray desenhando setas (#6); sentado na beira da laje, E6 (CTA #6); câmera antiga de frente (#8); sentado em laje flutuante com câmera (CTA #8); telefone de fio, E11 (#10); banqueta em estúdio marinho, E7 (CTA #10); lendo jornal em branco com mala, E8 (#15); atrás do quadro-negro em branco com giz, E12 (CTA #15); carimbo em branco pra lente, contra-plongée em creme (#12); varal com cartelas de cor contra céu azul, E9 (CTA #12). Banco de estéticas: `design-system/esteticas-editoriais.md`.
+Poses de T1b já usadas: olho de peixe de cima com celulares (#2); mão estendida pra câmera, agachado (CTA #2); olho de peixe com caneca laranja (#3); cadeira flutuando sobre névoa (CTA #3); spray desenhando setas (#6); sentado na beira da laje, E6 (CTA #6); câmera antiga de frente (#8); sentado em laje flutuante com câmera (CTA #8); telefone de fio, E11 (#10); banqueta em estúdio marinho, E7 (CTA #10); miniatura sobre agenda gigante, E3 (#17); segurando folha em branco, busto (CTA #17); lendo jornal em branco com mala, E8 (#15); atrás do quadro-negro em branco com giz, E12 (CTA #15); carimbo em branco pra lente, contra-plongée em creme (#12); varal com cartelas de cor contra céu azul, E9 (CTA #12). Banco de estéticas: `design-system/esteticas-editoriais.md`.
 
 ## Próximos (backlog, em ordem)
 
@@ -44,7 +45,6 @@ Pares de validação: cada par tem um T1 e um T1b.
 
 | # | Série | Tema | Hook sugerido | Capa | Pilar | CTA |
 |---|---|---|---|---|---|---|
-| 17 | Planta | Agenda no caderno e retorno que nunca acontece (lembrete automático) | O cliente voltaria. Só faltou *lembrar*. | T1b (E3 miniatura sobre agenda gigante em branco; CTA E10 cabeça-objeto) | Autoridade | AGENDA |
 | 13 | Case aidealab | Antes e depois de um cliente aidealab | O que mudou quando o site *começou a vender*. | T1 | Conversão | AIDEALAB |
 
 Notas:

@@ -1,0 +1,180 @@
+{
+ "id": "2026-10-agenda-caderno",
+ "meta": {
+  "serie": "PLANTA",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "O CLIENTE",
+    "VOLTARIA."
+   ],
+   "emocao": {
+    "texto": "só faltou [lembrar].",
+    "posicao": "depois"
+   },
+   "imagem": "capa.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     456,
+     835,
+     528,
+     915
+    ],
+    "caixa": [
+     415,
+     838,
+     565,
+     1178
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "O RETORNO FICOU",
+    "NO CADERNO"
+   ],
+   "emocao": {
+    "texto": "e o caderno [esqueceu].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "caixa": [
+     0,
+     652,
+     783,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "ONDE O RETORNO",
+    "{SE PERDE}"
+   ],
+   "lista": [
+    "Anotado na agenda de papel",
+    "Guardado só na cabeça",
+    "Dito no balcão e esquecido",
+    "Sem data pra falar de novo"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "O CLIENTE",
+    "NÃO SUMIU."
+   ],
+   "emocao": {
+    "texto": "ninguém {chamou}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE UM",
+    "{LEMBRETE} FAZ"
+   ],
+   "lista": [
+    "Avisa na data certa",
+    "Manda a mensagem por você",
+    "Mostra quem está atrasado",
+    "Funciona nos dias corridos"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "A AGENDA",
+    "AVISA SOZINHA"
+   ],
+   "emocao": {
+    "texto": "sem depender da {memória}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O CLIENTE",
+    "VOLTA QUANDO"
+   ],
+   "emocao": {
+    "texto": "alguém {chama}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER A AGENDA",
+    "TRABALHANDO"
+   ],
+   "emocao": {
+    "texto": "[por você]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta AGENDA",
+    "texto": "que eu te mando um passo a passo de lembrete no direct"
+   },
+   "imagem": "cta.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     190,
+     60,
+     620,
+     700
+    ],
+    "caixa": [
+     0,
+     36,
+     1079,
+     1439
+    ],
+    "cabeca_manual": [
+     190,
+     60,
+     620,
+     700
+    ]
+   },
+   "bloco": {
+    "y": 720,
+    "alinhar": "esquerda",
+    "largura": 560,
+    "manual": true
+   },
+   "recorte": "cta_recorte.png",
+   "texto_frente": true
+  }
+ ]
+}

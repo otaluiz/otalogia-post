@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-agenda-caderno",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-06",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 17,
+  "serie": "PLANTA",
+  "tema": "O CLIENTE VOLTARIA. só faltou lembrar.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "O CLIENTE VOLTARIA. só faltou lembrar."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "O RETORNO FICOU NO CADERNO e o caderno esqueceu."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "ONDE O RETORNO SE PERDE Anotado na agenda de papel Guardado só na cabeça Dito no balcão e esquecido Sem data pra falar de novo"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "O CLIENTE NÃO SUMIU. ninguém chamou."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE UM LEMBRETE FAZ Avisa na data certa Manda a mensagem por você Mostra quem está atrasado Funciona nos dias corridos"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "A AGENDA AVISA SOZINHA sem depender da memória."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "O CLIENTE VOLTA QUANDO alguém chama."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER A AGENDA TRABALHANDO por você? Comenta AGENDA que eu te mando um passo a passo de lembrete no direct"
+    }
+  ],
+  "legenda": "O cliente queria voltar. O retorno ficou anotado no caderno, e ninguém chamou de novo.\n\nQuando o retorno depende da memória, ele se perde em algum dia corrido. Um lembrete automático avisa na data certa e manda a mensagem por você, sem esperar a agenda de papel ser aberta.\n\nSe hoje o seu retorno mora no caderno, vale tirar de lá.\n\nComenta AGENDA que eu te mando um passo a passo de lembrete no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#instagramparanegocios",
+    "#pequenosnegocios",
+    "#atendimento",
+    "#automacao"
+  ],
+  "handle": "@otalogia"
+}
