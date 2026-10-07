@@ -1,0 +1,132 @@
+{
+  "id": "2026-10-teste-do-site",
+  "meta": {
+    "serie": "REFERÊNCIA",
+    "data": "2026/10"
+  },
+  "slides": [
+    {
+      "template": "T1",
+      "display": [
+        "[TESTAR]",
+        "SEU SITE"
+      ],
+      "emocao": {
+        "texto": "dá pra",
+        "posicao": "antes"
+      },
+      "imagem": "capa.png",
+      "tecido": true,
+      "bloco": {
+        "y": 680,
+        "alinhar": "esquerda",
+        "largura": 936,
+        "manual": true
+      }
+    },
+    {
+      "template": "T2",
+      "display": [
+        "A PÁGINA DEMORA",
+        "E O CLIENTE"
+      ],
+      "emocao": {
+        "texto": "vai [embora].",
+        "posicao": "depois"
+      },
+      "imagem": "slide2_led.png",
+      "bloco": {
+        "y": 200,
+        "alinhar": "esquerda",
+        "largura": 936,
+        "manual": true
+      }
+    },
+    {
+      "template": "T5",
+      "display": [
+        "VELOCIDADE",
+        "NO CELULAR"
+      ],
+      "referencia": {
+        "site": "pagespeed.web.dev",
+        "nome": "PageSpeed Insights",
+        "descricao": "Cola o endereço e vê a nota de velocidade. Grátis, do Google.",
+        "print": "ref-pagespeed.png"
+      }
+    },
+    {
+      "template": "T5",
+      "display": [
+        "COMO O GOOGLE",
+        "TE VÊ"
+      ],
+      "referencia": {
+        "site": "search.google.com/search-console",
+        "nome": "Search Console",
+        "descricao": "Mostra com quais buscas seu site aparece e o que está com erro.",
+        "print": "ref-searchconsole.png"
+      }
+    },
+    {
+      "template": "T5",
+      "display": [
+        "SUA VITRINE",
+        "NO MAPA"
+      ],
+      "referencia": {
+        "site": "google.com/business",
+        "nome": "Perfil da Empresa",
+        "descricao": "Perfil grátis na busca e no Maps, com fotos e avaliações.",
+        "print": "ref-business.png"
+      }
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "O TESTE",
+        "DÁ A LISTA."
+      ],
+      "emocao": {
+        "texto": "comece pelo {mais lento}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "ROTEIRO DE",
+        "{DOMINGO}"
+      ],
+      "lista": [
+        "Cole o endereço no PageSpeed",
+        "Anote o que veio em vermelho",
+        "Veja no Search Console se o Google te acha",
+        "Revise seu perfil no Maps"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER O PASSO",
+        "A PASSO?"
+      ],
+      "emocao": {
+        "texto": "do meu [jeito].",
+        "posicao": "depois"
+      },
+      "cta": {
+        "acao": "Comenta TESTE",
+        "texto": "que eu te mando o roteiro no direct"
+      },
+      "imagem": "cta.png",
+      "bloco": {
+        "y": 500,
+        "alinhar": "esquerda",
+        "largura": 936,
+        "manual": true
+      }
+    }
+  ]
+}

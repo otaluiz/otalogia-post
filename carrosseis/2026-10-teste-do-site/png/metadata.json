@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-teste-do-site",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-07",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 18,
+  "serie": "REFERÊNCIA",
+  "tema": "TESTAR SEU SITE dá pra",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T5-T5-T5-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "TESTAR SEU SITE dá pra"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "A PÁGINA DEMORA E O CLIENTE vai embora."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "VELOCIDADE NO CELULAR"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "COMO O GOOGLE TE VÊ"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "SUA VITRINE NO MAPA"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "O TESTE DÁ A LISTA. comece pelo mais lento."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "ROTEIRO DE DOMINGO Cole o endereço no PageSpeed Anote o que veio em vermelho Veja no Search Console se o Google te acha Revise seu perfil no Maps"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER O PASSO A PASSO? do meu jeito. Comenta TESTE que eu te mando o roteiro no direct"
+    }
+  ],
+  "legenda": "Dá pra testar seu site hoje, de graça, sem pedir nada pra ninguém.\n\nTrês ferramentas do Google fazem o trabalho: o PageSpeed Insights mostra a velocidade no celular, o Search Console mostra com quais buscas você aparece e o que está com erro, e o Perfil da Empresa cuida da sua vitrine na busca e no Maps.\n\nComece pelo ponto que veio pior. Cole o endereço, anote o que ficou em vermelho e resolva um item por vez.\n\nComenta TESTE que eu te mando o roteiro passo a passo no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#site",
+    "#pagespeed",
+    "#seo",
+    "#negociolocal"
+  ],
+  "handle": "@otalogia"
+}
