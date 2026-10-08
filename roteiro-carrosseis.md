@@ -48,6 +48,11 @@ Pares de validação: cada par tem um T1 e um T1b.
 | # | Série | Tema | Hook sugerido | Capa | Pilar | CTA |
 |---|---|---|---|---|---|---|
 | 13 | Case aidealab | Antes e depois de um cliente aidealab | O que mudou quando o site *começou a vender*. | T1 | Conversão | AIDEALAB |
+| 21 | Pergunta do Dono | Instagram como buscador: NAME, bio e legenda com a palavra que o cliente digita | Seu cliente te acha *buscando*? | T1b | Descoberta | BUSCA |
+| 22 | Planta | Resposta automática no Direct/WhatsApp fora do horário | Seu Direct responde às 23h. *Você* não. | T1 | Autoridade | DIRECT |
+| 23 | IA sem hype | Post genérico de IA: todo mundo reconhece e passa direto | Todo mundo reconhece post de IA. E *passa*. | T1b | Opinião | HUMANO |
+
+Os #21 a #23 vieram da pesquisa de 2026-10-08 (`pesquisa/instagram/analise-e-plano.md`). O calendário de 12/out a 8/nov também está lá.
 
 Notas:
 - Os hooks do backlog são ponto de partida e passam pela copywriting + humanizer antes de virar slide.
