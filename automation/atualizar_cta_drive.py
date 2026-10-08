@@ -1,4 +1,4 @@
-"""Atualiza no Drive o slide CTA (último PNG, halftone) e o slide 3 só de texto (quadro-negro) dos carrosséis da
+"""Atualiza no Drive o slide CTA (último PNG, halftone) e o slide 3 T3 (quadro-negro) dos carrosséis da
 otalogia já enviados, com o render atual do repo. Procura a pasta pelo nome do carrossel em Clientes/otalogia/04-Carrosseis e em
 06-Aprovados-para-Postar (e nas subpastas dela) e sobe o PNG como nova revisão do mesmo arquivo (o histórico do
 Drive guarda a versão anterior). Roda no GitHub Actions (workflow atualizar-cta-drive.yml, secrets GOOGLE_DRIVE_*).
@@ -32,7 +32,7 @@ def main():
             continue
         slides = json.loads(cj.read_text(encoding="utf-8"))["slides"]
         alvos = [f"slide-{len(slides):02d}.png"]
-        if len(slides) > 3 and slides[2].get("template") in ("T2", "T2c", "T3") and not slides[2].get("imagem"):
+        if len(slides) > 3 and slides[2].get("template") == "T3" and not slides[2].get("imagem"):
             alvos.append("slide-03.png")
         no_drive = filhos(svc, pastas[d.name])
         for arq in alvos:
