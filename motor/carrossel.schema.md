@@ -120,4 +120,4 @@ Colisão (JS, depois do ajuste do display): se emocao/CTA/corpo/gancho tocam cab
 
 ## Tecido (`tecido`)
 
-Trama de pano (`assets/pano.png`, soft-light, opacidade `--tex-pano`) por cima de tudo. T1b camadas: padrão ligado (`"tecido": false` desliga). T1: padrão desligado (`"tecido": true` liga).
+Trama de pano (`assets/pano.png`, soft-light, opacidade `--tex-pano`) por cima de tudo. T1b camadas: padrão ligado (`"tecido": false` desliga). T1: padrão desligado (`"tecido": true` liga). T4 (CTA): padrão ligado (`"tecido": false` desliga).

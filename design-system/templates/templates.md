@@ -63,7 +63,6 @@ A virada/insight.
 - Display + serifada grande sobreposta (a palavra-emoção "pendurada" na margem), com a conclusão em serifada itálica abaixo.
 
 ## T3 — Ink (miolo técnico/diagrama)
-- Slide 3 T3 (fundo escuro; papel não): quadro-negro na cor da marca no slide inteiro (`motor/filtro_quadro.py`, aprovado 2026-10-08), pelo `"quadro_slide3": true` do `tema.json`.
 
 Prova, números, processo, listas.
 - Fundo ink `#0B0B12` com grão.
@@ -76,7 +75,7 @@ Prova, números, processo, listas.
 - Fundo: **foto escurecida 70% (obrigatória)**: sangrada, com véu ink `#0B0B12` chapado a 70% (sem gradiente) e grão por cima; o resto do layout é o mesmo. `imagem: null` usa o placeholder de crepúsculo sob o mesmo véu, com aviso.
 - Headline de convite com a dupla display + serifada laranja.
 - Pill CTA: fundo laranja, texto ink, Inter Tight 900 30px, cantos de 14px. Ação de palavra-comentário ("Comenta EDITAR que eu te mando…") ou salvar/compartilhar.
-- Textura halftone de impresso no slide inteiro, letras incluídas (`motor/filtro_halftone.py`, aprovado 2026-10-08). O `render.py` aplica sozinho pelo `"halftone_cta": true` do `tema.json`.
+- Trama de tecido por cima de tudo (foto e texto), a mesma do hook (`motor/assets/pano.png`, soft-light 55%): padrão ligado no T4, `"tecido": false` desliga (aprovado 2026-10-08).
 
 ## Arco do carrossel (padrão 7-9 slides)
 

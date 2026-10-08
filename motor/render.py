@@ -21,9 +21,6 @@ from pathlib import Path
 from PIL import Image
 from playwright.sync_api import sync_playwright
 
-from filtro_halftone import halftone
-from filtro_quadro import quadro
-
 W, H = 1080, 1440
 AQUI = Path(__file__).resolve().parent
 
@@ -111,11 +108,6 @@ def main():
     for i, b in enumerate(shots, 1):
         png = out_dir / f"slide-{i:02d}.png"
         png.write_bytes(b)
-        if tema.get("halftone_cta") and i == len(shots):  # halftone no CTA inteiro, letras incluídas
-            halftone(Image.open(png)).save(png)
-        s3 = data["slides"][2] if len(shots) > 3 else {}
-        if tema.get("quadro_slide3") and i == 3 and s3.get("template") == "T3" and not s3.get("imagem"):
-            quadro(Image.open(png)).save(png)  # quadro-negro no slide 3 T3 (fundo escuro; papel não)
         pngs.append(png)
     for png in pngs:
         assert Image.open(png).size == (W, H), f"{png} fora de {W}x{H}"
