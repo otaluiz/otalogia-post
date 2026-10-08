@@ -1,5 +1,5 @@
-# Sobe para o Drive o CTA atual (halftone) dos carrosséis já enviados. Disparo manual; dry_run só lista.
-name: atualizar CTA no drive
+# Sobe para o Drive o CTA (halftone) e o slide 3 (quadro-negro) atuais dos carrosséis já enviados. Disparo manual; dry_run só lista.
+name: atualizar CTA e slide 3 no drive
 on:
   workflow_dispatch:
     inputs:
