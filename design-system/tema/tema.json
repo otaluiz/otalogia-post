@@ -5,5 +5,6 @@
   "rodape_centro": "salva pra depois",
   "google_fonts": "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap",
   "fontes": ["900 100px \"Inter Tight\"", "400 30px \"Inter Tight\"", "500 30px \"Inter Tight\"", "italic 400 100px \"Instrument Serif\"", "400 20px \"JetBrains Mono\""],
-  "familia_cor": "ink-laranja"
+  "familia_cor": "ink-laranja",
+  "halftone_cta": true
 }
