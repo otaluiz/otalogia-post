@@ -1,0 +1,34 @@
+name: instagram-pesquisa
+# Coleta dados públicos do Instagram via Apify (secret APIFY_TOKEN) e grava JSON em pesquisa/instagram/.
+on:
+  workflow_dispatch:
+  push:
+    paths: [pesquisa/instagram/alvos.txt]
+permissions:
+  contents: write
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Coletar
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -n "$APIFY_TOKEN" || { echo "APIFY_TOKEN ausente"; exit 1; }
+          out=pesquisa/instagram/dados; mkdir -p "$out"
+          run() { curl -sS --fail-with-body -m 600 -X POST -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' \
+            "https://api.apify.com/v2/acts/$1/run-sync-get-dataset-items" -d "$2"; }
+          perfis=$(grep '^@' pesquisa/instagram/alvos.txt | tr -d '@' | jq -R . | jq -sc .)
+          run apify~instagram-profile-scraper "{\"usernames\":$perfis}" > "$out/perfis.json"
+          for h in $(grep '^#' pesquisa/instagram/alvos.txt | tr -d '#'); do
+            run apify~instagram-hashtag-scraper "{\"hashtags\":[\"$h\"],\"resultsLimit\":30}" > "$out/hashtag-$h.json" || echo "falhou: $h"
+          done
+      - name: Commit
+        run: |
+          git config user.name github-actions; git config user.email github-actions@users.noreply.github.com
+          git add pesquisa/instagram/dados
+          git diff --cached --quiet || git commit -m "data: coleta instagram (Apify)"
+          git push
