@@ -75,7 +75,7 @@ Prova, números, processo, listas.
 - Fundo: **foto escurecida 70% (obrigatória)**: sangrada, com véu ink `#0B0B12` chapado a 70% (sem gradiente) e grão por cima; o resto do layout é o mesmo. `imagem: null` usa o placeholder de crepúsculo sob o mesmo véu, com aviso.
 - Headline de convite com a dupla display + serifada laranja.
 - Pill CTA: fundo laranja, texto ink, Inter Tight 900 30px, cantos de 14px. Ação de palavra-comentário ("Comenta EDITAR que eu te mando…") ou salvar/compartilhar.
-- Trama de tecido por cima de tudo (foto e texto), a mesma do hook (`motor/assets/pano.png`, soft-light 55%): padrão ligado no T4, `"tecido": false` desliga (aprovado 2026-10-08).
+- Trama de tecido por cima de tudo, a mesma do hook (`motor/assets/pano.png`, soft-light 55%), mais os fios em multiply 16% (`.tex-pano-fio`) para a trama marcar também as letras: padrão ligado no T4, `"tecido": false` desliga (aprovado 2026-10-08).
 
 ## Arco do carrossel (padrão 7-9 slides)
 

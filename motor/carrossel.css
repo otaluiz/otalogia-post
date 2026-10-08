@@ -206,6 +206,8 @@ body.single #carrossel { padding: 0; gap: 0; display: block; }
 .t2 .dobra { display: none; }
 /* T1b: trama de tecido sobre tudo (foto, título e recorte), como impresso em pano */
 .tex-pano { z-index: 30; background-image: url('assets/pano.png'); mix-blend-mode: soft-light; opacity: var(--tex-pano, .55); }
+/* T4 (CTA): a mesma trama também nas letras: multiply leve marca os fios no branco (soft-light não muda o branco) */
+.tex-pano-fio { position: absolute; inset: 0; pointer-events: none; z-index: 31; background: url('assets/pano.png') 0 0 / 100% 100%; mix-blend-mode: multiply; opacity: var(--tex-pano-fio, .16); }
 /* T4 camadas: sujeito recortado acima do texto e do véu */
 .t4.camadas .recorte { position: absolute; inset: 0; z-index: 12; background-size: cover; background-position: center; pointer-events: none; }
 /* T4 camadas: sujeito no terço de cima (prompt/corte), texto embaixo dele — nunca um cobrindo o outro */

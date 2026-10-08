@@ -202,8 +202,8 @@
     var c = s.cta ? '<div class="cta"><span class="pill">' + marcar(s.cta.acao) + '</span><div class="txt">' + marcar(s.cta.texto || '') + '</div></div>' : '';
     var bg = s.imagem === undefined ? '' : '<div class="photo"' + (s.imagem ? ' style="background-image:url(\'' + esc(s.imagem) + '\')">' : '>' + SVG_FOTO) + '</div><div class="veu"></div>';
     // T4 camadas: com `recorte`, o sujeito fica na frente do texto e fora do véu (aparece inteiro)
-    // tecido no T4 (CTA): padrão ligado, o mesmo do hook ("tecido": false desliga)
-    return bg + '<div class="content">' + texto(s) + corpo(s) + c + '</div>' + recorteDiv(s) + (s.tecido === false ? '' : '<div class="tex-pano"></div>');
+    // tecido no T4 (CTA): padrão ligado, o mesmo do hook + fios nas letras ("tecido": false desliga)
+    return bg + '<div class="content">' + texto(s) + corpo(s) + c + '</div>' + recorteDiv(s) + (s.tecido === false ? '' : '<div class="tex-pano"></div><div class="tex-pano-fio"></div>');
   }
 
   function montarSlide(s, i, total, data) {
