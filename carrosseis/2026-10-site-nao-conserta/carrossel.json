@@ -1,0 +1,14 @@
+{
+ "id": "2026-10-site-nao-conserta",
+ "meta": {"serie": "DIAGNÓSTICO", "data": "2026/10"},
+ "slides": [
+  {"template": "T1", "display": ["SITE NOVO", "NÃO CONSERTA", "UM NEGÓCIO"], "emocao": {"texto": "[bagunçado].", "posicao": "depois"}, "imagem": "capa.png", "tecido": true},
+  {"template": "T2", "display": ["PINTOU A FACHADA", "SEM ARRUMAR"], "emocao": {"texto": "o [estoque].", "posicao": "depois"}, "imagem": "slide2_led.png"},
+  {"template": "T3", "display": ["O QUE O SITE", "NÃO {RESOLVE}"], "lista": ["Preço que muda a cada conversa", "Pedido que se perde no WhatsApp", "Cliente que fica sem resposta", "Ninguém sabe o que foi combinado"], "textura": "grain"},
+  {"template": "T2", "display": ["O CLIENTE CHEGA", "E ENCONTRA A MESMA"], "emocao": {"texto": "{confusão}.", "posicao": "depois"}},
+  {"template": "T3", "display": ["ANTES DO SITE,", "ARRUME O {BÁSICO}"], "lista": ["O que você vende, em uma frase", "Quanto custa, escrito", "Como o cliente pede, em um caminho só"], "textura": "led"},
+  {"template": "T2c", "display": ["SITE BOM MOSTRA", "UM NEGÓCIO"], "emocao": {"texto": "{claro}.", "posicao": "depois"}},
+  {"template": "T3", "display": ["PRIMEIRO A CASA.", "DEPOIS A {VITRINE}."], "emocao": {"texto": "nessa ordem.", "posicao": "depois"}, "textura": "led"},
+  {"template": "T4", "display": ["QUER QUE EU", "OLHE O SEU"], "emocao": {"texto": "[processo]?", "posicao": "depois"}, "cta": {"acao": "Comenta ORGANIZA", "texto": "que eu te mando um checklist no direct"}, "imagem": "cta.png"}
+ ]
+}

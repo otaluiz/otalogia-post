@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-site-nao-conserta",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-08",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 0,
+  "serie": "DIAGNÓSTICO",
+  "tema": "SITE NOVO NÃO CONSERTA UM NEGÓCIO bagunçado.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SITE NOVO NÃO CONSERTA UM NEGÓCIO bagunçado."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "PINTOU A FACHADA SEM ARRUMAR o estoque."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE O SITE NÃO RESOLVE Preço que muda a cada conversa Pedido que se perde no WhatsApp Cliente que fica sem resposta Ninguém sabe o que foi combinado"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "O CLIENTE CHEGA E ENCONTRA A MESMA confusão."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "ANTES DO SITE, ARRUME O BÁSICO O que você vende, em uma frase Quanto custa, escrito Como o cliente pede, em um caminho só"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "SITE BOM MOSTRA UM NEGÓCIO claro."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "PRIMEIRO A CASA. DEPOIS A VITRINE. nessa ordem."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER QUE EU OLHE O SEU processo? Comenta ORGANIZA que eu te mando um checklist no direct"
+    }
+  ],
+  "legenda": "Site novo ajuda quem já tem o básico em ordem. Se o preço muda a cada conversa e o pedido se perde no WhatsApp, a página bonita só aponta para a mesma confusão.\n\nAntes de mexer no site, escreva o que você vende, quanto custa e como o cliente pede. Depois a vitrine.\n\nComenta ORGANIZA que eu te mando um checklist no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#sitepraempresa",
+    "#negociolocal",
+    "#organizacao",
+    "#marketingdigital"
+  ],
+  "handle": "@otalogia"
+}

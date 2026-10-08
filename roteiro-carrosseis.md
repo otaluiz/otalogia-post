@@ -2,7 +2,7 @@
 
 Guia de temas para a rotina de carrosséis. Cada linha vira um `carrossel.json` no motor `motor/` (submódulo carrossel-engine; ver `motor/carrossel.schema.md`; tema da marca em `design-system/tema/`; render: `python ../../motor/render.py carrossel.json png --tema ../../design-system/tema`, a partir da pasta do carrossel). Atualizar a seção "Já publicados/produzidos" a cada carrossel novo, para não repetir tema nem pose do T1b.
 
-Atualizado em 2026-10-07.
+Atualizado em 2026-10-08.
 
 ## Regras fixas de produção
 
@@ -37,6 +37,7 @@ Atualizado em 2026-10-07.
 | 16 | prompt-briefing | IA sem hype | A IA não sabe o que você *quer*. | T1 (megafone de pedra num cânion, figura na beirada) | Opinião | BRIEFING | 16 | rascunho |
 | 17 | agenda-caderno | Planta | O cliente voltaria. Só faltou *lembrar*. | T1b (E3 miniatura sobre agenda gigante em branco; sem recorte, fica como T1) | Autoridade | AGENDA | 17 | rascunho |
 | 19 | teste-do-site | Referência | Dá pra testar seu site de graça. | T1 (figura erguendo cronômetro no salar) + 3 T5 (PageSpeed Insights, Search Console, Perfil da Empresa) | Autoridade | TESTE | 18 | rascunho |
+| 20 | site-nao-conserta | Diagnóstico | Site novo não conserta um negócio *bagunçado*. | T1 (porta laranja sozinha diante de pilha de caixas e papéis, figura pequena) | Opinião | ORGANIZA | 19 | rascunho |
 
 Poses de T1b já usadas: olho de peixe de cima com celulares (#2); mão estendida pra câmera, agachado (CTA #2); olho de peixe com caneca laranja (#3); cadeira flutuando sobre névoa (CTA #3); spray desenhando setas (#6); sentado na beira da laje, E6 (CTA #6); câmera antiga de frente (#8); sentado em laje flutuante com câmera (CTA #8); telefone de fio, E11 (#10); banqueta em estúdio marinho, E7 (CTA #10); miniatura sobre agenda gigante, E3 (#17); segurando folha em branco, busto (CTA #17); lendo jornal em branco com mala, E8 (#15); atrás do quadro-negro em branco com giz, E12 (CTA #15); carimbo em branco pra lente, contra-plongée em creme (#12); varal com cartelas de cor contra céu azul, E9 (CTA #12). Banco de estéticas: `design-system/esteticas-editoriais.md`.
 
