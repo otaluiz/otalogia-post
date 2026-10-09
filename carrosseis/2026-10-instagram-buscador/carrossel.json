@@ -1,0 +1,189 @@
+{
+ "id": "2026-10-instagram-buscador",
+ "meta": {
+  "serie": "PERGUNTA DO DONO",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1b",
+   "fundo": "ink",
+   "display": [
+    "SEU CLIENTE",
+    "TE ACHA"
+   ],
+   "emocao": {
+    "texto": "[buscando]?",
+    "posicao": "depois"
+   },
+   "imagem": "capa.png",
+   "recorte": "capa_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     235,
+     350,
+     845,
+     1100
+    ],
+    "caixa": [
+     0,
+     359,
+     1079,
+     1439
+    ],
+    "cabeca_manual": [
+     235,
+     350,
+     845,
+     1100
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 720,
+    "manual": true
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "ELE DIGITA",
+    "UMA PALAVRA"
+   ],
+   "emocao": {
+    "texto": "e você [não aparece].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     0,
+     586,
+     87,
+     756
+    ],
+    "caixa": [
+     0,
+     593,
+     208,
+     1308
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 720
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "ONDE O INSTAGRAM",
+    "{LÊ} A PALAVRA"
+   ],
+   "lista": [
+    "Nome do perfil",
+    "Bio",
+    "Legenda dos posts"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "QUEM PROCURA",
+    "NÃO SABE"
+   ],
+   "emocao": {
+    "texto": "o seu {nome}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE EU",
+    "{TROCO}"
+   ],
+   "lista": [
+    "Nome do perfil com a palavra que o cliente digita",
+    "Bio com o que você faz e onde",
+    "Primeira linha da legenda com a busca",
+    "A mesma palavra, repetida com naturalidade"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "ESCREVA COMO",
+    "O CLIENTE"
+   ],
+   "emocao": {
+    "texto": "{pesquisa}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "A PALAVRA",
+    "CERTA"
+   ],
+   "emocao": {
+    "texto": "vale mais que [slogan].",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER O MEU",
+    "CHECKLIST DE"
+   ],
+   "emocao": {
+    "texto": "busca?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta BUSCA",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta.png",
+   "sujeito": {
+    "rostos": [],
+    "rostos_so_manual": true,
+    "cabeca": [
+     300,
+     0,
+     860,
+     800
+    ],
+    "cabeca_manual": [
+     300,
+     0,
+     860,
+     800
+    ],
+    "caixa": [
+     0,
+     0,
+     1079,
+     1439
+    ]
+   },
+   "recorte": "cta_recorte.png",
+   "texto_frente": true,
+   "bloco": {
+    "y": 770,
+    "alinhar": "esquerda",
+    "largura": 560,
+    "manual": true
+   }
+  }
+ ]
+}

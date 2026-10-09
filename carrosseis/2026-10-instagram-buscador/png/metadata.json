@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-instagram-buscador",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-09",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 0,
+  "serie": "PERGUNTA DO DONO",
+  "tema": "SEU CLIENTE TE ACHA buscando?",
+  "familia_cor": "ink-laranja",
+  "template": "T1b-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SEU CLIENTE TE ACHA buscando?"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "ELE DIGITA UMA PALAVRA e você não aparece."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "ONDE O INSTAGRAM LÊ A PALAVRA Nome do perfil Bio Legenda dos posts"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "QUEM PROCURA NÃO SABE o seu nome."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE EU TROCO Nome do perfil com a palavra que o cliente digita Bio com o que você faz e onde Primeira linha da legenda com a busca A mesma palavra, repetida com naturalidade"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "ESCREVA COMO O CLIENTE pesquisa."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "A PALAVRA CERTA vale mais que slogan."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER O MEU CHECKLIST DE busca? Comenta BUSCA que eu te mando no direct"
+    }
+  ],
+  "legenda": "Quem procura um negócio no Instagram digita uma palavra, não o seu nome. Se o nome do perfil, a bio e a primeira linha da legenda não trazem essa palavra, a busca passa direto por você. Escreva do jeito que o cliente pesquisa.\n\nComenta BUSCA que eu te mando o checklist.",
+  "hashtags": [
+    "#otalogia",
+    "#instagramparanegocios",
+    "#marketingdigital",
+    "#pequenosnegocios",
+    "#buscanoinstagram"
+  ],
+  "handle": "@otalogia"
+}
