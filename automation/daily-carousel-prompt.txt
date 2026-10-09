@@ -9,7 +9,7 @@ Backlog (decida sozinho, não pergunte):
   escreva "backlog cheio (N rascunhos), pulei a geração de hoje" e pare.
 
 Tema:
-- Primeiro, o roteiro da semana: abra o arquivo mais recente em `roteiros/` (gerado toda segunda
+- Primeiro, o roteiro da semana: abra o `roteiros/*-semana.md` mais recente (gerado toda segunda
   a partir da pesquisa de tendências) e pegue o primeiro carrossel dele que ainda não tem pasta em
   `carrosseis/`. Use o hook, o texto slide a slide, o CTA e a legenda que estão lá como base da copy
   (ajuste ao template, sem mudar o ângulo).
