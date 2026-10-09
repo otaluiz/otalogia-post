@@ -2,4 +2,6 @@
 
 O mínimo útil cabe numa página: o que você faz, onde fica, horário, botão de WhatsApp e fotos reais.
 
+Manda pra quem está em dúvida se precisa de site.
+
 Comenta DUVIDA que eu respondo a sua num próximo carrossel.

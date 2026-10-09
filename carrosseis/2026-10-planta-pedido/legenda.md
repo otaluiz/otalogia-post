@@ -2,4 +2,6 @@ Quando o pedido chega no WhatsApp, quase sempre ele passa por várias mãos: que
 
 Desenhar o caminho como fluxograma mostra onde o pedido espera, o que é anotado duas vezes e que passo só existe na cabeça de alguém. Só depois disso vale automatizar.
 
+Manda pra quem cuida dos pedidos aí.
+
 Comenta PLANTA que eu te mando um modelo de fluxo.

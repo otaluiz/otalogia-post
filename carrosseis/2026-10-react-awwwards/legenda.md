@@ -4,4 +4,6 @@ As que eu mais abro: React Bits pra texto e fundo animado, Aceternity UI e Magic
 
 O que separa um site de prêmio de um template é a montagem. Uma animação forte por página, fonte e cor da marca no lugar das da demo, e teste no celular antes de mostrar pra alguém.
 
+Salva a lista pra quando for montar o próximo site.
+
 Comenta REACT que eu te mando a lista com os links no direct.

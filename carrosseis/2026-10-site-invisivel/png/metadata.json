@@ -62,7 +62,12 @@
       "texto": "QUER QUE EU OLHE O seu site? Comenta SITE que eu te mando 3 ajustes no direct"
     }
   ],
-  "legenda": "Quem procura no Google digita o problema que tem: \"dentista perto de mim\", \"contador para MEI\". Se o título do seu site é só o nome da empresa, ele não aparece pra essa pessoa.\n\nComece por uma página para cada serviço, com a cidade no título.\n\nComenta SITE que eu te mando 3 ajustes pro seu.",
-  "hashtags": [],
+  "legenda": "Quem procura no Google digita o problema que tem: \"dentista perto de mim\", \"contador para MEI\". Se o título do seu site é só o nome da empresa, ele não aparece pra essa pessoa.\n\nComece por uma página para cada serviço, com a cidade no título.\n\nSalva e faz o teste de busca hoje.\n\nComenta SITE que eu te mando 3 ajustes pro seu.",
+  "hashtags": [
+    "#otalogia",
+    "#criacaodesites",
+    "#seolocal",
+    "#pequenosnegocios"
+  ],
   "handle": "@otalogia"
 }

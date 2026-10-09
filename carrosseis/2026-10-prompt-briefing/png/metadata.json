@@ -62,13 +62,12 @@
       "texto": "QUER UM MODELO DE briefing? Comenta BRIEFING que eu te mando o modelo no direct"
     }
   ],
-  "legenda": "Prompt bom ajuda, mas não conserta um pedido mal pensado. Antes de escrever o prompt, responda: qual é o objetivo, pra quem é, o que você aprova e o que você recusa.\n\nEscreva um briefing curto e só depois peça pra IA.\n\nComenta BRIEFING que eu te mando o modelo no direct.",
+  "legenda": "Prompt bom ajuda, mas não conserta um pedido mal pensado. Antes de escrever o prompt, responda: qual é o objetivo, pra quem é, o que você aprova e o que você recusa.\n\nEscreva um briefing curto e só depois peça pra IA.\n\nSalva pra usar antes do próximo prompt.\n\nComenta BRIEFING que eu te mando o modelo no direct.",
   "hashtags": [
     "#otalogia",
-    "#ia",
-    "#inteligenciaartificial",
-    "#pequenosnegocios",
-    "#produtividade"
+    "#iaparanegocios",
+    "#produtividade",
+    "#pequenosnegocios"
   ],
   "handle": "@otalogia"
 }

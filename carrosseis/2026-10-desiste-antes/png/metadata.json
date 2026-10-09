@@ -8,7 +8,7 @@
   "post_id": null,
   "ordem_fila": 15,
   "serie": "DIAGNÓSTICO",
-  "tema": "DESISTE ANTES seu cliente",
+  "tema": "ELE IA TE CHAMAR. desistiu no link da bio.",
   "familia_cor": "ink-laranja",
   "template": "T1-T2-T5-T3-T5-T2c-T5-T2-T4",
   "formato": "1080x1440",
@@ -17,7 +17,7 @@
       "ordem": 1,
       "arquivo": "slide-01.png",
       "papel": "hook",
-      "texto": "DESISTE ANTES seu cliente"
+      "texto": "ELE IA TE CHAMAR. desistiu no link da bio."
     },
     {
       "ordem": 2,
@@ -68,12 +68,11 @@
       "texto": "QUER REVER O SEU caminho? Comenta LINK que eu te mando um checklist no direct"
     }
   ],
-  "legenda": "Muita gente chega no seu perfil com vontade de falar com você e desiste no caminho. Link na bio, menu, formulário, e só depois o WhatsApp.\n\nCada passo a mais é uma chance de o cliente fechar o app. Uma página com vários botões obriga a escolher, e um formulário no meio pede tempo que ele não separou.\n\nO que costuma funcionar é encurtar: do post até a conversa em um toque, e uma automação cuidando do que vem depois do clique, com aviso, registro e resposta.\n\nComenta LINK que eu te mando um checklist pra rever o caminho do seu perfil.",
+  "legenda": "Ele ia te chamar no WhatsApp e desistiu no link da bio.\n\nMuita gente chega no seu perfil com vontade de falar com você e desiste no caminho. Link na bio, menu, formulário, e só depois o WhatsApp.\n\nCada passo a mais é uma chance de o cliente fechar o app. Uma página com vários botões obriga a escolher, e um formulário no meio pede tempo que ele não separou.\n\nO que costuma funcionar é encurtar: do post até a conversa em um toque, e uma automação cuidando do que vem depois do clique, com aviso, registro e resposta.\n\nSalva e confere hoje o caminho do seu perfil até o WhatsApp.\n\nComenta LINK que eu te mando um checklist pra rever o caminho do seu perfil.",
   "hashtags": [
     "#otalogia",
-    "#instagram",
-    "#whatsapp",
-    "#marketingdigital",
+    "#whatsappbusiness",
+    "#instagramparanegocios",
     "#pequenosnegocios"
   ],
   "handle": "@otalogia"

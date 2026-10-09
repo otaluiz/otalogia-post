@@ -8,7 +8,7 @@
   "post_id": null,
   "ordem_fila": 18,
   "serie": "REFERÊNCIA",
-  "tema": "TESTAR SEU SITE dá pra",
+  "tema": "SEU SITE PERDE CLIENTE? teste grátis em 5 minutos.",
   "familia_cor": "ink-laranja",
   "template": "T1-T2-T5-T5-T5-T2c-T3-T4",
   "formato": "1080x1440",
@@ -17,7 +17,7 @@
       "ordem": 1,
       "arquivo": "slide-01.png",
       "papel": "hook",
-      "texto": "TESTAR SEU SITE dá pra"
+      "texto": "SEU SITE PERDE CLIENTE? teste grátis em 5 minutos."
     },
     {
       "ordem": 2,
@@ -62,13 +62,12 @@
       "texto": "QUER O PASSO A PASSO? do meu jeito. Comenta TESTE que eu te mando o roteiro no direct"
     }
   ],
-  "legenda": "Dá pra testar seu site hoje, de graça, sem pedir nada pra ninguém.\n\nTrês ferramentas do Google fazem o trabalho: o PageSpeed Insights mostra a velocidade no celular, o Search Console mostra com quais buscas você aparece e o que está com erro, e o Perfil da Empresa cuida da sua vitrine na busca e no Maps.\n\nComece pelo ponto que veio pior. Cole o endereço, anote o que ficou em vermelho e resolva um item por vez.\n\nComenta TESTE que eu te mando o roteiro passo a passo no direct.",
+  "legenda": "Seu site perde cliente? Dá pra testar hoje, de graça, em uns 5 minutos.\n\nTrês ferramentas do Google fazem o trabalho: o PageSpeed Insights mostra a velocidade no celular, o Search Console mostra com quais buscas você aparece e o que está com erro, e o Perfil da Empresa cuida da sua vitrine na busca e no Maps.\n\nComece pelo ponto que veio pior. Cole o endereço, anote o que ficou em vermelho e resolva um item por vez.\n\nSalva pra fazer no domingo.\n\nComenta TESTE que eu te mando o roteiro passo a passo no direct.",
   "hashtags": [
     "#otalogia",
-    "#site",
-    "#pagespeed",
-    "#seo",
-    "#negociolocal"
+    "#criacaodesites",
+    "#seolocal",
+    "#pequenosnegocios"
   ],
   "handle": "@otalogia"
 }

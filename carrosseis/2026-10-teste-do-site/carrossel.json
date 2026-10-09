@@ -8,12 +8,12 @@
     {
       "template": "T1",
       "display": [
-        "[TESTAR]",
-        "SEU SITE"
+        "SEU SITE",
+        "PERDE CLIENTE?"
       ],
       "emocao": {
-        "texto": "dá pra",
-        "posicao": "antes"
+        "texto": "teste [grátis] em 5 minutos.",
+        "posicao": "depois"
       },
       "imagem": "capa.png",
       "tecido": true,

@@ -4,4 +4,6 @@ Três posts por semana, mantidos o ano inteiro, dão 156 posts. O que pesa é o 
 
 Um jeito que funciona: escolher os dias, produzir tudo num dia só, transformar um assunto em três posts e deixar agendado.
 
+Manda pra quem acha que precisa postar todo dia.
+
 Comenta POSTAR que eu te mando um modelo de calendário no direct.

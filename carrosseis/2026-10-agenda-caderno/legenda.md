@@ -4,4 +4,6 @@ Quando o retorno depende da memória, ele se perde em algum dia corrido. Um lemb
 
 Se hoje o seu retorno mora no caderno, vale tirar de lá.
 
+Manda pra quem ainda anota retorno no caderno.
+
 Comenta AGENDA que eu te mando um passo a passo de lembrete no direct.

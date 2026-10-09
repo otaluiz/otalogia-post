@@ -8,14 +8,13 @@
     {
       "template": "T1",
       "display": [
-        "[DESISTE]",
-        "ANTES"
+        "ELE IA",
+        "TE CHAMAR."
       ],
       "emocao": {
-        "texto": "seu cliente",
-        "posicao": "antes"
+        "texto": "desistiu no [link da bio].",
+        "posicao": "depois"
       },
-      "gancho": "de te chamar.",
       "imagem": "capa.png",
       "tecido": true
     },

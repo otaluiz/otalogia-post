@@ -2,4 +2,6 @@ Gerar dez versões de uma arte leva segundos. Escolher qual fica, e o que sai de
 
 A IA acelera o rascunho. O corte é decisão: o que o cliente precisa ver primeiro, o que fica de fora, o que já está genérico.
 
+Manda pra quem gera dez versões e não consegue escolher.
+
 Comenta EDITAR que eu te mando 3 cortes pro seu material.
