@@ -2,6 +2,8 @@ name: instagram-pesquisa
 # Coleta dados públicos do Instagram via Apify (secret APIFY_TOKEN) e grava JSON em pesquisa/instagram/.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * 1"  # segunda 6h BRT, antes da rotina de roteiro
   push:
     paths: [pesquisa/instagram/alvos.txt]
 permissions:
