@@ -18,8 +18,8 @@ Roda toda segunda às 8h (BRT) numa sessão nova na nuvem. Às 6h, o workflow `i
    - Abra o roteiro com um bloco **"Placar da semana"**: seguidores (atual × semana passada × meta da fase), o post que mais rendeu e o que mudou no plano por causa disso.
 5. **Salve em dois lugares:**
    - Repositório: `roteiros/AAAA-MM-DD-semana.md` (data da segunda). Faça `git add` do roteiro e do `roteiro-carrosseis.md`, commit `content: roteiro semana AAAA-MM-DD (rotina nuvem)` e push no branch da sessão (o workflow `entregar.yml` leva para a main).
-   - Google Drive: crie um Google Doc com o mesmo conteúdo na pasta **otalogia/03-Roteiros** (id `1u2WQqyCUCOE3xTYn269xqKKdd7Jladhx`), com o título `Roteiro semana AAAA-MM-DD`. Use `create_file` com `contentMimeType: text/markdown` e `parentId` nessa pasta.
-6. **Termine** com um resumo de no máximo 8 linhas: os temas da semana, o placar e o link do Doc.
+   - Google Drive: não precisa de conector. Depois que o push chega à main, o `entregar.yml` (secrets `GOOGLE_DRIVE_*` do repositório) sobe todo `roteiros/*.md` novo como Google Doc para **Clientes/otalogia/03-Roteiros**, com o título `Roteiro AAAA-MM-DD-semana`.
+6. **Termine** com um resumo de no máximo 8 linhas: os temas da semana, e o placar. O Doc aparece no Drive alguns minutos depois do push.
 
 ## Regras
 

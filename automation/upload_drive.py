@@ -1,5 +1,6 @@
 """Sobe para o Drive (Clientes/otalogia/04-Carrosseis) todo carrossel com status "rascunho"
-que ainda não tem pasta lá nem em 06-Aprovados-para-Postar. Roda no GitHub Actions (secrets GOOGLE_DRIVE_*); substitui o sync-drive.ps1 do PC.
+que ainda não tem pasta lá nem em 06-Aprovados-para-Postar, e cada roteiro semanal (roteiros/*.md)
+que ainda não está em Clientes/otalogia/03-Roteiros, convertido em Google Doc. Roda no GitHub Actions (secrets GOOGLE_DRIVE_*); substitui o sync-drive.ps1 do PC.
 
 Uso: python automation/upload_drive.py
 """
@@ -58,6 +59,16 @@ def main():
         print("enviado:", d.name, len(arquivos), "arquivos")
         enviados += 1
     print("total enviados:", enviados)
+
+    pasta_roteiros = achar(svc, "Clientes/otalogia/03-Roteiros")
+    ja = filhos(svc, pasta_roteiros)
+    for f in sorted(Path("roteiros").glob("*.md")):
+        nome = f"Roteiro {f.stem}"
+        if nome in ja:
+            continue
+        svc.files().create(body={"name": nome, "parents": [pasta_roteiros], "mimeType": "application/vnd.google-apps.document"},
+                           media_body=MediaFileUpload(str(f), mimetype="text/markdown"), fields="id").execute()
+        print("roteiro enviado:", nome)
 
 
 if __name__ == "__main__":
