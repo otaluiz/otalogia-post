@@ -9,8 +9,12 @@ Backlog (decida sozinho, não pergunte):
   escreva "backlog cheio (N rascunhos), pulei a geração de hoje" e pare.
 
 Tema:
-- Pegue o primeiro tema da seção "Próximos" de `roteiro-carrosseis.md` que ainda não tem
-  pasta em `carrosseis/`. Se a lista acabar, crie um tema novo dentro dos pilares e das
+- Primeiro, o roteiro da semana: abra o arquivo mais recente em `roteiros/` (gerado toda segunda
+  a partir da pesquisa de tendências) e pegue o primeiro carrossel dele que ainda não tem pasta em
+  `carrosseis/`. Use o hook, o texto slide a slide, o CTA e a legenda que estão lá como base da copy
+  (ajuste ao template, sem mudar o ângulo).
+- Se todos os carrosséis da semana já tiverem pasta, pegue o primeiro tema da seção "Próximos" de
+  `roteiro-carrosseis.md` que ainda não tem pasta em `carrosseis/`. Se a lista acabar, crie um tema novo dentro dos pilares e das
   séries do roteiro, sem repetir hook nem tema já usado (veja a tabela "Já produzidos").
 
 Variante (alterne, uma por dia, nesta ordem):
