@@ -1,7 +1,7 @@
 """
 render_motion.py — um MP4 por slide do carrossel, animado pelo motion.js (protótipo).
 
-Uso: python motion/render_motion.py <carrossel.json> [out_dir] --tema <pasta_do_tema> [--dur 6] [--fps 30] [--slides 1,8]
+Uso: python motion/render_motion.py <carrossel.json> [out_dir] --tema <pasta_do_tema> [--dur 10] [--fps 30] [--slides 1,8]
 - out_dir padrão: <pasta do json>/motion
 - grava slide-NN.mp4 (H.264, yuv420p, 1080x1440) e previa.mp4 (todos em sequência)
 Mesma página e mesmos dados do render.py; o tempo é dirigido quadro a quadro (Motion.seek), sem relógio real.
@@ -30,7 +30,7 @@ def arg(args, nome, padrao=None):
 def main():
     args = sys.argv[1:]
     tema_dir = Path(arg(args, "--tema") or sys.exit(__doc__)).resolve()
-    dur, fps = float(arg(args, "--dur", 6)), int(arg(args, "--fps", 30))
+    dur, fps = float(arg(args, "--dur", 10)), int(arg(args, "--fps", 30))
     so = arg(args, "--slides")
     json_path = Path(args[0]).resolve()
     out = Path(args[1]) if len(args) > 1 else json_path.parent / "motion"

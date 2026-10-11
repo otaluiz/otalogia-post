@@ -82,7 +82,7 @@
     opts = opts || {};
     var slide = document.querySelector('.slide'); if (!slide) return 0;
     var cs = getComputedStyle(slide), quente = (cs.getPropertyValue('--quente') || '#FF5A1F').trim();
-    var dur = opts.duracao || 6, foto = slide.querySelector('.photo, .foto, .portrait');
+    var dur = opts.duracao || 10, foto = slide.querySelector('.photo, .foto, .portrait');
     if (foto) {
       anima(foto, [{ transform: 'scale(1.08)', opacity: 0.3 }, { transform: 'scale(1.065)', opacity: 1, offset: 0.1 }, { transform: 'scale(1.0)', opacity: 1 }], 0, dur, 'linear');
     }
@@ -114,7 +114,7 @@
     if (pill) {
       var tp = te + 0.7;
       anima(pill, [{ transform: 'scale(0.6)', opacity: 0 }, { transform: 'scale(1)', opacity: 1 }], tp, 0.55, BACK);
-      anima(pill, [{ transform: 'scale(1)' }, { transform: 'scale(1.06)' }, { transform: 'scale(1)' }], tp + 1.2, 1.1, 'ease-in-out', { iterations: 3, composite: 'replace' });
+      anima(pill, [{ transform: 'scale(1)' }, { transform: 'scale(1.06)' }, { transform: 'scale(1)' }], tp + 1.2, 1.1, 'ease-in-out', { iterations: Math.max(1, Math.floor((dur - tp - 1.2) / 1.1)), composite: 'replace' });  // pulsa até o fim
     }
     if (txt) anima(txt, [{ opacity: 0 }, { opacity: 1 }], te + 1.0, 0.5, 'linear');
 

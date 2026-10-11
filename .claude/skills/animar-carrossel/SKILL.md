@@ -20,11 +20,11 @@ estático: a animação só mexe em quando e como cada peça entra.
 A partir da pasta do carrossel:
 
 ```
-python ../../motor/motion/render_motion.py carrossel.json motion --tema ../../design-system/tema [--dur 6] [--fps 30] [--slides 1,8]
+python ../../motor/motion/render_motion.py carrossel.json motion --tema ../../design-system/tema [--dur 10] [--fps 30] [--slides 1,8]
 ```
 
 - Requer o mesmo ambiente do `render.py` (Playwright/Chromium, fontes do tema) e `ffmpeg` no PATH.
-- Leva cerca de 1 min por slide de 6 s. Para testar, use `--slides 1` primeiro.
+- Cada slide tem 10 s (padrão). Leva cerca de 1,5 min por slide. Para testar, use `--slides 1` primeiro.
 - Saída: `motion/slide-NN.mp4` + `motion/previa.mp4`. Não versionar os MP4 no git (são pesados): sobem para o Drive
   junto com os PNG.
 
@@ -42,7 +42,7 @@ gera sempre o mesmo vídeo.
 | Frase manuscrita (`emocao`) | se escreve da esquerda pra direita | depois do título |
 | Marca-texto `{palavra}` | a caixa laranja varre por trás da palavra | junto do título |
 | Lista | itens em cascata da esquerda | depois do título |
-| Pílula do CTA | entra com overshoot e pulsa 3 vezes | depois da frase |
+| Pílula do CTA | entra com overshoot e pulsa até o fim do vídeo | depois da frase |
 | Partículas ASCII 3D | slides com foto: campo de brasas em caracteres subindo em perspectiva (laranja da marca, `screen`). Slides de texto escuro (T3): esfera de caracteres girando no espaço vazio do canto. Papel (T2/T2c): sem partículas | o slide inteiro |
 
 Os caracteres das partículas vêm de uma rampa (` .,:;-=+*#%@`) pela profundidade: o que está perto fica maior, mais
@@ -57,7 +57,7 @@ denso e mais opaco. A fonte é a mono do tema (`--f-mono`).
 
 ## Ajustes rápidos
 
-- Duração: `--dur` (padrão 6 s; o Instagram toca cada vídeo do carrossel até o fim).
+- Duração: `--dur` (padrão 10 s por slide; o Instagram toca cada vídeo do carrossel até o fim).
 - Sem partículas num slide: `Motion.init({particulas: false})` (no render, editar a chamada).
 - Tempos e curvas ficam no topo de cada bloco em `motor/motion/motion.js`; o tecido do T4 e as texturas do tema
   continuam como no PNG.
