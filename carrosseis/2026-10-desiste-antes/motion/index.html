@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1440" />
+<title>Ele ia te chamar (motion, imagem gerada)</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<link rel="stylesheet" href="otalogia.css" />
+<script src="otalogia.js"></script>
+<style>
+  /* S1 capa T1: foto gerada, título no meio */
+  #s1 .conteudo { top: 400px; }
+  #s1 .display { font-size: 138px; }
+  #s1 .emocao { font-size: 104px; }
+  #s1 .base { bottom: 190px; }
+  #s2 .display { font-size: 92px; }
+  /* S4: o ponto percorre o caminho e some no formulário */
+  #s4 .conteudo { top: 380px; }
+  #s4 .display { font-size: 112px; }
+  .ponto { position: absolute; left: -26px; top: 0; width: 14px; height: 14px; margin-top: -7px; border-radius: 50%; background: var(--quente); box-shadow: 0 0 16px var(--quente); }
+  /* S6 / S8 papel */
+  #s6 .conteudo { left: 230px; top: 640px; }
+  #s6 .display { font-size: 108px; }
+  #s8 .conteudo { top: 640px; }
+  #s8 .display { font-size: 96px; }
+  #s8 .emocao { font-size: 84px; }
+  .toque { position: absolute; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; border: 4px solid var(--quente-papel); opacity: 0; z-index: 4; }
+  /* S9 CTA */
+  #s9 .conteudo { top: 600px; }
+  #s9 .display { font-size: 120px; }
+  #s9 .emocao { font-size: 128px; }
+  #s9 .cta { margin-top: 40px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <filter id="ruido"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch" /><feColorMatrix type="saturate" values="0" /></filter>
+</svg>
+
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1440" data-duration="54">
+
+  <!-- S1 capa T1 (imagem gerada) -->
+  <section id="s1" class="slide com-foto clip" data-start="0" data-duration="6" data-track-index="0">
+    <img class="foto" src="img/capa.png" alt="" />
+    <img class="bloom" src="img/capa.png" alt="" />
+    <div class="luz" style="left: 955px; top: 345px"></div>
+    <div class="brasas" data-layout-allow-overflow></div>
+    <div class="conteudo">
+      <h1 class="display" data-layout-allow-overflow>
+        <span class="linha"><span>ele ia</span></span>
+        <span class="linha"><span>te chamar.</span></span>
+      </h1>
+      <p class="emocao" id="s1-emo">desistiu no <span class="hot">link da bio</span>.</p>
+    </div>
+    <div class="base"><div class="arrasta" id="s1-arrasta">arrasta <b></b></div></div>
+    <div class="topo"><span>otalogia</span><span>diagnóstico</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S2 foto inteira -->
+  <section id="s2" class="slide com-foto clip" data-start="6" data-duration="6" data-track-index="0">
+    <img class="foto" src="img/slide2_led.png" alt="" />
+    <img class="bloom" src="img/slide2_led.png" alt="" />
+    <div class="vinheta"></div>
+    <div class="brasas" data-layout-allow-overflow></div>
+    <div class="conteudo">
+      <h2 class="display" data-layout-allow-overflow>
+        <span class="linha"><span>link na bio,</span></span>
+        <span class="linha"><span>menu, formulário</span></span>
+      </h2>
+      <p class="emocao" id="s2-emo">e só então o <span class="hot">zap</span>.</p>
+    </div>
+    <div class="topo"><span>otalogia</span><span>diagnóstico</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S3 T5 Linktree -->
+  <section id="s3" class="slide clip" data-start="12" data-duration="6" data-track-index="0">
+    <div class="chip">REFERÊNCIA</div>
+    <div class="ref-titulo">link<br />na bio</div>
+    <div class="navegador">
+      <div class="barra-nav"><i class="d1"></i><i class="d2"></i><i class="d3"></i><span class="url">linktr.ee</span></div>
+      <div class="tela"><img src="img/ref-linktree.png" alt="" /></div>
+      <div class="info"><div class="nome">Linktree</div><div class="desc">Uma página com vários botões. Cada botão é mais uma escolha.</div></div>
+    </div>
+    <div class="topo"><span>otalogia</span><span>diagnóstico</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S4 T3 o caminho -->
+  <section id="s4" class="slide clip" data-start="18" data-duration="6" data-track-index="0">
+    <div class="led" id="s4-led" data-layout-allow-overflow></div>
+    <div class="conteudo">
+      <h2 class="display" data-layout-allow-overflow>
+        <span class="linha"><span>o caminho do</span></span>
+        <span class="linha"><span><span class="hl" id="s4-hl">cliente</span></span></span>
+      </h2>
+      <ul class="lista" id="s4-lista" style="position: relative">
+        <li><i class="fio"></i><span class="n">01</span><span class="t">Vê o post e se interessa</span></li>
+        <li><i class="fio"></i><span class="n">02</span><span class="t">Abre o perfil e procura o link</span></li>
+        <li><i class="fio"></i><span class="n">03</span><span class="t">Escolhe um botão entre vários</span></li>
+        <li><i class="fio"></i><span class="n">04</span><span class="t">Preenche um formulário</span></li>
+        <span class="ponto" id="s4-ponto"></span>
+      </ul>
+    </div>
+    <div class="topo"><span>otalogia</span><span>diagnóstico</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S5 T5 modelos de bio -->
+  <section id="s5" class="slide clip" data-start="24" data-duration="6" data-track-index="0">
+    <div class="chip">REFERÊNCIA</div>
+    <div class="ref-titulo">cada botão<br />um talvez</div>
+    <div class="navegador">
+      <div class="barra-nav"><i class="d1"></i><i class="d2"></i><i class="d3"></i><span class="url">linktr.ee/s/templates</span></div>
+      <div class="tela"><img src="img/ref-linktree-templates.png" alt="" /></div>
+      <div class="info"><div class="nome">Modelos de bio</div><div class="desc">Bio bonita não encurta o caminho até a conversa.</div></div>
+    </div>
+    <div class="topo"><span>otalogia</span><span>diagnóstico</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S6 T2c um toque -->
+  <section id="s6" class="slide papel clip" data-start="30" data-duration="6" data-track-index="0">
+    <div class="dobra"></div>
+    <div class="margem" id="s6-margem"></div>
+    <div class="jogo" id="s6-jogo">#</div>
+    <div class="conteudo">
+      <h2 class="display" data-layout-allow-overflow>
+        <span class="linha"><span>um toque</span></span>
+        <span class="linha"><span>basta.</span></span>
+      </h2>
+      <p class="emocao" id="s6-emo">do post até o <span class="hl" id="s6-hl">zap</span>.</p>
+    </div>
+    <div class="toque" id="s6-toque"></div>
+    <div class="topo"><span>otalogia</span><span>diagnóstico</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S7 T5 Zapier -->
+  <section id="s7" class="slide clip" data-start="36" data-duration="6" data-track-index="0">
+    <div class="chip">REFERÊNCIA</div>
+    <div class="ref-titulo">o lead<br />não esfria</div>
+    <div class="navegador">
+      <div class="barra-nav"><i class="d1"></i><i class="d2"></i><i class="d3"></i><span class="url">zapier.com</span></div>
+      <div class="tela"><img src="img/ref-zapier.png" alt="" /></div>
+      <div class="info"><div class="nome">Zapier</div><div class="desc">Automatiza o que vem depois do clique: aviso, registro e resposta.</div></div>
+    </div>
+    <div class="topo"><span>otalogia</span><span>diagnóstico</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S8 T2 papel com LED -->
+  <section id="s8" class="slide papel clip" data-start="42" data-duration="6" data-track-index="0">
+    <div class="dobra"></div>
+    <div class="led" id="s8-led" data-layout-allow-overflow></div>
+    <div class="conteudo">
+      <h2 class="display" data-layout-allow-overflow>
+        <span class="linha"><span>menos passos,</span></span>
+        <span class="linha"><span>mais <span class="hl" id="s8-hl">conversa</span>.</span></span>
+      </h2>
+      <p class="emocao" id="s8-emo">quem chegou já queria falar.</p>
+    </div>
+    <div class="topo"><span>otalogia</span><span>diagnóstico</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S9 CTA T4 (imagem gerada) -->
+  <section id="s9" class="slide com-foto clip" data-start="48" data-duration="6" data-track-index="0">
+    <img class="foto" src="img/cta.png" alt="" />
+    <img class="bloom" src="img/cta.png" alt="" />
+    <div class="brasas" data-layout-allow-overflow></div>
+    <div class="conteudo">
+      <h2 class="display" data-layout-allow-overflow>
+        <span class="linha"><span>quer rever</span></span>
+        <span class="linha"><span>o seu</span></span>
+      </h2>
+      <p class="emocao hot" id="s9-emo">caminho?</p>
+      <div class="cta">
+        <div class="pill" id="s9-pill">Comenta LINK</div>
+        <p class="cta-txt" id="s9-txt">que eu te mando um checklist no direct</p>
+      </div>
+    </div>
+    <div class="topo"><span>otalogia</span><span>diagnóstico</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+</div>
+
+<script>
+  const tl = gsap.timeline({ paused: true });
+  const S = 6, m = otaMotion(tl, S);
+  const BR = "#F5F5FA", INK = "#0B0B12";
+
+  // S1: a cena acende com push-in, a luz da porta tremula, brasas sobem
+  m.foto("s1", 0, { z: 1.16 });
+  m.chrome("s1", 0);
+  m.linhas("s1", 0.45);
+  m.escreve("#s1-emo", 1.3, 1.4);
+  m.sobe("#s1-arrasta", 2.6);
+  tl.fromTo("#s1-arrasta b", { x: 0 }, { x: 14, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 3 }, 3.1);
+
+  // S2
+  const t2 = S;
+  m.foto("s2", t2, { z: 1.14, brasas: 24 });
+  m.linhas("s2", t2 + 0.15);
+  m.escreve("#s2-emo", t2 + 1.0);
+
+  // S3 / S5 / S7: navegador sobe e a página rola
+  m.referencia("s3", S * 2);
+  m.referencia("s5", S * 4);
+  m.referencia("s7", S * 6);
+
+  // S4: lista em cascata, o ponto desce pelo caminho e some antes do fim
+  const t4 = S * 3;
+  m.respira("#s4-led", t4);
+  m.linhas("s4", t4 + 0.15);
+  m.marca("#s4-hl", t4 + 0.8, BR);
+  m.lista("s4", t4 + 1.0);
+  const lis = document.querySelectorAll("#s4-lista li");
+  tl.fromTo("#s4-ponto", { opacity: 0, y: lis[0].offsetTop + lis[0].offsetHeight / 2 }, { opacity: 1, duration: 0.3 }, t4 + 2.6);
+  [1, 2, 3].forEach((k, i) => tl.to("#s4-ponto", { y: lis[k].offsetTop + lis[k].offsetHeight / 2, duration: 0.55, ease: "power2.inOut" }, t4 + 3.0 + i * 0.6));
+  tl.to("#s4-ponto", { opacity: 0, scale: 0.2, duration: 0.6, ease: "power2.in" }, t4 + 4.9);
+  [1, 2, 3].forEach((k, i) => tl.to(lis[k].querySelector(".t"), { opacity: 0.45 + 0.15 * (2 - i), duration: 0.5 }, t4 + 3.3 + i * 0.6));
+
+  // S6: um toque no "zap" e a caixa acende
+  const t6 = S * 5;
+  tl.fromTo("#s6-margem", { scaleY: 0 }, { scaleY: 1, duration: 1.2, ease: "expo.out" }, t6 + 0.1);
+  m.sobe("#s6-jogo", t6 + 0.3, 0.6);
+  m.linhas("s6", t6 + 0.2);
+  m.escreve("#s6-emo", t6 + 0.9);
+  const hl = document.getElementById("s6-hl");
+  const r = hl.getBoundingClientRect();
+  gsap.set("#s6-toque", { left: r.left + r.width / 2, top: r.top + r.height / 2 });
+  tl.fromTo("#s6-toque", { scale: 0.3, opacity: 0.9 }, { scale: 1.6, opacity: 0, duration: 0.8, ease: "power2.out" }, t6 + 2.0);
+  m.marca("#s6-hl", t6 + 2.1, INK);
+  tl.fromTo("#s6-toque", { scale: 0.3, opacity: 0.7 }, { scale: 1.6, opacity: 0, duration: 0.8, ease: "power2.out", immediateRender: false }, t6 + 3.4);
+
+  // S8
+  const t8 = S * 7;
+  m.respira("#s8-led", t8);
+  m.linhas("s8", t8 + 0.15);
+  m.marca("#s8-hl", t8 + 1.0, INK);
+  m.escreve("#s8-emo", t8 + 1.4, 1.4);
+
+  // S9 CTA
+  const t9 = S * 8;
+  m.foto("s9", t9, { z: 1.12, brasas: 34 });
+  m.linhas("s9", t9 + 0.35);
+  m.escreve("#s9-emo", t9 + 1.1, 0.9);
+  m.pill("#s9-pill", t9 + 1.7);
+  m.sobe("#s9-txt", t9 + 2.1);
+
+  window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

@@ -61,3 +61,24 @@ denso e mais opaco. A fonte é a mono do tema (`--f-mono`).
 - Sem partículas num slide: `Motion.init({particulas: false})` (no render, editar a chamada).
 - Tempos e curvas ficam no topo de cada bloco em `motor/motion/motion.js`; o tecido do T4 e as texturas do tema
   continuam como no PNG.
+
+## Formato novo: HyperFrames (motor/hyperframes/)
+
+Mesmo formato do carrossel animado da aidealab (W43): uma composição HTML/GSAP por carrossel, 6 s por slide, motion
+suave (tudo assenta até ~3,5 s e só o ambiente respira até o fim, para o loop do Instagram ficar limpo). Cada slide
+ganha um gesto próprio além da entrada do texto: busca digitando, ponto percorrendo a lista, toque no marca-texto,
+navegador com o print aproximando, pílula do CTA pulsando.
+
+```
+bash motor/hyperframes/render.sh carrosseis/<slug>    # gera carrosseis/<slug>/motion/out/slide-NN.mp4 + completo.mp4
+```
+
+- `carrosseis/<slug>/motion/index.html`: só o conteúdo dos slides e a timeline. Tema (`otalogia.css`), helpers
+  (`otalogia.js`: linhas, escreve, marca, lista, foto, referencia, pill) e fontes ficam em `motor/hyperframes/` e o
+  `render.sh` copia para a pasta na hora, junto com os PNG do carrossel (`img/`). Nada disso é versionado.
+- Dois modelos, um por tipo de capa:
+  - **Personagem (T1b):** `2026-10-instagram-buscador`. Recorte por cima do título na capa (texto atrás da cabeça),
+    zoom menor (1.06) para a cabeça não engolir o título; no CTA o texto fica na frente do corpo.
+  - **Imagem gerada (T1):** `2026-10-desiste-antes`. Push-in maior (1.16) com a luz da cena tremulando e brasas;
+    slides T5 com o navegador subindo e o print aproximando.
+- Conferir antes de renderizar: `npx hyperframes@0.8.181 snapshot --at 5.5,11.5,... --no-end` dentro de `motion/`.

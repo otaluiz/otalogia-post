@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1440" />
+<title>Seu cliente te acha buscando? (motion, personagem)</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<link rel="stylesheet" href="otalogia.css" />
+<script src="otalogia.js"></script>
+<style>
+  /* S1 capa T1b: título atrás da cabeça do recorte */
+  #s1 .display { font-size: 132px; }
+  #s1 .base { bottom: 190px; }
+  #s1 .emocao { font-size: 120px; margin: 0 0 18px; }
+  /* S2 busca digitando */
+  .busca { position: absolute; left: 72px; right: 72px; bottom: 210px; z-index: 5; }
+  .campo { height: 96px; border-radius: 22px; background: rgba(20, 20, 26, .78); border: 1px solid rgba(245, 245, 250, .18); display: flex; align-items: center; gap: 22px; padding: 0 32px;
+    font: 500 38px/1 var(--f-display); backdrop-filter: blur(8px); }
+  .campo .lupa { width: 30px; height: 30px; border: 4px solid rgba(245, 245, 250, .7); border-radius: 50%; position: relative; flex: none; }
+  .campo .lupa::after { content: ""; position: absolute; width: 4px; height: 14px; background: rgba(245, 245, 250, .7); right: -7px; bottom: -11px; transform: rotate(-45deg); }
+  .campo .ch { display: inline-block; }
+  .campo .cursor { display: inline-block; width: 3px; height: 44px; background: var(--quente); margin-left: 2px; }
+  .res { margin-top: 18px; display: flex; flex-direction: column; gap: 14px; }
+  .res div { height: 74px; border-radius: 16px; background: rgba(20, 20, 26, .62); display: flex; align-items: center; gap: 20px; padding: 0 22px; }
+  .res i { width: 46px; height: 46px; border-radius: 50%; background: rgba(245, 245, 250, .22); flex: none; }
+  .res b { height: 16px; border-radius: 8px; background: rgba(245, 245, 250, .22); }
+  /* S4 / S6 papel */
+  #s4 .conteudo, #s6 .conteudo { top: 520px; }
+  #s6 .conteudo { left: 230px; top: 640px; }
+  #s6 .display { font-size: 98px; }
+  #s3 .display { font-size: 92px; }
+  /* S7 conclusão */
+  #s7 .conteudo { top: 600px; }
+  /* S8 CTA: texto na frente do corpo, abaixo do queixo */
+  #s8 .conteudo { top: 740px; width: 640px; right: auto; }
+  #s8 .display { font-size: 86px; }
+  #s8 .emocao { font-size: 92px; }
+  #s8 .cta { margin-top: 36px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <filter id="ruido"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" stitchTiles="stitch" /><feColorMatrix type="saturate" values="0" /></filter>
+</svg>
+
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1440" data-duration="48">
+
+  <!-- S1 capa T1b (personagem) -->
+  <section id="s1" class="slide com-foto clip" data-start="0" data-duration="6" data-track-index="0">
+    <img class="foto" src="img/capa.png" alt="" />
+    <img class="bloom" src="img/capa.png" alt="" />
+    <div class="luz" style="left: 360px; top: 760px"></div>
+    <div class="conteudo">
+      <h1 class="display" data-layout-allow-overflow data-layout-allow-occlusion>
+        <span class="linha"><span>seu cliente</span></span>
+        <span class="linha"><span>te acha</span></span>
+      </h1>
+    </div>
+    <img data-layout-allow-occlusion class="recorte" src="img/capa_recorte.png" alt="" />
+    <div class="brasas" data-layout-allow-overflow></div>
+    <div class="base">
+      <p class="emocao hot" id="s1-emo">buscando?</p>
+      <div class="arrasta" id="s1-arrasta">arrasta <b></b></div>
+    </div>
+    <div class="topo"><span>otalogia</span><span>pergunta do dono</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S2 foto inteira + busca -->
+  <section id="s2" class="slide com-foto clip" data-start="6" data-duration="6" data-track-index="0">
+    <img class="foto" src="img/slide2_led.png" alt="" />
+    <img class="bloom" src="img/slide2_led.png" alt="" />
+    <div class="vinheta"></div>
+    <div class="brasas" data-layout-allow-overflow></div>
+    <div class="conteudo">
+      <h2 class="display" data-layout-allow-overflow>
+        <span class="linha"><span>ele digita</span></span>
+        <span class="linha"><span>uma palavra</span></span>
+      </h2>
+      <p class="emocao" id="s2-emo">e você <span class="hot">não aparece</span>.</p>
+    </div>
+    <div class="busca" id="s2-busca">
+      <div class="campo"><span class="lupa"></span><span id="s2-txt"><span class="ch">c</span><span class="ch">o</span><span class="ch">n</span><span class="ch">f</span><span class="ch">e</span><span class="ch">i</span><span class="ch">t</span><span class="ch">a</span><span class="ch">r</span><span class="ch">i</span><span class="ch">a</span></span><span class="cursor" id="s2-cursor"></span></div>
+      <div class="res" id="s2-res">
+        <div><i></i><b style="width: 340px"></b></div>
+        <div><i></i><b style="width: 420px"></b></div>
+        <div><i></i><b style="width: 280px"></b></div>
+      </div>
+    </div>
+    <div class="topo"><span>otalogia</span><span>pergunta do dono</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S3 T3 lista -->
+  <section id="s3" class="slide clip" data-start="12" data-duration="6" data-track-index="0">
+    <div class="conteudo" style="top: 430px">
+      <h2 class="display" data-layout-allow-overflow>
+        <span class="linha"><span>onde o instagram</span></span>
+        <span class="linha"><span><span class="hl" id="s3-hl">lê</span> a palavra</span></span>
+      </h2>
+      <ul class="lista">
+        <li><i class="fio"></i><span class="n">01</span><span class="t">Nome do perfil</span></li>
+        <li><i class="fio"></i><span class="n">02</span><span class="t">Bio</span></li>
+        <li><i class="fio"></i><span class="n">03</span><span class="t">Legenda dos posts</span></li>
+      </ul>
+    </div>
+    <div class="topo"><span>otalogia</span><span>pergunta do dono</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S4 T2 papel -->
+  <section id="s4" class="slide papel clip" data-start="18" data-duration="6" data-track-index="0">
+    <div class="dobra"></div>
+    <div class="conteudo">
+      <h2 class="display" data-layout-allow-overflow>
+        <span class="linha"><span>quem procura</span></span>
+        <span class="linha"><span>não sabe</span></span>
+      </h2>
+      <p class="emocao" id="s4-emo">o seu <span class="hl" id="s4-hl">nome</span>.</p>
+    </div>
+    <div class="topo"><span>otalogia</span><span>pergunta do dono</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S5 T3 lista com LED -->
+  <section id="s5" class="slide clip" data-start="24" data-duration="6" data-track-index="0">
+    <div class="led" id="s5-led" data-layout-allow-overflow></div>
+    <div class="conteudo" style="top: 380px">
+      <h2 class="display" data-layout-allow-overflow>
+        <span class="linha"><span>o que eu</span></span>
+        <span class="linha"><span><span class="hl" id="s5-hl">troco</span></span></span>
+      </h2>
+      <ul class="lista">
+        <li><i class="fio"></i><span class="n">01</span><span class="t">Nome do perfil com a palavra que o cliente digita</span></li>
+        <li><i class="fio"></i><span class="n">02</span><span class="t">Bio com o que você faz e onde</span></li>
+        <li><i class="fio"></i><span class="n">03</span><span class="t">Primeira linha da legenda com a busca</span></li>
+        <li><i class="fio"></i><span class="n">04</span><span class="t">A mesma palavra, repetida com naturalidade</span></li>
+      </ul>
+    </div>
+    <div class="topo"><span>otalogia</span><span>pergunta do dono</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S6 T2c papel quadriculado: a palavra se digita na caixa -->
+  <section id="s6" class="slide papel clip" data-start="30" data-duration="6" data-track-index="0">
+    <div class="dobra"></div>
+    <div class="margem" id="s6-margem"></div>
+    <div class="jogo" id="s6-jogo">#</div>
+    <div class="conteudo">
+      <h2 class="display" data-layout-allow-overflow>
+        <span class="linha"><span>escreva como</span></span>
+        <span class="linha"><span>o cliente</span></span>
+      </h2>
+      <p class="emocao" id="s6-emo"><span class="hl" id="s6-hl"><span class="ch">p</span><span class="ch">e</span><span class="ch">s</span><span class="ch">q</span><span class="ch">u</span><span class="ch">i</span><span class="ch">s</span><span class="ch">a</span></span>.</p>
+    </div>
+    <div class="topo"><span>otalogia</span><span>pergunta do dono</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S7 T3 conclusão -->
+  <section id="s7" class="slide clip" data-start="36" data-duration="6" data-track-index="0">
+    <div class="led" id="s7-led" data-layout-allow-overflow></div>
+    <div class="conteudo">
+      <h2 class="display" data-layout-allow-overflow>
+        <span class="linha"><span>a palavra</span></span>
+        <span class="linha"><span>certa</span></span>
+      </h2>
+      <p class="emocao" id="s7-emo">vale mais que <span class="hot">slogan</span>.</p>
+    </div>
+    <div class="topo"><span>otalogia</span><span>pergunta do dono</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+
+  <!-- S8 CTA T4 (personagem, texto na frente do corpo) -->
+  <section id="s8" class="slide com-foto clip" data-start="42" data-duration="6" data-track-index="0">
+    <img class="foto" src="img/cta.png" alt="" />
+    <img class="bloom" src="img/cta.png" alt="" />
+    <img class="recorte" src="img/cta_recorte.png" alt="" style="z-index: 2" />
+    <div class="brasas" data-layout-allow-overflow></div>
+    <div class="conteudo">
+      <h2 class="display" data-layout-allow-overflow>
+        <span class="linha"><span>quer o meu</span></span>
+        <span class="linha"><span>checklist de</span></span>
+      </h2>
+      <p class="emocao" id="s8-emo">busca?</p>
+      <div class="cta">
+        <div class="pill" id="s8-pill">Comenta BUSCA</div>
+        <p class="cta-txt" id="s8-txt">que eu te mando no direct</p>
+      </div>
+    </div>
+    <div class="topo"><span>otalogia</span><span>pergunta do dono</span><span>2026/10</span></div>
+    <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i></span></div>
+    <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
+  </section>
+</div>
+
+<script>
+  const tl = gsap.timeline({ paused: true });
+  const S = 6, m = otaMotion(tl, S);
+  const BR = "#F5F5FA", INK = "#0B0B12";
+
+  // S1: personagem acende, título sobe atrás da cabeça, a pergunta se escreve
+  m.foto("s1", 0, { z: 1.06 });
+  m.chrome("s1", 0);
+  m.linhas("s1", 0.45);
+  m.escreve("#s1-emo", 1.4);
+  m.sobe("#s1-arrasta", 2.4);
+  tl.fromTo("#s1-arrasta b", { x: 0 }, { x: 14, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 4 }, 2.9);
+
+  // S2: a busca digita a palavra; os resultados aparecem e nenhum é você
+  const t2 = S;
+  m.foto("s2", t2, { z: 1.14, brasas: 24 });
+  m.linhas("s2", t2 + 0.15);
+  m.escreve("#s2-emo", t2 + 1.0);
+  m.sobe("#s2-busca .campo", t2 + 0.9, 0.7);
+  gsap.utils.toArray("#s2-txt .ch").forEach((c, i) => tl.fromTo(c, { opacity: 0 }, { opacity: 1, duration: 0.01 }, t2 + 1.5 + i * 0.08));
+  tl.fromTo("#s2-cursor", { opacity: 1 }, { opacity: 0, duration: 0.4, ease: "steps(1)", yoyo: true, repeat: 11 }, t2 + 0.9);
+  gsap.utils.toArray("#s2-res div").forEach((r, i) => tl.fromTo(r, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, t2 + 2.6 + i * 0.18));
+
+  // S3
+  const t3 = S * 2;
+  m.linhas("s3", t3 + 0.15);
+  m.marca("#s3-hl", t3 + 0.9, BR);
+  m.lista("s3", t3 + 1.1);
+
+  // S4: a caixa varre o "nome"
+  const t4 = S * 3;
+  m.linhas("s4", t4 + 0.15);
+  m.escreve("#s4-emo", t4 + 0.9);
+  m.marca("#s4-hl", t4 + 1.9, INK);
+
+  // S5
+  const t5 = S * 4;
+  m.respira("#s5-led", t5);
+  m.linhas("s5", t5 + 0.15);
+  m.marca("#s5-hl", t5 + 0.8, BR);
+  m.lista("s5", t5 + 1.0, 0.3);
+
+  // S6: a margem se desenha, a palavra é digitada dentro da caixa
+  const t6 = S * 5;
+  tl.fromTo("#s6-margem", { scaleY: 0 }, { scaleY: 1, duration: 1.2, ease: "expo.out" }, t6 + 0.1);
+  m.sobe("#s6-jogo", t6 + 0.3, 0.6);
+  m.linhas("s6", t6 + 0.2);
+  m.sobe("#s6-emo", t6 + 1.0, 0.5);
+  m.marca("#s6-hl", t6 + 1.0, INK);
+  gsap.utils.toArray("#s6-hl .ch").forEach((c, i) => tl.fromTo(c, { opacity: 0 }, { opacity: 1, duration: 0.01 }, t6 + 1.5 + i * 0.1));
+
+  // S7
+  const t7 = S * 6;
+  m.respira("#s7-led", t7);
+  m.linhas("s7", t7 + 0.2);
+  m.escreve("#s7-emo", t7 + 1.1, 1.3);
+
+  // S8 CTA: pílula entra por último e pulsa até o fim
+  const t8 = S * 7;
+  m.foto("s8", t8, { z: 1.06, brasas: 30 });
+  m.linhas("s8", t8 + 0.35);
+  m.escreve("#s8-emo", t8 + 1.1, 0.9);
+  m.pill("#s8-pill", t8 + 1.7);
+  m.sobe("#s8-txt", t8 + 2.1);
+
+  window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

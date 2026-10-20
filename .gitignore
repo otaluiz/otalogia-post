@@ -4,3 +4,10 @@ __pycache__/
 *.bak
 _tmp/
 automation/logs/
+
+# carrossel com motion (motor/hyperframes/render.sh): cópias e vídeos gerados
+carrosseis/*/motion/fonts/
+carrosseis/*/motion/img/
+carrosseis/*/motion/out/
+carrosseis/*/motion/otalogia.*
+carrosseis/*/motion/.hyperframes/
