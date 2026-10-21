@@ -87,3 +87,12 @@ bash motor/hyperframes/render.sh carrosseis/<slug>    # gera carrosseis/<slug>/m
   - **Imagem gerada (T1):** `2026-10-desiste-antes`. Push-in maior (1.16) com a luz da cena tremulando e brasas;
     slides T5 com o navegador subindo e o print aproximando.
 - Conferir antes de renderizar: `npx hyperframes@0.8.181 snapshot --at 5.5,11.5,... --no-end` dentro de `motion/`.
+
+## Regras do motion (2026-10-21)
+
+- Parallax e título letra por letra só nos slides com imagem (capa, slide 2 e CTA); os de texto mantêm a entrada
+  por linha, sem parallax.
+- Texto nunca sobre rosto: `motor/hyperframes/checar_rostos.py` roda dentro do `render.sh` (Haar + cabeça do
+  recorte, em 3 momentos de cada slide com imagem, já com o parallax) e para o render se achar sobreposição.
+- Entrega no Drive (`motion-drive.yml`): a pasta do carrossel fica no formato da estática, com `slide-NN.mp4` no
+  lugar dos PNG e o `metadata.json` apontando para os .mp4 (`formato_midia: motion`). PNG e prévia completa em `extras/`.

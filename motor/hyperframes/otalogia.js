@@ -8,7 +8,9 @@ window.otaMotion = (tl, S = 6) => {
   const m = {
     // linhas do display sobem de trás da máscara, em cascata
     // título letra por letra: cada linha sobe de trás da máscara com leve rotação, em cascata
+    // slides com imagem: letra por letra; slides de texto: a linha inteira sobe da máscara (formato original)
     linhas: (sl, t0) => document.querySelectorAll(`#${sl} .display .linha > span`).forEach((ln, i) => {
+      if (!$(`#${sl} .foto`)) return tl.fromTo(ln, { yPercent: 108 }, { yPercent: 0, duration: 1.1, ease: E }, t0 + i * 0.12);
       const cs = m.letras(ln);
       tl.fromTo(cs, { yPercent: 115, rotate: 8, opacity: 0 }, { yPercent: 0, rotate: 0, opacity: 1, duration: 0.95, ease: E, stagger: 0.022 }, t0 + i * 0.14);
     }),
@@ -53,7 +55,8 @@ window.otaMotion = (tl, S = 6) => {
         tl.fromTo(nav, { rotationY: 5, rotationX: 2, x: 12 }, { rotationY: -5, rotationX: -1, x: -12, duration: S, ease: "sine.inOut" }, t0);
       }
     },
-    parallaxTodos: () => document.querySelectorAll("section[data-start]").forEach((s) => m.parallax(s.id, +s.dataset.start)),
+    // parallax só nos slides com imagem (capa, slide 2 e CTA); os de texto ficam parados como antes
+    parallaxTodos: () => document.querySelectorAll("section[data-start]").forEach((s) => s.querySelector(".foto") && m.parallax(s.id, +s.dataset.start)),
     sobe: (sel, t, d = 0.9) => tl.fromTo(sel, { y: 30, opacity: 0, filter: "blur(10px)" }, { y: 0, opacity: 1, filter: "blur(0px)", duration: d, ease: "power3.out" }, t),
     // frase manuscrita se escreve da esquerda pra direita
     escreve: (sel, t, d = 1.2) => tl.fromTo(sel, { clipPath: "inset(-30% 100% -30% -5%)" }, { clipPath: "inset(-30% -5% -30% -5%)", duration: d, ease: "power2.inOut" }, t),

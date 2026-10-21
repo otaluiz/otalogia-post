@@ -11,7 +11,7 @@
   --f-display: "Inter Tight", sans-serif; --f-serif: "Instrument Serif", serif; --f-mono: "JetBrains Mono", monospace;
 }
 body { margin: 0; background: var(--ink); }
-#root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--ink); }
+#root { position: relative; width: 1080px; height: 1440px; overflow: hidden; background: var(--ink); }
 
 .slide { position: absolute; inset: 0; overflow: hidden; font-family: var(--f-display); --fg: var(--branco); --hot: var(--quente); color: var(--fg); background: var(--ink); }
 .slide.papel { --fg: var(--ink); --hot: var(--quente-papel); background: var(--papel); }
