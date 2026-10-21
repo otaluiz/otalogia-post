@@ -1,0 +1,41 @@
+# Renderiza os carrosséis com motion (carrosseis/*/motion/index.html) e sobe os MP4 para o Drive,
+# na subpasta "motion" de cada carrossel. Disparo manual; "carrosseis" vazio = todos os que têm motion.
+name: motion -> drive
+on:
+  workflow_dispatch:
+    inputs:
+      carrosseis:
+        description: "slugs separados por espaço (vazio = todos)"
+        type: string
+        default: ""
+permissions:
+  contents: read
+concurrency: drive
+jobs:
+  motion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: pip install -q google-api-python-client google-auth
+      - name: renderiza
+        run: |
+          for d in carrosseis/*/motion/index.html; do
+            slug=$(basename "$(dirname "$(dirname "$d")")")
+            if [ -n "${{ inputs.carrosseis }}" ] && ! grep -qw "$slug" <<< "${{ inputs.carrosseis }}"; then continue; fi
+            bash motor/hyperframes/render.sh "carrosseis/$slug" > render.log 2>&1 || { tail -30 render.log; exit 1; }
+            tail -1 render.log
+          done
+      - name: sobe para o Drive
+        env:
+          GOOGLE_DRIVE_CLIENT_ID: ${{ secrets.GOOGLE_DRIVE_CLIENT_ID }}
+          GOOGLE_DRIVE_CLIENT_SECRET: ${{ secrets.GOOGLE_DRIVE_CLIENT_SECRET }}
+          GOOGLE_DRIVE_REFRESH_TOKEN: ${{ secrets.GOOGLE_DRIVE_REFRESH_TOKEN }}
+        run: python automation/subir_motion_drive.py ${{ inputs.carrosseis }}
