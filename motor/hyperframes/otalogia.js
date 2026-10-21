@@ -7,7 +7,53 @@ window.otaMotion = (tl, S = 6) => {
 
   const m = {
     // linhas do display sobem de trás da máscara, em cascata
-    linhas: (sl, t0) => tl.fromTo(`#${sl} .display .linha > span`, { yPercent: 108 }, { yPercent: 0, duration: 1.1, ease: E, stagger: 0.12 }, t0),
+    // título letra por letra: cada linha sobe de trás da máscara com leve rotação, em cascata
+    linhas: (sl, t0) => document.querySelectorAll(`#${sl} .display .linha > span`).forEach((ln, i) => {
+      const cs = m.letras(ln);
+      tl.fromTo(cs, { yPercent: 115, rotate: 8, opacity: 0 }, { yPercent: 0, rotate: 0, opacity: 1, duration: 0.95, ease: E, stagger: 0.022 }, t0 + i * 0.14);
+    }),
+    // quebra os nós de texto em letras (palavra inteira num inline-block para não partir a linha), mantendo .hl/.hot
+    letras: (el) => {
+      const nos = [], w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      while (w.nextNode()) nos.push(w.currentNode);
+      nos.forEach((n) => {
+        const f = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach((p) => {
+          if (!p) return;
+          if (/^\s+$/.test(p)) return f.append(p);
+          const pal = document.createElement("span");
+          pal.style.cssText = "display:inline-block;white-space:nowrap";
+          [...p].forEach((ch) => { const c = document.createElement("span"); c.className = "ch-a"; c.style.display = "inline-block"; c.textContent = ch; pal.append(c); });
+          f.append(pal);
+        });
+        n.replaceWith(f);
+      });
+      return el.querySelectorAll(".ch-a");
+    },
+    // câmera que desliza: cada camada anda numa velocidade (fundo devagar, texto no meio, personagem e partículas na frente)
+    parallax: (sl, t0) => {
+      const sec = $(`#${sl}`), camadas = [
+        [".foto, .bloom, .led, .dobra, .grade-fundo", 14],
+        [".margem, .jogo", 18],
+        [".conteudo", 24],
+        [".emocao, .lista, .cta, .busca", 10],
+        [".base, .chip, .ref-titulo", 20],
+        [".recorte", 52],
+        [".brasas", 90],
+      ];
+      camadas.forEach(([sel, d]) => {
+        const els = [...sec.querySelectorAll(sel)];
+        if (els.length) tl.fromTo(els, { x: d }, { x: -d, duration: S, ease: "sine.inOut" }, t0);
+      });
+      const rec = sec.querySelectorAll(".recorte");
+      if (rec.length) tl.fromTo(rec, { rotation: 0.6 }, { rotation: -0.6, duration: S, ease: "sine.inOut" }, t0);
+      const nav = sec.querySelector(".navegador");
+      if (nav) {
+        gsap.set(sec, { perspective: 1400 });
+        tl.fromTo(nav, { rotationY: 5, rotationX: 2, x: 12 }, { rotationY: -5, rotationX: -1, x: -12, duration: S, ease: "sine.inOut" }, t0);
+      }
+    },
+    parallaxTodos: () => document.querySelectorAll("section[data-start]").forEach((s) => m.parallax(s.id, +s.dataset.start)),
     sobe: (sel, t, d = 0.9) => tl.fromTo(sel, { y: 30, opacity: 0, filter: "blur(10px)" }, { y: 0, opacity: 1, filter: "blur(0px)", duration: d, ease: "power3.out" }, t),
     // frase manuscrita se escreve da esquerda pra direita
     escreve: (sel, t, d = 1.2) => tl.fromTo(sel, { clipPath: "inset(-30% 100% -30% -5%)" }, { clipPath: "inset(-30% -5% -30% -5%)", duration: d, ease: "power2.inOut" }, t),

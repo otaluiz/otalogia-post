@@ -169,6 +169,7 @@ def main():
 
 {timeline}
 
+  m.parallaxTodos();
   window.__timelines["main"] = tl;
 </script>
 </body>

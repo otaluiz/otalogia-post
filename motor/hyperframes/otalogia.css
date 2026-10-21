@@ -60,7 +60,8 @@ body { margin: 0; background: var(--ink); }
 .lista .fio.fim { top: auto; bottom: 0; }
 
 /* foto sangrada + bloom + recorte + brasas */
-.foto, .bloom, .recorte { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 80%; }
+/* sobra de 48px em volta: a foto desliza no parallax sem mostrar borda; foto e recorte usam a mesma caixa */
+.foto, .bloom, .recorte { position: absolute; left: -48px; top: -48px; width: calc(100% + 96px); height: calc(100% + 96px); object-fit: cover; transform-origin: 50% 80%; }
 .bloom { filter: blur(22px) brightness(1.5) saturate(1.2); mix-blend-mode: screen; opacity: 0; }
 .recorte { z-index: 4; }
 .brasas { position: absolute; inset: 0; z-index: 4; pointer-events: none; }

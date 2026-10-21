@@ -1,0 +1,80 @@
+{
+  "carousel_id": "2026-10-direct-fora-do-horario",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-21",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 22,
+  "serie": "PLANTA",
+  "tema": "SEU DIRECT RESPONDE ÀS 23H. você não.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T5-T3-T5-T2c-T5-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SEU DIRECT RESPONDE ÀS 23H. você não."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "A MENSAGEM CHEGA FORA DO HORÁRIO e espera até amanhã."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "MENSAGEM DE AUSÊNCIA"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE A RESPOSTA AUTOMÁTICA DIZ Que a mensagem chegou Quando você volta a atender O link do cardápio ou da agenda A resposta da pergunta mais comum"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "NO DIRECT TAMBÉM"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "A RESPOSTA SEGURA O CLIENTE até você chegar."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "QUANDO QUISER IR ALÉM"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "desenvolvimento",
+      "texto": "DE MANHÃ VOCÊ CONTINUA a conversa que já começou."
+    },
+    {
+      "ordem": 9,
+      "arquivo": "slide-09.png",
+      "papel": "cta",
+      "texto": "QUER O TEXTO DA MENSAGEM pronto? Comenta DIRECT que eu te mando os modelos no direct"
+    }
+  ],
+  "legenda": "A mensagem chega às 23h, o cliente quer saber se você atende sábado e a resposta só sai no dia seguinte. Até lá, ele já perguntou pra outra loja.\n\nUma resposta automática resolve o começo da conversa. O WhatsApp Business tem mensagem de ausência de graça, a conta profissional do Instagram tem respostas salvas e perguntas frequentes no Direct e, se quiser ir além, o Chatfuel responde e agenda sozinho.\n\nO texto avisa que a mensagem chegou, diz quando você volta e já entrega o link do cardápio ou da agenda. De manhã, você continua a conversa em vez de começar do zero.\n\nSalva pra configurar hoje à noite.\n\nComenta DIRECT que eu te mando os modelos de mensagem no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#whatsappbusiness",
+    "#atendimentoaocliente",
+    "#automacao",
+    "#pequenosnegocios"
+  ],
+  "handle": "@otalogia"
+}

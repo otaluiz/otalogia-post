@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-      - run: pip install -q google-api-python-client google-auth
+      - run: pip install -q google-api-python-client google-auth numpy opencv-python-headless
       - name: renderiza
         run: |
           for d in carrosseis/*/motion/index.html; do

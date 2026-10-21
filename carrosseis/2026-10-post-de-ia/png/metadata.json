@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-post-de-ia",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-21",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 23,
+  "serie": "IA SEM HYPE",
+  "tema": "TODO MUNDO RECONHECE post de IA.",
+  "familia_cor": "ink-laranja",
+  "template": "T1b-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "TODO MUNDO RECONHECE post de IA."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "E PASSA DIRETO sem ler a primeira linha."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "COMO SE RECONHECE Abertura que serve pra qualquer marca Lista de três com a mesma cara Imagem lisa, sem lugar nenhum Nenhuma história de quem escreveu"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "A IA ESCREVE A MÉDIA e a média não para ninguém."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE SÓ VOCÊ TEM O caso do cliente de ontem A foto do seu balcão O jeito que você fala O erro que você já cometeu"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "USE A IA PRA CORTAR e você pra contar."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "O DETALHE REAL FAZ PARAR o genérico faz passar."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER REVISAR UM POST SEU comigo? Comenta HUMANO que eu te mando o checklist anti-genérico no direct"
+    }
+  ],
+  "legenda": "Todo mundo já reconhece post de IA. A abertura serve pra qualquer marca, a lista vem em três, a imagem é lisa demais. O dedo passa antes da segunda linha.\n\nA IA escreve a média do que já existe. O que faz alguém parar é o que só você tem: o caso do cliente de ontem, a foto do seu balcão, o seu jeito de falar, o erro que você já cometeu.\n\nUse a IA pra cortar e organizar. A história, conte você.\n\nManda pra quem posta todo dia com o mesmo texto de sempre.\n\nComenta HUMANO que eu te mando o checklist anti-genérico no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#inteligenciaartificial",
+    "#marketingdeconteudo",
+    "#instagramparanegocios",
+    "#pequenosnegocios"
+  ],
+  "handle": "@otalogia"
+}

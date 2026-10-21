@@ -1,0 +1,126 @@
+{
+ "id": "2026-10-direct-fora-do-horario",
+ "meta": {
+  "serie": "PLANTA",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "SEU DIRECT",
+    "RESPONDE ÀS 23H."
+   ],
+   "emocao": {
+    "texto": "[você] não.",
+    "posicao": "depois"
+   },
+   "imagem": "capa.png",
+   "tecido": true
+  },
+  {
+   "template": "T2",
+   "display": [
+    "A MENSAGEM CHEGA",
+    "FORA DO HORÁRIO"
+   ],
+   "emocao": {
+    "texto": "e espera até [amanhã].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png"
+  },
+  {
+   "template": "T5",
+   "display": [
+    "MENSAGEM",
+    "DE AUSÊNCIA"
+   ],
+   "referencia": {
+    "site": "business.whatsapp.com",
+    "nome": "WhatsApp Business",
+    "descricao": "Mensagem de ausência e de saudação automáticas, de graça no app.",
+    "print": "ref-whatsapp-business.png"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE A RESPOSTA",
+    "{AUTOMÁTICA} DIZ"
+   ],
+   "lista": [
+    "Que a mensagem chegou",
+    "Quando você volta a atender",
+    "O link do cardápio ou da agenda",
+    "A resposta da pergunta mais comum"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T5",
+   "display": [
+    "NO DIRECT",
+    "TAMBÉM"
+   ],
+   "referencia": {
+    "site": "help.instagram.com",
+    "nome": "Instagram",
+    "descricao": "Conta profissional tem respostas salvas e perguntas frequentes no Direct.",
+    "print": "ref-instagram-ajuda.png"
+   }
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "A RESPOSTA SEGURA",
+    "O CLIENTE"
+   ],
+   "emocao": {
+    "texto": "até você {chegar}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T5",
+   "display": [
+    "QUANDO QUISER",
+    "IR ALÉM"
+   ],
+   "referencia": {
+    "site": "chatfuel.com",
+    "nome": "Chatfuel",
+    "descricao": "Automação no WhatsApp e no Direct: responde, qualifica e agenda.",
+    "print": "ref-chatfuel.png"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "DE MANHÃ VOCÊ",
+    "{CONTINUA}"
+   ],
+   "emocao": {
+    "texto": "a conversa que já começou.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER O TEXTO",
+    "DA MENSAGEM"
+   ],
+   "emocao": {
+    "texto": "[pronto]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta DIRECT",
+    "texto": "que eu te mando os modelos no direct"
+   },
+   "imagem": "cta.png"
+  }
+ ]
+}
