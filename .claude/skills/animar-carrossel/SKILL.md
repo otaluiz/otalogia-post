@@ -70,8 +70,13 @@ ganha um gesto próprio além da entrada do texto: busca digitando, ponto percor
 navegador com o print aproximando, pílula do CTA pulsando.
 
 ```
+cd carrosseis/<slug> && python ../../motor/hyperframes/gerar.py carrossel.json   # cria motion/index.html
 bash motor/hyperframes/render.sh carrosseis/<slug>    # gera carrosseis/<slug>/motion/out/slide-NN.mp4 + completo.mp4
 ```
+
+- `gerar.py` monta o HTML a partir do `carrossel.json` com o motion padrão de cada template e ajusta o tamanho do
+  título para caber no bloco. Gestos próprios de um carrossel entram editando o `index.html` gerado (ele não
+  sobrescreve um existente sem `--force`).
 
 - `carrosseis/<slug>/motion/index.html`: só o conteúdo dos slides e a timeline. Tema (`otalogia.css`), helpers
   (`otalogia.js`: linhas, escreve, marca, lista, foto, referencia, pill) e fontes ficam em `motor/hyperframes/` e o

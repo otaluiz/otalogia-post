@@ -13,10 +13,23 @@ window.otaMotion = (tl, S = 6) => {
     escreve: (sel, t, d = 1.2) => tl.fromTo(sel, { clipPath: "inset(-30% 100% -30% -5%)" }, { clipPath: "inset(-30% -5% -30% -5%)", duration: d, ease: "power2.inOut" }, t),
     // caixa laranja varre por trás da palavra; a letra troca de cor junto
     marca: (sel, t, fg) => tl.fromTo(sel, { backgroundSize: "0% 100%", color: fg }, { backgroundSize: "100% 100%", color: "#0B0B12", duration: 0.7, ease: "power3.inOut" }, t),
+    // todos os marca-texto do seletor, cada um partindo da cor do texto em volta
+    marcas: (sel, t) => document.querySelectorAll(sel).forEach((el, i) => m.marca(el, t + i * 0.15, getComputedStyle(el.parentElement).color)),
+    // reduz o display e a frase manuscrita até a linha mais larga caber no bloco (o PNG estático faz o mesmo)
+    ajusta: () => document.querySelectorAll(".conteudo").forEach((c) => {
+      const w = c.clientWidth;
+      c.querySelectorAll(".display, .emocao").forEach((el) => {
+        const linhas = el.classList.contains("display") ? [...el.querySelectorAll(".linha > span")] : [el];
+        const larg = Math.max(...linhas.map((l) => l.scrollWidth));
+        if (larg > w) el.style.fontSize = parseFloat(getComputedStyle(el).fontSize) * (w / larg) * 0.98 + "px";
+      });
+    }),
     respira: (sel, t0) => tl.fromTo(sel, { scale: 1 }, { scale: 1.06, duration: S, ease: "none" }, t0),
-    lista: (sl, t0, passo = 0.35) => document.querySelectorAll(`#${sl} .lista li`).forEach((li, i) => {
+    lista: (sl, t0, passo = 0.35) => document.querySelectorAll(`#${sl} .lista li`).forEach((li, i, all) => {
       const t = t0 + i * passo;
-      tl.fromTo(li.querySelector(".fio"), { scaleX: 0 }, { scaleX: 1, duration: 1.1, ease: E }, t);
+      // a linha de baixo da lista entra junto com o último item
+      if (i === all.length - 1 && !li.querySelector(".fim")) li.insertAdjacentHTML("beforeend", '<i class="fio fim"></i>');
+      tl.fromTo(li.querySelectorAll(".fio"), { scaleX: 0 }, { scaleX: 1, duration: 1.1, ease: E }, t);
       tl.fromTo(li.querySelector(".n"), { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.7, ease: "power3.out" }, t + 0.05);
       tl.fromTo(li.querySelector(".t"), { opacity: 0, x: 40, filter: "blur(8px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.9, ease: E }, t + 0.1);
     }),
