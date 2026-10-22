@@ -94,5 +94,8 @@ bash motor/hyperframes/render.sh carrosseis/<slug>    # gera carrosseis/<slug>/m
   por linha, sem parallax.
 - Texto nunca sobre rosto: `motor/hyperframes/checar_rostos.py` roda dentro do `render.sh` (Haar + cabeça do
   recorte, em 3 momentos de cada slide com imagem, já com o parallax) e para o render se achar sobreposição.
-- Entrega no Drive (`motion-drive.yml`): a pasta do carrossel fica no formato da estática, com `slide-NN.mp4` no
-  lugar dos PNG e o `metadata.json` apontando para os .mp4 (`formato_midia: motion`). PNG e prévia completa em `extras/`.
+- Entrega no Drive (`motion-drive.yml`): a pasta do carrossel fica na ordem de postagem: `slide-01.png` (hook
+  estático, capa pronta no feed), `slide-02.mp4` (hook animado) e um `slide-NN.mp4` por slide seguinte. O
+  `metadata.json` lista essa sequência (`formato_midia: motion-capa`, lista original em `slides_estatico`); com 10
+  slides o hook animado sai (limite de 10 itens do Instagram). Originais (PNG e MP4 com a numeração do carrossel) e
+  a prévia ficam em `extras/`. Para só reorganizar pastas que já estão no Drive: workflow com `so_organizar`.
