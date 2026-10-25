@@ -41,12 +41,12 @@ jobs:
         run: |
           [ -n "$GOOGLE_DRIVE_REFRESH_TOKEN" ] || { echo "secrets do Drive ainda não cadastrados"; exit 0; }
           python automation/upload_drive.py
-      - name: status do Drive no repo (rascunho/aprovado/publicado)
+      - name: status do Drive no repo (rascunho/aprovado/publicado) e links das iscas
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add carrosseis/*/png/metadata.json
-          git diff --cached --quiet || { git commit -qm "chore: status dos carrosséis igual ao Drive [skip ci]" && git push origin main; }
+          git add carrosseis/*/png/metadata.json iscas/links.md 2>/dev/null || git add carrosseis/*/png/metadata.json
+          git diff --cached --quiet || { git commit -qm "chore: status dos carrosséis e links das iscas do Drive [skip ci]" && git push origin main; }
       - name: motion novo -> render e Drive
         env:
           GH_TOKEN: ${{ github.token }}

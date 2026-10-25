@@ -1,0 +1,34 @@
+{
+  "palavra": "BRIEFING",
+  "reel": "R7",
+  "semana": "2026-10-26",
+  "titulo": "O prompt de briefing que eu uso",
+  "subtitulo": "Pra IA escrever o seu post com a sua cara, e não com cara de IA.",
+  "secoes": [
+    {
+      "titulo": "Antes de abrir a IA",
+      "texto": "A IA escreve rápido, mas não sabe o que o seu cliente pergunta no balcão. Separe 5 minutos e anote isso primeiro.",
+      "itens": [
+        "As 3 perguntas que o cliente mais faz no WhatsApp ou na loja",
+        "A palavra que ele usa pro seu produto (não a palavra técnica)",
+        "Uma objeção que você escuta toda semana",
+        "O que você quer que a pessoa faça depois de ler"
+      ]
+    },
+    {
+      "titulo": "O prompt",
+      "texto": "Copie, troque o que está entre colchetes e cole no ChatGPT, Claude ou Gemini.",
+      "codigo": "Você vai escrever um post de Instagram para o meu negócio.\n\nNegócio: [o que você vende e pra quem]\nCidade/região: [onde atende]\nCliente típico: [quem compra, em uma frase]\nPerguntas que ele mais faz:\n1. [pergunta]\n2. [pergunta]\n3. [pergunta]\nObjeção que eu mais escuto: [ex.: \"tá caro\"]\nComo eu falo: [ex.: direto, informal, sem gíria]\nObjetivo do post: [ex.: a pessoa chamar no WhatsApp]\n\nRegras:\n- Responda UMA das perguntas acima, com exemplo do dia a dia.\n- Use as palavras que o cliente usa, não termo técnico.\n- Primeira linha com até 10 palavras, que faça parar de rolar.\n- Nada de frase motivacional, emoji em excesso ou número inventado.\n- Termine com uma ação clara ligada ao objetivo.\n\nMe entregue 3 versões curtas de primeira linha e 1 texto completo."
+    },
+    {
+      "titulo": "Depois que a IA responder",
+      "itens": [
+        "Corte tudo que você não falaria em voz alta",
+        "Troque exemplo genérico por um caso seu (ou diga que é exemplo)",
+        "Leia em voz alta: se travar, reescreva",
+        "Confira preço, prazo e endereço. A IA inventa"
+      ]
+    }
+  ],
+  "fecho": "Eu faço site, automação de WhatsApp e vídeo pra pequeno negócio parar de perder cliente. Me manda um oi no direct que eu te mostro como ficaria no seu."
+}

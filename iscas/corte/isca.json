@@ -1,0 +1,40 @@
+{
+  "palavra": "CORTE",
+  "reel": "R8",
+  "semana": "2026-10-26",
+  "titulo": "Os 3 passos que eu faço na mão",
+  "subtitulo": "Checklist pra tirar a cara de IA de qualquer post.",
+  "secoes": [
+    {
+      "titulo": "Passo 1 · O briefing (você)",
+      "texto": "A IA só sabe o que você conta. Antes de pedir o texto, dê o contexto que só você tem.",
+      "itens": [
+        "Pra quem é o post, em uma frase",
+        "A pergunta real do cliente que o post responde",
+        "Um exemplo do seu dia a dia pra IA usar",
+        "O que a pessoa deve fazer no fim"
+      ]
+    },
+    {
+      "titulo": "Passo 2 · O corte (você)",
+      "texto": "A primeira versão da IA quase sempre sobra. Corte sem dó.",
+      "itens": [
+        "Apague a introdução: comece no assunto",
+        "Tire adjetivo que não diz nada (\"incrível\", \"poderoso\")",
+        "Uma ideia por slide ou parágrafo",
+        "Se dá pra dizer em menos palavras, diga"
+      ]
+    },
+    {
+      "titulo": "Passo 3 · A revisão de voz (você)",
+      "texto": "Leia em voz alta, como se estivesse falando com o cliente no balcão.",
+      "itens": [
+        "Travou? Reescreva do jeito que você fala",
+        "Troque termo técnico pela palavra do cliente",
+        "Nenhum número que você não consiga provar",
+        "Último teste: você postaria isso com o seu nome?"
+      ]
+    }
+  ],
+  "fecho": "Se você quer que o seu Instagram, o seu site e o seu WhatsApp trabalhem juntos, me chama no direct. Eu monto isso pra pequeno negócio."
+}

@@ -1,6 +1,7 @@
 """Sobe para o Drive (Clientes/otalogia/04-Carrosseis) todo carrossel com status "rascunho"
 que ainda não tem pasta lá nem em 06-Aprovados-para-Postar, e cada roteiro semanal (roteiros/*.md)
-que ainda não está em Clientes/otalogia/03-Roteiros, convertido em Google Doc. Roda no GitHub Actions (secrets GOOGLE_DRIVE_*); substitui o sync-drive.ps1 do PC.
+que ainda não está em Clientes/otalogia/03-Roteiros, convertido em Google Doc, e cada PDF de isca (iscas/<slug>/<slug>.pdf)
+que ainda não está em Clientes/otalogia/07-Iscas-DM, com link público de leitura gravado em iscas/links.md (é o link da DM automática). Roda no GitHub Actions (secrets GOOGLE_DRIVE_*); substitui o sync-drive.ps1 do PC.
 
 Uso: python automation/upload_drive.py
 """
@@ -81,6 +82,26 @@ def main():
         svc.files().create(body={"name": nome, "parents": [pasta_roteiros], "mimeType": "application/vnd.google-apps.document"},
                            media_body=MediaFileUpload(str(f), mimetype="text/markdown"), fields="id").execute()
         print("roteiro enviado:", nome)
+
+    otalogia = achar(svc, "Clientes/otalogia")
+    pasta_iscas = filhos(svc, otalogia, True).get("07-Iscas-DM") or svc.files().create(
+        body={"name": "07-Iscas-DM", "mimeType": PASTA, "parents": [otalogia]}, fields="id").execute()["id"]
+    r = svc.files().list(q=f"'{pasta_iscas}' in parents and trashed = false", fields="files(name,webViewLink)", pageSize=1000).execute()
+    links = {f["name"]: f["webViewLink"] for f in r["files"]}
+    for f in sorted(Path("iscas").glob("*/*.pdf")):
+        if f.name in links:
+            continue
+        novo = svc.files().create(body={"name": f.name, "parents": [pasta_iscas]},
+                                  media_body=MediaFileUpload(str(f), mimetype="application/pdf"), fields="id,webViewLink").execute()
+        svc.permissions().create(fileId=novo["id"], body={"type": "anyone", "role": "reader"}).execute()
+        links[f.name] = novo["webViewLink"]
+        print("isca enviada:", f.name)
+    linhas = ["# Links das iscas (DM automática)", "", "Gerado pelo entregar.yml. Cole o link na resposta da palavra no ManyChat/automação da Meta.", "",
+              "| Palavra | Reel | Semana | Link |", "|---|---|---|---|"]
+    for j in sorted(Path("iscas").glob("*/isca.json")):
+        d = json.loads(j.read_text(encoding="utf-8"))
+        linhas.append(f"| {d['palavra']} | {d['reel']} | {d['semana']} | {links.get(j.parent.name + '.pdf', 'aguardando upload')} |")
+    Path("iscas/links.md").write_text("\n".join(linhas) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

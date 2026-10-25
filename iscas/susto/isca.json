@@ -1,0 +1,52 @@
+{
+  "palavra": "SUSTO",
+  "reel": "R9",
+  "semana": "2026-10-26",
+  "titulo": "5 coisas que espantam cliente",
+  "subtitulo": "Checklist pra mandar pro além antes que o cliente vá embora.",
+  "secoes": [
+    {
+      "titulo": "Site que não abre no celular",
+      "itens": [
+        "Abra o seu site no seu celular e no de outra pessoa",
+        "Texto legível sem dar zoom?",
+        "Botão do WhatsApp aparece sem rolar muito?",
+        "Carrega antes de você perder a paciência?"
+      ]
+    },
+    {
+      "titulo": "Link da bio quebrado",
+      "itens": [
+        "Clique em todos os links da bio hoje",
+        "O link leva direto pro que a pessoa quer (WhatsApp, catálogo, agenda)?",
+        "Tire link de promoção que já acabou"
+      ]
+    },
+    {
+      "titulo": "WhatsApp que responde em 2 dias",
+      "itens": [
+        "Mensagem de ausência configurada no WhatsApp Business",
+        "Respostas rápidas pras 5 perguntas mais comuns",
+        "Catálogo com preço ou faixa de preço",
+        "Alguém olha as mensagens no fim de semana?"
+      ]
+    },
+    {
+      "titulo": "Logo esticado",
+      "itens": [
+        "Foto de perfil centralizada e sem cortar o nome",
+        "Logo com a proporção certa no site, na fachada e no post",
+        "Tenha o logo em fundo claro e em fundo escuro"
+      ]
+    },
+    {
+      "titulo": "Post de IA sem revisão",
+      "itens": [
+        "Leia em voz alta antes de postar",
+        "Confira preço, horário e endereço",
+        "Corte frase genérica que serviria pra qualquer loja"
+      ]
+    }
+  ],
+  "fecho": "Marcou mais de dois itens? Me chama no direct que eu te ajudo a arrumar site, link da bio e WhatsApp."
+}
