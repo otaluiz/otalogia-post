@@ -1,0 +1,53 @@
+name: instagram-reels-virais
+# Reels mais vistos do nicho via Apify (secret APIFY_TOKEN): hashtags -> top criadores -> reels deles.
+on:
+  workflow_dispatch:
+  push:
+    paths: [pesquisa/instagram/alvos-reels.txt]
+permissions:
+  contents: write
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Coletar
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -n "$APIFY_TOKEN" || { echo "APIFY_TOKEN ausente"; exit 1; }
+          out=pesquisa/instagram/dados/reels; mkdir -p "$out"
+          run() { curl -sS --fail-with-body -m 900 -X POST -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' \
+            "https://api.apify.com/v2/acts/$1/run-sync-get-dataset-items" -d "$2"; }
+          for h in $(grep '^#' pesquisa/instagram/alvos-reels.txt | tr -d '#'); do
+            run apify~instagram-hashtag-scraper "{\"hashtags\":[\"$h\"],\"resultsType\":\"reels\",\"resultsLimit\":60}" > "$out/hashtag-$h.json" || echo "falhou: $h"
+          done
+          # criadores: os da lista + os 10 com mais views nas hashtags
+          { grep '^@' pesquisa/instagram/alvos-reels.txt | tr -d '@'
+            jq -s -r '[.[][] | select(.ownerUsername) | {u:.ownerUsername,v:((.videoViewCount // .videoPlayCount // 0))}] | group_by(.u) | map({u:.[0].u,v:(map(.v)|max)}) | sort_by(-.v) | .[:10][] | .u' $out/hashtag-*.json
+          } | sort -u | jq -R . | jq -sc . > /tmp/u.json
+          cat /tmp/u.json
+          run apify~instagram-reel-scraper "{\"username\":$(cat /tmp/u.json),\"resultsLimit\":15}" > "$out/criadores.json"
+          jq -s '[.[][] | select(.videoUrl) | {url, owner:.ownerUsername, views:(.videoPlayCount // .videoViewCount // 0), likes:.likesCount, comments:.commentsCount, dur:.videoDuration, ts:.timestamp, caption:((.caption // "")[:300]), videoUrl}] | unique_by(.url) | sort_by(-.views) | .[:40]' $out/hashtag-*.json $out/criadores.json > "$out/top.json"
+          jq -r '.[:15][] | "\(.views)\t\(.owner)\t\(.dur)s\t\(.caption[:80])"' "$out/top.json"
+      - name: Estilo (cortes e frames dos top 8)
+        run: |
+          set -euo pipefail
+          sudo apt-get -qq install -y ffmpeg >/dev/null
+          out=pesquisa/instagram/dados/reels; mkdir -p "$out/frames"; echo '[]' > "$out/estilo.json"
+          jq -r '.[:8][] | [.url, .videoUrl] | @tsv' "$out/top.json" | while IFS=$'\t' read -r u v; do
+            id=$(basename "$u"); curl -sSL -m 120 -o /tmp/v.mp4 "$v" || continue
+            d=$(ffprobe -v error -show_entries format=duration -of csv=p=0 /tmp/v.mp4)
+            cuts=$(ffmpeg -i /tmp/v.mp4 -vf "select='gt(scene,0.3)',showinfo" -f null - 2>&1 | grep -c pts_time || true)
+            ffmpeg -v error -y -i /tmp/v.mp4 -vf "fps=1,scale=180:-1,tile=8x2" -frames:v 1 "$out/frames/$id.jpg"
+            jq --arg u "$u" --arg d "$d" --arg c "$cuts" '. + [{url:$u, dur:($d|tonumber), cuts:($c|tonumber), cortes_por_s:(($c|tonumber)/($d|tonumber))}]' "$out/estilo.json" > /tmp/e && mv /tmp/e "$out/estilo.json"
+          done
+          cat "$out/estilo.json"
+      - name: Commit
+        run: |
+          git config user.name github-actions; git config user.email github-actions@users.noreply.github.com
+          git add pesquisa/instagram/dados/reels
+          git diff --cached --quiet || git commit -m "data: reels virais do nicho (Apify)"
+          git push origin HEAD:${GITHUB_REF_NAME}
