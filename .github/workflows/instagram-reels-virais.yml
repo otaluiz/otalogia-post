@@ -3,7 +3,7 @@ name: instagram-reels-virais
 on:
   workflow_dispatch:
   push:
-    paths: [pesquisa/instagram/alvos-reels.txt]
+    paths: [pesquisa/instagram/alvos-reels.txt, pesquisa/instagram/referencias.txt]
 permissions:
   contents: write
 jobs:
@@ -32,6 +32,20 @@ jobs:
           run apify~instagram-reel-scraper "{\"username\":$(cat /tmp/u.json),\"resultsLimit\":15}" > "$out/criadores.json"
           jq -s '[.[] | arrays | .[] | select(.videoUrl) | {url, owner:.ownerUsername, views:(.videoPlayCount // .videoViewCount // 0), likes:.likesCount, comments:.commentsCount, dur:.videoDuration, ts:.timestamp, caption:((.caption // "")[:300]), videoUrl}] | unique_by(.url) | sort_by(-.views) | .[:40]' $out/hashtag-*.json $out/criadores.json > "$out/top.json"
           jq -r '.[:15][] | "\(.views)\t\(.owner)\t\(.dur)s\t\(.caption[:80])"' "$out/top.json"
+      - name: Referências (links de reels enviados)
+        if: hashFiles('pesquisa/instagram/referencias.txt') != ''
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: |
+          set -euo pipefail
+          out=pesquisa/instagram/dados/reels/ref; mkdir -p "$out"
+          urls=$(grep '^https' pesquisa/instagram/referencias.txt | jq -R . | jq -sc .)
+          curl -sS --fail-with-body -m 900 -X POST -H "Authorization: Bearer $APIFY_TOKEN" -H 'Content-Type: application/json' \
+            "https://api.apify.com/v2/acts/apify~instagram-scraper/run-sync-get-dataset-items" -d "{\"directUrls\":$urls,\"resultsType\":\"posts\",\"resultsLimit\":1}" > "$out/ref.json"
+          jq -r '.[] | select(.videoUrl) | [.shortCode, .videoUrl] | @tsv' "$out/ref.json" | while IFS=$'\t' read -r id v; do
+            curl -sSL -m 120 -o "$out/$id.mp4" "$v" || true
+          done
+          ls -la "$out"
       - name: Estilo (cortes e frames dos top 8)
         run: |
           set -euo pipefail
