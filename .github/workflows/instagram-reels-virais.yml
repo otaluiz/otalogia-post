@@ -25,12 +25,12 @@ jobs:
             run apify~instagram-hashtag-scraper "{\"hashtags\":[\"$h\"],\"resultsType\":\"reels\",\"resultsLimit\":60}" > "$out/hashtag-$h.json" || echo "falhou: $h"
           done
           # criadores: os da lista + os 10 com mais views nas hashtags
-          { grep '^@' pesquisa/instagram/alvos-reels.txt | tr -d '@'
-            jq -s -r '[.[][] | select(.ownerUsername) | {u:.ownerUsername,v:((.videoViewCount // .videoPlayCount // 0))}] | group_by(.u) | map({u:.[0].u,v:(map(.v)|max)}) | sort_by(-.v) | .[:10][] | .u' $out/hashtag-*.json
+          { grep '^@' pesquisa/instagram/alvos-reels.txt | tr -d '@' || true
+            jq -s -r '[.[] | arrays | .[] | select(.ownerUsername) | {u:.ownerUsername,v:((.videoViewCount // .videoPlayCount // 0))}] | group_by(.u) | map({u:.[0].u,v:(map(.v)|max)}) | sort_by(-.v) | .[:10][] | .u' $out/hashtag-*.json
           } | sort -u | jq -R . | jq -sc . > /tmp/u.json
           cat /tmp/u.json
           run apify~instagram-reel-scraper "{\"username\":$(cat /tmp/u.json),\"resultsLimit\":15}" > "$out/criadores.json"
-          jq -s '[.[][] | select(.videoUrl) | {url, owner:.ownerUsername, views:(.videoPlayCount // .videoViewCount // 0), likes:.likesCount, comments:.commentsCount, dur:.videoDuration, ts:.timestamp, caption:((.caption // "")[:300]), videoUrl}] | unique_by(.url) | sort_by(-.views) | .[:40]' $out/hashtag-*.json $out/criadores.json > "$out/top.json"
+          jq -s '[.[] | arrays | .[] | select(.videoUrl) | {url, owner:.ownerUsername, views:(.videoPlayCount // .videoViewCount // 0), likes:.likesCount, comments:.commentsCount, dur:.videoDuration, ts:.timestamp, caption:((.caption // "")[:300]), videoUrl}] | unique_by(.url) | sort_by(-.views) | .[:40]' $out/hashtag-*.json $out/criadores.json > "$out/top.json"
           jq -r '.[:15][] | "\(.views)\t\(.owner)\t\(.dur)s\t\(.caption[:80])"' "$out/top.json"
       - name: Estilo (cortes e frames dos top 8)
         run: |
