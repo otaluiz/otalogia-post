@@ -119,7 +119,8 @@ def main():
     svc = servico()
     pastas = dict(filhos(svc, achar(svc, "Clientes/otalogia/04-Carrosseis"), True))
     for nome, pid in filhos(svc, achar(svc, "Clientes/otalogia/06-Aprovados-para-Postar"), True).items():
-        pastas.setdefault(nome, pid)
+        # a fila (06) vale mais que uma cópia em 04; pasta renomeada na revisão (<slug>_ajustar) também conta
+        pastas[nome] = pastas[nome.split("_")[0]] = pid
         for sub, sid in filhos(svc, pid, True).items():
             pastas.setdefault(sub, sid)
 

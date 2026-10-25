@@ -10,6 +10,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write  # dispara o motion-drive (workflow_dispatch é o único gatilho que o GITHUB_TOKEN aciona)
 concurrency: drive
 jobs:
   entregar:
@@ -24,6 +25,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git diff --name-only HEAD "origin/${GITHUB_REF_NAME}" -- 'carrosseis/*/motion/index.html' | cut -d/ -f2 | sort -u | tr '\n' ' ' > /tmp/motion_slugs
           git merge --no-edit "origin/${GITHUB_REF_NAME}"
           git push origin main
           git push origin --delete "${GITHUB_REF_NAME}"
@@ -39,3 +41,22 @@ jobs:
         run: |
           [ -n "$GOOGLE_DRIVE_REFRESH_TOKEN" ] || { echo "secrets do Drive ainda não cadastrados"; exit 0; }
           python automation/upload_drive.py
+      - name: status do Drive no repo (rascunho/aprovado/publicado)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add carrosseis/*/png/metadata.json
+          git diff --cached --quiet || { git commit -qm "chore: status dos carrosséis igual ao Drive [skip ci]" && git push origin main; }
+      - name: motion novo -> render e Drive
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENTO: ${{ github.event_name }}
+        run: |
+          # push direto na main: compara com o commit anterior; branch da rotina: lista feita antes do merge
+          if [ "$EVENTO" = push ] && [ "$GITHUB_REF_NAME" = main ]; then
+            git diff --name-only "${{ github.event.before }}" HEAD -- 'carrosseis/*/motion/index.html' 2>/dev/null | cut -d/ -f2 | sort -u | tr '\n' ' ' > /tmp/motion_slugs || true
+          fi
+          slugs=$(cat /tmp/motion_slugs 2>/dev/null | xargs)
+          [ -n "$slugs" ] || { echo "sem motion novo"; exit 0; }
+          gh workflow run motion-drive.yml --ref main -f carrosseis="$slugs"
+          echo "motion-drive disparado: $slugs"

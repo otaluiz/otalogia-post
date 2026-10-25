@@ -3,7 +3,7 @@ name: instagram-pesquisa
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 9 * * 1"  # segunda 6h BRT, antes da rotina de roteiro
+    - cron: "0 12 * * 0"  # domingo 9h BRT: o agendador do GitHub atrasa horas e a rotina de roteiro roda segunda 7h52
   push:
     paths: [pesquisa/instagram/alvos.txt]
 permissions:

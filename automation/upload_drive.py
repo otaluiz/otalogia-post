@@ -43,14 +43,26 @@ def achar(svc, caminho):
 def main():
     svc = servico()
     destino = achar(svc, "Clientes/otalogia/04-Carrosseis")
-    # já enviado = existe em 04 (rascunhos) ou em 06 (aprovado e movido sem mudar o status no repo)
-    no_drive = {**filhos(svc, destino, True), **filhos(svc, achar(svc, "Clientes/otalogia/06-Aprovados-para-Postar"), True)}
+    # já enviado = existe em 04 (rascunho), em 06 (aprovado) ou em 06/publicados (postado); nome pode ter sufixo
+    # de revisão (<slug>_ajustar). O status do repo acompanha o Drive: é por ele que a rotina diária conta o backlog.
+    base = lambda n: n.split("_")[0]  # noqa: E731
+    seis = filhos(svc, achar(svc, "Clientes/otalogia/06-Aprovados-para-Postar"), True)
+    publicados = {base(n) for n in filhos(svc, seis["publicados"], True)} if "publicados" in seis else set()
+    aprovados = {base(n) for n in seis} - {"publicados"} - publicados
+    no_drive = {base(n) for n in filhos(svc, destino, True)} | aprovados | publicados
     enviados = 0
     for d in sorted(Path("carrosseis").iterdir()):
         meta = d / "png" / "metadata.json"
-        if not meta.exists() or d.name in no_drive:
+        if not meta.exists():
             continue
-        if json.loads(meta.read_text(encoding="utf-8")).get("status") != "rascunho":
+        dados = json.loads(meta.read_text(encoding="utf-8"))
+        novo = "publicado" if d.name in publicados else "aprovado" if d.name in aprovados else dados.get("status")
+        if novo != dados.get("status"):
+            dados["status"] = novo
+            dados["postado"] = dados.get("postado") or novo == "publicado"
+            meta.write_text(json.dumps(dados, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            print("status:", d.name, "->", novo)
+        if d.name in no_drive or novo != "rascunho":
             continue
         pasta = svc.files().create(body={"name": d.name, "mimeType": PASTA, "parents": [destino]}, fields="id").execute()["id"]
         arquivos = sorted((d / "png").iterdir()) + ([d / "legenda.md"] if (d / "legenda.md").exists() else [])

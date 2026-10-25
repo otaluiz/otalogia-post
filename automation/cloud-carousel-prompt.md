@@ -18,6 +18,11 @@ Siga `automation/daily-carousel-prompt.txt` do início ao fim, com estas diferen
 
 ## 2. Entregar
 - `status: "rascunho"` no `png/metadata.json` (aprovação é humana).
+- Motion (obrigatório, todo carrossel sai animado): na pasta do carrossel rode
+  `python ../../motor/hyperframes/gerar.py carrossel.json` e confira que `motion/index.html` foi criado.
+  Não renderize aqui: o `entregar.yml` vê o `motion/index.html` novo e dispara o `motion-drive.yml`, que gera os MP4
+  e monta a pasta do Drive na ordem de postagem (capa PNG + vídeos). Inclua `motion/index.html` no commit.
+- Backlog: conte só `status: "rascunho"` (o `entregar.yml` muda para `aprovado`/`publicado` conforme o Drive).
 - Atualize `roteiro-carrosseis.md` (linha em "Já produzidos" com a capa usada; tire o tema de "Próximos").
 - `git add` da pasta do carrossel e do roteiro, commit `content: <slug> (rotina nuvem)` e `git push`.
   Não envie PNG para o Drive por MCP (base64 estoura o contexto): o workflow `.github/workflows/entregar.yml`

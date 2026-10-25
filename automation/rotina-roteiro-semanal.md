@@ -1,10 +1,10 @@
 # Rotina de segunda: varredura do nicho + roteiro da semana (@otalogia)
 
-Roda toda segunda às 8h (BRT) numa sessão nova na nuvem. Às 6h, o workflow `instagram-pesquisa` já coletou dados novos no Apify e gravou em `pesquisa/instagram/dados/` na main.
+Roda toda segunda às 8h (BRT) numa sessão nova na nuvem. No domingo, o workflow `instagram-pesquisa` já coletou dados novos no Apify e gravou em `pesquisa/instagram/dados/` na main.
 
 ## Passos
 
-1. **Repositório atualizado.** Trabalhe no clone de `otaluiz/otalogia-post` e faça `git pull origin main`. Confira em `git log -3 -- pesquisa/instagram/dados` se a coleta é de hoje. Se não for, dispare o workflow `instagram-pesquisa.yml` na main (GitHub MCP `actions_run_trigger`, `run_workflow`), espere terminar (`actions_list`, de 60 em 60 s, no máximo 25 min) e faça o pull de novo. Se a coleta falhar, siga só com a pesquisa web e avise no roteiro.
+1. **Repositório atualizado.** Trabalhe no clone de `otaluiz/otalogia-post` e faça `git pull origin main`. Confira em `git log -3 -- pesquisa/instagram/dados` se a coleta é de ontem ou de hoje. Se não for, dispare `gh workflow run instagram-pesquisa.yml --ref main -R otaluiz/otalogia-post`, espere terminar (`gh run list -w instagram-pesquisa.yml -R otaluiz/otalogia-post`, de 60 em 60 s, no máximo 25 min) e faça o pull de novo. Se a coleta falhar, siga só com a pesquisa web e avise no roteiro.
 2. **Leia o contexto** (só o necessário):
    - `pesquisa/instagram/campanha-10k.md`: meta, fase do mês, cadência, alavancas, KPIs.
    - `roteiro-carrosseis.md`: regras de produção, carrosséis já produzidos e backlog (não repetir tema).
@@ -17,7 +17,7 @@ Roda toda segunda às 8h (BRT) numa sessão nova na nuvem. Às 6h, o workflow `i
    - Revise todo o texto com a skill `humanizer` (se não houver, com `ig-humanizer`).
    - Abra o roteiro com um bloco **"Placar da semana"**: seguidores (atual × semana passada × meta da fase), o post que mais rendeu e o que mudou no plano por causa disso.
 5. **Salve em dois lugares:**
-   - Repositório: `roteiros/AAAA-MM-DD-semana.md` (data da segunda). Faça `git add` do roteiro e do `roteiro-carrosseis.md`, commit `content: roteiro semana AAAA-MM-DD (rotina nuvem)` e push no branch da sessão (o workflow `entregar.yml` leva para a main).
+   - Repositório: `roteiros/AAAA-MM-DD-semana.md` (data da segunda). Faça `git add` do roteiro e do `roteiro-carrosseis.md`, commit `content: roteiro semana AAAA-MM-DD (rotina nuvem)` e push no branch da sessão (o workflow `entregar.yml` leva para a main). Se o clone não tiver credencial de push, anexe o repositório com `add_repo` (owner `otaluiz`, repo `otalogia-post`, access `push`) antes. Confira com `git ls-remote origin` que o branch chegou; se o push falhar, diga isso no resumo final em vez de dar a rotina por concluída.
    - Google Drive: não precisa de conector. Depois que o push chega à main, o `entregar.yml` (secrets `GOOGLE_DRIVE_*` do repositório) sobe todo `roteiros/*.md` novo como Google Doc para **Clientes/otalogia/03-Roteiros**, com o título `Roteiro AAAA-MM-DD-semana`.
 6. **Termine** com um resumo de no máximo 8 linhas: os temas da semana, e o placar. O Doc aparece no Drive alguns minutos depois do push.
 
