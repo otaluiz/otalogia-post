@@ -4,6 +4,7 @@ Roda toda segunda às 8h (BRT) numa sessão nova na nuvem. No domingo, o workflo
 
 ## Passos
 
+0. **Já existe?** Se `roteiros/AAAA-MM-DD-semana.md` desta segunda já estiver na main (feito à mão antes), não refaça: termine dizendo que o roteiro já existe.
 1. **Repositório atualizado.** Trabalhe no clone de `otaluiz/otalogia-post` e faça `git pull origin main`. Confira em `git log -3 -- pesquisa/instagram/dados` se a coleta é de ontem ou de hoje. Se não for, dispare `gh workflow run instagram-pesquisa.yml --ref main -R otaluiz/otalogia-post`, espere terminar (`gh run list -w instagram-pesquisa.yml -R otaluiz/otalogia-post`, de 60 em 60 s, no máximo 25 min) e faça o pull de novo. Se a coleta falhar, siga só com a pesquisa web e avise no roteiro.
 2. **Leia o contexto** (só o necessário):
    - `pesquisa/instagram/campanha-10k.md`: meta, fase do mês, cadência, alavancas, KPIs.

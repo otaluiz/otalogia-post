@@ -50,9 +50,12 @@ Pares de validação: cada par tem um T1 e um T1b.
 
 | # | Série | Tema | Hook sugerido | Capa | Pilar | CTA |
 |---|---|---|---|---|---|---|
+| 24 | Planta | IA do WhatsApp Business: o que arrumar antes de ligar (ia-do-whatsapp) | O WhatsApp Business já tem IA. Calma antes de *ligar*. | Referência | Autoridade | CATALOGO |
+| 25 | Planta | Black Friday: o atendimento trava no WhatsApp (black-friday-whatsapp) | A Black Friday trava no seu *WhatsApp*. | T1 | Descoberta | BLACK |
+| 26 | Antes e Depois | Bastidor do site da aidealab: 3 decisões invisíveis (bastidor-site-aidealab) | O site da minha agência e o que ninguém *vê*. | T1b | Autoridade | BASTIDOR |
 | 13 | Case aidealab | Antes e depois de um cliente aidealab | O que mudou quando o site *começou a vender*. | T1 | Conversão | AIDEALAB |
 
-Os #21 a #23 vieram da pesquisa de 2026-10-08 (`pesquisa/instagram/analise-e-plano.md`). O calendário de 12/out a 8/nov também está lá.
+Os #24 a #26 vêm do roteiro `roteiros/2026-10-26-semana.md` (copy completa lá). Os #21 a #23 vieram da pesquisa de 2026-10-08 (`pesquisa/instagram/analise-e-plano.md`). O calendário de 12/out a 8/nov também está lá.
 
 Notas:
 - Os hooks do backlog são ponto de partida e passam pela copywriting + humanizer antes de virar slide.
