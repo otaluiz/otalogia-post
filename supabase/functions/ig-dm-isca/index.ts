@@ -1,6 +1,6 @@
 // DM automática das iscas da @otalogia (API do Instagram com login do Instagram).
-// Comentário com a palavra (ex.: BRIEFING) -> resposta pública + DM com botão "Já te sigo".
-// Clicou no botão (ou mandou a palavra no direct) -> confere se segue: segue = manda o link do PDF; não segue = pede o follow.
+// Comentário com a palavra (ex.: BRIEFING) -> resposta pública + DM perguntando "Você já me segue?" (Sim / Ainda não).
+// "Sim" (ou a palavra no direct) -> confere se segue de verdade: segue = link do PDF; não segue = botão do perfil + "Pronto, segui".
 // Palavras e links vêm de iscas/links.json na main (gerado pelo entregar.yml), então isca nova não pede deploy.
 // Secrets: IG_TOKEN, IG_APP_SECRET, IG_VERIFY_TOKEN.
 // Token permanente: IG_TOKEN = token de Usuário do Sistema (Business Manager) da Página ligada à @otalogia e IG_GRAPH=facebook.
@@ -39,12 +39,16 @@ async function ig(caminho: string, corpo?: unknown) {
   return j;
 }
 
-const botao = (texto: string, p: string) => ({
-  attachment: {
-    type: "template",
-    payload: { template_type: "button", text: texto, buttons: [{ type: "postback", title: "Já te sigo ✅", payload: `ISCA:${p}` }] },
-  },
+const PERFIL = "https://www.instagram.com/otalogia/";
+const modelo = (texto: string, buttons: unknown[]) => ({
+  attachment: { type: "template", payload: { template_type: "button", text: texto, buttons } },
 });
+const sim = (p: string, titulo = "Sim, já sigo ✅") => ({ type: "postback", title: titulo, payload: `ISCA:${p}` });
+// pergunta se segue: "Sim" confere o follow antes de liberar; "Ainda não" manda o botão do perfil
+const pergunta = (texto: string, p: string) =>
+  modelo(texto, [sim(p), { type: "postback", title: "Ainda não", payload: `SEGUIR:${p}` }]);
+const seguir = (texto: string, p: string) =>
+  modelo(texto, [{ type: "web_url", title: "Seguir @otalogia", url: PERFIL }, sim(p, "Pronto, segui ✅")]);
 
 async function entregar(eu: string, quem: string, p: string) {
   const perfil = await ig(`${quem}?fields=username,is_user_follow_business`);
@@ -54,7 +58,7 @@ async function entregar(eu: string, quem: string, p: string) {
   } else {
     await ig(`${FB ? "me" : eu}/messages`, {
       recipient: { id: quem },
-      message: botao("Ainda não achei seu follow 👀 Me segue na @otalogia e toca no botão de novo que o material chega na hora.", p),
+      message: seguir("Ainda não achei seu follow 👀 Toca em Seguir, segue a @otalogia e depois toca em Pronto. O material chega na hora.", p),
     });
   }
 }
@@ -85,13 +89,18 @@ Deno.serve(async (req) => {
       await ig(`${v.id}/replies`, { message: "Te mandei no direct 📩" });
       await ig(`${FB ? "me" : eu}/messages`, {
         recipient: { comment_id: v.id },
-        message: botao(`Oi! Seu material ${p} está separado. O envio é só pra quem me segue: me segue na @otalogia e toca no botão 👇`, p),
+        message: pergunta(`Oi! Seu material ${p} está separado 📎 Ele é liberado só pra quem segue a @otalogia. Você já me segue?`, p),
       });
     }
     for (const m of entrada.messaging ?? []) {
       const quem = m.sender?.id;
       if (!quem || quem === eu || m.message?.is_echo) continue;
-      const p = m.postback?.payload?.startsWith("ISCA:") ? m.postback.payload.slice(5) : await palavra(m.message?.text);
+      const [acao, chave] = String(m.postback?.payload ?? "").split(":");
+      if (acao === "SEGUIR" && (await iscas())[chave]) {
+        await ig(`${FB ? "me" : eu}/messages`, { recipient: { id: quem }, message: seguir("Bora! Toca em Seguir e depois em Pronto, segui que eu libero o material 👇", chave) });
+        continue;
+      }
+      const p = acao === "ISCA" ? chave : await palavra(m.message?.text);
       if (p && (await iscas())[p]) await entregar(eu, quem, p);
     }
   }
