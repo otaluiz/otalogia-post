@@ -4,8 +4,8 @@ Função `supabase/functions/ig-dm-isca` (projeto Supabase **aidealab**), já pu
 `https://jrfjjpxjkpvuvvycyryj.supabase.co/functions/v1/ig-dm-isca`
 
 ## Fluxo
-1. Alguém comenta a palavra (ex.: BRIEFING) num post/Reel → responde no comentário "Te mandei no direct 📩" e manda DM com botão **Já te sigo ✅**.
-2. Tocou no botão (ou mandou a palavra no direct) → confere `is_user_follow_business`.
+1. Alguém comenta a palavra (ex.: BRIEFING) → responde no comentário "Te mandei no direct 📩" e manda DM perguntando **"Você já me segue?"** com os botões **Sim, já sigo ✅** e **Ainda não**.
+2. "Ainda não" → manda o botão **Seguir @otalogia** (abre o perfil) e **Pronto, segui ✅**. "Sim" ou "Pronto" (ou a palavra no direct) → confere `is_user_follow_business`; o link só sai se seguir de verdade.
    - Segue: manda o título e o link do PDF no Drive.
    - Não segue: pede o follow e manda o botão de novo.
 3. Palavras e links vêm de `iscas/links.json` na main (o `entregar.yml` gera). Isca nova entra sozinha, sem novo deploy (cache de 5 min).
