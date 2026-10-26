@@ -1,0 +1,124 @@
+{
+ "id": "2026-10-ia-do-whatsapp",
+ "meta": {
+  "serie": "PLANTA",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "O WHATSAPP BUSINESS",
+    "JÁ TEM IA."
+   ],
+   "emocao": {
+    "texto": "calma antes de [ligar].",
+    "posicao": "depois"
+   },
+   "imagem": "capa.png",
+   "tecido": true
+  },
+  {
+   "template": "T2",
+   "display": [
+    "ELA RESPONDE",
+    "SEU CLIENTE"
+   ],
+   "emocao": {
+    "texto": "com o que você [ensinou].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png"
+  },
+  {
+   "template": "T5",
+   "display": [
+    "JÁ VEM",
+    "NO APP"
+   ],
+   "referencia": {
+    "site": "business.whatsapp.com",
+    "nome": "WhatsApp Business",
+    "descricao": "Catálogo, mensagens automáticas e a IA para empresas no mesmo app.",
+    "print": "ref-whatsapp-business.png"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "ANTES DE LIGAR,",
+    "{ARRUME}"
+   ],
+   "lista": [
+    "Catálogo com preço atualizado",
+    "Horário e endereço certos no perfil",
+    "As perguntas que mais chegam, com a sua resposta",
+    "Quem atende quando a IA não souber"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "ELA SÓ SABE",
+    "O QUE ESTÁ NO {CATÁLOGO}"
+   ],
+   "emocao": {
+    "texto": "catálogo vazio, resposta vazia.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T5",
+   "display": [
+    "ONDE",
+    "FICA"
+   ],
+   "referencia": {
+    "site": "forbes.com.br",
+    "nome": "Forbes Brasil",
+    "descricao": "Ferramentas → IA para Empresas. A liberação no Brasil é gradual.",
+    "print": "ref-forbes.png"
+   }
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "ESCREVA COMO VOCÊ",
+    "RESPONDE NO {BALCÃO}"
+   ],
+   "emocao": {
+    "texto": "é isso que ela vai copiar.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "LIGAR É",
+    "UM BOTÃO."
+   ],
+   "emocao": {
+    "texto": "o trabalho é {antes}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER O CHECKLIST",
+    "DO QUE ARRUMAR"
+   ],
+   "emocao": {
+    "texto": "[antes]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta CATALOGO",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta.png"
+  }
+ ]
+}

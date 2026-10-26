@@ -1,0 +1,80 @@
+{
+  "carousel_id": "2026-10-ia-do-whatsapp",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-26",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 24,
+  "serie": "PLANTA",
+  "tema": "O WHATSAPP BUSINESS JÁ TEM IA. calma antes de ligar.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T5-T3-T2-T5-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "O WHATSAPP BUSINESS JÁ TEM IA. calma antes de ligar."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "ELA RESPONDE SEU CLIENTE com o que você ensinou."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "JÁ VEM NO APP"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "ANTES DE LIGAR, ARRUME Catálogo com preço atualizado Horário e endereço certos no perfil As perguntas que mais chegam, com a sua resposta Quem atende quando a IA não souber"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "ELA SÓ SABE O QUE ESTÁ NO CATÁLOGO catálogo vazio, resposta vazia."
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "ONDE FICA"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "ESCREVA COMO VOCÊ RESPONDE NO BALCÃO é isso que ela vai copiar."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "desenvolvimento",
+      "texto": "LIGAR É UM BOTÃO. o trabalho é antes."
+    },
+    {
+      "ordem": 9,
+      "arquivo": "slide-09.png",
+      "papel": "cta",
+      "texto": "QUER O CHECKLIST DO QUE ARRUMAR antes? Comenta CATALOGO que eu te mando no direct"
+    }
+  ],
+  "legenda": "O WhatsApp Business ganhou uma IA que responde cliente e indica produto do seu catálogo. Antes de ligar, vale arrumar a base.\n\nEla responde com o que encontra: catálogo, horário, endereço, as respostas que você já deu. Se o catálogo está sem preço, ela fica sem resposta, e o cliente também.\n\nPara achar: Ferramentas → IA para Empresas. Precisa do app em português e de pelo menos um item no catálogo. Se ainda não apareceu no seu, a liberação está sendo gradual.\n\nSalva pra fazer antes de ligar.\n\nComenta CATALOGO que eu te mando o checklist no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#pequenosnegocios",
+    "#iaparanegocios",
+    "#automacaodeprocessos",
+    "#whatsappbusiness"
+  ],
+  "handle": "@otalogia"
+}
