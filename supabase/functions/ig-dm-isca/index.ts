@@ -3,8 +3,11 @@
 // Clicou no botão (ou mandou a palavra no direct) -> confere se segue: segue = manda o link do PDF; não segue = pede o follow.
 // Palavras e links vêm de iscas/links.json na main (gerado pelo entregar.yml), então isca nova não pede deploy.
 // Secrets: IG_TOKEN, IG_APP_SECRET, IG_VERIFY_TOKEN.
+// Token permanente: IG_TOKEN = token de Usuário do Sistema (Business Manager) da Página ligada à @otalogia e IG_GRAPH=facebook.
+// Sem IG_GRAPH, usa a API com login do Instagram (token de 60 dias).
 
-const API = "https://graph.instagram.com/v23.0";
+const FB = Deno.env.get("IG_GRAPH") === "facebook";
+const API = FB ? "https://graph.facebook.com/v23.0" : "https://graph.instagram.com/v23.0";
 const LINKS = "https://raw.githubusercontent.com/otaluiz/otalogia-post/main/iscas/links.json";
 const env = (k: string) => Deno.env.get(k) ?? "";
 
@@ -47,9 +50,9 @@ async function entregar(eu: string, quem: string, p: string) {
   const perfil = await ig(`${quem}?fields=username,is_user_follow_business`);
   const isca = (await iscas())[p];
   if (perfil.is_user_follow_business) {
-    await ig(`${eu}/messages`, { recipient: { id: quem }, message: { text: `Aqui está: ${isca.titulo} 👇\n${isca.link}` } });
+    await ig(`${FB ? "me" : eu}/messages`, { recipient: { id: quem }, message: { text: `Aqui está: ${isca.titulo} 👇\n${isca.link}` } });
   } else {
-    await ig(`${eu}/messages`, {
+    await ig(`${FB ? "me" : eu}/messages`, {
       recipient: { id: quem },
       message: botao("Ainda não achei seu follow 👀 Me segue na @otalogia e toca no botão de novo que o material chega na hora.", p),
     });
@@ -80,7 +83,7 @@ Deno.serve(async (req) => {
       const p = await palavra(v.text);
       if (!p) continue;
       await ig(`${v.id}/replies`, { message: "Te mandei no direct 📩" });
-      await ig(`${eu}/messages`, {
+      await ig(`${FB ? "me" : eu}/messages`, {
         recipient: { comment_id: v.id },
         message: botao(`Oi! Seu material ${p} está separado. O envio é só pra quem me segue: me segue na @otalogia e toca no botão 👇`, p),
       });
