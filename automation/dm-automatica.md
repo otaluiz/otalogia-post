@@ -20,7 +20,16 @@ Função `supabase/functions/ig-dm-isca` (projeto Supabase **aidealab**), já pu
 4. No app, em Webhooks: Callback URL = a URL acima, Verify token = o `IG_VERIFY_TOKEN`. Assine os campos **comments**, **messages** e **messaging_postbacks**.
 5. Teste com uma conta adicionada como **Instagram Tester** do app (modo desenvolvimento). Para funcionar com qualquer seguidor: troque o app para **Live** e peça Advanced Access das permissões acima na App Review da Meta.
 
+## Token permanente (recomendado)
+O token do login do Instagram vence em 60 dias. O que não vence é o token de **Usuário do Sistema** do Business Manager:
+1. A @otalogia precisa estar ligada a uma **Página do Facebook** (Configurações do Instagram > Central de Contas).
+2. No app da Meta, adicione o produto **Messenger > Configurações do Instagram** (API com login do Facebook) e assine o webhook do objeto **Instagram** com `comments`, `messages` e `messaging_postbacks` na mesma URL.
+3. business.facebook.com > Configurações > **Usuários do sistema** > Adicionar (função Admin). Em "Atribuir ativos", dê a Página e a conta do Instagram com controle total, e o app.
+4. "Gerar novo token" > escolha o app > validade **Nunca** > permissões `instagram_basic`, `instagram_manage_messages`, `instagram_manage_comments`, `pages_manage_metadata`, `pages_show_list`, `pages_read_engagement`, `business_management`.
+5. Troque o token do Usuário do Sistema pelo token da Página (também não vence): `GET https://graph.facebook.com/v23.0/me/accounts?access_token=<token do sistema>` e copie o `access_token` da Página.
+6. Secrets no Supabase: `IG_TOKEN` = token da Página, `IG_GRAPH` = `facebook`, `IG_APP_SECRET` = chave secreta do app (Configurações > Básico), `IG_VERIFY_TOKEN` = a senha do webhook.
+
 ## Manutenção
-- O token dura 60 dias. Renove antes de vencer: `GET https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=<IG_TOKEN>` e troque o secret.
+- Só no modo login do Instagram (sem `IG_GRAPH`): o token dura 60 dias. Renove antes de vencer: `GET https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=<IG_TOKEN>` e troque o secret.
 - Logs de erro: Supabase > Edge Functions > ig-dm-isca > Logs.
 - Para desligar: remova o webhook no app da Meta.
