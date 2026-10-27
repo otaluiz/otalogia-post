@@ -1,0 +1,110 @@
+{
+ "id": "2026-10-black-friday-whatsapp",
+ "meta": {
+  "serie": "PLANTA",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "A BLACK FRIDAY",
+    "TRAVA NO"
+   ],
+   "emocao": {
+    "texto": "seu [WhatsApp].",
+    "posicao": "depois"
+   },
+   "imagem": "capa.png",
+   "tecido": true
+  },
+  {
+   "template": "T2",
+   "display": [
+    "MAIS GENTE",
+    "PERGUNTANDO"
+   ],
+   "emocao": {
+    "texto": "e [uma pessoa] respondendo.",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png"
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE {TRAVA}"
+   ],
+   "lista": [
+    "A mesma pergunta de preço o dia inteiro",
+    "Pedido anotado em três lugares",
+    "Cliente esperando e comprando no concorrente"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "27 DE NOVEMBRO",
+    "É SEXTA."
+   ],
+   "emocao": {
+    "texto": "dá {um mês} pra arrumar.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "DÁ PRA FAZER",
+    "{ATÉ LÁ}"
+   ],
+   "lista": [
+    "Mensagem pronta de preço, prazo e entrega",
+    "Catálogo com o preço da promoção",
+    "Um lugar só pra anotar pedido",
+    "Aviso de horário no perfil"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "TESTE NUMA",
+    "SEXTA {COMUM}"
+   ],
+   "emocao": {
+    "texto": "se já trava num dia normal, imagina na Black.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "QUEM RESPONDE",
+    "{PRIMEIRO}"
+   ],
+   "emocao": {
+    "texto": "costuma levar a venda.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER AS 3",
+    "MENSAGENS"
+   ],
+   "emocao": {
+    "texto": "[prontas]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta BLACK",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta.png"
+  }
+ ]
+}

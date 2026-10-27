@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-black-friday-whatsapp",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-27",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 25,
+  "serie": "PLANTA",
+  "tema": "A BLACK FRIDAY TRAVA NO seu WhatsApp.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "A BLACK FRIDAY TRAVA NO seu WhatsApp."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "MAIS GENTE PERGUNTANDO e uma pessoa respondendo."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE TRAVA A mesma pergunta de preço o dia inteiro Pedido anotado em três lugares Cliente esperando e comprando no concorrente"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "27 DE NOVEMBRO É SEXTA. dá um mês pra arrumar."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "DÁ PRA FAZER ATÉ LÁ Mensagem pronta de preço, prazo e entrega Catálogo com o preço da promoção Um lugar só pra anotar pedido Aviso de horário no perfil"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "TESTE NUMA SEXTA COMUM se já trava num dia normal, imagina na Black."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "QUEM RESPONDE PRIMEIRO costuma levar a venda."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER AS 3 MENSAGENS prontas? Comenta BLACK que eu te mando no direct"
+    }
+  ],
+  "legenda": "A Black Friday é sexta, 27 de novembro. Para o pequeno negócio, o aperto costuma aparecer no WhatsApp: muita gente perguntando a mesma coisa e uma pessoa só respondendo.\n\nDá um mês para deixar pronto o básico: mensagem salva com preço, prazo e entrega, catálogo com o preço da promoção e um lugar só para anotar os pedidos.\n\nFaça o teste numa sexta comum. O que trava num dia normal trava mais na Black.\n\nSalva e manda pra quem vai fazer promoção.\n\nComenta BLACK que eu te mando as 3 mensagens prontas no direct.\n\n#otalogia #pequenosnegocios #automacaodeprocessos #blackfriday #whatsappbusiness",
+  "hashtags": [
+    "#otalogia",
+    "#pequenosnegocios",
+    "#automacaodeprocessos",
+    "#blackfriday",
+    "#whatsappbusiness"
+  ],
+  "handle": "@otalogia"
+}
