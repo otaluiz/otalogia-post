@@ -1,0 +1,185 @@
+{
+ "id": "2026-10-bastidor-site-aidealab",
+ "meta": {
+  "serie": "ANTES E DEPOIS",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "O SITE DA",
+    "MINHA AGÊNCIA"
+   ],
+   "emocao": {
+    "texto": "e o que ninguém [vê].",
+    "posicao": "depois"
+   },
+   "imagem": "capa.png",
+   "sujeito": {
+    "rostos": [
+     [
+      265,
+      153,
+      717,
+      605
+     ]
+    ],
+    "cabeca": [
+     298,
+     49,
+     640,
+     377
+    ],
+    "caixa": [
+     0,
+     62,
+     1079,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 700,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "BONITO TODO",
+    "MUNDO VÊ."
+   ],
+   "emocao": {
+    "texto": "o que funciona fica [escondido].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     332,
+     606,
+     364,
+     675
+    ],
+    "caixa": [
+     290,
+     609,
+     415,
+     900
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "3 DECISÕES",
+    "{INVISÍVEIS}"
+   ],
+   "lista": [
+    "O vídeo que abre rápido",
+    "O assistente que passa a bola",
+    "Os serviços em 3 grupos"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "TIREI O YOUTUBE",
+    "DA PÁGINA"
+   ],
+   "emocao": {
+    "texto": "vídeo curto do próprio site abre {mais rápido}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "O ASSISTENTE",
+    "RESPONDE"
+   ],
+   "emocao": {
+    "texto": "{curto} e manda pro WhatsApp de quem resolve.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "12 SERVIÇOS,",
+    "3 GRUPOS"
+   ],
+   "emocao": {
+    "texto": "cada um acha o seu de {primeira}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "CADA DECISÃO TIROU",
+    "UM MOTIVO PRA"
+   ],
+   "emocao": {
+    "texto": "{desistir}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER VER",
+    "FUNCIONANDO"
+   ],
+   "emocao": {
+    "texto": "[ao vivo]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta BASTIDOR",
+    "texto": "que eu te mando o link"
+   },
+   "imagem": "cta.png",
+   "recorte": "cta_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "rostos_sujeito": [
+     [
+      540,
+      394,
+      795,
+      649
+     ]
+    ],
+    "cabeca": [
+     581,
+     335,
+     773,
+     434
+    ],
+    "caixa": [
+     399,
+     339,
+     902,
+     757
+    ]
+   },
+   "bloco": {
+    "y": 740,
+    "alinhar": "esquerda",
+    "largura": 720,
+    "manual": true
+   },
+   "texto_frente": true
+  }
+ ]
+}

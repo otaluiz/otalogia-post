@@ -43,8 +43,9 @@ Atualizado em 2026-10-09.
 | 23 | post-de-ia | IA sem hype | Todo mundo reconhece post de *IA*. | T1b (estúdio marinho, leque de cartões em branco; CTA: foto instantânea em branco ao lado do rosto) | Opinião | HUMANO | 23 | rascunho |
 | 24 | ia-do-whatsapp | Planta | O WhatsApp Business já tem IA. Calma antes de *ligar*. | Referência: T1 (celular antigo gigante aceso sobre mesa de madeira) + 2 T5 (WhatsApp Business, Forbes Brasil) | Autoridade | CATALOGO | 24 | rascunho |
 | 25 | black-friday-whatsapp | Planta | A Black Friday trava no seu *WhatsApp*. | T1 (fila de silhuetas saindo de celular gigante numa rua deserta ao entardecer) | Descoberta | BLACK | 25 | rascunho |
+| 26 | bastidor-site-aidealab | Antes e Depois | O site da minha agência e o que ninguém *vê*. | T1b (segurando moldura de quadro vazia, busto, fundo creme com luz laranja; sem recorte, fica como T1; CTA: espiando atrás de cortina de palco) | Autoridade | BASTIDOR | 26 | rascunho |
 
-Poses de T1b já usadas: leque de cartões em branco, estúdio marinho (#23); foto instantânea em branco ao lado do rosto, busto (CTA #23); olho de peixe com lupa em branco no olho (#21); mão em concha atrás da orelha, busto (CTA #21); olho de peixe de cima com celulares (#2); mão estendida pra câmera, agachado (CTA #2); olho de peixe com caneca laranja (#3); cadeira flutuando sobre névoa (CTA #3); spray desenhando setas (#6); sentado na beira da laje, E6 (CTA #6); câmera antiga de frente (#8); sentado em laje flutuante com câmera (CTA #8); telefone de fio, E11 (#10); banqueta em estúdio marinho, E7 (CTA #10); miniatura sobre agenda gigante, E3 (#17); segurando folha em branco, busto (CTA #17); lendo jornal em branco com mala, E8 (#15); atrás do quadro-negro em branco com giz, E12 (CTA #15); carimbo em branco pra lente, contra-plongée em creme (#12); varal com cartelas de cor contra céu azul, E9 (CTA #12). Banco de estéticas: `design-system/esteticas-editoriais.md`.
+Poses de T1b já usadas: segurando moldura vazia, busto (#26); espiando atrás da cortina de palco, busto (CTA #26); leque de cartões em branco, estúdio marinho (#23); foto instantânea em branco ao lado do rosto, busto (CTA #23); olho de peixe com lupa em branco no olho (#21); mão em concha atrás da orelha, busto (CTA #21); olho de peixe de cima com celulares (#2); mão estendida pra câmera, agachado (CTA #2); olho de peixe com caneca laranja (#3); cadeira flutuando sobre névoa (CTA #3); spray desenhando setas (#6); sentado na beira da laje, E6 (CTA #6); câmera antiga de frente (#8); sentado em laje flutuante com câmera (CTA #8); telefone de fio, E11 (#10); banqueta em estúdio marinho, E7 (CTA #10); miniatura sobre agenda gigante, E3 (#17); segurando folha em branco, busto (CTA #17); lendo jornal em branco com mala, E8 (#15); atrás do quadro-negro em branco com giz, E12 (CTA #15); carimbo em branco pra lente, contra-plongée em creme (#12); varal com cartelas de cor contra céu azul, E9 (CTA #12). Banco de estéticas: `design-system/esteticas-editoriais.md`.
 
 ## Próximos (backlog, em ordem)
 
@@ -52,7 +53,6 @@ Pares de validação: cada par tem um T1 e um T1b.
 
 | # | Série | Tema | Hook sugerido | Capa | Pilar | CTA |
 |---|---|---|---|---|---|---|
-| 26 | Antes e Depois | Bastidor do site da aidealab: 3 decisões invisíveis (bastidor-site-aidealab) | O site da minha agência e o que ninguém *vê*. | T1b | Autoridade | BASTIDOR |
 | 13 | Case aidealab | Antes e depois de um cliente aidealab | O que mudou quando o site *começou a vender*. | T1 | Conversão | AIDEALAB |
 
 Os #24 a #26 vêm do roteiro `roteiros/2026-10-26-semana.md` (copy completa lá). Os #21 a #23 vieram da pesquisa de 2026-10-08 (`pesquisa/instagram/analise-e-plano.md`). O calendário de 12/out a 8/nov também está lá.

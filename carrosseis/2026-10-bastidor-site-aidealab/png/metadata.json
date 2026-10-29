@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-bastidor-site-aidealab",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-29",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 26,
+  "serie": "ANTES E DEPOIS",
+  "tema": "O SITE DA MINHA AGÊNCIA e o que ninguém vê.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T2c-T2-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "O SITE DA MINHA AGÊNCIA e o que ninguém vê."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "BONITO TODO MUNDO VÊ. o que funciona fica escondido."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "3 DECISÕES INVISÍVEIS O vídeo que abre rápido O assistente que passa a bola Os serviços em 3 grupos"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "TIREI O YOUTUBE DA PÁGINA vídeo curto do próprio site abre mais rápido."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O ASSISTENTE RESPONDE curto e manda pro WhatsApp de quem resolve."
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "12 SERVIÇOS, 3 GRUPOS cada um acha o seu de primeira."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "CADA DECISÃO TIROU UM MOTIVO PRA desistir."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER VER FUNCIONANDO ao vivo? Comenta BASTIDOR que eu te mando o link"
+    }
+  ],
+  "legenda": "Fiz o site da minha agência e as decisões que mais pesaram não aparecem no print.\n\nTirei o vídeo do YouTube da página e coloquei vídeos curtos servidos pelo próprio site, que abrem mais rápido. O assistente responde curto e já encaminha para o WhatsApp de quem cuida daquele serviço. E os 12 serviços viraram 3 grupos, para quem chega achar o seu sem rolar a página inteira.\n\nNenhuma dessas coisas deixa o site mais bonito. Todas tiram um motivo para o cliente ir embora.\n\nComenta BASTIDOR que eu te mando o link.\n\n#criacaodesites #webdesignbrasil #pequenosnegocios #automacaodeprocessos #otalogia",
+  "hashtags": [
+    "#criacaodesites",
+    "#webdesignbrasil",
+    "#pequenosnegocios",
+    "#automacaodeprocessos",
+    "#otalogia"
+  ],
+  "handle": "@otalogia"
+}
