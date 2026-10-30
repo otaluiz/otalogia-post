@@ -1,0 +1,188 @@
+{
+ "id": "2026-10-balcao-whatsapp",
+ "meta": {
+  "serie": "REFERÊNCIA",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "MANDA PRO",
+    "[WHATSAPP]."
+   ],
+   "emocao": {
+    "texto": "cliente no balcão?",
+    "posicao": "antes"
+   },
+   "imagem": "capa.png",
+   "tecido": true,
+   "recorte": "capa_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     441,
+     530,
+     713,
+     635
+    ],
+    "caixa": [
+     451,
+     534,
+     704,
+     979
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 720
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "ELE JÁ ESTÁ",
+    "COM O CELULAR"
+   ],
+   "emocao": {
+    "texto": "na [mão].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     76,
+     489,
+     481,
+     713
+    ],
+    "caixa": [
+     0,
+     498,
+     466,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "direita",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T5",
+   "display": [
+    "UM LINK",
+    "PRONTO"
+   ],
+   "referencia": {
+    "site": "faq.whatsapp.com",
+    "nome": "Clique para conversa",
+    "descricao": "Link wa.me que abre a conversa com você, até com mensagem pronta.",
+    "print": "ref-clicktochat.png"
+   }
+  },
+  {
+   "template": "T5",
+   "display": [
+    "APP PRA",
+    "NEGÓCIO"
+   ],
+   "referencia": {
+    "site": "business.whatsapp.com",
+    "nome": "WhatsApp Business",
+    "descricao": "O WhatsApp pensado pra empresa, com recursos de IA pra falar com cliente.",
+    "print": "ref-wabusiness.png"
+   }
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "O LINK É A",
+    "PORTA."
+   ],
+   "emocao": {
+    "texto": "o balcão é o {convite}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T5",
+   "display": [
+    "ACHAR",
+    "NO GOOGLE"
+   ],
+   "referencia": {
+    "site": "google.com/business",
+    "nome": "Google Perfil da Empresa",
+    "descricao": "Aparece na Pesquisa e no Maps, sem custo financeiro.",
+    "print": "ref-gbp.png"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "PRA PORTA ABRIR",
+    "{DIREITO}"
+   ],
+   "lista": [
+    "Link com mensagem de boas-vindas pronta",
+    "O mesmo número no Google e no Instagram",
+    "Cartaz no balcão com o link",
+    "Teste você mesmo, com o seu celular"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T3",
+   "display": [
+    "A VENDA NÃO",
+    "PRECISA ACABAR"
+   ],
+   "emocao": {
+    "texto": "quando o cliente [sai].",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER O PASSO",
+    "A PASSO DO"
+   ],
+   "emocao": {
+    "texto": "[link]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta BALCAO",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     273,
+     142,
+     1080,
+     321
+    ],
+    "caixa": [
+     0,
+     149,
+     1079,
+     904
+    ]
+   },
+   "bloco": {
+    "y": 680,
+    "alinhar": "direita",
+    "largura": 720,
+    "manual": true
+   }
+  }
+ ]
+}

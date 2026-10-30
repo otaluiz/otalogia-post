@@ -1,0 +1,80 @@
+{
+  "carousel_id": "2026-10-balcao-whatsapp",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-30",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 27,
+  "serie": "REFERÊNCIA",
+  "tema": "MANDA PRO WHATSAPP. cliente no balcão?",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T5-T5-T2c-T5-T3-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "MANDA PRO WHATSAPP. cliente no balcão?"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "ELE JÁ ESTÁ COM O CELULAR na mão."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "UM LINK PRONTO"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "APP PRA NEGÓCIO"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O LINK É A PORTA. o balcão é o convite."
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "ACHAR NO GOOGLE"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "PRA PORTA ABRIR DIREITO Link com mensagem de boas-vindas pronta O mesmo número no Google e no Instagram Cartaz no balcão com o link Teste você mesmo, com o seu celular"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "desenvolvimento",
+      "texto": "A VENDA NÃO PRECISA ACABAR quando o cliente sai."
+    },
+    {
+      "ordem": 9,
+      "arquivo": "slide-09.png",
+      "papel": "cta",
+      "texto": "QUER O PASSO A PASSO DO link? Comenta BALCAO que eu te mando no direct"
+    }
+  ],
+  "legenda": "Seu cliente já está no balcão, com o celular na mão. Dá pra levar essa conversa pro WhatsApp antes que ele saia.\n\nO WhatsApp tem o recurso \"clique para conversa\": um link wa.me que abre a conversa com você, até com uma mensagem pronta. Coloque esse link num cartaz no balcão, no Instagram e no Perfil da Empresa do Google, que aparece na Pesquisa e no Maps.\n\nAntes de divulgar, teste com o seu próprio celular. Confira se o número é o mesmo em todo lugar e se a mensagem de boas-vindas faz sentido.\n\nSalva pra montar o seu.\n\nComenta BALCAO que eu te mando o passo a passo no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#pequenosnegocios",
+    "#whatsappbusiness",
+    "#criacaodesites",
+    "#automacaodeprocessos"
+  ],
+  "handle": "@otalogia"
+}
