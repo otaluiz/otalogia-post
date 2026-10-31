@@ -1,0 +1,118 @@
+{
+ "id": "2026-10-preco-some",
+ "meta": {
+  "serie": "PERGUNTA DO DONO",
+  "data": "2026/10"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "O CLIENTE",
+    "PERGUNTA O PREÇO"
+   ],
+   "emocao": {
+    "texto": "e [some].",
+    "posicao": "depois"
+   },
+   "imagem": "capa.png",
+   "tecido": true,
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936,
+    "manual": true
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "ELE VIU,",
+    "GOSTOU E"
+   ],
+   "emocao": {
+    "texto": "ficou no [vácuo].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png"
+  },
+  {
+   "template": "T3",
+   "display": [
+    "POR QUE ELE",
+    "{SOME}"
+   ],
+   "lista": [
+    "A resposta demorou horas",
+    "Veio um \"já te falo\" e mais nada",
+    "O preço chegou sem prazo nem entrega",
+    "Ninguém perguntou o que ele precisa"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "PREÇO SOZINHO",
+    "ASSUSTA."
+   ],
+   "emocao": {
+    "texto": "com contexto, ele [explica].",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "UMA RESPOSTA",
+    "{COMPLETA}"
+   ],
+   "lista": [
+    "O valor, dito logo de cara",
+    "O que está incluso nele",
+    "Prazo e forma de entrega",
+    "Uma pergunta para continuar a conversa"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "DEIXE A MENSAGEM",
+    "SALVA E"
+   ],
+   "emocao": {
+    "texto": "{pronta}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "QUEM RESPONDE",
+    "BEM, {FICA}."
+   ],
+   "emocao": {
+    "texto": "o resto é vácuo.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER O MODELO",
+    "DE RESPOSTA"
+   ],
+   "emocao": {
+    "texto": "[de preço]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta PRECO",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta.png"
+  }
+ ]
+}

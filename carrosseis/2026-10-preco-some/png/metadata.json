@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-10-preco-some",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-31",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 0,
+  "serie": "PERGUNTA DO DONO",
+  "tema": "O CLIENTE PERGUNTA O PREÇO e some.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "O CLIENTE PERGUNTA O PREÇO e some."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "ELE VIU, GOSTOU E ficou no vácuo."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "POR QUE ELE SOME A resposta demorou horas Veio um \"já te falo\" e mais nada O preço chegou sem prazo nem entrega Ninguém perguntou o que ele precisa"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "PREÇO SOZINHO ASSUSTA. com contexto, ele explica."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "UMA RESPOSTA COMPLETA O valor, dito logo de cara O que está incluso nele Prazo e forma de entrega Uma pergunta para continuar a conversa"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "DEIXE A MENSAGEM SALVA E pronta."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "QUEM RESPONDE BEM, FICA. o resto é vácuo."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER O MODELO DE RESPOSTA de preço? Comenta PRECO que eu te mando no direct"
+    }
+  ],
+  "legenda": "Muita gente pergunta o preço e some. Na maioria das vezes não é o valor que espanta: é a resposta que demora, vem seca, sem prazo e sem entrega.\n\nUma resposta de preço boa leva o valor, o que está incluso, o prazo, a forma de entrega e uma pergunta para a conversa continuar. Deixe salva e use sempre.\n\nSalva pra montar a sua.\n\nComenta PRECO que eu te mando o modelo no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#pequenosnegocios",
+    "#whatsappbusiness",
+    "#atendimentoaocliente",
+    "#automacaodeprocessos"
+  ],
+  "handle": "@otalogia"
+}
