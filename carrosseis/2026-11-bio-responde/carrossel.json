@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-bio-responde",
+ "meta": {
+  "serie": "PERGUNTA DO DONO",
+  "data": "2026/11"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "SUA BIO",
+    "RESPONDE"
+   ],
+   "emocao": {
+    "texto": "o que o cliente [pergunta]?",
+    "posicao": "depois"
+   },
+   "imagem": "capa.png",
+   "sujeito": {
+    "rostos": [
+     [
+      295,
+      246,
+      793,
+      744
+     ]
+    ],
+    "cabeca": [
+     355,
+     210,
+     710,
+     499
+    ],
+    "caixa": [
+     0,
+     221,
+     1079,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 800,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "O CLIENTE",
+    "CHEGA"
+   ],
+   "emocao": {
+    "texto": "com uma [dúvida].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "caixa": [
+     0,
+     0,
+     1,
+     1
+    ]
+   },
+   "bloco": {
+    "y": 300,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE ELE",
+    "QUER {SABER}"
+   ],
+   "lista": [
+    "O que você vende",
+    "Onde você atende",
+    "Como chamar você",
+    "Se vale a pena esperar"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "QUEM NÃO ACHA",
+    "A RESPOSTA"
+   ],
+   "emocao": {
+    "texto": "{sai} sem avisar.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "LEIA SUA BIO",
+    "COMO QUEM"
+   ],
+   "emocao": {
+    "texto": "nunca te {viu}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "UMA BIO QUE",
+    "{RESPONDE}"
+   ],
+   "lista": [
+    "Uma frase do que você faz",
+    "Para quem você faz",
+    "Um jeito de chamar",
+    "Um motivo para clicar"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T3",
+   "display": [
+    "CLIENTE SEM",
+    "RESPOSTA"
+   ],
+   "emocao": {
+    "texto": "não {chama}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER QUE EU",
+    "LEIA A SUA"
+   ],
+   "emocao": {
+    "texto": "[bio]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta BIO",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta.png",
+   "sujeito": {
+    "rostos": [],
+    "rostos_sujeito": [
+     [
+      380,
+      200,
+      720,
+      640
+     ]
+    ],
+    "cabeca": [
+     350,
+     90,
+     730,
+     330
+    ],
+    "caixa": [
+     0,
+     90,
+     1079,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 690,
+    "alinhar": "esquerda",
+    "largura": 720,
+    "manual": true
+   },
+   "recorte": "cta_recorte.png",
+   "texto_frente": true
+  }
+ ]
+}
