@@ -1,0 +1,121 @@
+{
+ "id": "2026-11-resposta-pronta",
+ "meta": {
+  "serie": "REFERÊNCIA",
+  "data": "2026/11"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "A MESMA",
+    "RESPOSTA",
+    "[SALVA]."
+   ],
+   "emocao": {
+    "texto": "chega de digitar",
+    "posicao": "antes"
+   },
+   "imagem": "capa.png",
+   "tecido": true,
+   "bloco": {
+    "y": 170,
+    "alinhar": "esquerda",
+    "largura": 936,
+    "manual": true
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "O CLIENTE",
+    "PERGUNTA O MESMO"
+   ],
+   "emocao": {
+    "texto": "e você digita [de novo].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png"
+  },
+  {
+   "template": "T5",
+   "display": [
+    "APP PRA",
+    "NEGÓCIO"
+   ],
+   "referencia": {
+    "site": "business.whatsapp.com",
+    "nome": "WhatsApp Business",
+    "descricao": "O app do WhatsApp feito para empresa, com ferramentas para atender cliente.",
+    "print": "ref-wabusiness.png"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE",
+    "{SALVAR}"
+   ],
+   "lista": [
+    "Preço e formas de pagamento",
+    "Prazo e entrega",
+    "Horário e endereço",
+    "Boas-vindas ao cliente novo"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T5",
+   "display": [
+    "PASSO A",
+    "PASSO"
+   ],
+   "referencia": {
+    "site": "zenvia.com/blog",
+    "nome": "Respostas rápidas",
+    "descricao": "Guia da Zenvia: como configurar e usar respostas rápidas no WhatsApp Business.",
+    "print": "ref-zenvia.png"
+   }
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "UMA BARRA",
+    "NA CONVERSA"
+   ],
+   "emocao": {
+    "texto": "e a resposta [aparece].",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "ESCREVA",
+    "UMA VEZ,",
+    "USE {SEMPRE}"
+   ],
+   "emocao": {
+    "texto": "com a sua voz.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER MODELOS",
+    "DE RESPOSTA"
+   ],
+   "emocao": {
+    "texto": "[prontas]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta PRONTA",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta.png"
+  }
+ ]
+}
