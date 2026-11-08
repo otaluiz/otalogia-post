@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-11-quem-atende",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-08",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 32,
+  "serie": "PERGUNTA DO DONO",
+  "tema": "SEU CLIENTE QUER VER quem atende.",
+  "familia_cor": "ink-laranja",
+  "template": "T1b-T2-T3-T2-T2c-T3-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SEU CLIENTE QUER VER quem atende."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "PERFIL SÓ COM PRODUTO PARECE BALCÃO VAZIO"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE ELE QUER SABER Quem vai atender Se essa pessoa entende do assunto Se dá pra confiar Como é falar com ela"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "ELE COMPRA DE GENTE antes do produto."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "VOCÊ NÃO PRECISA virar influencer."
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "COMO APARECER Seu rosto na foto do perfil Um vídeo curto se apresentando Você explicando o que faz Um pedaço do seu dia"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "CLIENTE QUE TE VÊ, TE chama."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER UMA IDEIA DE VÍDEO pra se apresentar? Comenta ROSTO que eu te mando no direct"
+    }
+  ],
+  "legenda": "Antes de chamar, seu cliente quer saber quem vai atender. Se essa pessoa entende do assunto, se dá pra confiar, como é falar com ela.\n\nPerfil só com produto parece balcão vazio. Ele compra de gente antes de comprar o produto.\n\nVocê não precisa virar influencer. Basta aparecer: seu rosto na foto do perfil, um vídeo curto se apresentando, você explicando o que faz, um pedaço do seu dia.\n\nCliente que te vê, te chama.\n\nSalva pra lembrar de aparecer essa semana.\n\nComenta ROSTO que eu te mando uma ideia de vídeo pra se apresentar no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#marketingdigital",
+    "#pequenosnegocios",
+    "#instagramparanegocios",
+    "#empreendedorismo"
+  ],
+  "handle": "@otalogia"
+}

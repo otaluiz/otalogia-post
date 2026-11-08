@@ -1,0 +1,190 @@
+{
+ "id": "2026-11-quem-atende",
+ "meta": {
+  "serie": "PERGUNTA DO DONO",
+  "data": "2026/11"
+ },
+ "slides": [
+  {
+   "template": "T1b",
+   "fundo": "ink",
+   "display": [
+    "SEU CLIENTE",
+    "QUER VER"
+   ],
+   "emocao": {
+    "texto": "{quem} atende.",
+    "posicao": "depois"
+   },
+   "imagem": "capa.png",
+   "recorte": "capa_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "rostos_sujeito": [
+     [
+      367,
+      548,
+      685,
+      866
+     ]
+    ],
+    "cabeca": [
+     226,
+     378,
+     845,
+     549
+    ],
+    "caixa": [
+     196,
+     385,
+     847,
+     1105
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 720
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "PERFIL SÓ COM",
+    "PRODUTO PARECE",
+    "BALCÃO {VAZIO}"
+   ],
+   "imagem": "slide2_led.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     380,
+     560,
+     720,
+     760
+    ],
+    "caixa": [
+     28,
+     351,
+     1054,
+     1422
+    ]
+   },
+   "bloco": {
+    "y": 140,
+    "alinhar": "esquerda",
+    "largura": 936,
+    "manual": true
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE ELE",
+    "QUER {SABER}"
+   ],
+   "lista": [
+    "Quem vai atender",
+    "Se essa pessoa entende do assunto",
+    "Se dá pra confiar",
+    "Como é falar com ela"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "ELE COMPRA",
+    "DE GENTE"
+   ],
+   "emocao": {
+    "texto": "antes do {produto}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "VOCÊ NÃO",
+    "PRECISA"
+   ],
+   "emocao": {
+    "texto": "virar {influencer}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "COMO",
+    "{APARECER}"
+   ],
+   "lista": [
+    "Seu rosto na foto do perfil",
+    "Um vídeo curto se apresentando",
+    "Você explicando o que faz",
+    "Um pedaço do seu dia"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T3",
+   "display": [
+    "CLIENTE QUE TE",
+    "VÊ, TE"
+   ],
+   "emocao": {
+    "texto": "{chama}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER UMA IDEIA",
+    "DE VÍDEO"
+   ],
+   "emocao": {
+    "texto": "pra se {apresentar}?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta ROSTO",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta.png",
+   "sujeito": {
+    "rostos": [],
+    "rostos_sujeito": [
+     [
+      440,
+      290,
+      770,
+      660
+     ]
+    ],
+    "cabeca": [
+     430,
+     190,
+     780,
+     660
+    ],
+    "caixa": [
+     0,
+     190,
+     1079,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 700,
+    "alinhar": "esquerda",
+    "largura": 720,
+    "manual": true
+   },
+   "recorte": "cta_recorte.png",
+   "texto_frente": true
+  }
+ ]
+}
