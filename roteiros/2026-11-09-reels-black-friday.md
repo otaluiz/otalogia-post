@@ -93,3 +93,20 @@ Pesquisa web de 08/nov. Ainda não saiu uma lista confiável de trends para nove
 - [HostGator · tendências de compra na Black Friday](https://www.hostgator.com.br/blog/black-friday-tendencia-compra/)
 - [Vista Social · sons em alta](https://vistasocial.com/insights/songs-for-instagram-story/)
 - [Forbes Brasil · IA no WhatsApp Business](https://forbes.com.br/forbes-tech/2026/02/whatsapp-business-lanca-ia-agentica-para-pmes/)
+
+## Dados Apify (08/nov)
+
+- **Hashtags do nicho (coleta de 08/nov, cerca de 190 posts):** a amostra é fraca, com engajamento médio perto de zero. Os que mais renderam foram o showcase de landing page explicando as decisões e a dor do WhatsApp contada em primeira pessoa ("ficou digitando 'falar com atendente'…").
+- **Perfil:** 403 seguidores. O melhor da semana foi o Reel "4 sites" (8 curtidas), seguido do bastidor do site da agência (7). Os carrosséis informativos ficaram entre 0 e 1.
+- **Reels virais de tecnologia e IA (coleta de 25/out; a de 08/nov deu 403 no Apify):**
+  - O formato que domina é **alerta ou segredo útil em talking head de 30 a 60s**: "🚨 Muita gente ignora…" (58M de views), "ALERTA: seu WhatsApp está em risco" (5M), "O Google tem 5 IAs gratuitas que quase ninguém sabe" (2,7M), "Sites extremamente úteis" (1,5M).
+  - **Poucos cortes:** de 0,03 a 0,35 cortes por segundo nos top 7, ou seja, um corte a cada 3 a 30s. Edição simples ganha.
+  - **Humor com "objetos falantes" feitos em IA** (13,8M e 2,8M de views).
+  - **Golpe e segurança no WhatsApp** é o assunto de WhatsApp que mais viraliza.
+
+**Ajustes nos hooks (troca ou variação):**
+- R2 → "🚨 Faltam 18 dias e seu WhatsApp ainda não tá pronto."
+- R9 → "Seu WhatsApp Business tem uma IA grátis que quase ninguém ativou."
+- Novo, no lugar do R6 se quiser alcance: "🚨 O golpe do Pix falso volta na Black Friday. Seu negócio tá protegido?" (comprovante falso, link de pagamento clonado, perfil fake da loja; CTA **GOLPE**).
+- Novo, humor: "O celular do dono no dia 27/nov" (objeto falante feito em IA reclamando das 87 mensagens; CTA **BF**).
+- Regra para todos: grave em talking head, com 1 corte a cada 3 a 5s, e mantenha entre 30 e 45s.
