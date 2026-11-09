@@ -6,8 +6,7 @@
  },
  "slides": [
   {
-   "template": "T1b",
-   "fundo": "ink",
+   "template": "T1",
    "display": [
     "SEU CLIENTE",
     "QUER VER"
@@ -17,7 +16,6 @@
     "posicao": "depois"
    },
    "imagem": "capa.png",
-   "recorte": "capa_recorte.png",
    "sujeito": {
     "rostos": [],
     "rostos_sujeito": [
@@ -42,9 +40,10 @@
     ]
    },
    "bloco": {
-    "y": 200,
+    "y": 900,
     "alinhar": "esquerda",
-    "largura": 720
+    "largura": 760,
+    "manual": true
    }
   },
   {
