@@ -1,0 +1,193 @@
+{
+ "id": "2026-11-bf-negocio-pequeno",
+ "meta": {
+  "serie": "REFERÊNCIA",
+  "data": "2026/11"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "BLACK FRIDAY",
+    "É PRA NEGÓCIO",
+    "PEQUENO?"
+   ],
+   "emocao": {
+    "texto": "sim, com [critério].",
+    "posicao": "depois"
+   },
+   "imagem": "capa.png",
+   "sujeito": {
+    "rostos": [
+     [
+      301,
+      194,
+      738,
+      631
+     ]
+    ],
+    "cabeca": [
+     361,
+     128,
+     691,
+     437
+    ],
+    "caixa": [
+     0,
+     140,
+     976,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 700,
+    "alinhar": "esquerda",
+    "largura": 936,
+    "manual": true
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "BLACK FRIDAY SEM",
+    "PREPARO VIRA",
+    "PLANTÃO"
+   ],
+   "emocao": {
+    "texto": "no seu [WhatsApp].",
+    "posicao": "depois"
+   },
+   "imagem": "slide2_led.png",
+   "recorte": "slide2_led_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     623,
+     711,
+     736,
+     823
+    ],
+    "caixa": [
+     424,
+     716,
+     1004,
+     1186
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T5",
+   "display": [
+    "PRA",
+    "COMEÇAR"
+   ],
+   "referencia": {
+    "site": "sebrae.com.br",
+    "nome": "Sebrae",
+    "descricao": "Conteúdos para gerenciar o negócio, ter mais clientes e vender mais.",
+    "print": "prints/sebrae.png"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE",
+    "{PREPARAR}"
+   ],
+   "lista": [
+    "Uma oferta que cabe na sua margem",
+    "Dia de começar e dia de acabar",
+    "Respostas prontas pra preço e prazo",
+    "Catálogo com preço atualizado"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "VOCÊ NÃO PRECISA",
+    "DE 50% OFF"
+   ],
+   "emocao": {
+    "texto": "precisa estar [pronto].",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T5",
+   "display": [
+    "PRO",
+    "CHAT"
+   ],
+   "referencia": {
+    "site": "business.whatsapp.com",
+    "nome": "WhatsApp Business",
+    "descricao": "O app do WhatsApp para empresa, com ferramentas para atender cliente.",
+    "print": "prints/wabusiness.png"
+   }
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "COMBO,",
+    "BRINDE OU FRETE"
+   ],
+   "emocao": {
+    "texto": "já {basta}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T5",
+   "display": [
+    "ONDE",
+    "TE ACHAM"
+   ],
+   "referencia": {
+    "site": "google.com/intl/pt-BR/business",
+    "nome": "Google Perfil da Empresa",
+    "descricao": "Perfil sem custo financeiro para aparecer na Pesquisa Google e no Maps.",
+    "print": "prints/gbp.png"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "PREPARE HOJE.",
+    "VENDA DIA 27."
+   ],
+   "emocao": {
+    "texto": "sem {susto}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER A LISTA",
+    "DE PREPARO"
+   ],
+   "emocao": {
+    "texto": "da [Black Friday]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta PREPARO",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta.png",
+   "bloco": {
+    "y": 745,
+    "alinhar": "esquerda",
+    "largura": 620,
+    "manual": true
+   }
+  }
+ ]
+}

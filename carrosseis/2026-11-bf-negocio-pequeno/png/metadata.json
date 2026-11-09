@@ -1,0 +1,86 @@
+{
+  "carousel_id": "2026-11-bf-negocio-pequeno",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-09",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 0,
+  "serie": "REFERÊNCIA",
+  "tema": "BLACK FRIDAY É PRA NEGÓCIO PEQUENO? sim, com critério.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T5-T3-T2-T5-T2c-T5-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "BLACK FRIDAY É PRA NEGÓCIO PEQUENO? sim, com critério."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "BLACK FRIDAY SEM PREPARO VIRA PLANTÃO no seu WhatsApp."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "PRA COMEÇAR"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE PREPARAR Uma oferta que cabe na sua margem Dia de começar e dia de acabar Respostas prontas pra preço e prazo Catálogo com preço atualizado"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "VOCÊ NÃO PRECISA DE 50% OFF precisa estar pronto."
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "PRO CHAT"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "COMBO, BRINDE OU FRETE já basta."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "desenvolvimento",
+      "texto": "ONDE TE ACHAM"
+    },
+    {
+      "ordem": 9,
+      "arquivo": "slide-09.png",
+      "papel": "desenvolvimento",
+      "texto": "PREPARE HOJE. VENDA DIA 27. sem susto."
+    },
+    {
+      "ordem": 10,
+      "arquivo": "slide-10.png",
+      "papel": "cta",
+      "texto": "QUER A LISTA DE PREPARO da Black Friday? Comenta PREPARO que eu te mando no direct"
+    }
+  ],
+  "legenda": "",
+  "hashtags": [
+    "#otalogia",
+    "#pequenosnegocios",
+    "#blackfriday",
+    "#whatsappbusiness",
+    "#criacaodesites"
+  ],
+  "handle": "@otalogia"
+}
