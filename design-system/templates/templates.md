@@ -81,7 +81,7 @@ Prova, números, processo, listas.
 
 | Slide | Função | Template |
 |---|---|---|
-| 1 | Hook | T1 ou T1b |
+| 1 | Hook | T1b (com o Luiz) |
 | 2 | Tensão / problema | T2 |
 | 3-5 | Desenvolvimento | T2 / T3 alternando |
 | 6 | Virada / insight | T2c |
@@ -101,7 +101,7 @@ Alternar papel ↔ ink cria o ritmo de leitura. Nunca usar o mesmo fundo em mais
 ## Geração de imagem
 
 Rotina própria do otalogia, separada da do aidealab. Detalhes em `tokens.json` → `geracao_imagem`.
-- Modelo: Higgsfield `gpt_image_2_5` (3 créditos) para imagens sem o Luiz (capa T1, slide 2). Com o Luiz (T1b e CTA da variante 2): `soul_2` com o Soul "Luiz ota", prompt do banco `../esteticas-editoriais.md`.
+- Modelo: `soul_2` com o Soul "Luiz ota" em todas as fotos (capa T1b, slide 2 e CTA), prompt do banco `../esteticas-editoriais.md`. `gpt_image_2_5` sem o Luiz só como reserva.
 - Teto: **3 imagens por carrossel** (capa T1/T1b, slide 2 em T2 com foto e CTA T4 com foto escurecida 70%) e no máximo 9 por rodada da rotina. Acima disso, pedir aprovação.
 - As 3 imagens saem da mesma família de prompt e do mesmo color grading, para o carrossel manter uma paleta só.
 - Imagem sempre sem texto; color grading descrito no prompt (sombras para o ink, altas para o laranja).

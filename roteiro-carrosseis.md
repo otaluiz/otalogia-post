@@ -12,7 +12,7 @@ Atualizado em 2026-10-09.
 - Arco: capa (T1 ou T1b) → slide 2 com foto inteira → miolo alternando papel (T2/T2c) e ink (T3) → CTA (T4 com foto escurecida 70%).
 - 3 imagens por carrossel no Higgsfield `gpt_image_2_5`: capa, slide 2 e CTA, todas com o mesmo color grading (sombras ink, luz laranja), sempre sem texto.
 - T1b: personagem @luizota, gerado no Soul 2.0 (`soul_2` + Soul "Luiz ota"), capa e CTA com estéticas diferentes do banco `design-system/esteticas-editoriais.md`. Pose e cenário sempre diferentes do carrossel anterior: olho de peixe de cima, mão vindo pra câmera, estúdio de fundo liso colorido, objeto surreal. O texto fica atrás do recorte.
-- Alternar a capa: um carrossel em T1 (foto cinematográfica sem o Luiz), o seguinte em T1b (com o Luiz).
+- Todo carrossel com o Luiz (@luizota) na capa, no slide 2 e no CTA (regra de 2026-11-09: melhores resultados). Alternar T1b e Referência com capa T1b; capa T1 sem o Luiz saiu da rotação.
 - Pilares no mês: Descoberta, Autoridade, Identificação, Opinião e Conversão (Conversão no máximo 10% do feed).
 
 ## Já produzidos

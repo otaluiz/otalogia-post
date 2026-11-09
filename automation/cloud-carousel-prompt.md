@@ -8,8 +8,8 @@ Se falhar, pare e relate o erro.
 
 ## 1. Fazer o carrossel
 Siga `automation/daily-carousel-prompt.txt` do início ao fim, com estas diferenças da versão local:
-- Variante: 2 carrosséis com o Luiz (@luizota, único personagem do otalogia) para 1 sem, na ordem T1b → Referência
-  (capa T1b) → T1, como está no `daily-carousel-prompt.txt`.
+- Variante: todo carrossel com o Luiz (@luizota, único personagem do otalogia) na capa, no slide 2 e no CTA,
+  alternando T1b → Referência (capa T1b), como está no `daily-carousel-prompt.txt`. Nada de capa T1 sem o Luiz.
 - Caminhos do Windows (`C:\Users\...`) não existem aqui. O backlog de rascunhos é contado pelas pastas em
   `carrosseis/` cujo `png/metadata.json` tem `"status": "rascunho"`.
 - Imagens: conectores Higgsfield (`generate_image`/`generate_image_batch` + `jobs_wait`), baixe o `result_url` com curl.

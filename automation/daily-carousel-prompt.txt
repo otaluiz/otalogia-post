@@ -17,15 +17,18 @@ Tema:
   `roteiro-carrosseis.md` que ainda não tem pasta em `carrosseis/`. Se a lista acabar, crie um tema novo dentro dos pilares e das
   séries do roteiro, sem repetir hook nem tema já usado (veja a tabela "Já produzidos").
 
-Variante (alterne, uma por dia, nesta ordem; 2 com o Luiz para 1 sem, porque post com o
-personagem converte mais visualização; o único personagem do otalogia é o @luizota):
-1. T1b · capa com o Luiz (personagem @luizota);
-2. Referência · capa T1b com o Luiz + 3 a 5 slides T5 com print real de sites/ferramentas;
-3. T1 · capa cinematográfica sem o Luiz.
+Variante (regra de 2026-11-09: TODO carrossel sai com o Luiz, personagem @luizota, único
+personagem do otalogia; post com ele teve os melhores resultados). Nunca gere capa T1 sem o Luiz.
+Alterne entre:
+1. T1b · capa com o Luiz;
+2. Referência · capa T1b com o Luiz + 3 a 5 slides T5 com print real de sites/ferramentas.
 Para saber a vez, olhe a coluna de capa da última linha de "Já produzidos" no roteiro:
-depois de T1 vem T1b, depois de T1b vem Referência, depois de Referência vem T1.
-Na coluna de capa, escreva `T1b (...)`, `Referência: T1b (...) + N T5 (...)` ou `T1 (...)`.
-Se o tema do roteiro da semana pedir outra capa, a vez manda: troque a capa, não o tema.
+depois de T1b vem Referência, depois de Referência (ou de um T1 antigo) vem T1b.
+Na coluna de capa, escreva `T1b (...)` ou `Referência: T1b (...) + N T5 (...)`.
+Se o tema do roteiro da semana pedir capa sem o Luiz, troque a capa, não o tema.
+O Luiz aparece em 3 fotos: capa, slide 2 e CTA (pose e estética diferentes em cada uma).
+Se o recorte da capa não sair limpo, a capa fica `"template": "T1"` com a foto do Luiz inteira
+(o T1b sem recorte quebra); registre `T1b (...; sem recorte, fica como T1)`.
 
 Leia antes de começar (obrigatório):
 - `design-system/templates/templates.md`, `design-system/tokens.json`,
@@ -35,20 +38,21 @@ Leia antes de começar (obrigatório):
   (T1b), `carrosseis/2026-10-react-awwwards` (referência).
 
 Estrutura (8 slides; referência pode ter até 10):
-1 capa T1 ou T1b → 2 T2 com imagem (a tensão) → miolo SÓ TEXTO (T3 listas, T2 papel,
+1 capa T1b com o Luiz → 2 T2 com foto do Luiz (a tensão) → miolo SÓ TEXTO (T3 listas, T2 papel,
 T2c caderno; destaque `{palavra}` em marca-texto, um por slide; nunca mais de 3 fundos
 iguais seguidos) → último T4 CTA com imagem e palavra-comentário.
 Marque com `"textura": "led"` os slides de lista e o de conclusão (último antes do CTA);
 o slide 3 leva `"textura": "grain"` (só grão forte no fundo liso, sem gradiente de cor; o compor.py já marca).
 
 Imagens (só capa, slide 2 e CTA; sempre "No text, no letters, no logos, no watermark"):
-- Sem o Luiz: Higgsfield `gpt_image_2_5`, 3:4, quality high, resolution 2k; surreal
-  cinematográfico editorial, sombras ink #0B0B12, luz laranja #FF5A1F.
-- Com o Luiz (capa T1b, inclusive na Referência, e o CTA desse carrossel): `soul_2` com soul_id
+- As 3 fotos (capa, slide 2 e CTA) são com o Luiz: `soul_2` com soul_id
   f752ac25-65a0-4930-a628-722af0508c5b, 3:4, quality 2k; prompt montado de
   `design-system/esteticas-editoriais.md`, estética e pose DIFERENTES das já usadas;
   manter o cabelo e o rosto dele ("keep his own short dark textured hair fully visible,
-  no hat, no glasses").
+  no hat, no glasses"). `gpt_image_2_5` (sem o Luiz) só se o Soul falhar de vez.
+- Motion: no HyperFrames a emoção vem logo abaixo do display. Deixe display + emoção numa
+  área sem rosto (normalmente abaixo do queixo); o `checar_rostos.py` do motion-drive barra
+  texto sobre rosto e o carrossel fica sem vídeo (o publicador só posta carrossel animado).
 - Referência: print real com `python motor/print_site.py <url> prints/<nome>.png --wait 3`.
 - Teto: 3 gerações por carrossel; pode refazer UMA se sair com texto ou defeito.
 - Corte 3:4 1080x1440 (Lanczos + unsharp local; nunca upscale pago).
