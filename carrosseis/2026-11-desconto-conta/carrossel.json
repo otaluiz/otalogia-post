@@ -1,0 +1,195 @@
+{
+ "id": "2026-11-desconto-conta",
+ "meta": {
+  "serie": "CUSTO REAL",
+  "data": "2026/11"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "ANTES DO",
+    "DESCONTO"
+   ],
+   "emocao": {
+    "texto": "faça a [conta].",
+    "posicao": "depois"
+   },
+   "imagem": "capa.png",
+   "sujeito": {
+    "rostos": [],
+    "rostos_sujeito": [
+     [
+      309,
+      200,
+      701,
+      640
+     ]
+    ],
+    "cabeca": [
+     309,
+     91,
+     701,
+     408
+    ],
+    "caixa": [
+     0,
+     91,
+     1079,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 800,
+    "alinhar": "esquerda",
+    "largura": 720,
+    "manual": true
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "DESCONTO SEM CONTA",
+    "É PREJUÍZO",
+    "{DISFARÇADO}"
+   ],
+   "imagem": "slide2_led.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     291,
+     238,
+     775,
+     521
+    ],
+    "caixa": [
+     330,
+     238,
+     760,
+     540
+    ]
+   },
+   "bloco": {
+    "y": 880,
+    "alinhar": "esquerda",
+    "largura": 936,
+    "manual": true
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE ENTRA",
+    "NA {CONTA}"
+   ],
+   "lista": [
+    "Quanto o produto custa pra você",
+    "Taxa da maquininha ou do marketplace",
+    "Frete que você vai bancar",
+    "Quanto sobra no fim"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "VENDEU MUITO",
+    "E SOBROU POUCO?"
+   ],
+   "emocao": {
+    "texto": "{faltou} a conta.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "TODO DESCONTO",
+    "TEM UM"
+   ],
+   "emocao": {
+    "texto": "{piso} definido antes.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "ANTES DE",
+    "PUBLICAR A {OFERTA}"
+   ],
+   "lista": [
+    "Defina o preço mínimo",
+    "Escolha 1 ou 2 produtos de entrada",
+    "Combine o frete",
+    "Deixe a resposta pronta no WhatsApp"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T3",
+   "display": [
+    "DESCONTO BOM",
+    "É O QUE VOCÊ"
+   ],
+   "emocao": {
+    "texto": "{aguenta}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER A CONTA",
+    "PRONTA"
+   ],
+   "emocao": {
+    "texto": "pra [Black Friday]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta MARGEM",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta.png",
+   "recorte": "cta_recorte.png",
+   "texto_frente": true,
+   "sujeito": {
+    "rostos": [],
+    "rostos_sujeito": [
+     [
+      350,
+      300,
+      650,
+      640
+     ]
+    ],
+    "cabeca": [
+     320,
+     230,
+     680,
+     680
+    ],
+    "cabeca_manual": [
+     320,
+     230,
+     680,
+     680
+    ],
+    "caixa": [
+     112,
+     233,
+     951,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 740,
+    "alinhar": "esquerda",
+    "largura": 720,
+    "manual": true
+   }
+  }
+ ]
+}

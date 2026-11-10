@@ -1,0 +1,74 @@
+{
+  "carousel_id": "2026-11-desconto-conta",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-10",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 0,
+  "serie": "CUSTO REAL",
+  "tema": "ANTES DO DESCONTO faça a conta.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T2c-T3-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "ANTES DO DESCONTO faça a conta."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "DESCONTO SEM CONTA É PREJUÍZO DISFARÇADO"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE ENTRA NA CONTA Quanto o produto custa pra você Taxa da maquininha ou do marketplace Frete que você vai bancar Quanto sobra no fim"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "VENDEU MUITO E SOBROU POUCO? faltou a conta."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "TODO DESCONTO TEM UM piso definido antes."
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "ANTES DE PUBLICAR A OFERTA Defina o preço mínimo Escolha 1 ou 2 produtos de entrada Combine o frete Deixe a resposta pronta no WhatsApp"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "DESCONTO BOM É O QUE VOCÊ aguenta."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER A CONTA PRONTA pra Black Friday? Comenta MARGEM que eu te mando no direct"
+    }
+  ],
+  "legenda": "Desconto sem conta é prejuízo disfarçado. Vender muito e sobrar pouco quase sempre começa aí.\n\nAntes da Black Friday, some o que entra na conta: quanto o produto custa pra você, a taxa da maquininha ou do marketplace, o frete que você vai bancar. O que sobra no fim é a sua margem.\n\nCom isso na mão, defina o preço mínimo, escolha um ou dois produtos de entrada, combine o frete e deixe a resposta pronta no WhatsApp.\n\nDesconto bom é o que você aguenta. Salva pra fazer essa semana.\n\nComenta MARGEM que eu te mando a conta pronta no direct.\n\n#otalogia #pequenosnegocios #blackfriday #precificacao #criacaodesites",
+  "hashtags": [
+    "#otalogia",
+    "#pequenosnegocios",
+    "#blackfriday",
+    "#precificacao",
+    "#criacaodesites"
+  ],
+  "handle": "@otalogia"
+}
