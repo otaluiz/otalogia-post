@@ -1,0 +1,202 @@
+{
+ "id": "2026-11-avaliacao-google",
+ "meta": {
+  "serie": "REFERÊNCIA",
+  "data": "2026/11"
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "AVALIAÇÃO",
+    "NO GOOGLE"
+   ],
+   "emocao": {
+    "texto": "responde ou [some]?",
+    "posicao": "depois"
+   },
+   "imagem": "capa.png",
+   "sujeito": {
+    "rostos": [
+     [
+      310,
+      229,
+      674,
+      593
+     ]
+    ],
+    "cabeca": [
+     394,
+     161,
+     683,
+     462
+    ],
+    "caixa": [
+     102,
+     173,
+     1015,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 800,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "CLIENTE NOVO LÊ",
+    "O QUE OS OUTROS",
+    "{DISSERAM}"
+   ],
+   "imagem": "slide2_led.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     414,
+     276,
+     691,
+     393
+    ],
+    "caixa": [
+     219,
+     281,
+     785,
+     771
+    ]
+   },
+   "bloco": {
+    "y": 800,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T5",
+   "display": [
+    "O",
+    "PERFIL"
+   ],
+   "referencia": {
+    "site": "google.com/intl/pt-BR/business",
+    "nome": "Google Perfil da Empresa",
+    "descricao": "Controle como seu perfil aparece na Pesquisa Google e no Maps.",
+    "print": "prints/perfil.png"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE",
+    "{FAZER}"
+   ],
+   "lista": [
+    "Agradeça quem elogiou",
+    "Responda a crítica com calma",
+    "Resolva o problema fora do comentário",
+    "Peça avaliação a quem gostou"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "RESPOSTA NÃO É",
+    "PARA QUEM",
+    "RECLAMOU"
+   ],
+   "emocao": {
+    "texto": "é para quem está [lendo].",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T5",
+   "display": [
+    "COMO",
+    "RESPONDER"
+   ],
+   "referencia": {
+    "site": "support.google.com/business",
+    "nome": "Gerenciar avaliações",
+    "descricao": "Ao responder, você mostra que valoriza a opinião dos consumidores.",
+    "print": "prints/gerenciar.png"
+   }
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "SILÊNCIO",
+    "TAMBÉM"
+   ],
+   "emocao": {
+    "texto": "é uma {resposta}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T5",
+   "display": [
+    "PEDIR",
+    "É NORMAL"
+   ],
+   "referencia": {
+    "site": "support.google.com/business",
+    "nome": "Link ou QR code",
+    "descricao": "Crie um link ou QR code para pedir avaliações.",
+    "print": "prints/link.png"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "RESPONDA HOJE.",
+    "PEÇA AMANHÃ."
+   ],
+   "emocao": {
+    "texto": "sem {pressa}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER UM MODELO",
+    "DE RESPOSTA"
+   ],
+   "emocao": {
+    "texto": "pra [crítica]?",
+    "posicao": "depois"
+   },
+   "cta": {
+    "acao": "Comenta AVALIA",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     424,
+     58,
+     810,
+     383
+    ],
+    "caixa": [
+     0,
+     71,
+     1049,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 600,
+    "alinhar": "esquerda",
+    "largura": 720,
+    "manual": true
+   }
+  }
+ ]
+}

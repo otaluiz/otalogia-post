@@ -1,0 +1,86 @@
+{
+  "carousel_id": "2026-11-avaliacao-google",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-11",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 0,
+  "serie": "REFERÊNCIA",
+  "tema": "AVALIAÇÃO NO GOOGLE responde ou some?",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T5-T3-T2-T5-T2c-T5-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "AVALIAÇÃO NO GOOGLE responde ou some?"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "CLIENTE NOVO LÊ O QUE OS OUTROS DISSERAM"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O PERFIL"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE FAZER Agradeça quem elogiou Responda a crítica com calma Resolva o problema fora do comentário Peça avaliação a quem gostou"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "RESPOSTA NÃO É PARA QUEM RECLAMOU é para quem está lendo."
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "COMO RESPONDER"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "SILÊNCIO TAMBÉM é uma resposta."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "desenvolvimento",
+      "texto": "PEDIR É NORMAL"
+    },
+    {
+      "ordem": 9,
+      "arquivo": "slide-09.png",
+      "papel": "desenvolvimento",
+      "texto": "RESPONDA HOJE. PEÇA AMANHÃ. sem pressa."
+    },
+    {
+      "ordem": 10,
+      "arquivo": "slide-10.png",
+      "papel": "cta",
+      "texto": "QUER UM MODELO DE RESPOSTA pra crítica? Comenta AVALIA que eu te mando no direct"
+    }
+  ],
+  "legenda": "Avaliação no Google responde ou some? Quem chega novo lê o que os outros disseram antes de te chamar.\n\nAgradeça quem elogiou. Responda a crítica com calma e resolva o problema fora do comentário. A resposta não é só para quem reclamou, é para quem está lendo.\n\nSilêncio também é uma resposta. E pedir avaliação a quem gostou é normal: o Google tem até link e QR code para isso.\n\nResponda hoje, peça amanhã, sem pressa. Salva pra fazer essa semana.\n\nComenta AVALIA que eu te mando um modelo de resposta pra crítica no direct.\n\n#otalogia #pequenosnegocios #googlemeunegocio #avaliacoes #criacaodesites",
+  "hashtags": [
+    "#otalogia",
+    "#pequenosnegocios",
+    "#googlemeunegocio",
+    "#avaliacoes",
+    "#criacaodesites"
+  ],
+  "handle": "@otalogia"
+}
