@@ -107,9 +107,9 @@ async function send(a: Account, recipient: Record<string, string>, item: Materia
   const docs = documents(item);
   if (!docs.length) throw new Error("Categoria sem PDFs aprovados: envio bloqueado");
   const title = item.categoria ? "Materiais da categoria " + item.categoria : "Aqui está seu material";
-  const text = title + ":\\n" +
-               docs.map((d, i) => "\\n" + (i + 1) + ". " + d.titulo + "\\n" + d.link).join("\\n") +
-               "\\n\\nSe tiver dúvidas, pode responder esta mensagem.";
+  const text = title + ":\n" +
+               docs.map((d, i) => "\n" + (i + 1) + ". " + d.titulo + "\n" + d.link).join("\n") +
+               "\n\nSe tiver dúvidas, pode responder esta mensagem.";
   try {
     const response = await fetch(endpoint, {
       method: "POST", headers: { Authorization: "Bearer " + a.token, "Content-Type": "application/json" },
