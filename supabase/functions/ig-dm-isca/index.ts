@@ -193,8 +193,15 @@ Deno.serve(async (req: Request) => {
         const c = change.value || {};
         const word = keyword(String(c.text || ""), links);
         if (!c.id || !word || String(c.from?.id || "") === id) continue;
-        // Private reply: uma mensagem, somente texto/link, em até 7 dias do comentário.
-        await sendText(a, { comment_id: String(c.id) }, promptToReply(a, word), "comment:" + c.id);
+        // Tentativa de follow real: a Meta só libera User Profile quando o usuário já
+        // iniciou conversa anteriormente. Sem consentimento, devolve UNKNOWN => sem link.
+        const commenter = String(c.from?.id || "");
+        const commentFollow = commenter ? await followerStatus(a, commenter) : "unknown";
+        const privateReply = canDeliverLinks(commentFollow)
+          ? documentText(links[word])
+          : promptToReply(a, word);
+        // Meta permite apenas uma private reply por comentário.
+        await sendText(a, { comment_id: String(c.id) }, privateReply, "comment:" + c.id);
       }
       for (const msg of entry.messaging || []) {
         const sender = String(msg.sender?.id || "");
