@@ -247,8 +247,17 @@ def main():
                     continue
                 identifier = re.sub(r"[^a-zA-Z0-9_-]", "-", str(meta.get("carousel_id") or name))[:100]
                 caption = content(svc, files["legenda.md"]) if "legenda.md" in files else meta.get("legenda", "")
-                if not caption.strip() or not meta.get("tema"):
-                    raise ValueError("sem tema ou legenda; revisão manual necessária")
+                if not caption.strip():
+                    # Backfill de pasta histórica que tem texto nos slides mas não legenda.md:
+                    # primeiro preserva o sentido do conteúdo; depois CTA no metadata.
+                    slide_texts = [str(s.get("texto") or "").strip()
+                                   for s in meta.get("slides", []) if isinstance(s, dict)]
+                    if slide_texts:
+                        caption = "\n\n".join(x for x in slide_texts if x)
+                    else:
+                        raise ValueError("sem legenda e sem texto para compor material")
+                if not meta.get("tema"):
+                    raise ValueError("sem tema; revisão manual necessária")
                 keyword = choose_word(meta, caption, registry, identifier)
                 # A revisão humana permanece no fluxo original: não movemos nem publicamos nada.
                 link = ensure_pdf(svc, dest, known, identifier, meta, caption, keyword)
