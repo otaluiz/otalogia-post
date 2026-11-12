@@ -37,6 +37,7 @@ def all_posts():
       ROOT/"agente aidealab"/"skills"/"post-instagram"/"queue"
     ]
     seen=set()
+    seen_ids=set()
     for base in roots:
         if not base.exists():
             continue
@@ -54,8 +55,30 @@ def all_posts():
                 slides=obj.get("slides") or []
                 headline=slides[0] if slides else {}
                 tema=" ".join(headline.get("display",[])) if isinstance(headline,dict) else ""
-            if tema:
+            if tema and ident not in seen_ids:
+                seen_ids.add(ident)
                 yield {"id":ident,"tema":str(tema),"arquivo":str(path.relative_to(ROOT))}
+    # Estado sincronizado do Drive registra posts em fila e publicados que
+    # podem não ter todos os metadados no checkout local (ex.: Reels no Drive).
+    for status_path in [
+        ROOT/"agente aidealab"/"automation"/"cloud"/"estado-drive.json",
+        ROOT/"automation"/"cloud"/"estado-drive.json",
+    ]:
+        if not status_path.exists():
+            continue
+        try:
+            state=json.loads(status_path.read_text(encoding="utf-8-sig"))
+        except (ValueError,OSError):
+            continue
+        for status in ("rascunhos_04","fila","postados"):
+            for ident in state.get(status,[]):
+                if ident in seen_ids or not isinstance(ident,str):
+                    continue
+                seen_ids.add(ident)
+                titulo=re.sub(r"^\\d{4}-\\d{2}-\\d{2}-", "", ident)
+                titulo=re.sub(r"^Dia\\d+-", "", titulo)
+                titulo=titulo.replace("-"," ")
+                yield {"id":ident,"tema":titulo,"arquivo":str(status_path.relative_to(ROOT))+"#"+status}
 
 def decide(title,category,post_id="",minimum=.57):
     cfg=json.loads(CONFIG.read_text(encoding="utf-8"))
