@@ -16,8 +16,8 @@
         {
           "id": "otalogia-bio-2026-01",
           "titulo": "Bio que converte",
-          "arquivo": "OTALOGIA_Guia_Bio_que_Converte_PILOTO.pdf",
-          "status": "piloto_aprovado_sem_publicacao",
+          "arquivo": "OTALOGIA_Guia_Bio_que_Converte.pdf",
+          "status": "aprovado",
           "versao": "1.0",
           "temas_cobertos": [
             "auditoria de bio",
@@ -25,11 +25,16 @@
             "links",
             "testes de compreensão",
             "UTMs"
-          ]
+          ],
+          "drive_file_id": "1MYd7J9hra77HUXvs5ipv9I1YljUtSTfN",
+          "link": "https://drive.google.com/file/d/1MYd7J9hra77HUXvs5ipv9I1YljUtSTfN/view"
         }
       ],
       "posts_relevantes": [
         "2026-11-bio-responde"
+      ],
+      "aliases": [
+        "BIO"
       ]
     },
     "SITES": {
