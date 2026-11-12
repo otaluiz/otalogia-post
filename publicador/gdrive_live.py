@@ -35,7 +35,7 @@ class GoogleDriveLive:
         self.client_id = client_id or os.getenv("GDRIVE_CLIENT_ID", "").strip()
         self.client_secret = client_secret or os.getenv("GDRIVE_CLIENT_SECRET", "").strip()
         self.refresh_token = refresh_token or os.getenv("GDRIVE_REFRESH_TOKEN", "").strip()
-        self.folder_id = folder_id or os.getenv("GDRIVE_FOLDER_ID_OTALOGIA", "13GZEPJrWJaf9rWB4RFQXf5Hh0wRp27D6").strip()
+        self.folder_id = folder_id or (os.getenv("GDRIVE_FOLDER_ID_OTALOGIA") or "13GZEPJrWJaf9rWB4RFQXf5Hh0wRp27D6").strip()
         self.access_token = None
 
         # Fallback local se não estiver no env
