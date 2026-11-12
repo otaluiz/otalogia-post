@@ -1,4 +1,10 @@
 {
+  "BIO": {
+    "link": "https://drive.google.com/file/d/1nJJxqt4LCa7ZIsGgwMzuUMOpHeGdm8dO/view",
+    "titulo": "SUA BIO RESPONDE o que o cliente pergunta?",
+    "carousel_id": "2026-11-bio-responde",
+    "perfil": "otalogia"
+  },
   "BRIEFING": {
     "link": "https://drive.google.com/file/d/1qF0H5YRX9QUZHYjrLcjXEjAtQ0lD3232/view?usp=drivesdk",
     "titulo": "O prompt de briefing que eu uso"
@@ -6,6 +12,12 @@
   "CORTE": {
     "link": "https://drive.google.com/file/d/1vJmCb2Mk_tMkQjKyMxuvcvlVM8B0VRKx/view?usp=drivesdk",
     "titulo": "Os 3 passos que eu faço na mão"
+  },
+  "PRONTA": {
+    "link": "https://drive.google.com/file/d/1TsTzGguwJnNL1ivlsFtMYHQz7JOSOmUg/view",
+    "titulo": "A MESMA RESPOSTA SALVA. chega de digitar",
+    "carousel_id": "2026-11-resposta-pronta",
+    "perfil": "otalogia"
   },
   "SUSTO": {
     "link": "https://drive.google.com/file/d/1xK0R1pN1xlMYHkLyYZwxZljTawkIn2eB/view?usp=drivesdk",
