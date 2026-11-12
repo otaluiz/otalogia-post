@@ -36,3 +36,14 @@ Tema, variante, imagens geradas e créditos gastos, checagens feitas, bloqueios.
 
 ## CTA com personagem (regra de 2026-10-05)
 No CTA (T4) com o Luiz, gere a foto com enquadramento grande, do peito pra cima, igual ao hook: cabeça no terço de cima, corpo preenchendo a metade de baixo. Nada de figura pequena de corpo inteiro. Composição: `recorte` (motor/recorte.py), `"texto_frente": true`, `bloco` manual (`y` logo abaixo do queixo, ~740, `largura` 720 ou 560 para o bloco caber acima do rodapé, `manual: true`) e `sujeito.cabeca_manual` cobrindo o rosto. O texto pode passar na frente do corpo, nunca do rosto. Confira o slide em tamanho cheio.
+
+
+## Isca PDF + resposta por DM (obrigatório a partir de 2026-11-12)
+Todo post novo precisa entregar um documento complementar útil, e não apenas uma chamada genérica.
+Defina no metadata.json (dentro de png/ para carrosséis) o objeto `dm` com
+`palavra` única (3 a 24 caracteres A-Z/0-9, sem acentos), `titulo` específico e
+`secoes`: pelo menos 3 seções curtas com itens acionáveis, baseados em informações verificáveis.
+A legenda e o CTA final devem dizer: "Comente PALAVRA para receber o material gratuito em PDF por DM."
+O script `dm_preparar.py` do workflow prepara PDF no Drive, registra o link público em
+`iscas/links.json` e ajusta os posts já aprovados na fila. Nunca prometa um arquivo vazio.
+Respeite a aprovação humana e não publique sem o material vinculado.
