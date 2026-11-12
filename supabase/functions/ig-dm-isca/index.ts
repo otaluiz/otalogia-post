@@ -6,7 +6,7 @@
 // Definir IG_ID_OTALOGIA quando ativar os dois perfis no mesmo endpoint.
 const V = "v27.0";
 const env = (k: string) => (Deno.env.get(k) || "").trim();
-type Material = { link: string; titulo: string; carousel_id?: string };
+type Material = { link?: string; links?: Array<string | { link: string; titulo?: string }>; titulo: string; categoria?: string; carousel_id?: string };
 type Registry = Record<string, Material>;
 type Account = { name: "otalogia" | "aidealab"; id: string; token: string; facebook: boolean };
 const source: Record<string, string> = {
@@ -44,11 +44,25 @@ async function registry(name: string): Promise<Registry> {
   cache[name] = { until: Date.now() + 300_000, data };
   return data;
 }
+function documents(item?: Material): Array<{ link: string; titulo: string }> {
+  if (!item) return [];
+  const received = Array.isArray(item.links) && item.links.length ? item.links : (item.link ? [item.link] : []);
+  const urls = new Set<string>();
+  const docs: Array<{ link: string; titulo: string }> = [];
+  for (const raw of received) {
+    const url = typeof raw === "string" ? raw : raw?.link;
+    if (typeof url !== "string" || !/^https:\/\/drive\.google\.com\/file\/d\/[A-Za-z0-9_-]+\/view/.test(url)) continue;
+    if (urls.has(url)) continue;
+    urls.add(url);
+    docs.push({ link: url, titulo: typeof raw === "string" ? item.titulo : raw.titulo || item.titulo });
+  }
+  // A Private Replies API permite uma única mensagem por comentário.
+  // Limite editorial por categoria: no máximo 5 PDFs com título/URL.
+  return docs.slice(0, 5);
+}
 function keyword(text: string, links: Registry): string | null {
   const parts = text.normalize("NFD").replace(/\p{M}/gu, "").toUpperCase().split(/[^A-Z0-9_]+/);
-  return parts.find((p) =>
-    typeof links[p]?.link === "string" &&
-    /^https:\/\/drive\.google\.com\/file\/d\/[A-Za-z0-9_-]+\/view/.test(links[p].link)) || null;
+  return parts.find((p) => documents(links[p]).length > 0) || null;
 }
 
 async function signatureOk(body: string, provided: string, secret: string): Promise<boolean> {
@@ -90,8 +104,12 @@ async function send(a: Account, recipient: Record<string, string>, item: Materia
   if (!(await claim(a, eventId))) return;
   const host = a.facebook ? "https://graph.facebook.com" : "https://graph.instagram.com";
   const endpoint = host + "/" + V + "/" + (a.facebook ? "me" : a.id) + "/messages";
-  const text = "Aqui está seu material: " + item.titulo + "\n" + item.link +
-               "\n\nSe tiver dúvidas, pode responder esta mensagem.";
+  const docs = documents(item);
+  if (!docs.length) throw new Error("Categoria sem PDFs aprovados: envio bloqueado");
+  const title = item.categoria ? "Materiais da categoria " + item.categoria : "Aqui está seu material";
+  const text = title + ":\\n" +
+               docs.map((d, i) => "\\n" + (i + 1) + ". " + d.titulo + "\\n" + d.link).join("\\n") +
+               "\\n\\nSe tiver dúvidas, pode responder esta mensagem.";
   try {
     const response = await fetch(endpoint, {
       method: "POST", headers: { Authorization: "Bearer " + a.token, "Content-Type": "application/json" },
