@@ -1,0 +1,26 @@
+name: DM - validar documentos aprovados no Drive
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/dm-share-guides.yml"
+      - "iscas/categorias.json"
+permissions:
+  contents: read
+concurrency: dm-guides
+jobs:
+  share:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q "google-api-python-client>=2.100,<3" "google-auth>=2.25,<3"
+      - name: Compartilhar PDFs aprovados e conferir permissões
+        env:
+          DM_BRAND: otalogia
+          GOOGLE_DRIVE_CLIENT_ID: ${{ secrets.GOOGLE_DRIVE_CLIENT_ID }}
+          GOOGLE_DRIVE_CLIENT_SECRET: ${{ secrets.GOOGLE_DRIVE_CLIENT_SECRET }}
+          GOOGLE_DRIVE_REFRESH_TOKEN: ${{ secrets.GOOGLE_DRIVE_REFRESH_TOKEN }}
+        run: python "automation/share_dm_guides.py"
