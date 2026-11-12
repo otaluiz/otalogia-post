@@ -75,8 +75,8 @@ def all_posts():
                 if ident in seen_ids or not isinstance(ident,str):
                     continue
                 seen_ids.add(ident)
-                titulo=re.sub(r"^\\d{4}-\\d{2}-\\d{2}-", "", ident)
-                titulo=re.sub(r"^Dia\\d+-", "", titulo)
+                titulo=re.sub(r"^\d{4}-\d{2}-\d{2}-", "", ident)
+                titulo=re.sub(r"^Dia\d+-", "", titulo)
                 titulo=titulo.replace("-"," ")
                 yield {"id":ident,"tema":titulo,"arquivo":str(status_path.relative_to(ROOT))+"#"+status}
 
