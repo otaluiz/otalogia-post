@@ -159,9 +159,22 @@ def generate_pdf(meta, caption, keyword):
              Paragraph("O ponto de partida", styles["BrandSub"])]
     for value in intro:
         story.append(Paragraph(escape(value), styles["BrandBody"]))
-    story.append(Paragraph("Checklist para colocar em prática", styles["BrandSub"]))
-    for i, value in enumerate(steps, 1):
-        story.append(Paragraph(f"{i:02d}. {escape(value)}", styles["BrandBody"]))
+    spec_sections = (meta.get("dm") or {}).get("secoes") or []
+    if spec_sections:
+        for sec in spec_sections[:8]:
+            if not isinstance(sec, dict):
+                continue
+            story.append(Paragraph(escape(str(sec.get("titulo") or "Como aplicar")), styles["BrandSub"]))
+            if sec.get("texto"):
+                story.append(Paragraph(escape(str(sec["texto"])), styles["BrandBody"]))
+            for i, value in enumerate(sec.get("itens") or [], 1):
+                story.append(Paragraph(f"{i:02d}. {escape(str(value))}", styles["BrandBody"]))
+            if sec.get("codigo"):
+                story.append(Paragraph(escape(str(sec["codigo"])).replace("\\n", "<br/>"), styles["BrandBody"]))
+    else:
+        story.append(Paragraph("Checklist para colocar em prática", styles["BrandSub"]))
+        for i, value in enumerate(steps, 1):
+            story.append(Paragraph(f"{i:02d}. {escape(value)}", styles["BrandBody"]))
     story += [Paragraph("Seu próximo passo", styles["BrandSub"]),
               Paragraph("Revise cada item acima e anote: o que já faz, o que falta testar e qual mudança "
                         "vai aplicar primeiro. Compare o resultado com o objetivo do post.", styles["BrandBody"]),
