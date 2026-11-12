@@ -32,10 +32,17 @@ for category, data in CONFIG["categorias"].items():
     for guide in data.get("guias", []):
         if guide.get("status") not in ("aprovado", "publicado"):
             continue
-        fid = guide.get("drive_file_id")
-        if not fid:
-            raise RuntimeError(f"{category}: guia aprovado sem drive_file_id")
-        found = svc.files().get(fileId=fid, fields="id,name,mimeType,parents,webViewLink").execute()
+        name = str(guide.get("arquivo") or "")
+        if not name or not name.endswith(".pdf") or "/" in name or "\\\\" in name:
+            raise RuntimeError(f"{category}: nome de arquivo inválido")
+        safe = name.replace("'", "\\'")
+        query = f"'{PARENT_IDS[BRAND]}' in parents and name = '{safe}' and trashed = false"
+        response = svc.files().list(q=query, fields="files(id,name,mimeType,parents,webViewLink)", pageSize=20).execute()
+        matches = response.get("files", [])
+        if len(matches) != 1:
+            raise RuntimeError(f"{category}: esperado exatamente 1 PDF aprovado na pasta ({len(matches)})")
+        found = matches[0]
+        fid = found["id"]
         if found.get("mimeType") != "application/pdf" or PARENT_IDS[BRAND] not in found.get("parents", []):
             raise RuntimeError(f"{category}: arquivo não corresponde ao PDF da pasta autorizada")
         perms = svc.permissions().list(fileId=fid, fields="permissions(id,type,role)").execute()
