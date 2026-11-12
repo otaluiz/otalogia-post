@@ -18,4 +18,4 @@ jobs:
       - name: Valida TypeScript e imports
         run: deno check supabase/functions/ig-dm-isca/index.ts
       - name: Confere seguidores (incluindo falhas e nao seguidores)
-        run: deno test --allow-none supabase/functions/ig-dm-isca/follower_gate_test.ts
+        run: deno test supabase/functions/ig-dm-isca/follower_gate_test.ts
