@@ -38,3 +38,11 @@ Quem enviar espontaneamente **ATENDIMENTO** para @idea_lab7 ou **PERFIL** para @
 - Nenhum link de documento deve sair de resposta privada baseada apenas no comentário.
 - Aprovados são compartilhados no Drive somente pelo workflow \`dm-share-guides.yml\`.
 - Nunca colocar token Meta, Drive OAuth ou service_role em Git, legenda, logs ou documentação.
+
+## Biblioteca privada e teste de seguidores (atualizado em 12/11/2026)
+
+**Fonte de links de produção:** tabela Supabase `public.ig_dm_catalog`, protegida com RLS e sem grants a `anon` ou `authenticated`; a Edge Function consulta via `service_role` **somente após autenticar o webhook**. O GitHub público (`iscas/links.json`) guarda apenas nomes de categorias e palavras, **sem URLs**. Não volte a publicar Drive IDs ou links em arquivos públicos, commits, readmes ou legendas. A geração de novo documento exige pesquisa, revisão, aprovação, upload ao Drive e cadastro privado na tabela.
+
+**Gate de seguidores (sem exceções):** a API oficial `is_user_follow_business` deve retornar exatamente `true` no contexto da conta Instagram que recebeu a mensagem. Comentários de pessoas que já autorizaram a User Profile API podem receber link direto depois dessa verificação; comentários sem consentimento recebem apenas resposta privada pedindo que respondam com a palavra-chave. Na DM subsequente, verificar novamente antes de entregar. Perfil false, ausente, 403, timeout ou token inválido => nunca enviar link. Usuário pode seguir e tentar de novo com a palavra. Não confiar em botões ou afirmações "já sigo".
+
+**Testes:** `otaluiz/otalogia-post/.github/workflows/dm-follower-gate-tests.yml` faz checagem de tipos e 7 testes de falha fechada. `dm-share-guides.yml` confirma permissões públicas dos guias aprovados. Essas checagens NÃO substituem a ativação da Meta: ainda são necessários caso de uso Instagram Business, tokens e IDs da conta, assinatura dos webhooks `comments`/`messages` e teste real com conta seguidora e não seguidora. Links do Google Drive são compartilháveis depois da entrega; o bloqueio vale para a distribuição pelo bot, não DRM do PDF.
