@@ -10,10 +10,7 @@ const env = (k: string) => (Deno.env.get(k) || "").trim();
 type Material = { link?: string; links?: Array<string | { link: string; titulo?: string }>; titulo: string; categoria?: string; carousel_id?: string };
 type Registry = Record<string, Material>;
 type Account = { name: "otalogia" | "aidealab"; id: string; token: string; facebook: boolean };
-const source: Record<string, string> = {
-  otalogia: "https://raw.githubusercontent.com/otaluiz/otalogia-post/main/iscas/links.json",
-  aidealab: "https://raw.githubusercontent.com/otaluiz/aidealab-post/main/iscas/links.json",
-};
+// Os links NÃO ficam mais em arquivos publicamente acessíveis do GitHub.
 const cache: Record<string, { until: number; data: Registry } | undefined> = {};
 
 function account(id: string): Account | null {
@@ -37,14 +34,33 @@ function account(id: string): Account | null {
 async function registry(name: string): Promise<Registry> {
   const current = cache[name];
   if (current && current.until > Date.now()) return current.data;
-  const response = await fetch(source[name], { headers: { accept: "application/json" } });
-  if (name === "aidealab" && response.status === 404) return {};
-  if (!response.ok) throw new Error("Falha no catálogo de PDFs: " + response.status);
-  const data = await response.json() as Registry;
-  if (!data || typeof data !== "object" || Array.isArray(data)) throw new Error("Catálogo inválido");
+  const serviceUrl = env("SUPABASE_URL"), serviceKey = env("SUPABASE_SERVICE_ROLE_KEY");
+  if (!serviceUrl || !serviceKey) throw new Error("Catálogo privado indisponível: secret não configurado");
+  if (name !== "aidealab" && name !== "otalogia") throw new Error("Perfil não autorizado");
+  const params = new URLSearchParams({
+    profile: "eq." + name,
+    enabled: "eq.true",
+    select: "keyword,title,category,documents"
+  });
+  const response = await fetch(serviceUrl + "/rest/v1/ig_dm_catalog?" + params.toString(), {
+    headers: { apikey: serviceKey, Authorization: "Bearer " + serviceKey }
+  });
+  if (!response.ok) {
+    console.error("Falha no catálogo privado", name, response.status);
+    throw new Error("Não foi possível consultar catálogo aprovado");
+  }
+  const rows = await response.json() as Array<{keyword:string; title:string; category:string; documents:unknown[]}>;
+  const data: Registry = {};
+  for (const row of rows) {
+    if (!/^[A-Z0-9_]{3,30}$/.test(row.keyword)) continue;
+    if (!Array.isArray(row.documents)) continue;
+    data[row.keyword] = { categoria: row.category, titulo: row.title,
+                          links: row.documents as Array<string | {link:string; titulo?:string}> };
+  }
   cache[name] = { until: Date.now() + 300_000, data };
   return data;
 }
+
 function documents(item?: Material): Array<{ link: string; titulo: string }> {
   if (!item) return [];
   const received = Array.isArray(item.links) && item.links.length ? item.links : (item.link ? [item.link] : []);
