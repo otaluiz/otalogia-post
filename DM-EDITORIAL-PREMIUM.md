@@ -27,3 +27,14 @@ O conteúdo de feed (Reels/carrossel) é a chamada de atenção e introdução. 
 - O conteúdo da fila e os posts já publicados NÃO devem sofrer alteração automática de legenda; aprovação humana é preservada.
 - Para testar um novo formato, criar **apenas um piloto** e revisá-lo antes de gerar em lote.
 - Não apagar PDFs válidos preexistentes sem identificar se são parte de campanha ativa.
+
+
+## Biblioteca por categoria (sem PDFs repetidos)
+- A fonte das categorias, assuntos cobertos, posts associados e guias aprovados é `iscas/categorias.json`. Não invente palavra-chave nova para cada post.
+- Antes de escolher um tema para carrossel ou Reels, procure posts existentes na pasta `carrosseis`, na fila do Drive e no estado do projeto. Execute o verificador `avaliar_categorias.py` com título e categoria. Ele encontra títulos parecidos; a revisão semântica/editorial dos resultados é obrigatória, pois similaridade lexical não é suficiente.
+- Se já houve post de mesmo ângulo/problema, mude o ângulo para um insight comprovadamente novo ou não crie novo post. Se o assunto tem guia aprovado, **REUTILIZE** o PDF da categoria. Só abrir pesquisa para novo guia quando a lacuna for nova e substancial; preferir atualizar/versionar o guia central.
+- A palavra no comentário e na DM é a da **categoria** (ex.: ATENDIMENTO), não do assunto do dia. Todos os posts daquela categoria levam à mesma biblioteca, separada por Instagram.
+- `iscas/links.json` é o registro de distribuição, não o rascunho editorial: cada categoria aprovada terá um item `{"categoria":"ATENDIMENTO","titulo":"Guias de Atendimento","links":[{"titulo":"Nome do PDF","link":"https://drive.google.com/file/d/.../view"}]}`. Não inclua URLs fictícias, PDFs pendentes ou links sem permissão de leitura. O webhook aceita `link` legado ou `links` (até 5 PDFs únicos por categoria).
+- Guarde toda pesquisa e conteúdo em `iscas/<categoria>/brief.md`, `pesquisa.md`, `conteudo.md`; produção de PDF continua condicionada à revisão e à aprovação editorial, sem geração a partir dos slides.
+- Quando for um guia novo, mantenha `status: piloto_aguardando_aprovacao` em `iscas/categorias.json` até a aprovação. Nunca anuncie envio automático de um PDF ausente.
+- Não alterar legendas de postagens antigas em lote e não reaproveitar arquivos de outra marca.
