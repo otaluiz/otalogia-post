@@ -41,13 +41,6 @@ jobs:
         run: |
           [ -n "$GOOGLE_DRIVE_REFRESH_TOKEN" ] || { echo "secrets do Drive ainda não cadastrados"; exit 0; }
           python automation/upload_drive.py
-      - name: PDFs e palavras-chave para a DM dos posts na fila e novos rascunhos
-        env:
-          DM_BRAND: otalogia
-          GOOGLE_DRIVE_CLIENT_ID: ${{ secrets.GOOGLE_DRIVE_CLIENT_ID }}
-          GOOGLE_DRIVE_CLIENT_SECRET: ${{ secrets.GOOGLE_DRIVE_CLIENT_SECRET }}
-          GOOGLE_DRIVE_REFRESH_TOKEN: ${{ secrets.GOOGLE_DRIVE_REFRESH_TOKEN }}
-        run: python automation/dm_preparar.py
       - name: status do Drive no repo (rascunho/aprovado/publicado) e links das iscas
         run: |
           git config user.name "github-actions[bot]"
