@@ -26,7 +26,7 @@ function account(id: string): Account | null {
     return { name: "otalogia", id: env("IG_ID_OTALOGIA") || id,
              token: env("IG_TOKEN"), facebook: env("IG_GRAPH") === "facebook" };
   }
-  // Compatibilidade com a versão anterior até instalar token e ID da segunda conta.
+  // Compatibilidade temporária. Para 2 perfis exija IG_ID_* distintos e sem fallback.
   if (!otId && !env("IG_TOKEN_AIDEALAB") && env("IG_TOKEN")) {
     return { name: "otalogia", id, token: env("IG_TOKEN"), facebook: env("IG_GRAPH") === "facebook" };
   }
@@ -100,26 +100,81 @@ async function release(a: Account, eventId: string) {
   if (!response.ok) console.error("Falha ao remover registro após erro:", response.status);
 }
 
-async function send(a: Account, recipient: Record<string, string>, item: Material, eventId: string) {
-  if (!(await claim(a, eventId))) return;
+// Meta User Profile API: somente depois de o usuário enviar mensagem por iniciativa própria
+// existe consentimento para consultar o perfil. Comentário isolado NÃO permite essa consulta.
+async function followerStatus(a: Account, scopedUserId: string): Promise<"following" | "not_following" | "unknown"> {
+  if (!scopedUserId || !a.token) return "unknown";
+  const host = a.facebook ? "https://graph.facebook.com" : "https://graph.instagram.com";
+  const url = host + "/" + V + "/" + encodeURIComponent(scopedUserId) +
+              "?fields=is_user_follow_business";
+  try {
+    const response = await fetch(url, {
+      headers: { Authorization: "Bearer " + a.token },
+      signal: AbortSignal.timeout(9000),
+    });
+    if (!response.ok) {
+      console.error("Verificação de seguidor indisponível", a.name, response.status);
+      return "unknown";
+    }
+    const data = await response.json() as { is_user_follow_business?: boolean };
+    if (data.is_user_follow_business === true) return "following";
+    if (data.is_user_follow_business === false) return "not_following";
+  } catch (error) {
+    console.error("Falha de rede na verificação de seguidor", a.name, String(error));
+  }
+  return "unknown";  // Falha fechada: sem informação inequívoca => SEM link.
+}
+
+function promptToReply(a: Account, keyword: string): string {
+  const profile = a.name === "otalogia" ? "@otalogia" : "@idea_lab7";
+  return "Recebi seu comentário sobre " + keyword + "! 📩\n" +
+         "Para proteger o material exclusivo de quem segue " + profile +
+         ", responda esta mensagem com " + keyword + ". " +
+         "Vou confirmar que você segue o perfil antes de enviar o PDF.";
+}
+
+function documentText(item: Material): string {
+  const docs = documents(item);
+  const title = item.categoria ? "Materiais da categoria " + item.categoria : "Aqui está seu material";
+  return title + ":\n" +
+         docs.map((d, i) => "\n" + (i + 1) + ". " + d.titulo + "\n" + d.link).join("\n") +
+         "\n\nSe tiver dúvidas, pode responder esta mensagem.";
+}
+
+async function sendText(a: Account, recipient: Record<string, string>, text: string, eventId: string) {
+  if (!eventId || !(await claim(a, eventId))) return;
   const host = a.facebook ? "https://graph.facebook.com" : "https://graph.instagram.com";
   const endpoint = host + "/" + V + "/" + (a.facebook ? "me" : a.id) + "/messages";
-  const docs = documents(item);
-  if (!docs.length) throw new Error("Categoria sem PDFs aprovados: envio bloqueado");
-  const title = item.categoria ? "Materiais da categoria " + item.categoria : "Aqui está seu material";
-  const text = title + ":\n" +
-               docs.map((d, i) => "\n" + (i + 1) + ". " + d.titulo + "\n" + d.link).join("\n") +
-               "\n\nSe tiver dúvidas, pode responder esta mensagem.";
   try {
     const response = await fetch(endpoint, {
       method: "POST", headers: { Authorization: "Bearer " + a.token, "Content-Type": "application/json" },
       body: JSON.stringify({ recipient, message: { text } }),
     });
     if (!response.ok) {
-      console.error("Meta recusou envio", a.name, response.status, (await response.text()).slice(0, 350));
+      console.error("Meta recusou envio", a.name, response.status, (await response.text()).slice(0, 200));
       throw new Error("Envio negado pela Meta: " + response.status);
     }
   } catch (error) { await release(a, eventId); throw error; }
+}
+
+async function deliverIfFollower(a: Account, senderId: string, item: Material, word: string, mid: string) {
+  // Não confiar em texto "já sigo", botão ou cache: consulta real em CADA tentativa.
+  const status = await followerStatus(a, senderId);
+  const recipient = { id: senderId };
+  if (status !== "following") {
+    const profile = a.name === "otalogia" ? "@otalogia" : "@idea_lab7";
+    const message = status === "not_following"
+      ? "O material é exclusivo para seguidores. Siga " + profile +
+        " e envie " + word + " novamente aqui na DM para eu confirmar."
+      : "Ainda não consegui confirmar seu follow em " + profile +
+        ". Por segurança não envio links sem confirmação. Tente novamente em alguns minutos.";
+    await sendText(a, recipient, message, "notice:" + mid);
+    return;
+  }
+  const docs = documents(item);
+  if (!docs.length) return;
+  // Único caminho pelo qual o webhook entrega URLs de arquivos.
+  await sendText(a, recipient, documentText(item), "dm:" + mid);
 }
 
 Deno.serve(async (req: Request) => {
@@ -157,14 +212,14 @@ Deno.serve(async (req: Request) => {
         const word = keyword(String(c.text || ""), links);
         if (!c.id || !word || String(c.from?.id || "") === id) continue;
         // Private reply: uma mensagem, somente texto/link, em até 7 dias do comentário.
-        await send(a, { comment_id: String(c.id) }, links[word], "comment:" + c.id);
+        await sendText(a, { comment_id: String(c.id) }, promptToReply(a, word), "comment:" + c.id);
       }
       for (const msg of entry.messaging || []) {
         const sender = String(msg.sender?.id || "");
         if (!sender || sender === id || msg.message?.is_echo || msg.is_self) continue;
         const word = keyword(String(msg.message?.text || ""), links);
         const messageId = String(msg.message?.mid || "");
-        if (word && messageId) await send(a, { id: sender }, links[word], "dm:" + messageId);
+        if (word && messageId) await deliverIfFollower(a, sender, links[word], word, messageId);
       }
     }
   } catch (err) {
