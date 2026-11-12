@@ -1,3 +1,4 @@
+import { verifyFollow, canDeliverLinks } from "./follower_gate.ts";
 // Meta webhook: @otalogia + @idea_lab7. Recebe comentários e DMs iniciados pelos usuários.
 // Envia um único link público para o PDF, sem exigir follow. Verificação HMAC e idempotência.
 // Secrets legados @otalogia: IG_TOKEN, IG_APP_SECRET, IG_VERIFY_TOKEN, IG_GRAPH.
@@ -102,27 +103,8 @@ async function release(a: Account, eventId: string) {
 
 // Meta User Profile API: somente depois de o usuário enviar mensagem por iniciativa própria
 // existe consentimento para consultar o perfil. Comentário isolado NÃO permite essa consulta.
-async function followerStatus(a: Account, scopedUserId: string): Promise<"following" | "not_following" | "unknown"> {
-  if (!scopedUserId || !a.token) return "unknown";
-  const host = a.facebook ? "https://graph.facebook.com" : "https://graph.instagram.com";
-  const url = host + "/" + V + "/" + encodeURIComponent(scopedUserId) +
-              "?fields=is_user_follow_business";
-  try {
-    const response = await fetch(url, {
-      headers: { Authorization: "Bearer " + a.token },
-      signal: AbortSignal.timeout(9000),
-    });
-    if (!response.ok) {
-      console.error("Verificação de seguidor indisponível", a.name, response.status);
-      return "unknown";
-    }
-    const data = await response.json() as { is_user_follow_business?: boolean };
-    if (data.is_user_follow_business === true) return "following";
-    if (data.is_user_follow_business === false) return "not_following";
-  } catch (error) {
-    console.error("Falha de rede na verificação de seguidor", a.name, String(error));
-  }
-  return "unknown";  // Falha fechada: sem informação inequívoca => SEM link.
+async function followerStatus(a: Account, scopedUserId: string) {
+  return verifyFollow({ scopedId: scopedUserId, token: a.token, facebook: a.facebook, version: V });
 }
 
 function promptToReply(a: Account, keyword: string): string {
@@ -161,7 +143,7 @@ async function deliverIfFollower(a: Account, senderId: string, item: Material, w
   // Não confiar em texto "já sigo", botão ou cache: consulta real em CADA tentativa.
   const status = await followerStatus(a, senderId);
   const recipient = { id: senderId };
-  if (status !== "following") {
+  if (!canDeliverLinks(status)) {
     const profile = a.name === "otalogia" ? "@otalogia" : "@idea_lab7";
     const message = status === "not_following"
       ? "O material é exclusivo para seguidores. Siga " + profile +
