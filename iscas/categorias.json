@@ -1,0 +1,139 @@
+{
+  "versao_schema": 1,
+  "perfil": "@otalogia",
+  "politica": "Biblioteca por categoria; preservar material já publicado e não duplicar assuntos.",
+  "categorias": {
+    "PERFIL": {
+      "palavra": "PERFIL",
+      "assuntos": [
+        "bio",
+        "perfil de Instagram",
+        "conversão",
+        "links",
+        "descrição de serviços"
+      ],
+      "guias": [
+        {
+          "id": "otalogia-bio-2026-01",
+          "titulo": "Bio que converte",
+          "arquivo": "OTALOGIA_Guia_Bio_que_Converte_PILOTO.pdf",
+          "status": "piloto_aprovado_sem_publicacao",
+          "versao": "1.0",
+          "temas_cobertos": [
+            "auditoria de bio",
+            "estrutura",
+            "links",
+            "testes de compreensão",
+            "UTMs"
+          ]
+        }
+      ],
+      "posts_relevantes": [
+        "2026-11-bio-responde"
+      ]
+    },
+    "SITES": {
+      "palavra": "SITES",
+      "assuntos": [
+        "web design",
+        "sites",
+        "portfólio",
+        "UX",
+        "performance"
+      ],
+      "guias": [],
+      "posts_relevantes": [
+        "2026-10-preciso-de-site",
+        "2026-10-site-invisivel",
+        "2026-10-teste-do-site"
+      ]
+    },
+    "AUTOMACAO": {
+      "palavra": "AUTOMACAO",
+      "assuntos": [
+        "agentes",
+        "WhatsApp",
+        "IA para processos",
+        "atendimento automático"
+      ],
+      "guias": [],
+      "posts_relevantes": [
+        "2026-10-ia-do-whatsapp",
+        "2026-11-resposta-pronta"
+      ]
+    },
+    "CONTEUDO": {
+      "palavra": "CONTEUDO",
+      "assuntos": [
+        "briefing",
+        "prompts",
+        "roteiros",
+        "produção de conteúdo"
+      ],
+      "guias": [
+        {
+          "id": "otalogia-briefing",
+          "titulo": "Prompt de briefing",
+          "arquivo": "briefing.pdf",
+          "status": "existente_validar_visual",
+          "versao": "legado",
+          "temas_cobertos": [
+            "briefing",
+            "prompt para post"
+          ]
+        }
+      ],
+      "posts_relevantes": [
+        "2026-10-prompt-briefing"
+      ]
+    },
+    "EDICAO": {
+      "palavra": "EDICAO",
+      "assuntos": [
+        "edição",
+        "reels",
+        "motion design",
+        "cortes"
+      ],
+      "guias": [
+        {
+          "id": "otalogia-corte",
+          "titulo": "Os 3 passos que eu faço na mão",
+          "arquivo": "corte.pdf",
+          "status": "existente_validar_visual",
+          "versao": "legado",
+          "temas_cobertos": [
+            "edição",
+            "corte"
+          ]
+        }
+      ],
+      "posts_relevantes": []
+    },
+    "NEGOCIOS": {
+      "palavra": "NEGOCIOS",
+      "assuntos": [
+        "vendas",
+        "clientes",
+        "marketing para negócio local",
+        "atendimento"
+      ],
+      "guias": [
+        {
+          "id": "otalogia-susto",
+          "titulo": "5 coisas que espantam cliente",
+          "arquivo": "susto.pdf",
+          "status": "existente_validar_visual",
+          "versao": "legado",
+          "temas_cobertos": [
+            "atrito na compra",
+            "experiência do cliente"
+          ]
+        }
+      ],
+      "posts_relevantes": [
+        "2026-11-cliente-nao-sabe"
+      ]
+    }
+  }
+}
