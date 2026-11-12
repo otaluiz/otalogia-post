@@ -1,0 +1,21 @@
+name: DM - testes de seguranca dos seguidores
+on:
+  push:
+    paths:
+      - ".github/workflows/dm-follower-gate-tests.yml"
+      - "supabase/functions/ig-dm-isca/**"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Valida TypeScript e imports
+        run: deno check supabase/functions/ig-dm-isca/index.ts
+      - name: Confere seguidores (incluindo falhas e nao seguidores)
+        run: deno test --allow-none supabase/functions/ig-dm-isca/follower_gate_test.ts
