@@ -96,3 +96,7 @@ Ao final, escreva um resumo curto: tema, variante, imagens geradas, checagens e 
 
 ## Nova regra — PDF editorial para DM
 Leia `DM-EDITORIAL-PREMIUM.md` antes de planejar CTAs de materiais. O documento é uma pesquisa aprofundada e INDEPENDENTE dos slides: não resumir carrossel. NÃO prometer PDF em post novo nem gravar `dm.palavra` automaticamente enquanto o material não tiver pesquisa, redação, diagramação, PDF revisado, link pronto e aprovação humana. Projeto de teste: apenas um guia piloto antes de escalar. Links de materiais antigos autorizados são preservados.
+
+
+## PRÉ-VALIDAÇÃO DE CATEGORIA E NÃO REPETIÇÃO
+ANTES de gerar/carregar novo carrossel, Reels ou PDF, leia `iscas/categorias.json` e rode: `python automation/avaliar_categorias.py --titulo "<tema planejado>" --categoria <CATEGORIA> --json`. Verifique `posts_possivelmente_duplicados` e `guias_existentes`. Se houve post sobre o mesmo problema, diferencie o ângulo ou cancele. Se já existe guia aprovado para a categoria, reuso obrigatório; não gerar documento novo. PDF apenas após pesquisa independente, revisão visual e aprovação. Palavra-chave de comentário = palavra da categoria, não do post. Não prometa PDF inexistente.
