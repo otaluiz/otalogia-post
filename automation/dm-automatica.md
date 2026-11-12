@@ -1,35 +1,51 @@
-# DM automática das iscas (só para quem segue)
+# Automação oficial de DM: @otalogia + @idea_lab7
 
-Função `supabase/functions/ig-dm-isca` (projeto Supabase **aidealab**), já publicada em:
+Esta função usa somente a Meta Instagram Messaging API e foi implantada no projeto Supabase **aidealab** no endpoint:
+
 `https://jrfjjpxjkpvuvvycyryj.supabase.co/functions/v1/ig-dm-isca`
 
-## Fluxo
-1. Alguém comenta a palavra (ex.: BRIEFING) → responde no comentário "Te mandei no direct 📩" e manda DM perguntando **"Você já me segue?"** com os botões **Sim, já sigo ✅** e **Ainda não**.
-2. "Ainda não" → manda o botão **Seguir @otalogia** (abre o perfil) e **Pronto, segui ✅**. "Sim" ou "Pronto" (ou a palavra no direct) → confere `is_user_follow_business`; o link só sai se seguir de verdade.
-   - Segue: manda o título e o link do PDF no Drive.
-   - Não segue: pede o follow e manda o botão de novo.
-3. Palavras e links vêm de `iscas/links.json` na main (o `entregar.yml` gera). Isca nova entra sozinha, sem novo deploy (cache de 5 min).
+## Gatilhos
 
-## Configurar uma vez
-1. Conta @otalogia como **Profissional** (criador ou empresa). Em Configurações > Mensagens e respostas > Ferramentas conectadas, ligue **Permitir acesso às mensagens**.
-2. Em developers.facebook.com: crie um app tipo **Business**, adicione o produto **Instagram** > "API setup with Instagram login". Gere o token da @otalogia com `instagram_business_basic`, `instagram_business_manage_messages` e `instagram_business_manage_comments`.
-3. Secrets no Supabase (Project Settings > Edge Functions > Secrets):
-   - `IG_TOKEN`: token de longa duração da @otalogia
-   - `IG_APP_SECRET`: Instagram app secret
-   - `IG_VERIFY_TOKEN`: uma senha qualquer que você inventa
-4. No app, em Webhooks: Callback URL = a URL acima, Verify token = o `IG_VERIFY_TOKEN`. Assine os campos **comments**, **messages** e **messaging_postbacks**.
-5. Teste com uma conta adicionada como **Instagram Tester** do app (modo desenvolvimento). Para funcionar com qualquer seguidor: troque o app para **Live** e peça Advanced Access das permissões acima na App Review da Meta.
+- Comentário em Reel/carrossel com palavra exata -> **uma única resposta privada** com link do PDF (sem exigir follow).
+- DM enviada espontaneamente pelo usuário com palavra exata -> responde com link do PDF.
+- Não envia mensagens em massa nem faz follow-up sem interação do usuário.
+- Não responde quando não existe documento publicado, nem mistura links entre contas.
+- Eventos HMAC são validados e deduplicados em `public.ig_dm_events`.
 
-## Token permanente (recomendado)
-O token do login do Instagram vence em 60 dias. O que não vence é o token de **Usuário do Sistema** do Business Manager:
-1. A @otalogia precisa estar ligada a uma **Página do Facebook** (Configurações do Instagram > Central de Contas).
-2. No app da Meta, adicione o produto **Messenger > Configurações do Instagram** (API com login do Facebook) e assine o webhook do objeto **Instagram** com `comments`, `messages` e `messaging_postbacks` na mesma URL.
-3. business.facebook.com > Configurações > **Usuários do sistema** > Adicionar (função Admin). Em "Atribuir ativos", dê a Página e a conta do Instagram com controle total, e o app.
-4. "Gerar novo token" > escolha o app > validade **Nunca** > permissões `instagram_basic`, `instagram_manage_messages`, `instagram_manage_comments`, `pages_manage_metadata`, `pages_show_list`, `pages_read_engagement`, `business_management`.
-5. Troque o token do Usuário do Sistema pelo token da Página (também não vence): `GET https://graph.facebook.com/v23.0/me/accounts?access_token=<token do sistema>` e copie o `access_token` da Página.
-6. Secrets no Supabase: `IG_TOKEN` = token da Página, `IG_GRAPH` = `facebook`, `IG_APP_SECRET` = chave secreta do app (Configurações > Básico), `IG_VERIFY_TOKEN` = a senha do webhook.
+## De onde vêm as palavras e PDFs
 
-## Manutenção
-- Só no modo login do Instagram (sem `IG_GRAPH`): o token dura 60 dias. Renove antes de vencer: `GET https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=<IG_TOKEN>` e troque o secret.
-- Logs de erro: Supabase > Edge Functions > ig-dm-isca > Logs.
-- Para desligar: remova o webhook no app da Meta.
+- @otalogia: `https://raw.githubusercontent.com/otaluiz/otalogia-post/main/iscas/links.json`
+- @idea_lab7: `https://raw.githubusercontent.com/otaluiz/aidealab-post/main/iscas/links.json`
+- O script `automation/dm_preparar.py` (otalogia) ou `agente aidealab/automation/cloud/dm_preparar.py` (aidealab) lê as pastas do Drive e gera as iscas.
+- PDFs: `Clientes/<marca>/07-Iscas-DM`. Links existentes preservados, cache de 5 minutos.
+
+## Configurar antes de ativar as contas publicamente
+
+Cada conta de Instagram precisa ser **profissional** e estar autorizada no app da Meta com permissões de mensagens e comentários, com Advanced Access quando aplicável.
+
+No painel Meta, configure webhook para o endpoint acima no objeto Instagram com os campos **comments** e **messages**. Não assine eventos de terceiros desconhecidos. Teste com usuário de teste e depois com usuário externo autorizado.
+
+Secrets da função (não armazenar no GitHub em texto puro):
+
+| @otalogia | @idea_lab7 | Descrição |
+|---|---|---|
+| `IG_TOKEN` | `IG_TOKEN_AIDEALAB` | Access token de mensagens da conta |
+| `IG_ID_OTALOGIA` | `IG_ID_AIDEALAB` | Instagram professional user ID |
+| `IG_APP_SECRET` | `IG_APP_SECRET_AIDEALAB` | Segredo do app emissor do webhook (somente se apps distintos; mesmo app pode usar o mesmo segredo) |
+| `IG_VERIFY_TOKEN` | `IG_VERIFY_TOKEN_AIDEALAB` | Verify token para validação inicial |
+| `IG_GRAPH` | `IG_GRAPH_AIDEALAB` | `facebook` caso o token use Facebook Login, omitido para Instagram Login |
+
+Também requer o Supabase padrão: `SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY` para a deduplicação.
+
+**Importante:** o webhook atual já está implantado, mas isso **não significa** que os webhooks de ambas as contas, o acesso avançado e os tokens estejam ativos. Verifique e teste o fluxo ponta a ponta antes de incluir promessas de envio automático em posts publicados.
+
+Documentação de limites: apenas uma resposta privada por comentário dentro de até 7 dias; uma conversa adicional somente após nova interação do usuário, respeitando janela de 24h. Enviar link de arquivo é mais estável que anexo direto como primeira resposta privada.
+
+## Diagnóstico
+
+- Supabase > Edge Functions > `ig-dm-isca` > Logs.
+- GitHub Actions > `entregar.yml`: PDFs e palavras são preparados na sincronização do Drive.
+- Drive > `07-Iscas-DM`: conferir o PDF com visualização pública.
+- `iscas/links.json`: checar se a palavra está publicada na branch main.
+
+Se o usuário comentar uma palavra que não está no mapa, não enviará nenhuma resposta.
