@@ -96,7 +96,9 @@ def main():
         svc.permissions().create(fileId=novo["id"], body={"type": "anyone", "role": "reader"}).execute()
         links[f.name] = novo["webViewLink"]
         print("isca enviada:", f.name)
-    mapa = {}
+    # Não apague palavras de posts já publicados: comentários antigos ainda podem chegar.
+    historico = Path("iscas/links.json")
+    mapa = json.loads(historico.read_text(encoding="utf-8")) if historico.exists() else {}
     linhas = ["# Links das iscas (DM automática)", "", "Gerado pelo entregar.yml. Cole o link na resposta da palavra no ManyChat/automação da Meta.", "",
               "| Palavra | Reel | Semana | Link |", "|---|---|---|---|"]
     for j in sorted(Path("iscas").glob("*/isca.json")):
