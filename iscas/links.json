@@ -1,35 +1,27 @@
 {
   "BRIEFING": {
-    "link": "https://drive.google.com/file/d/1qF0H5YRX9QUZHYjrLcjXEjAtQ0lD3232/view?usp=drivesdk",
-    "titulo": "O prompt de briefing que eu uso"
+    "categoria": "LEGADO",
+    "titulo": "O prompt de briefing que eu uso",
+    "status": "consultar_catalogo_privado"
   },
   "CORTE": {
-    "link": "https://drive.google.com/file/d/1vJmCb2Mk_tMkQjKyMxuvcvlVM8B0VRKx/view?usp=drivesdk",
-    "titulo": "Os 3 passos que eu faço na mão"
+    "categoria": "LEGADO",
+    "titulo": "Os 3 passos que eu faço na mão",
+    "status": "consultar_catalogo_privado"
   },
   "SUSTO": {
-    "link": "https://drive.google.com/file/d/1xK0R1pN1xlMYHkLyYZwxZljTawkIn2eB/view?usp=drivesdk",
-    "titulo": "5 coisas que espantam cliente"
+    "categoria": "LEGADO",
+    "titulo": "5 coisas que espantam cliente",
+    "status": "consultar_catalogo_privado"
   },
   "PERFIL": {
     "categoria": "PERFIL",
     "titulo": "Biblioteca PERFIL",
-    "links": [
-      {
-        "titulo": "Bio que converte — guia completo para o Instagram",
-        "link": "https://drive.google.com/file/d/1MYd7J9hra77HUXvs5ipv9I1YljUtSTfN/view"
-      }
-    ]
+    "status": "consultar_catalogo_privado"
   },
   "BIO": {
     "categoria": "PERFIL",
     "titulo": "Biblioteca PERFIL",
-    "links": [
-      {
-        "titulo": "Bio que converte — guia completo para o Instagram",
-        "link": "https://drive.google.com/file/d/1MYd7J9hra77HUXvs5ipv9I1YljUtSTfN/view"
-      }
-    ],
-    "alias_de": "PERFIL"
+    "status": "consultar_catalogo_privado"
   }
 }
