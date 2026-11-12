@@ -96,19 +96,10 @@ def main():
         svc.permissions().create(fileId=novo["id"], body={"type": "anyone", "role": "reader"}).execute()
         links[f.name] = novo["webViewLink"]
         print("isca enviada:", f.name)
-    # Não apague palavras de posts já publicados: comentários antigos ainda podem chegar.
-    historico = Path("iscas/links.json")
-    mapa = json.loads(historico.read_text(encoding="utf-8")) if historico.exists() else {}
-    linhas = ["# Links das iscas (DM automática)", "", "Gerado pelo entregar.yml. Cole o link na resposta da palavra no ManyChat/automação da Meta.", "",
-              "| Palavra | Reel | Semana | Link |", "|---|---|---|---|"]
-    for j in sorted(Path("iscas").glob("*/isca.json")):
-        d = json.loads(j.read_text(encoding="utf-8"))
-        link = links.get(j.parent.name + ".pdf", "aguardando upload")
-        mapa[d["palavra"].upper()] = {"link": link, "titulo": d["titulo"]}
-        linhas.append(f"| {d['palavra']} | {d['reel']} | {d['semana']} | {link} |")
-    Path("iscas/links.md").write_text("\n".join(linhas) + "\n", encoding="utf-8")
-    # lido pela função supabase/functions/ig-dm-isca (DM automática)
-    Path("iscas/links.json").write_text(json.dumps(mapa, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # Links ativos ficam exclusivamente na tabela ig_dm_catalog do Supabase,
+    # protegida por service_role e verificação de seguidores no webhook.
+    # NUNCA gerar links.json/links.md públicos com URLs de PDFs.
+    print("Catálogo de DM gerenciado privadamente no Supabase.")
 
 
 if __name__ == "__main__":
