@@ -1,9 +1,3 @@
-# Links das iscas (DM automática)
+# Biblioteca de DMs
 
-Gerado pelo entregar.yml. Cole o link na resposta da palavra no ManyChat/automação da Meta.
-
-| Palavra | Reel | Semana | Link |
-|---|---|---|---|
-| BRIEFING | R7 | 2026-10-26 | https://drive.google.com/file/d/1qF0H5YRX9QUZHYjrLcjXEjAtQ0lD3232/view?usp=drivesdk |
-| CORTE | R8 | 2026-10-26 | https://drive.google.com/file/d/1vJmCb2Mk_tMkQjKyMxuvcvlVM8B0VRKx/view?usp=drivesdk |
-| SUSTO | R9 | 2026-10-26 | https://drive.google.com/file/d/1xK0R1pN1xlMYHkLyYZwxZljTawkIn2eB/view?usp=drivesdk |
+Links de PDFs não são publicados no GitHub. A distribuição é gerenciada pelo catálogo privado `public.ig_dm_catalog` no Supabase, com verificação real de seguidores.
