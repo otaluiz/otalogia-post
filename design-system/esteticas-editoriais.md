@@ -7,7 +7,7 @@ Origem: referências em `Drive/Clientes/otalogia/01-Referencias/Instagram/soul-r
 ## Regras de geração
 
 - **Com o Luiz (capa T1b e CTA da variante 2):** Higgsfield `soul_2`, `soul_id` `f752ac25-65a0-4930-a628-722af0508c5b` (Soul "Luiz ota"), `aspect_ratio` 3:4, `quality` 2k. Só prompt descritivo, nunca a imagem de referência como input (ela tem o rosto de outra pessoa).
-- **Padrão desde 2026-11-09:** o Luiz em todas as fotos (capa, slide 2 e CTA). `gpt_image_2_5` sem o Luiz só como reserva se o Soul falhar.
+- **Padrão desde 2026-11-09:** o Luiz em todas as fotos (capa, slide 2 e CTA). Sem reserva sem o Luiz (o modelo com imagem de hook sem personagem foi eliminado em 2026-11-12).
 - **Preservar o personagem:** sempre escrever "keep his own short dark textured hair fully visible, no hat, no glasses" (o boné e o óculos das referências escondem o cabelo e mudam a fisionomia).
 - **Sem texto:** objetos que costumam vir com letra (caneca, teclado, post-it, placa, tela) precisam de "completely blank". Teclado sempre sai com letra: evitar como cenário. Se sobrar marca pequena, limpar localmente (inpaint) antes do recorte.
 - **Moldura:** pedir "no black circular border, image fills the frame" quando for olho de peixe; o Soul tende a pôr vinheta preta.

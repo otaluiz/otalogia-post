@@ -9,7 +9,8 @@ Se falhar, pare e relate o erro.
 ## 1. Fazer o carrossel
 Siga `automation/daily-carousel-prompt.txt` do início ao fim, com estas diferenças da versão local:
 - Variante: todo carrossel com o Luiz (@luizota, único personagem do otalogia) na capa, no slide 2 e no CTA,
-  alternando T1b → Referência (capa T1b), como está no `daily-carousel-prompt.txt`. Nada de capa T1 sem o Luiz.
+  alternando T1b → Referência (capa T1b), como está no `daily-carousel-prompt.txt`. O modelo de capa com imagem de
+  hook sem o Luiz foi eliminado: nada de `gpt_image_2_5` sem ele, nem como reserva. Se o Soul falhar de vez, pare e relate.
 - Caminhos do Windows (`C:\Users\...`) não existem aqui. O backlog de rascunhos é contado pelas pastas em
   `carrosseis/` cujo `png/metadata.json` tem `"status": "rascunho"`.
 - Imagens: conectores Higgsfield (`generate_image`/`generate_image_batch` + `jobs_wait`), baixe o `result_url` com curl.

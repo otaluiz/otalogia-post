@@ -18,7 +18,8 @@ Tema:
   séries do roteiro, sem repetir hook nem tema já usado (veja a tabela "Já produzidos").
 
 Variante (regra de 2026-11-09: TODO carrossel sai com o Luiz, personagem @luizota, único
-personagem do otalogia; post com ele teve os melhores resultados). Nunca gere capa T1 sem o Luiz.
+personagem do otalogia; post com ele teve os melhores resultados). O modelo antigo de capa T1 com imagem
+de hook sem o Luiz (figura pequena em paisagem) saiu de vez: nunca gere capa nem foto sem o Luiz.
 Alterne entre:
 1. T1b · capa com o Luiz;
 2. Referência · capa T1b com o Luiz + 3 a 5 slides T5 com print real de sites/ferramentas.
@@ -34,8 +35,8 @@ Leia antes de começar (obrigatório):
 - `design-system/templates/templates.md`, `design-system/tokens.json`,
   `design-system/esteticas-editoriais.md`, `roteiro-carrosseis.md`,
   `motor/README.md`, `motor/carrossel.schema.md`.
-- Modelos prontos: `carrosseis/2026-10-site-invisivel` (T1), `carrosseis/2026-10-mesma-pergunta`
-  (T1b), `carrosseis/2026-10-react-awwwards` (referência).
+- Modelos prontos: `carrosseis/2026-10-mesma-pergunta` (T1b) e `carrosseis/2026-11-avaliacao-google`
+  (referência com o Luiz). Não use `2026-10-site-invisivel` nem `2026-10-react-awwwards` como modelo: capa sem o Luiz.
 
 Estrutura (8 slides; referência pode ter até 10):
 1 capa T1b com o Luiz → 2 T2 com foto do Luiz (a tensão) → miolo SÓ TEXTO (T3 listas, T2 papel,
@@ -49,7 +50,9 @@ Imagens (só capa, slide 2 e CTA; sempre "No text, no letters, no logos, no wate
   f752ac25-65a0-4930-a628-722af0508c5b, 3:4, quality 2k; prompt montado de
   `design-system/esteticas-editoriais.md`, estética e pose DIFERENTES das já usadas;
   manter o cabelo e o rosto dele ("keep his own short dark textured hair fully visible,
-  no hat, no glasses"). `gpt_image_2_5` (sem o Luiz) só se o Soul falhar de vez.
+  no hat, no glasses"). Sem reserva sem o Luiz: se o Soul falhar, reenvie; se falhar de vez, pare e relate.
+- Antes de entregar, confira no `carrossel.json` que a capa tem `recorte` ou `sujeito.rostos` (rosto do Luiz
+  detectado). Capa sem rosto = refaça a capa com o Luiz.
 - Motion: no HyperFrames a emoção vem logo abaixo do display. Deixe display + emoção numa
   área sem rosto (normalmente abaixo do queixo); o `checar_rostos.py` do motion-drive barra
   texto sobre rosto e o carrossel fica sem vídeo (o publicador só posta carrossel animado).

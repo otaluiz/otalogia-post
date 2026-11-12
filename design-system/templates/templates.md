@@ -25,6 +25,8 @@ Nos slides só de texto (sem foto), a palavra-chave vai em **marca-texto**: `{pa
 
 ## T1 — Capa foto (hook)
 
+**Fora de uso como modelo (2026-11-12):** capa só com o Luiz (T1b). O `"template": "T1"` só aparece quando o recorte do Luiz não sai limpo e a foto dele fica inteira; a imagem de hook sem o Luiz (figura pequena em paisagem) foi eliminada.
+
 Slide 1. Funciona como thumbnail.
 - Fundo: foto cinematográfica sangrada (figura humana pequena em paisagem grande, luz de holofote ou pôr do sol, um toque surreal). Imagem gerada **sem texto** (Higgsfield `gpt_image_2_5`, padrão do otalogia; ver `geracao_imagem` em tokens.json), com color grading no prompt: sombras para o ink e altas para o laranja.
 - Lockup do hook centralizado em y 300-900: serifada itálica pequena acima ("Todo mundo"), display gigante (180-230px) com a palavra-chave em laranja, linha serifada abaixo com a promessa/tensão.

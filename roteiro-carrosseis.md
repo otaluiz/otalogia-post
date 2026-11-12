@@ -9,10 +9,10 @@ Atualizado em 2026-10-09.
 - Cadência: 3 carrosséis por semana (qua, sex, sáb), dentro do plano de 3 carrosséis + 2 Reels.
 - Copy escrita com a skill `marketing-skills:copywriting` e revisada com `humanizer:humanizer` (slides e legenda).
 - Hook de no máximo 10 palavras. Uma ideia por slide, virada no meio, CTA de palavra-comentário.
-- Arco: capa (T1 ou T1b) → slide 2 com foto inteira → miolo alternando papel (T2/T2c) e ink (T3) → CTA (T4 com foto escurecida 70%).
-- 3 imagens por carrossel no Higgsfield `gpt_image_2_5`: capa, slide 2 e CTA, todas com o mesmo color grading (sombras ink, luz laranja), sempre sem texto.
+- Arco: capa T1b com o Luiz → slide 2 com foto do Luiz → miolo alternando papel (T2/T2c) e ink (T3) → CTA (T4 com foto escurecida 70%).
+- 3 imagens por carrossel no Higgsfield `soul_2` com o Soul "Luiz ota": capa, slide 2 e CTA, todas com o mesmo color grading (sombras ink, luz laranja), sempre sem texto. Nenhuma imagem sem o Luiz.
 - T1b: personagem @luizota, gerado no Soul 2.0 (`soul_2` + Soul "Luiz ota"), capa e CTA com estéticas diferentes do banco `design-system/esteticas-editoriais.md`. Pose e cenário sempre diferentes do carrossel anterior: olho de peixe de cima, mão vindo pra câmera, estúdio de fundo liso colorido, objeto surreal. O texto fica atrás do recorte.
-- Todo carrossel com o Luiz (@luizota) na capa, no slide 2 e no CTA (regra de 2026-11-09: melhores resultados). Alternar T1b e Referência com capa T1b; capa T1 sem o Luiz saiu da rotação.
+- Todo carrossel com o Luiz (@luizota) na capa, no slide 2 e no CTA (regra de 2026-11-09: melhores resultados). Alternar T1b e Referência com capa T1b; o modelo de capa com imagem de hook sem o Luiz foi eliminado.
 - Pilares no mês: Descoberta, Autoridade, Identificação, Opinião e Conversão (Conversão no máximo 10% do feed).
 
 ## Já produzidos
@@ -58,11 +58,9 @@ Poses de T1b já usadas: segurando estrela de papel laranja em branco, busto (#3
 
 ## Próximos (backlog, em ordem)
 
-Pares de validação: cada par tem um T1 e um T1b.
-
 | # | Série | Tema | Hook sugerido | Capa | Pilar | CTA |
 |---|---|---|---|---|---|---|
-| 13 | Case aidealab | Antes e depois de um cliente aidealab | O que mudou quando o site *começou a vender*. | T1 | Conversão | AIDEALAB |
+| 13 | Case aidealab | Antes e depois de um cliente aidealab | O que mudou quando o site *começou a vender*. | T1b | Conversão | AIDEALAB |
 
 Os #24 a #26 vêm do roteiro `roteiros/2026-10-26-semana.md` (copy completa lá). Os #21 a #23 vieram da pesquisa de 2026-10-08 (`pesquisa/instagram/analise-e-plano.md`). O calendário de 12/out a 8/nov também está lá.
 
