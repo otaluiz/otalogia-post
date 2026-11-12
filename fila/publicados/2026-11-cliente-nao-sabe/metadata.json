@@ -1,0 +1,149 @@
+{
+  "carousel_id": "2026-11-cliente-nao-sabe",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-03",
+  "status": "rascunho",
+  "postado": true,
+  "postado_em": "2026-11-10 14:40:07",
+  "post_id": "18117868487070477",
+  "ordem_fila": 0,
+  "serie": "PERGUNTA DO DONO",
+  "tema": "SEU CLIENTE NÃO SABE O QUE perguntar.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SEU CLIENTE NÃO SABE O QUE perguntar.",
+      "midia": "imagem",
+      "origem": "slide-01.png"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.mp4",
+      "papel": "hook-animado",
+      "texto": "SEU CLIENTE NÃO SABE O QUE perguntar.",
+      "midia": "video",
+      "origem": "slide-01.mp4"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.mp4",
+      "papel": "tensao",
+      "texto": "ELE CHEGA NO DIRECT E manda só um oi.",
+      "midia": "video",
+      "origem": "slide-02.mp4"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.mp4",
+      "papel": "desenvolvimento",
+      "texto": "O QUE ACONTECE DEPOIS Você pergunta: em que posso ajudar? Ele responde: queria saber mais A conversa vira um quebra-cabeça Ele cansa e sai",
+      "midia": "video",
+      "origem": "slide-03.mp4"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.mp4",
+      "papel": "desenvolvimento",
+      "texto": "QUEM NÃO SABE O QUE PEDIR precisa de um caminho.",
+      "midia": "video",
+      "origem": "slide-04.mp4"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.mp4",
+      "papel": "desenvolvimento",
+      "texto": "A PRIMEIRA MENSAGEM COM OPÇÕES Cumprimento curto, sem enrolar Três caminhos numerados Uma opção para falar com gente Horário de resposta, dito claro",
+      "midia": "video",
+      "origem": "slide-05.mp4"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.mp4",
+      "papel": "desenvolvimento",
+      "texto": "RESPONDA COM UM NÚMERO. digitar cansa.",
+      "midia": "video",
+      "origem": "slide-06.mp4"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.mp4",
+      "papel": "desenvolvimento",
+      "texto": "QUEM FACILITA O PRIMEIRO PASSO ganha a conversa.",
+      "midia": "video",
+      "origem": "slide-07.mp4"
+    },
+    {
+      "ordem": 9,
+      "arquivo": "slide-09.mp4",
+      "papel": "cta",
+      "texto": "QUER O MODELO DE MENU de boas-vindas? Comenta MENU que eu te mando no direct",
+      "midia": "video",
+      "origem": "slide-08.mp4"
+    }
+  ],
+  "legenda": "Muito cliente chega no Direct e manda só um \"oi\". Ele quer algo, mas não sabe por onde começar.\n\nSe a resposta é \"em que posso ajudar?\", a conversa vira um quebra-cabeça e ele cansa. Uma primeira mensagem com opções numeradas resolve: um cumprimento curto, três caminhos, uma opção para falar com uma pessoa e o horário em que você responde. O cliente só digita um número.\n\nSalva pra montar o seu menu.\n\nComenta MENU que eu te mando o modelo no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#pequenosnegocios",
+    "#whatsappbusiness",
+    "#atendimentoaocliente",
+    "#automacaodeprocessos"
+  ],
+  "handle": "@otalogia",
+  "slides_estatico": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SEU CLIENTE NÃO SABE O QUE perguntar."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "ELE CHEGA NO DIRECT E manda só um oi."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE ACONTECE DEPOIS Você pergunta: em que posso ajudar? Ele responde: queria saber mais A conversa vira um quebra-cabeça Ele cansa e sai"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "QUEM NÃO SABE O QUE PEDIR precisa de um caminho."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "A PRIMEIRA MENSAGEM COM OPÇÕES Cumprimento curto, sem enrolar Três caminhos numerados Uma opção para falar com gente Horário de resposta, dito claro"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "RESPONDA COM UM NÚMERO. digitar cansa."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "QUEM FACILITA O PRIMEIRO PASSO ganha a conversa."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER O MODELO DE MENU de boas-vindas? Comenta MENU que eu te mando no direct"
+    }
+  ],
+  "formato_midia": "motion-capa"
+}

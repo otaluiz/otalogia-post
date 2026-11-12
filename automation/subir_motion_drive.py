@@ -1,5 +1,5 @@
 """Entrega o carrossel com motion no Drive já na ordem de postagem, para a rotina de postagem
-(otalogia-instagram-publisher) publicar sem mudança:
+(publicador/ + fila/) publicar sem mudança:
 
   slide-01.png  hook estático (capa que aparece pronta no feed)
   slide-02.mp4  hook animado (vídeo do slide 1)

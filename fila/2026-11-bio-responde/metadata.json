@@ -1,0 +1,149 @@
+{
+  "carousel_id": "2026-11-bio-responde",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-01",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 29,
+  "serie": "PERGUNTA DO DONO",
+  "tema": "SUA BIO RESPONDE o que o cliente pergunta?",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T3-T2-T2c-T3-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SUA BIO RESPONDE o que o cliente pergunta?",
+      "midia": "imagem",
+      "origem": "slide-01.png"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.mp4",
+      "papel": "hook-animado",
+      "texto": "SUA BIO RESPONDE o que o cliente pergunta?",
+      "midia": "video",
+      "origem": "slide-01.mp4"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.mp4",
+      "papel": "tensao",
+      "texto": "O CLIENTE CHEGA com uma dúvida.",
+      "midia": "video",
+      "origem": "slide-02.mp4"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.mp4",
+      "papel": "desenvolvimento",
+      "texto": "O QUE ELE QUER SABER O que você vende Onde você atende Como chamar você Se vale a pena esperar",
+      "midia": "video",
+      "origem": "slide-03.mp4"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.mp4",
+      "papel": "desenvolvimento",
+      "texto": "QUEM NÃO ACHA A RESPOSTA sai sem avisar.",
+      "midia": "video",
+      "origem": "slide-04.mp4"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.mp4",
+      "papel": "desenvolvimento",
+      "texto": "LEIA SUA BIO COMO QUEM nunca te viu.",
+      "midia": "video",
+      "origem": "slide-05.mp4"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.mp4",
+      "papel": "desenvolvimento",
+      "texto": "UMA BIO QUE RESPONDE Uma frase do que você faz Para quem você faz Um jeito de chamar Um motivo para clicar",
+      "midia": "video",
+      "origem": "slide-06.mp4"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.mp4",
+      "papel": "desenvolvimento",
+      "texto": "CLIENTE SEM RESPOSTA não chama.",
+      "midia": "video",
+      "origem": "slide-07.mp4"
+    },
+    {
+      "ordem": 9,
+      "arquivo": "slide-09.mp4",
+      "papel": "cta",
+      "texto": "QUER QUE EU LEIA A SUA bio? Comenta BIO que eu te mando no direct",
+      "midia": "video",
+      "origem": "slide-08.mp4"
+    }
+  ],
+  "legenda": "Seu cliente chega no seu perfil com uma dúvida: o que você vende, onde atende, como chamar, se vale a pena esperar.\n\nQuem não acha a resposta na bio sai sem avisar. Você nem fica sabendo que ele passou por ali.\n\nLeia sua bio como quem nunca te viu. Ela precisa ter uma frase do que você faz, para quem faz, um jeito de chamar e um motivo para clicar.\n\nCliente sem resposta não chama.\n\nSalva pra revisar sua bio hoje.\n\nComenta BIO que eu te mando o roteiro no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#pequenosnegocios",
+    "#instagramparanegocios",
+    "#criacaodesites",
+    "#webdesignbrasil"
+  ],
+  "handle": "@otalogia",
+  "slides_estatico": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SUA BIO RESPONDE o que o cliente pergunta?"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "O CLIENTE CHEGA com uma dúvida."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE ELE QUER SABER O que você vende Onde você atende Como chamar você Se vale a pena esperar"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "QUEM NÃO ACHA A RESPOSTA sai sem avisar."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "LEIA SUA BIO COMO QUEM nunca te viu."
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "UMA BIO QUE RESPONDE Uma frase do que você faz Para quem você faz Um jeito de chamar Um motivo para clicar"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "CLIENTE SEM RESPOSTA não chama."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER QUE EU LEIA A SUA bio? Comenta BIO que eu te mando no direct"
+    }
+  ],
+  "formato_midia": "motion-capa"
+}

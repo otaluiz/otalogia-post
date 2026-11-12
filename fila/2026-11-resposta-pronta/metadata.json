@@ -1,0 +1,149 @@
+{
+  "carousel_id": "2026-11-resposta-pronta",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-02",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 30,
+  "serie": "REFERÊNCIA",
+  "tema": "A MESMA RESPOSTA SALVA. chega de digitar",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T5-T3-T5-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "A MESMA RESPOSTA SALVA. chega de digitar",
+      "midia": "imagem",
+      "origem": "slide-01.png"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.mp4",
+      "papel": "hook-animado",
+      "texto": "A MESMA RESPOSTA SALVA. chega de digitar",
+      "midia": "video",
+      "origem": "slide-01.mp4"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.mp4",
+      "papel": "tensao",
+      "texto": "O CLIENTE PERGUNTA O MESMO e você digita de novo.",
+      "midia": "video",
+      "origem": "slide-02.mp4"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.mp4",
+      "papel": "desenvolvimento",
+      "texto": "APP PRA NEGÓCIO",
+      "midia": "video",
+      "origem": "slide-03.mp4"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.mp4",
+      "papel": "desenvolvimento",
+      "texto": "O QUE SALVAR Preço e formas de pagamento Prazo e entrega Horário e endereço Boas-vindas ao cliente novo",
+      "midia": "video",
+      "origem": "slide-04.mp4"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.mp4",
+      "papel": "desenvolvimento",
+      "texto": "PASSO A PASSO",
+      "midia": "video",
+      "origem": "slide-05.mp4"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.mp4",
+      "papel": "desenvolvimento",
+      "texto": "UMA BARRA NA CONVERSA e a resposta aparece.",
+      "midia": "video",
+      "origem": "slide-06.mp4"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.mp4",
+      "papel": "desenvolvimento",
+      "texto": "ESCREVA UMA VEZ, USE SEMPRE com a sua voz.",
+      "midia": "video",
+      "origem": "slide-07.mp4"
+    },
+    {
+      "ordem": 9,
+      "arquivo": "slide-09.mp4",
+      "papel": "cta",
+      "texto": "QUER MODELOS DE RESPOSTA prontas? Comenta PRONTA que eu te mando no direct",
+      "midia": "video",
+      "origem": "slide-08.mp4"
+    }
+  ],
+  "legenda": "Todo dia o cliente pergunta preço, prazo e horário. Todo dia você digita a mesma coisa.\n\nO WhatsApp Business tem as respostas rápidas: você escreve a mensagem uma vez, salva com um atalho e usa na conversa quando precisar. A criação é feita pelo app WhatsApp Business no celular.\n\nComece pelo que mais chega: preço e formas de pagamento, prazo e entrega, horário e endereço, boas-vindas para cliente novo. Escreva do jeito que você fala no balcão.\n\nSalva pra montar as suas.\n\nComenta PRONTA que eu te mando modelos de resposta no direct.",
+  "hashtags": [
+    "#otalogia",
+    "#pequenosnegocios",
+    "#whatsappbusiness",
+    "#atendimento",
+    "#automacaodeprocessos"
+  ],
+  "handle": "@otalogia",
+  "slides_estatico": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "A MESMA RESPOSTA SALVA. chega de digitar"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "O CLIENTE PERGUNTA O MESMO e você digita de novo."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "APP PRA NEGÓCIO"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE SALVAR Preço e formas de pagamento Prazo e entrega Horário e endereço Boas-vindas ao cliente novo"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "PASSO A PASSO"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "UMA BARRA NA CONVERSA e a resposta aparece."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "ESCREVA UMA VEZ, USE SEMPRE com a sua voz."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER MODELOS DE RESPOSTA prontas? Comenta PRONTA que eu te mando no direct"
+    }
+  ],
+  "formato_midia": "motion-capa"
+}

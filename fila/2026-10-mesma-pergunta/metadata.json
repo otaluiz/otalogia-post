@@ -1,0 +1,68 @@
+{
+  "carousel_id": "2026-10-mesma-pergunta",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-04",
+  "status": "aprovado",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": null,
+  "serie": "PLANTA",
+  "tema": "A MESMA PERGUNTA o dia inteiro.",
+  "familia_cor": "ink-laranja",
+  "template": "T1b-T2-T3-T2-T3-T2c-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "A MESMA PERGUNTA o dia inteiro."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "\"QUANTO CUSTA?\" de novo."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "AS 4 QUE MAIS VOLTAM Quanto custa? Vocês abrem hoje? Onde fica? Faz entrega?"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "CADA UMA TE TIRA do trabalho."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE EU MONTO Boas-vindas com um menu de opções Preço e horário respondidos na hora Localização enviada com um toque Só chega pra você o que precisa de você"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "VOCÊ PARA DE RESPONDER E volta a vender."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "CONFIGURA UMA VEZ. funciona todo dia."
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "cta",
+      "texto": "QUER O MEU MODELO DE respostas? Comenta WHATS que eu te mando no direct"
+    }
+  ],
+  "legenda": "Quanto custa, abre hoje, onde fica, faz entrega. Se você responde isso na mão o dia todo, o próprio WhatsApp Business já resolve boa parte: mensagem de boas-vindas, respostas rápidas e localização com um toque. Você só entra na conversa quando ela precisa de você.\n\nComenta WHATS que eu te mando o modelo de respostas.",
+  "hashtags": [],
+  "handle": "@otalogia"
+}

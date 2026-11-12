@@ -11,3 +11,10 @@ carrosseis/*/motion/img/
 carrosseis/*/motion/out/
 carrosseis/*/motion/otalogia.*
 carrosseis/*/motion/.hyperframes/
+
+# fila de publicação: mídia baixada do Drive em runtime, só texto vai pro git
+fila/**/*.png
+fila/**/*.mp4
+fila/**/*.jpg
+fila/**/extras/
+publicador/.env

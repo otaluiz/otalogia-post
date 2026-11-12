@@ -1,0 +1,162 @@
+{
+  "carousel_id": "2026-10-desiste-antes",
+  "cliente": "otalogia",
+  "data_criacao": "2026-10-05",
+  "status": "rascunho",
+  "postado": true,
+  "postado_em": "2026-10-27 10:37:32",
+  "post_id": "17950709640347002",
+  "ordem_fila": 15,
+  "serie": "DIAGNÓSTICO",
+  "tema": "ELE IA TE CHAMAR. desistiu no link da bio.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T2-T5-T3-T5-T2c-T5-T2-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "ELE IA TE CHAMAR. desistiu no link da bio.",
+      "midia": "imagem",
+      "origem": "slide-01.png"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.mp4",
+      "papel": "hook-animado",
+      "texto": "ELE IA TE CHAMAR. desistiu no link da bio.",
+      "midia": "video",
+      "origem": "slide-01.mp4"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.mp4",
+      "papel": "tensao",
+      "texto": "LINK NA BIO, MENU, FORMULÁRIO e só então o zap.",
+      "midia": "video",
+      "origem": "slide-02.mp4"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.mp4",
+      "papel": "desenvolvimento",
+      "texto": "LINK NA BIO",
+      "midia": "video",
+      "origem": "slide-03.mp4"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.mp4",
+      "papel": "desenvolvimento",
+      "texto": "O CAMINHO DO CLIENTE Vê o post e se interessa Abre o perfil e procura o link Escolhe um botão entre vários Preenche um formulário",
+      "midia": "video",
+      "origem": "slide-04.mp4"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.mp4",
+      "papel": "desenvolvimento",
+      "texto": "CADA BOTÃO UM TALVEZ",
+      "midia": "video",
+      "origem": "slide-05.mp4"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.mp4",
+      "papel": "desenvolvimento",
+      "texto": "UM TOQUE BASTA. do post até o zap.",
+      "midia": "video",
+      "origem": "slide-06.mp4"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.mp4",
+      "papel": "desenvolvimento",
+      "texto": "O LEAD NÃO ESFRIA",
+      "midia": "video",
+      "origem": "slide-07.mp4"
+    },
+    {
+      "ordem": 9,
+      "arquivo": "slide-09.mp4",
+      "papel": "desenvolvimento",
+      "texto": "MENOS PASSOS, MAIS CONVERSA. quem chegou já queria falar.",
+      "midia": "video",
+      "origem": "slide-08.mp4"
+    },
+    {
+      "ordem": 10,
+      "arquivo": "slide-10.mp4",
+      "papel": "cta",
+      "texto": "QUER REVER O SEU caminho? Comenta LINK que eu te mando um checklist no direct",
+      "midia": "video",
+      "origem": "slide-09.mp4"
+    }
+  ],
+  "legenda": "Ele ia te chamar no WhatsApp e desistiu no link da bio.\n\nMuita gente chega no seu perfil com vontade de falar com você e desiste no caminho. Link na bio, menu, formulário, e só depois o WhatsApp.\n\nCada passo a mais é uma chance de o cliente fechar o app. Uma página com vários botões obriga a escolher, e um formulário no meio pede tempo que ele não separou.\n\nO que costuma funcionar é encurtar: do post até a conversa em um toque, e uma automação cuidando do que vem depois do clique, com aviso, registro e resposta.\n\nSalva e confere hoje o caminho do seu perfil até o WhatsApp.\n\nComenta LINK que eu te mando um checklist pra rever o caminho do seu perfil.",
+  "hashtags": [
+    "#otalogia",
+    "#whatsappbusiness",
+    "#instagramparanegocios",
+    "#pequenosnegocios"
+  ],
+  "handle": "@otalogia",
+  "formato_midia": "motion-capa",
+  "slides_estatico": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "ELE IA TE CHAMAR. desistiu no link da bio."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "LINK NA BIO, MENU, FORMULÁRIO e só então o zap."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "LINK NA BIO"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "O CAMINHO DO CLIENTE Vê o post e se interessa Abre o perfil e procura o link Escolhe um botão entre vários Preenche um formulário"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "CADA BOTÃO UM TALVEZ"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "UM TOQUE BASTA. do post até o zap."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "desenvolvimento",
+      "texto": "O LEAD NÃO ESFRIA"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.png",
+      "papel": "desenvolvimento",
+      "texto": "MENOS PASSOS, MAIS CONVERSA. quem chegou já queria falar."
+    },
+    {
+      "ordem": 9,
+      "arquivo": "slide-09.png",
+      "papel": "cta",
+      "texto": "QUER REVER O SEU caminho? Comenta LINK que eu te mando um checklist no direct"
+    }
+  ]
+}
