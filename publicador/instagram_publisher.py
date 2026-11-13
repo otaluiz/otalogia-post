@@ -347,7 +347,8 @@ class InstagramClient:
         print(f"  ⬆️ Enviando {size // 1_000_000} MB ao Instagram...")
         with open(video_path, "rb") as f:
             up = requests.post(uri, data=f, timeout=1800, headers={
-                "Authorization": f"OAuth {self.access_token}", "offset": "0", "file_size": str(size)})
+                "Authorization": f"OAuth {self.access_token}", "offset": "0", "file_size": str(size),
+                "Content-Type": "application/octet-stream"})
         if up.status_code != 200 or not up.json().get("success"):
             raise RuntimeError(f"Falha no upload resumível ({up.status_code}): {up.text[:300]}")
         self.wait_for_container_finished(container_id, max_retries=120, interval=5)
@@ -394,7 +395,6 @@ class InstagramClient:
 # Supabase Storage para hospedar mídias públicas com HTTPS exigidas pelo Instagram
 SUPABASE_URL = os.getenv("NEXT_PUBLIC_SUPABASE_URL", "").strip().rstrip("/")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "").strip()
-REEL_MAX_SUPABASE = 45 * 1024 * 1024  # acima disso o reel vai direto ao Instagram (limite padrão do Supabase: 50 MB)
 STORAGE_BUCKET = os.getenv("INSTAGRAM_MEDIA_BUCKET", "instagram-carousels")
 
 
@@ -552,10 +552,14 @@ def publish_reel_from_dir(target_dir: Path, meta: Dict[str, Any], caption: str) 
     print(f"\n🎬 Reel: {slug} ({video.stat().st_size // 1_000_000} MB)")
     capa = target_dir / meta["capa"] if meta.get("capa") else None
     cover_url = upload_image_to_public_storage(capa, remote_folder=f"otalogia/{slug}") if capa and capa.exists() else None
-    if video.stat().st_size > REEL_MAX_SUPABASE:
+    # 1ª opção: URL pública (Supabase), caminho já validado com a Meta. Se o storage recusar (ex.: limite de tamanho),
+    # cai no upload resumível direto ao Instagram.
+    try:
+        print("  ☁️ Gerando link público do vídeo...")
+        video_url = upload_image_to_public_storage(video, remote_folder=f"otalogia/{slug}")
+    except Exception as e:
+        print(f"  ⚠️ Storage público recusou o vídeo ({str(e)[:160]}); usando upload resumível direto ao Instagram")
         return InstagramClient().publish_reel_resumable(video, caption, cover_url)
-    print("  ☁️ Gerando link público do vídeo...")
-    video_url = upload_image_to_public_storage(video, remote_folder=f"otalogia/{slug}")
     return InstagramClient().publish_reel(video_url, caption, cover_url)
 
 
