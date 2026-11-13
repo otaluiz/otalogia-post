@@ -1,6 +1,7 @@
+import { makePublicReplyRequest, PUBLIC_REPLIES } from "./public_comment_reply.ts";
 import { verifyFollow, canDeliverLinks } from "./follower_gate.ts";
 // Meta webhook: @otalogia + @idea_lab7. Recebe comentários e DMs iniciados pelos usuários.
-// Envia um único link público para o PDF, sem exigir follow. Verificação HMAC e idempotência.
+// Protege PDFs: confirma seguidores e só responde no comentário depois de enviar DM.
 // Secrets legados @otalogia: IG_TOKEN, IG_APP_SECRET, IG_VERIFY_TOKEN, IG_GRAPH.
 // Secrets extras @idea_lab7: IG_ID_AIDEALAB, IG_TOKEN_AIDEALAB,
 // IG_APP_SECRET_AIDEALAB (somente para outro app), IG_VERIFY_TOKEN_AIDEALAB, IG_GRAPH_AIDEALAB.
@@ -97,7 +98,7 @@ async function signatureOk(body: string, provided: string, secret: string): Prom
 
 async function claim(a: Account, eventId: string): Promise<boolean> {
   const url = env("SUPABASE_URL"), key = env("SUPABASE_SERVICE_ROLE_KEY");
-  if (!url || !key) { console.warn("Idempotência desativada: configure service_role"); return true; }
+  if (!url || !key) throw new Error("Idempotência obrigatória indisponível");
   const response = await fetch(url + "/rest/v1/ig_dm_events?on_conflict=perfil,event_id", {
     method: "POST",
     headers: { apikey: key, Authorization: "Bearer " + key, "Content-Type": "application/json",
@@ -155,6 +156,42 @@ async function sendText(a: Account, recipient: Record<string, string>, text: str
   } catch (error) { await release(a, eventId); throw error; }
 }
 
+async function nextRandomPublicReply(a: Account): Promise<string> {
+  const url = env("SUPABASE_URL"), key = env("SUPABASE_SERVICE_ROLE_KEY");
+  if (!url || !key) throw new Error("Rotação de comentários indisponível");
+  const response = await fetch(url + "/rest/v1/rpc/ig_dm_next_public_comment_reply", {
+    method: "POST",
+    headers: { apikey: key, Authorization: "Bearer " + key,
+               "Content-Type": "application/json" },
+    body: JSON.stringify({p_perfil:a.name}),
+  });
+  if (!response.ok) throw new Error("Rotação de comentários falhou: " + response.status);
+  const phrase = await response.json();
+  if (typeof phrase !== "string" || !PUBLIC_REPLIES.includes(phrase as typeof PUBLIC_REPLIES[number]))
+    throw new Error("Resposta pública fora da lista autorizada");
+  return phrase;
+}
+
+async function publishPublicCommentReply(a: Account, commentId: string): Promise<void> {
+  const eventId = "public:" + commentId;
+  if (!(await claim(a, eventId))) return;
+  try {
+    const phrase = await nextRandomPublicReply(a);
+    const host = a.facebook ? "https://graph.facebook.com" : "https://graph.instagram.com";
+    const request = makePublicReplyRequest({host, version:V,
+       commentId, token:a.token, message:phrase});
+    const response = await fetch(request.url, request.init);
+    if (!response.ok) {
+      console.error("Meta recusou resposta pública", a.name, response.status,
+                    (await response.text()).slice(0, 200));
+      throw new Error("Resposta pública negada: " + response.status);
+    }
+  } catch(err) {
+    await release(a, eventId);
+    throw err;
+  }
+}
+
 async function deliverIfFollower(a: Account, senderId: string, item: Material, word: string, mid: string) {
   // Não confiar em texto "já sigo", botão ou cache: consulta real em CADA tentativa.
   const status = await followerStatus(a, senderId);
@@ -208,7 +245,7 @@ Deno.serve(async (req: Request) => {
         if (change.field !== "comments") continue;
         const c = change.value || {};
         const word = keyword(String(c.text || ""), links);
-        if (!c.id || !word || String(c.from?.id || "") === id) continue;
+        if (!c.id || !word || c.parent_id || String(c.from?.id || "") === id) continue;
         // Tentativa de follow real: a Meta só libera User Profile quando o usuário já
         // iniciou conversa anteriormente. Sem consentimento, devolve UNKNOWN => sem link.
         const commenter = String(c.from?.id || "");
@@ -218,6 +255,7 @@ Deno.serve(async (req: Request) => {
           : promptToReply(a, word);
         // Meta permite apenas uma private reply por comentário.
         await sendText(a, { comment_id: String(c.id) }, privateReply, "comment:" + c.id);
+        await publishPublicCommentReply(a, String(c.id));
       }
       for (const msg of entry.messaging || []) {
         const sender = String(msg.sender?.id || "");
