@@ -139,7 +139,7 @@ class GoogleDriveLive:
         queue.sort(key=lambda x: (x["ordem_val"], x["folder_name"]))
         return queue
 
-    def download_next_carousel(self, target_base_dir: Path, prefer: Optional[str] = None) -> Optional[Tuple[Path, str, str, Dict[str, Any]]]:
+    def download_next_carousel(self, target_base_dir: Path, prefer: Optional[str] = None, only: Optional[str] = None) -> Optional[Tuple[Path, str, str, Dict[str, Any]]]:
         """
         Seleciona o próximo carrossel aprovado e não postado e baixa todos os seus arquivos.
         Retorna (pasta_local, meta_file_id, gdrive_folder_id, metadata).
@@ -165,6 +165,9 @@ class GoogleDriveLive:
         por_tipo = {"reel": reels, "carrossel": carr}
         outro = "carrossel" if prefer == "reel" else "reel"
         pendentes = por_tipo.get(prefer, []) + por_tipo.get(outro, []) if prefer else sorted(reels + carr, key=lambda x: (x["ordem_val"], x["folder_name"]))
+
+        if only:  # pasta específica (teste/reenvio): ignora tipo e regra de motion
+            pendentes = [i for i in queue if i["folder_name"] == only and not i.get("postado")]
 
         if not pendentes:
             print("✨ Nenhum carrossel pendente no Google Drive no momento.")

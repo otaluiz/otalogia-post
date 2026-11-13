@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
     inputs:
       carousel_folder:
-        description: 'Pasta em fila/ (vazio = próximo da fila)'
+        description: 'Nome de uma pasta do Drive 06-Aprovados-para-Postar (vazio = próximo da fila)'
         required: false
         default: ''
       tipo:
@@ -63,11 +63,7 @@ jobs:
           FORCE: ${{ github.event.inputs.force }}
         run: |
           EXTRA=""; [ "$FORCE" = "true" ] && EXTRA="--force"
-          if [ -n "$PASTA" ]; then
-            python publicador/instagram_publisher.py --dir "fila/$PASTA" $EXTRA
-          else
-            python publicador/instagram_publisher.py --auto-next --queue-dir fila --tipo "$TIPO" $EXTRA
-          fi
+          python publicador/instagram_publisher.py --auto-next --queue-dir fila --tipo "$TIPO" ${PASTA:+--pasta "$PASTA"} $EXTRA
       - name: Registrar estado na fila (só texto)
         if: always()
         run: |

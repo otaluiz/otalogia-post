@@ -682,6 +682,7 @@ if __name__ == "__main__":
     parser.add_argument("--caption", type=str, help="Legenda customizada (sobrescreve metadata.json)")
     parser.add_argument("--force", action="store_true", help="Ignora a trava de 1 post por dia e força a publicação")
     parser.add_argument("--tipo", choices=["auto", "reel", "carrossel"], default="auto", help="auto = alterna com o último post; reel/carrossel = força o tipo")
+    parser.add_argument("--pasta", type=str, help="Com --auto-next: posta esta pasta específica do Drive (06-Aprovados-para-Postar)")
     parser.add_argument("--no-wait", action="store_true", help="Não aguarda a janela das 06:00 se executado antes desse horário")
     parser.add_argument("--motion", action="store_true", help="Força o uso de slides em vídeo (motion)")
     parser.add_argument("--static", action="store_true", help="Força o uso de imagens estáticas ignorando vídeos")
@@ -749,7 +750,7 @@ if __name__ == "__main__":
                 ult = last_post_kind(os.getenv("INSTAGRAM_ACCOUNT_ID", "").strip(), os.getenv("META_ACCESS_TOKEN", "").strip())
                 prefer = {"reel": "carrossel", "carrossel": "reel"}.get(ult)
                 print(f"🔁 Último post: {ult or 'desconhecido'} → preferência de hoje: {prefer or 'qualquer'}")
-            gdrive_res = gdrive.download_next_carousel(base_temp, prefer=prefer)
+            gdrive_res = gdrive.download_next_carousel(base_temp, prefer=prefer, only=args.pasta)
             if not gdrive_res:
                 print("✨ Nenhum carrossel pendente no Google Drive no momento.")
                 sys.exit(0)
