@@ -23,5 +23,83 @@
     "categoria": "PERFIL",
     "titulo": "Biblioteca PERFIL",
     "status": "consultar_catalogo_privado"
+  },
+  "COPO": {
+    "categoria": "CONTEUDO",
+    "titulo": "AIDEALAB DM COPO CORUJA GUIA PREMIUM",
+    "arquivo": "AIDEALAB_DM_COPO_CORUJA_GUIA_PREMIUM.pdf",
+    "status": "catálogo privado Supabase; link não publicado no GitHub"
+  },
+  "OFERTA": {
+    "categoria": "TRAFEGO",
+    "titulo": "AIDEALAB DM OFERTA GUIA PREMIUM",
+    "arquivo": "AIDEALAB_DM_OFERTA_GUIA_PREMIUM.pdf",
+    "status": "catálogo privado Supabase; link não publicado no GitHub"
+  },
+  "CORUJA": {
+    "categoria": "CONTEUDO",
+    "titulo": "AIDEALAB DM COPO CORUJA GUIA PREMIUM",
+    "arquivo": "AIDEALAB_DM_COPO_CORUJA_GUIA_PREMIUM.pdf",
+    "status": "catálogo privado Supabase; link não publicado no GitHub"
+  },
+  "ZAP": {
+    "categoria": "ATENDIMENTO",
+    "titulo": "AIDEALAB DM ZAP GUIA PREMIUM",
+    "arquivo": "AIDEALAB_DM_ZAP_GUIA_PREMIUM.pdf",
+    "status": "catálogo privado Supabase; link não publicado no GitHub"
+  },
+  "TESTE": {
+    "categoria": "VALIDACAO",
+    "titulo": "AIDEALAB DM TESTE GUIA PREMIUM",
+    "arquivo": "AIDEALAB_DM_TESTE_GUIA_PREMIUM.pdf",
+    "status": "catálogo privado Supabase; link não publicado no GitHub"
+  },
+  "BUSCA": {
+    "categoria": "PRESENCA",
+    "titulo": "AIDEALAB DM BUSCA GUIA PREMIUM",
+    "arquivo": "AIDEALAB_DM_BUSCA_GUIA_PREMIUM.pdf",
+    "status": "catálogo privado Supabase; link não publicado no GitHub"
+  },
+  "SISTEMA": {
+    "categoria": "AUTOMACAO",
+    "titulo": "AIDEALAB DM SISTEMA GUIA PREMIUM",
+    "arquivo": "AIDEALAB_DM_SISTEMA_GUIA_PREMIUM.pdf",
+    "status": "catálogo privado Supabase; link não publicado no GitHub"
+  },
+  "RETOMA": {
+    "categoria": "ATENDIMENTO",
+    "titulo": "AIDEALAB Playbook Atendimento v1",
+    "arquivo": "AIDEALAB_Playbook_Atendimento_v1.pdf",
+    "status": "catálogo privado Supabase; link não publicado no GitHub"
+  },
+  "SITE": {
+    "categoria": "SITES",
+    "titulo": "AIDEALAB DM SITE GUIA PREMIUM",
+    "arquivo": "AIDEALAB_DM_SITE_GUIA_PREMIUM.pdf",
+    "status": "catálogo privado Supabase; link não publicado no GitHub"
+  },
+  "ESTRELA": {
+    "categoria": "PRESENCA",
+    "titulo": "AIDEALAB DM ESTRELA GUIA PREMIUM",
+    "arquivo": "AIDEALAB_DM_ESTRELA_GUIA_PREMIUM.pdf",
+    "status": "catálogo privado Supabase; link não publicado no GitHub"
+  },
+  "VIDEO": {
+    "categoria": "EDICAO",
+    "titulo": "AIDEALAB DM VIDEO GUIA PREMIUM",
+    "arquivo": "AIDEALAB_DM_VIDEO_GUIA_PREMIUM.pdf",
+    "status": "catálogo privado Supabase; link não publicado no GitHub"
+  },
+  "APLICADA": {
+    "categoria": "AUTOMACAO",
+    "titulo": "AIDEALAB DM APLICADA GUIA PREMIUM",
+    "arquivo": "AIDEALAB_DM_APLICADA_GUIA_PREMIUM.pdf",
+    "status": "catálogo privado Supabase; link não publicado no GitHub"
+  },
+  "ATENCAO": {
+    "categoria": "CONTEUDO",
+    "titulo": "AIDEALAB DM ATENCAO GUIA PREMIUM",
+    "arquivo": "AIDEALAB_DM_ATENCAO_GUIA_PREMIUM.pdf",
+    "status": "catálogo privado Supabase; link não publicado no GitHub"
   }
 }
