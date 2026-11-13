@@ -8,4 +8,4 @@ Cliente sem resposta não chama.
 
 Salva pra revisar sua bio hoje.
 
-Comenta BIO que eu te mando o roteiro no direct.
+Comente BIO para receber o material gratuito em PDF por DM.

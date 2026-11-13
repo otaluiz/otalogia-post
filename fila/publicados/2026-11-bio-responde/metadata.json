@@ -3,9 +3,9 @@
   "cliente": "otalogia",
   "data_criacao": "2026-11-01",
   "status": "rascunho",
-  "postado": false,
-  "postado_em": null,
-  "post_id": null,
+  "postado": true,
+  "postado_em": "2026-11-13 14:44:07",
+  "post_id": "17897031387432267",
   "ordem_fila": 29,
   "serie": "PERGUNTA DO DONO",
   "tema": "SUA BIO RESPONDE o que o cliente pergunta?",
@@ -86,7 +86,7 @@
       "origem": "slide-08.mp4"
     }
   ],
-  "legenda": "Seu cliente chega no seu perfil com uma dúvida: o que você vende, onde atende, como chamar, se vale a pena esperar.\n\nQuem não acha a resposta na bio sai sem avisar. Você nem fica sabendo que ele passou por ali.\n\nLeia sua bio como quem nunca te viu. Ela precisa ter uma frase do que você faz, para quem faz, um jeito de chamar e um motivo para clicar.\n\nCliente sem resposta não chama.\n\nSalva pra revisar sua bio hoje.\n\nComenta BIO que eu te mando o roteiro no direct.",
+  "legenda": "Seu cliente chega no seu perfil com uma dúvida: o que você vende, onde atende, como chamar, se vale a pena esperar.\n\nQuem não acha a resposta na bio sai sem avisar. Você nem fica sabendo que ele passou por ali.\n\nLeia sua bio como quem nunca te viu. Ela precisa ter uma frase do que você faz, para quem faz, um jeito de chamar e um motivo para clicar.\n\nCliente sem resposta não chama.\n\nSalva pra revisar sua bio hoje.\n\nComente BIO para receber o material gratuito em PDF por DM.\n",
   "hashtags": [
     "#otalogia",
     "#pequenosnegocios",
@@ -145,5 +145,10 @@
       "texto": "QUER QUE EU LEIA A SUA bio? Comenta BIO que eu te mando no direct"
     }
   ],
-  "formato_midia": "motion-capa"
+  "formato_midia": "motion-capa",
+  "dm": {
+    "palavra": "BIO",
+    "titulo": "SUA BIO RESPONDE o que o cliente pergunta?",
+    "link": "https://drive.google.com/file/d/1nJJxqt4LCa7ZIsGgwMzuUMOpHeGdm8dO/view"
+  }
 }
