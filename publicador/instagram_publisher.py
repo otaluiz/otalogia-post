@@ -543,6 +543,29 @@ def last_post_kind(account_id: str, access_token: str) -> Optional[str]:
     return None
 
 
+REEL_MAX_BYTES = 45 * 1024 * 1024  # o bucket do Supabase recusa arquivos acima de ~50 MB (413)
+
+
+def shrink_video(src: Path, max_bytes: int = REEL_MAX_BYTES) -> Path:
+    """Recodifica o vídeo (H.264/AAC) com bitrate calculado para caber em max_bytes. Retorna src se já couber."""
+    import subprocess
+    if src.stat().st_size <= max_bytes:
+        return src
+    dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                                         "-of", "default=nw=1:nk=1", str(src)], text=True).strip())
+    audio = 128_000
+    vbr = int(max_bytes * 8 * 0.92 / dur) - audio  # 8% de folga p/ container
+    if vbr < 300_000:
+        raise RuntimeError(f"Vídeo longo demais ({dur:.0f}s) para caber em {max_bytes // 1_000_000} MB")
+    out = src.with_name(src.stem + "_leve.mp4")
+    print(f"  🗜️ Comprimindo {src.stat().st_size // 1_000_000} MB -> ~{max_bytes // 1_000_000} MB ({dur:.0f}s, vídeo {vbr // 1000} kbps)...")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-c:v", "libx264", "-preset", "veryfast",
+                    "-b:v", str(vbr), "-maxrate", str(int(vbr * 1.4)), "-bufsize", str(vbr * 2), "-pix_fmt", "yuv420p",
+                    "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(out)], check=True)
+    print(f"  ✅ Vídeo comprimido: {out.stat().st_size // 1_000_000} MB")
+    return out
+
+
 def publish_reel_from_dir(target_dir: Path, meta: Dict[str, Any], caption: str) -> str:
     video = target_dir / meta.get("video", "reel.mp4")
     if not video.exists():
@@ -552,6 +575,10 @@ def publish_reel_from_dir(target_dir: Path, meta: Dict[str, Any], caption: str) 
     print(f"\n🎬 Reel: {slug} ({video.stat().st_size // 1_000_000} MB)")
     capa = target_dir / meta["capa"] if meta.get("capa") else None
     cover_url = upload_image_to_public_storage(capa, remote_folder=f"otalogia/{slug}") if capa and capa.exists() else None
+    try:
+        video = shrink_video(video)
+    except Exception as e:
+        print(f"  ⚠️ Não foi possível comprimir o vídeo ({e}); seguindo com o original")
     # 1ª opção: URL pública (Supabase), caminho já validado com a Meta. Se o storage recusar (ex.: limite de tamanho),
     # cai no upload resumível direto ao Instagram.
     try:
