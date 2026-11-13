@@ -4,6 +4,7 @@ on:
     paths:
       - ".github/workflows/dm-follower-gate-tests.yml"
       - "supabase/functions/ig-dm-isca/**"
+      - "supabase/functions/ig-dm-api-auto/**"
   workflow_dispatch:
 permissions:
   contents: read
@@ -16,6 +17,8 @@ jobs:
         with:
           deno-version: v2.x
       - name: Valida TypeScript e imports
-        run: deno check supabase/functions/ig-dm-isca/index.ts
+        run: |
+          deno check supabase/functions/ig-dm-isca/index.ts
+          deno check supabase/functions/ig-dm-api-auto/index.ts
       - name: Confere seguidores (incluindo falhas e nao seguidores)
         run: deno test supabase/functions/ig-dm-isca/follower_gate_test.ts
