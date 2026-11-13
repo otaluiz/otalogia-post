@@ -1,0 +1,44 @@
+{
+  "carousel_id": "reel-sites-que-mudaram-tudo",
+  "tipo": "reel",
+  "cliente": "aidealab",
+  "data_criacao": "2026-11-09",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 9,
+  "tema": "Três sites que mudaram tudo com quase nada",
+  "pilar": "educacional",
+  "personagem": "",
+  "formato": "1080x1920",
+  "duracao_s": 64.0,
+  "video": "reel.mp4",
+  "capa": "capa.jpg",
+  "legenda": "Às vezes um site muda tudo com quase nada.\n\nO primeiro site da história era só texto e link. Um estudante faturou mais de US$ 1 milhão com uma página só. E uma grande loja online ganhou US$ 300 milhões a mais no primeiro ano trocando o texto de um botão, segundo Jared Spool.\n\nQuanto o seu site tá deixando de vender?\n\nComente SITE para receber o material gratuito em PDF por DM.\n\n#criacaodesites #marketingdigital #pequenosnegocios #vendasonline #aidealab\n",
+  "hashtags": [
+    "#criacaodesites",
+    "#marketingdigital",
+    "#pequenosnegocios",
+    "#vendasonline",
+    "#aidealab"
+  ],
+  "fontes": [
+    "http://info.cern.ch/hypertext/WWW/TheProject.html",
+    "https://en.wikipedia.org/wiki/The_Million_Dollar_Homepage",
+    "https://articles.centercentre.com/three_hund_million_button/"
+  ],
+  "fonte_tendencia": null,
+  "dm": {
+    "palavra": "SITE",
+    "titulo": "Três sites que mudaram tudo com quase nada",
+    "catalogo": {
+      "provedor": "supabase/ig_dm_catalog",
+      "perfil": "otalogia",
+      "palavra": "SITE",
+      "categoria": "SITES"
+    },
+    "material_pdf": "AIDEALAB_DM_SITE_GUIA_PREMIUM.pdf",
+    "entrega": "apenas_se_seguidor_confirmado_pela_meta"
+  }
+}
