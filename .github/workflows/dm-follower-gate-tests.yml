@@ -20,5 +20,7 @@ jobs:
         run: |
           deno check supabase/functions/ig-dm-isca/index.ts
           deno check supabase/functions/ig-dm-api-auto/index.ts
-      - name: Confere seguidores (incluindo falhas e nao seguidores)
-        run: deno test supabase/functions/ig-dm-isca/follower_gate_test.ts
+      - name: Confere seguidores e respostas públicas
+        run: |
+          deno test supabase/functions/ig-dm-isca/follower_gate_test.ts
+          deno test supabase/functions/ig-dm-isca/public_comment_reply_test.ts
