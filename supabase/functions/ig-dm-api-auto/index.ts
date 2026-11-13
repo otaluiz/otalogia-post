@@ -184,9 +184,9 @@ Deno.serve(async (req: Request) => {
       return new Response("forbidden", { status: 403 });
     }
     // A Meta recebe o segredo de verificação; apenas seu hash é armazenado no código.
-    const tokenHash = Array.from(new Uint8Array(
-      await crypto.subtle.digest("SHA-256", new TextEncoder().encode(token)),
-      b => b.toString(16).padStart(2, "0")).join("");
+    const hashBytes = new Uint8Array(
+      await crypto.subtle.digest("SHA-256", new TextEncoder().encode(token)));
+    const tokenHash = Array.from(hashBytes, byte => byte.toString(16).padStart(2, "0")).join("");
     if (tokenHash !== "421cdb2aa087e00b2c5358658583dcc4d7f61e72975ee3b888fffe4850b1462f") {
       return new Response("forbidden", { status: 403 });
     }
