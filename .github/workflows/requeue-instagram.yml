@@ -1,0 +1,25 @@
+name: requeue-instagram
+# Devolve uma pasta de 'publicados' (Drive) para a fila de postagem, como próxima.
+on:
+  workflow_dispatch:
+    inputs:
+      pasta:
+        description: 'Nome da pasta em publicados (ex.: 2026-11-09-stanley-copo-no-incendio)'
+        required: true
+jobs:
+  requeue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: publicador
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - env:
+          GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID || secrets.GOOGLE_DRIVE_CLIENT_ID }}
+          GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET || secrets.GOOGLE_DRIVE_CLIENT_SECRET }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN || secrets.GOOGLE_DRIVE_REFRESH_TOKEN }}
+          GDRIVE_FOLDER_ID_OTALOGIA: ${{ secrets.GDRIVE_FOLDER_ID_OTALOGIA }}
+          PASTA: ${{ github.event.inputs.pasta }}
+        run: cd publicador && python requeue.py "$PASTA"
