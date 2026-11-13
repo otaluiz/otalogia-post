@@ -46,3 +46,31 @@ Quem enviar espontaneamente **ATENDIMENTO** para @idea_lab7 ou **PERFIL** para @
 **Gate de seguidores (sem exceções):** a API oficial `is_user_follow_business` deve retornar exatamente `true` no contexto da conta Instagram que recebeu a mensagem. Comentários de pessoas que já autorizaram a User Profile API podem receber link direto depois dessa verificação; comentários sem consentimento recebem apenas resposta privada pedindo que respondam com a palavra-chave. Na DM subsequente, verificar novamente antes de entregar. Perfil false, ausente, 403, timeout ou token inválido => nunca enviar link. Usuário pode seguir e tentar de novo com a palavra. Não confiar em botões ou afirmações "já sigo".
 
 **Testes:** `otaluiz/otalogia-post/.github/workflows/dm-follower-gate-tests.yml` faz checagem de tipos e 7 testes de falha fechada. `dm-share-guides.yml` confirma permissões públicas dos guias aprovados. Essas checagens NÃO substituem a ativação da Meta: ainda são necessários caso de uso Instagram Business, tokens e IDs da conta, assinatura dos webhooks `comments`/`messages` e teste real com conta seguidora e não seguidora. Links do Google Drive são compartilháveis depois da entrega; o bloqueio vale para a distribuição pelo bot, não DRM do PDF.
+
+
+## Resposta pública automática nos comentários — 13/11/2026
+
+A função que recebe o webhook do app Meta **API_AUTO (2124703308119813)** é
+`ig-dm-api-auto` no Supabase, com código versionado em
+`otaluiz/otalogia-post/supabase/functions/ig-dm-api-auto/index.ts`.
+O endpoint legado `ig-dm-isca` também recebeu a alteração, mas não confundir os apps:
+`api-CRM (1788113915524239)` não recebe o webhook Instagram no momento.
+
+Em comentários principais com uma palavra válida (`COPO`, `OFERTA`, etc.):
+1. O webhook é autenticado com HMAC; ignora comentários da própria conta e respostas a comentários.
+2. Envia uma resposta privada. **Se já houver permissão para consultar o follow e o usuário for seguidor, entrega o PDF; caso contrário, pede que responda à DM para permitir a verificação de follow.** Nunca envia link sem `is_user_follow_business=true`.
+3. **Apenas depois de uma private reply aceita pela Meta**, publica uma resposta visível ao comentário usando `POST /{IG_COMMENT_ID}/replies`:
+   - `Confere lá na sua DM!`
+   - `Opa, tá na sua DM!`
+   - `Dá uma olhada na sua DM!`
+4. Supabase RPC `ig_dm_next_public_comment_reply` sorteia entre as outras duas frases, impedindo repetição imediata por perfil, mesmo entre instâncias concorrentes.
+5. O registro `ig_dm_events` garante no máximo uma resposta pública por comentário (`public:{commentId}`) e evita duplicidade da private reply.
+
+**Não confundir a confirmação pública com a entrega imediata do PDF.** Usuários não seguidores ou cuja condição não possa ser verificada recebem DM de instruções, não o link.
+
+### Verificação de produção
+
+- App `API_AUTO`: webhook `instagram` ativo para `comments` e `messages`; `instagram_business_manage_comments` e `instagram_business_manage_messages` em Standard Access; **modo desenvolvimento**, sem Advanced Access.
+- Falta validar vínculo real e tokens das contas @idea_lab7 e @otalogia, assinatura individual do webhook e um teste real end-to-end.
+- Meta App Review: sem submissão, privacy policy ausente, business verification não concluída. Advanced Access deve ser avaliado se o app atender contas de empresas externas, não obrigatório por padrão para contas próprias sob Standard Access.
+- A verificação de follow continua sendo **fail-closed**; a aplicação não pode garantir distribuição sem tokens/permissões Meta e usuários autorizados.
