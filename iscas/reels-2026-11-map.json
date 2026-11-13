@@ -1,0 +1,118 @@
+{
+  "versao_schema": 2,
+  "periodo": "2026-11",
+  "origem_drive": "Clientes/aidealab/06-Aprovados-para-Postar/FILA",
+  "biblioteca_canonica": "Clientes/aidealab/07-Iscas-DM",
+  "perfis": [
+    "aidealab",
+    "otalogia"
+  ],
+  "politica": "Um PDF autoral por tema distinto. Guias compartilhados entre marcas; referências de otalogia apontam ao mesmo PDF de aidealab. Palavras por Reels, além da palavra da categoria, são indexadas no catálogo privado ig_dm_catalog. Reutilizar antes de criar.",
+  "documentos_fisicos": 12,
+  "reels": [
+    {
+      "reel_id": "reel-stanley-copo-no-incendio",
+      "palavra": "COPO",
+      "categoria": "CONTEUDO",
+      "pdf": "AIDEALAB_DM_COPO_CORUJA_GUIA_PREMIUM.pdf",
+      "status_pdf": "aprovado",
+      "habilitacao_envio": "requer Meta e webhook funcionando, verifica follow antes do link"
+    },
+    {
+      "reel_id": "reel-trafego-pago-mudou",
+      "palavra": "OFERTA",
+      "categoria": "TRAFEGO",
+      "pdf": "AIDEALAB_DM_OFERTA_GUIA_PREMIUM.pdf",
+      "status_pdf": "aprovado",
+      "habilitacao_envio": "requer Meta e webhook funcionando, verifica follow antes do link"
+    },
+    {
+      "reel_id": "reel-duolingo-coruja-atropelada",
+      "palavra": "CORUJA",
+      "categoria": "CONTEUDO",
+      "pdf": "AIDEALAB_DM_COPO_CORUJA_GUIA_PREMIUM.pdf",
+      "status_pdf": "aprovado",
+      "habilitacao_envio": "requer Meta e webhook funcionando, verifica follow antes do link"
+    },
+    {
+      "reel_id": "reel-sistemas-pix-whatsapp",
+      "palavra": "ZAP",
+      "categoria": "ATENDIMENTO",
+      "pdf": "AIDEALAB_DM_ZAP_GUIA_PREMIUM.pdf",
+      "status_pdf": "aprovado",
+      "habilitacao_envio": "requer Meta e webhook funcionando, verifica follow antes do link"
+    },
+    {
+      "reel_id": "reel-liquid-death-agua-em-lata",
+      "palavra": "TESTE",
+      "categoria": "VALIDACAO",
+      "pdf": "AIDEALAB_DM_TESTE_GUIA_PREMIUM.pdf",
+      "status_pdf": "aprovado",
+      "habilitacao_envio": "requer Meta e webhook funcionando, verifica follow antes do link"
+    },
+    {
+      "reel_id": "reel-busca-mudou-instagram-google",
+      "palavra": "BUSCA",
+      "categoria": "PRESENCA",
+      "pdf": "AIDEALAB_DM_BUSCA_GUIA_PREMIUM.pdf",
+      "status_pdf": "aprovado",
+      "habilitacao_envio": "requer Meta e webhook funcionando, verifica follow antes do link"
+    },
+    {
+      "reel_id": "reel-tres-sistemas-erros-minusculos",
+      "palavra": "SISTEMA",
+      "categoria": "AUTOMACAO",
+      "pdf": "AIDEALAB_DM_SISTEMA_GUIA_PREMIUM.pdf",
+      "status_pdf": "aprovado",
+      "habilitacao_envio": "requer Meta e webhook funcionando, verifica follow antes do link"
+    },
+    {
+      "reel_id": "reel-lead-que-esfria",
+      "palavra": "RETOMA",
+      "categoria": "ATENDIMENTO",
+      "pdf": "AIDEALAB_Playbook_Atendimento_v1.pdf",
+      "status_pdf": "aprovado",
+      "habilitacao_envio": "requer Meta e webhook funcionando, verifica follow antes do link"
+    },
+    {
+      "reel_id": "reel-sites-que-mudaram-tudo",
+      "palavra": "SITE",
+      "categoria": "SITES",
+      "pdf": "AIDEALAB_DM_SITE_GUIA_PREMIUM.pdf",
+      "status_pdf": "aprovado",
+      "habilitacao_envio": "requer Meta e webhook funcionando, verifica follow antes do link"
+    },
+    {
+      "reel_id": "reel-cliente-feliz-sem-estrela",
+      "palavra": "ESTRELA",
+      "categoria": "PRESENCA",
+      "pdf": "AIDEALAB_DM_ESTRELA_GUIA_PREMIUM.pdf",
+      "status_pdf": "aprovado",
+      "habilitacao_envio": "requer Meta e webhook funcionando, verifica follow antes do link"
+    },
+    {
+      "reel_id": "reel-edicao-que-engana-o-cerebro",
+      "palavra": "VIDEO",
+      "categoria": "EDICAO",
+      "pdf": "AIDEALAB_DM_VIDEO_GUIA_PREMIUM.pdf",
+      "status_pdf": "aprovado",
+      "habilitacao_envio": "requer Meta e webhook funcionando, verifica follow antes do link"
+    },
+    {
+      "reel_id": "reel-ia-aplicada-ao-negocio",
+      "palavra": "APLICADA",
+      "categoria": "AUTOMACAO",
+      "pdf": "AIDEALAB_DM_APLICADA_GUIA_PREMIUM.pdf",
+      "status_pdf": "aprovado",
+      "habilitacao_envio": "requer Meta e webhook funcionando, verifica follow antes do link"
+    },
+    {
+      "reel_id": "reel-a-disputa-pela-atencao",
+      "palavra": "ATENCAO",
+      "categoria": "CONTEUDO",
+      "pdf": "AIDEALAB_DM_ATENCAO_GUIA_PREMIUM.pdf",
+      "status_pdf": "aprovado",
+      "habilitacao_envio": "requer Meta e webhook funcionando, verifica follow antes do link"
+    }
+  ]
+}
