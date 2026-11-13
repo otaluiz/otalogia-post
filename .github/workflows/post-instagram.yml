@@ -47,6 +47,8 @@ jobs:
           cache: 'pip'
           cache-dependency-path: publicador/requirements.txt
       - run: pip install -r publicador/requirements.txt
+      - name: ffmpeg (comprime reels grandes)
+        run: command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
       - name: Publicar no Instagram
         env:
           META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
