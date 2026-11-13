@@ -1,7 +1,7 @@
 {
   "versao_schema": 1,
   "perfil": "@otalogia",
-  "politica": "Biblioteca por categoria; preservar material já publicado e não duplicar assuntos.",
+  "politica": "Reutilização entre marcas: Otalogia distribui os PDFs aprovados e hospedados pela aidealab via catálogo privado do Supabase; nenhum PDF duplicado no Drive. Guias com status aprovado_compartilhado_externo são referências e não devem ser compartilhados novamente pelo workflow Otalogia.",
   "categorias": {
     "PERFIL": {
       "palavra": "PERFIL",
@@ -44,11 +44,26 @@
         "UX",
         "performance"
       ],
-      "guias": [],
+      "guias": [
+        {
+          "id": "compartilhado-aidealab-2026-11-site",
+          "titulo": "Guia Premium SITE • aidealab",
+          "arquivo": "AIDEALAB_DM_SITE_GUIA_PREMIUM.pdf",
+          "status": "aprovado_compartilhado_externo",
+          "origem": "Google Drive/Clientes/aidealab/07-Iscas-DM",
+          "reels": [
+            "reel-sites-que-mudaram-tudo"
+          ]
+        }
+      ],
       "posts_relevantes": [
         "2026-10-preciso-de-site",
         "2026-10-site-invisivel",
-        "2026-10-teste-do-site"
+        "2026-10-teste-do-site",
+        "reel-sites-que-mudaram-tudo"
+      ],
+      "aliases": [
+        "SITE"
       ]
     },
     "AUTOMACAO": {
@@ -59,10 +74,37 @@
         "IA para processos",
         "atendimento automático"
       ],
-      "guias": [],
+      "guias": [
+        {
+          "id": "compartilhado-aidealab-2026-11-aplicada",
+          "titulo": "Guia Premium APLICADA • aidealab",
+          "arquivo": "AIDEALAB_DM_APLICADA_GUIA_PREMIUM.pdf",
+          "status": "aprovado_compartilhado_externo",
+          "origem": "Google Drive/Clientes/aidealab/07-Iscas-DM",
+          "reels": [
+            "reel-ia-aplicada-ao-negocio"
+          ]
+        },
+        {
+          "id": "compartilhado-aidealab-2026-11-sistema",
+          "titulo": "Guia Premium SISTEMA • aidealab",
+          "arquivo": "AIDEALAB_DM_SISTEMA_GUIA_PREMIUM.pdf",
+          "status": "aprovado_compartilhado_externo",
+          "origem": "Google Drive/Clientes/aidealab/07-Iscas-DM",
+          "reels": [
+            "reel-tres-sistemas-erros-minusculos"
+          ]
+        }
+      ],
       "posts_relevantes": [
         "2026-10-ia-do-whatsapp",
-        "2026-11-resposta-pronta"
+        "2026-11-resposta-pronta",
+        "reel-ia-aplicada-ao-negocio",
+        "reel-tres-sistemas-erros-minusculos"
+      ],
+      "aliases": [
+        "APLICADA",
+        "SISTEMA"
       ]
     },
     "CONTEUDO": {
@@ -84,10 +126,39 @@
             "briefing",
             "prompt para post"
           ]
+        },
+        {
+          "id": "compartilhado-aidealab-2026-11-atencao",
+          "titulo": "Guia Premium ATENCAO • aidealab",
+          "arquivo": "AIDEALAB_DM_ATENCAO_GUIA_PREMIUM.pdf",
+          "status": "aprovado_compartilhado_externo",
+          "origem": "Google Drive/Clientes/aidealab/07-Iscas-DM",
+          "reels": [
+            "reel-a-disputa-pela-atencao"
+          ]
+        },
+        {
+          "id": "compartilhado-aidealab-2026-11-copo_coruja",
+          "titulo": "Guia Premium COPO_CORUJA • aidealab",
+          "arquivo": "AIDEALAB_DM_COPO_CORUJA_GUIA_PREMIUM.pdf",
+          "status": "aprovado_compartilhado_externo",
+          "origem": "Google Drive/Clientes/aidealab/07-Iscas-DM",
+          "reels": [
+            "reel-stanley-copo-no-incendio",
+            "reel-duolingo-coruja-atropelada"
+          ]
         }
       ],
       "posts_relevantes": [
-        "2026-10-prompt-briefing"
+        "2026-10-prompt-briefing",
+        "reel-a-disputa-pela-atencao",
+        "reel-stanley-copo-no-incendio",
+        "reel-duolingo-coruja-atropelada"
+      ],
+      "aliases": [
+        "ATENCAO",
+        "COPO",
+        "CORUJA"
       ]
     },
     "EDICAO": {
@@ -109,9 +180,24 @@
             "edição",
             "corte"
           ]
+        },
+        {
+          "id": "compartilhado-aidealab-2026-11-video",
+          "titulo": "Guia Premium VIDEO • aidealab",
+          "arquivo": "AIDEALAB_DM_VIDEO_GUIA_PREMIUM.pdf",
+          "status": "aprovado_compartilhado_externo",
+          "origem": "Google Drive/Clientes/aidealab/07-Iscas-DM",
+          "reels": [
+            "reel-edicao-que-engana-o-cerebro"
+          ]
         }
       ],
-      "posts_relevantes": []
+      "posts_relevantes": [
+        "reel-edicao-que-engana-o-cerebro"
+      ],
+      "aliases": [
+        "VIDEO"
+      ]
     },
     "NEGOCIOS": {
       "palavra": "NEGOCIOS",
@@ -136,6 +222,106 @@
       ],
       "posts_relevantes": [
         "2026-11-cliente-nao-sabe"
+      ]
+    },
+    "PRESENCA": {
+      "palavra": "PRESENCA",
+      "assuntos": [],
+      "guias": [
+        {
+          "id": "compartilhado-aidealab-2026-11-estrela",
+          "titulo": "Guia Premium ESTRELA • aidealab",
+          "arquivo": "AIDEALAB_DM_ESTRELA_GUIA_PREMIUM.pdf",
+          "status": "aprovado_compartilhado_externo",
+          "origem": "Google Drive/Clientes/aidealab/07-Iscas-DM",
+          "reels": [
+            "reel-cliente-feliz-sem-estrela"
+          ]
+        },
+        {
+          "id": "compartilhado-aidealab-2026-11-busca",
+          "titulo": "Guia Premium BUSCA • aidealab",
+          "arquivo": "AIDEALAB_DM_BUSCA_GUIA_PREMIUM.pdf",
+          "status": "aprovado_compartilhado_externo",
+          "origem": "Google Drive/Clientes/aidealab/07-Iscas-DM",
+          "reels": [
+            "reel-busca-mudou-instagram-google"
+          ]
+        }
+      ],
+      "posts_relevantes": [
+        "reel-cliente-feliz-sem-estrela",
+        "reel-busca-mudou-instagram-google"
+      ],
+      "aliases": [
+        "ESTRELA",
+        "BUSCA"
+      ]
+    },
+    "VALIDACAO": {
+      "palavra": "VALIDACAO",
+      "assuntos": [],
+      "guias": [
+        {
+          "id": "compartilhado-aidealab-2026-11-teste",
+          "titulo": "Guia Premium TESTE • aidealab",
+          "arquivo": "AIDEALAB_DM_TESTE_GUIA_PREMIUM.pdf",
+          "status": "aprovado_compartilhado_externo",
+          "origem": "Google Drive/Clientes/aidealab/07-Iscas-DM",
+          "reels": [
+            "reel-liquid-death-agua-em-lata"
+          ]
+        }
+      ],
+      "posts_relevantes": [
+        "reel-liquid-death-agua-em-lata"
+      ],
+      "aliases": [
+        "TESTE"
+      ]
+    },
+    "ATENDIMENTO": {
+      "palavra": "ATENDIMENTO",
+      "assuntos": [],
+      "guias": [
+        {
+          "id": "compartilhado-aidealab-2026-11-zap",
+          "titulo": "Guia Premium ZAP • aidealab",
+          "arquivo": "AIDEALAB_DM_ZAP_GUIA_PREMIUM.pdf",
+          "status": "aprovado_compartilhado_externo",
+          "origem": "Google Drive/Clientes/aidealab/07-Iscas-DM",
+          "reels": [
+            "reel-sistemas-pix-whatsapp"
+          ]
+        }
+      ],
+      "posts_relevantes": [
+        "reel-sistemas-pix-whatsapp"
+      ],
+      "aliases": [
+        "ZAP"
+      ]
+    },
+    "TRAFEGO": {
+      "palavra": "TRAFEGO",
+      "assuntos": [],
+      "guias": [
+        {
+          "id": "compartilhado-aidealab-2026-11-oferta",
+          "titulo": "Guia Premium OFERTA • aidealab",
+          "arquivo": "AIDEALAB_DM_OFERTA_GUIA_PREMIUM.pdf",
+          "status": "aprovado_compartilhado_externo",
+          "origem": "Google Drive/Clientes/aidealab/07-Iscas-DM",
+          "reels": [
+            "reel-trafego-pago-mudou"
+          ]
+        }
+      ],
+      "posts_relevantes": [
+        "reel-trafego-pago-mudou"
+      ],
+      "aliases": [
+        "OFERTA"
       ]
     }
   }
