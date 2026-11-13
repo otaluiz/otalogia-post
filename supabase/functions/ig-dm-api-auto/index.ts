@@ -1,3 +1,4 @@
+import { makePublicReplyRequest, PUBLIC_REPLIES } from "./public_comment_reply.ts";
 import { verifyFollow, canDeliverLinks } from "./follower_gate.ts";
 // API_AUTO (Meta app 2124703308119813): Instagram DM e private replies.
 // Duas contas: @idea_lab7 e @otalogia; sem usar credenciais do app api-CRM.
@@ -97,7 +98,7 @@ async function signatureOk(body: string, provided: string, secret: string): Prom
 
 async function claim(a: Account, eventId: string): Promise<boolean> {
   const url = env("SUPABASE_URL"), key = env("SUPABASE_SERVICE_ROLE_KEY");
-  if (!url || !key) { console.warn("Idempotência desativada: configure service_role"); return true; }
+  if (!url || !key) throw new Error("Idempotência obrigatória indisponível");
   const response = await fetch(url + "/rest/v1/ig_dm_events?on_conflict=perfil,event_id", {
     method: "POST",
     headers: { apikey: key, Authorization: "Bearer " + key, "Content-Type": "application/json",
@@ -153,6 +154,44 @@ async function sendText(a: Account, recipient: Record<string, string>, text: str
       throw new Error("Envio negado pela Meta: " + response.status);
     }
   } catch (error) { await release(a, eventId); throw error; }
+}
+
+async function nextRandomPublicReply(a: Account): Promise<string> {
+  const base = env("SUPABASE_URL"), key = env("SUPABASE_SERVICE_ROLE_KEY");
+  if (!base || !key) throw new Error("Catálogo de variações indisponível");
+  const response = await fetch(base + "/rest/v1/rpc/ig_dm_next_public_comment_reply", {
+    method: "POST",
+    headers: { apikey: key, Authorization: "Bearer " + key,
+               "Content-Type": "application/json" },
+    body: JSON.stringify({p_perfil:a.name}),
+  });
+  if (!response.ok) throw new Error("Rotação de comentários falhou: " + response.status);
+  const phrase = await response.json();
+  if (typeof phrase !== "string" || !PUBLIC_REPLIES.includes(phrase as typeof PUBLIC_REPLIES[number]))
+    throw new Error("Resposta fora da lista autorizada");
+  return phrase;
+}
+
+async function publishPublicCommentReply(a: Account, commentId: string): Promise<void> {
+  const eventId = "public:" + commentId;
+  if (!(await claim(a, eventId))) return; // não responder duas vezes ao mesmo comentário
+  try {
+    const phrase = await nextRandomPublicReply(a);
+    const host = a.facebook ? "https://graph.facebook.com" : "https://graph.instagram.com";
+    const request = makePublicReplyRequest({
+      host, version: V, commentId, token: a.token, message: phrase
+    });
+    const response = await fetch(request.url, request.init);
+    if (!response.ok) {
+      console.error("Resposta pública recusada pela Meta", a.name, response.status,
+                    (await response.text()).slice(0, 220));
+      throw new Error("Não foi possível responder ao comentário: " + response.status);
+    }
+    console.log("Resposta pública entregue", a.name, commentId);
+  } catch (error) {
+    await release(a, eventId);
+    throw error;
+  }
 }
 
 async function deliverIfFollower(a: Account, senderId: string, item: Material, word: string, mid: string) {
@@ -211,7 +250,7 @@ Deno.serve(async (req: Request) => {
         if (change.field !== "comments") continue;
         const c = change.value || {};
         const word = keyword(String(c.text || ""), links);
-        if (!c.id || !word || String(c.from?.id || "") === id) continue;
+        if (!c.id || !word || c.parent_id || String(c.from?.id || "") === id) continue;
         // Tentativa de follow real: a Meta só libera User Profile quando o usuário já
         // iniciou conversa anteriormente. Sem consentimento, devolve UNKNOWN => sem link.
         const commenter = String(c.from?.id || "");
@@ -221,6 +260,10 @@ Deno.serve(async (req: Request) => {
           : promptToReply(a, word);
         // Meta permite apenas uma private reply por comentário.
         await sendText(a, { comment_id: String(c.id) }, privateReply, "comment:" + c.id);
+        // Somente depois da mensagem privada aceita pela Meta, responder publicamente.
+        // Se o usuário ainda não foi verificado como seguidor, a DM contém orientações,
+        // nunca o PDF; a resposta pública confirma apenas que existe uma DM.
+        await publishPublicCommentReply(a, String(c.id));
       }
       for (const msg of entry.messaging || []) {
         const sender = String(msg.sender?.id || "");
