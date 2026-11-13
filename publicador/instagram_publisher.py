@@ -328,6 +328,34 @@ class InstagramClient:
         print(f"  ✅ Reel publicado! Post ID: {post_id}")
         return post_id
 
+    def publish_reel_resumable(self, video_path: Path, caption: str, cover_url: Optional[str] = None) -> str:
+        """Reel grande: envia o arquivo direto ao Instagram (rupload), sem passar pelo Supabase (limite de tamanho)."""
+        payload = {
+            "media_type": "REELS", "upload_type": "resumable", "caption": caption,
+            "share_to_feed": "true", "access_token": self.access_token,
+        }
+        if cover_url:
+            payload["cover_url"] = cover_url
+        print("\n🎬 Criando container do Reel (upload resumível direto no Instagram)...")
+        data = requests.post(f"{GRAPH_BASE_URL}/{self.ig_user_id}/media", data=payload, timeout=60).json()
+        if "error" in data:
+            raise RuntimeError(f"Erro ao criar container do Reel: {data['error'].get('message')}")
+        container_id, uri = data["id"], data.get("uri")
+        if not uri:
+            raise RuntimeError(f"Instagram não devolveu a URL de upload resumível: {data}")
+        size = video_path.stat().st_size
+        print(f"  ⬆️ Enviando {size // 1_000_000} MB ao Instagram...")
+        with open(video_path, "rb") as f:
+            up = requests.post(uri, data=f, timeout=1800, headers={
+                "Authorization": f"OAuth {self.access_token}", "offset": "0", "file_size": str(size)})
+        if up.status_code != 200 or not up.json().get("success"):
+            raise RuntimeError(f"Falha no upload resumível ({up.status_code}): {up.text[:300]}")
+        self.wait_for_container_finished(container_id, max_retries=120, interval=5)
+        time.sleep(3)
+        post_id = self.publish_container(container_id)
+        print(f"  ✅ Reel publicado! Post ID: {post_id}")
+        return post_id
+
     def publish_carousel(self, media_items: List[Any], caption: str) -> str:
         """Orquestra as 3 etapas de publicação de um carrossel completo (imagens e/ou vídeos)."""
         print(f"\n🚀 Iniciando publicação de Carrossel com {len(media_items)} slides...")
@@ -366,6 +394,7 @@ class InstagramClient:
 # Supabase Storage para hospedar mídias públicas com HTTPS exigidas pelo Instagram
 SUPABASE_URL = os.getenv("NEXT_PUBLIC_SUPABASE_URL", "").strip().rstrip("/")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "").strip()
+REEL_MAX_SUPABASE = 45 * 1024 * 1024  # acima disso o reel vai direto ao Instagram (limite padrão do Supabase: 50 MB)
 STORAGE_BUCKET = os.getenv("INSTAGRAM_MEDIA_BUCKET", "instagram-carousels")
 
 
@@ -521,10 +550,12 @@ def publish_reel_from_dir(target_dir: Path, meta: Dict[str, Any], caption: str) 
         sys.exit(1)
     slug = meta.get("carousel_id", target_dir.name)
     print(f"\n🎬 Reel: {slug} ({video.stat().st_size // 1_000_000} MB)")
-    print("  ☁️ Gerando link público do vídeo...")
-    video_url = upload_image_to_public_storage(video, remote_folder=f"otalogia/{slug}")
     capa = target_dir / meta["capa"] if meta.get("capa") else None
     cover_url = upload_image_to_public_storage(capa, remote_folder=f"otalogia/{slug}") if capa and capa.exists() else None
+    if video.stat().st_size > REEL_MAX_SUPABASE:
+        return InstagramClient().publish_reel_resumable(video, caption, cover_url)
+    print("  ☁️ Gerando link público do vídeo...")
+    video_url = upload_image_to_public_storage(video, remote_folder=f"otalogia/{slug}")
     return InstagramClient().publish_reel(video_url, caption, cover_url)
 
 
@@ -771,7 +802,7 @@ if __name__ == "__main__":
     meta["postado_em"] = now_iso
     meta["post_id"] = post_id
     save_carousel_metadata(target_dir, meta)
-    print(f"\n🎉 Carrossel publicado com sucesso no perfil @otalogia!")
+    print(f"\n🎉 Post publicado com sucesso no perfil @otalogia!")
     print(f"🆔 Post ID: {post_id}")
     print(f"💾 Metadados salvos localmente em: {target_dir / 'metadata.json'}")
 
