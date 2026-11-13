@@ -139,7 +139,7 @@ class GoogleDriveLive:
         queue.sort(key=lambda x: (x["ordem_val"], x["folder_name"]))
         return queue
 
-    def download_next_carousel(self, target_base_dir: Path) -> Optional[Tuple[Path, str, str, Dict[str, Any]]]:
+    def download_next_carousel(self, target_base_dir: Path, prefer: Optional[str] = None) -> Optional[Tuple[Path, str, str, Dict[str, Any]]]:
         """
         Seleciona o próximo carrossel aprovado e não postado e baixa todos os seus arquivos.
         Retorna (pasta_local, meta_file_id, gdrive_folder_id, metadata).
@@ -147,14 +147,28 @@ class GoogleDriveLive:
         queue = self.fetch_live_queue()
         # Qualquer carrossel dentro da pasta '06-Aprovados-para-Postar' que não tenha sido postado e não esteja rejeitado é considerado aprovado
         pendentes = [item for item in queue if item.get("status") != "rejeitado" and not item.get("postado")]
-        # Só carrossel animado (pasta montada pelo motion-drive do otalogia-post). Estático fica esperando o motion;
-        # PERMITIR_ESTATICO=1 libera o estático quando não houver nenhum animado na fila.
-        animados = [i for i in pendentes if i["metadata"].get("formato_midia") == "motion-capa"]
+        # Metadata de outra marca não sobe pro @otalogia (ex.: reels copiados da aidealab). PERMITIR_OUTRO_CLIENTE=1 libera.
+        ok = []
         for i in pendentes:
+            cli = (i["metadata"].get("cliente") or "otalogia").lower()
+            if cli != "otalogia" and os.environ.get("PERMITIR_OUTRO_CLIENTE") != "1":
+                print(f"⏸️ Pulado (cliente '{cli}' no metadata, não é otalogia): {i['folder_name']}")
+            else:
+                ok.append(i)
+        pendentes = ok
+        reels = [i for i in pendentes if i["metadata"].get("tipo") == "reel"]
+        # Carrossel só animado (pasta montada pelo motion-drive do otalogia-post). Estático espera o motion;
+        # PERMITIR_ESTATICO=1 libera o estático quando não houver nenhum animado na fila.
+        carr = [i for i in pendentes if i["metadata"].get("tipo") != "reel"]
+        animados = [i for i in carr if i["metadata"].get("formato_midia") == "motion-capa"]
+        for i in carr:
             if i not in animados:
                 print(f"⏸️ Pulado (sem motion ainda): {i['folder_name']}")
         if animados or os.environ.get("PERMITIR_ESTATICO") != "1":
-            pendentes = animados
+            carr = animados
+        por_tipo = {"reel": reels, "carrossel": carr}
+        outro = "carrossel" if prefer == "reel" else "reel"
+        pendentes = por_tipo.get(prefer, []) + por_tipo.get(outro, []) if prefer else sorted(reels + carr, key=lambda x: (x["ordem_val"], x["folder_name"]))
 
         if not pendentes:
             print("✨ Nenhum carrossel pendente no Google Drive no momento.")

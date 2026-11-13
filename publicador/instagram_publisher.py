@@ -129,8 +129,8 @@ META_ACCESS_TOKEN={permanent_token}
 INSTAGRAM_ACCOUNT_ID={ig_id}
 
 # Supabase Storage (para servir imagens do carrossel ao Instagram)
-NEXT_PUBLIC_SUPABASE_URL=https://mojcjrcqkuvqfsqvpzgt.supabase.co
-SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1vamNqcmNxa3V2cWZzcXZwemd0Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NDA1ODQ2NSwiZXhwIjoyMDY5NjM0NDY1fQ.ApZ01Z_gdAN0CzmTIP07GDqF0l98zH-KU_5wMR272vk
+NEXT_PUBLIC_SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
 INSTAGRAM_MEDIA_BUCKET=instagram-carousels
 """
     ENV_PATH.write_text(env_content, encoding="utf-8")
@@ -307,6 +307,27 @@ class InstagramClient:
 
         raise TimeoutError("Tempo limite esgotado esperando processamento do carrossel no Instagram.")
 
+    def publish_reel(self, video_url: str, caption: str, cover_url: Optional[str] = None) -> str:
+        """Publica um Reel (vídeo único, também no feed)."""
+        payload = {
+            "media_type": "REELS",
+            "video_url": video_url,
+            "caption": caption,
+            "share_to_feed": "true",
+            "access_token": self.access_token,
+        }
+        if cover_url:
+            payload["cover_url"] = cover_url
+        print("\n🎬 Criando container do Reel...")
+        data = requests.post(f"{GRAPH_BASE_URL}/{self.ig_user_id}/media", data=payload, timeout=60).json()
+        if "error" in data:
+            raise RuntimeError(f"Erro ao criar container do Reel: {data['error'].get('message')}")
+        self.wait_for_container_finished(data["id"], max_retries=72, interval=5)
+        time.sleep(3)
+        post_id = self.publish_container(data["id"])
+        print(f"  ✅ Reel publicado! Post ID: {post_id}")
+        return post_id
+
     def publish_carousel(self, media_items: List[Any], caption: str) -> str:
         """Orquestra as 3 etapas de publicação de um carrossel completo (imagens e/ou vídeos)."""
         print(f"\n🚀 Iniciando publicação de Carrossel com {len(media_items)} slides...")
@@ -343,13 +364,15 @@ class InstagramClient:
 
 
 # Supabase Storage para hospedar mídias públicas com HTTPS exigidas pelo Instagram
-SUPABASE_URL = os.getenv("NEXT_PUBLIC_SUPABASE_URL", "https://mojcjrcqkuvqfsqvpzgt.supabase.co").rstrip("/")
-SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1vamNqcmNxa3V2cWZzcXZwemd0Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NDA1ODQ2NSwiZXhwIjoyMDY5NjM0NDY1fQ.ApZ01Z_gdAN0CzmTIP07GDqF0l98zH-KU_5wMR272vk")
+SUPABASE_URL = os.getenv("NEXT_PUBLIC_SUPABASE_URL", "").strip().rstrip("/")
+SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "").strip()
 STORAGE_BUCKET = os.getenv("INSTAGRAM_MEDIA_BUCKET", "instagram-carousels")
 
 
 def upload_image_to_public_storage(file_path: Path, remote_folder: str = "queue") -> str:
     """Faz upload de imagem ou vídeo local para o Supabase Storage e retorna a URL pública HTTPS."""
+    if not SUPABASE_URL or not SUPABASE_KEY:
+        raise RuntimeError("Defina NEXT_PUBLIC_SUPABASE_URL e SUPABASE_SERVICE_ROLE_KEY")
     file_name = file_path.name
     remote_path = f"{remote_folder}/{int(time.time())}_{file_name}"
     upload_url = f"{SUPABASE_URL}/storage/v1/object/{STORAGE_BUCKET}/{remote_path}"
@@ -370,16 +393,14 @@ def upload_image_to_public_storage(file_path: Path, remote_folder: str = "queue"
     else:
         content_type = "application/octet-stream"
 
-    with open(file_path, "rb") as f:
-        file_bytes = f.read()
-
     headers = {
         "Authorization": f"Bearer {SUPABASE_KEY}",
         "apikey": SUPABASE_KEY,
         "Content-Type": content_type,
     }
 
-    res = requests.post(upload_url, data=file_bytes, headers=headers, timeout=60)
+    with open(file_path, "rb") as f:  # streaming: reels passam de 100 MB
+        res = requests.post(upload_url, data=f, headers=headers, timeout=600)
     if res.status_code not in (200, 201):
         raise RuntimeError(f"Falha no upload para o storage ({res.status_code}): {res.text}")
 
@@ -420,7 +441,8 @@ def format_caption(meta: Dict[str, Any], custom_caption: Optional[str] = None) -
     else:
         hashtags_str = str(hashtags_data).strip()
 
-    if hashtags_str:
+    # reels já trazem as hashtags dentro de "legenda": não duplica
+    if hashtags_str and not all(h in legenda for h in hashtags_str.split()):
         return f"{legenda}\n\n{hashtags_str}"
     return legenda
 
@@ -479,6 +501,33 @@ def check_already_posted_today(account_id: str, access_token: str) -> bool:
     return False
 
 
+def last_post_kind(account_id: str, access_token: str) -> Optional[str]:
+    """Tipo do último post do perfil ('reel' ou 'carrossel'), para alternar. None se não der pra saber."""
+    try:
+        r = requests.get(f"{GRAPH_BASE_URL}/{account_id}/media",
+                         params={"fields": "media_product_type,media_type", "limit": "1", "access_token": access_token}, timeout=15)
+        d = r.json().get("data", [])
+        if r.status_code == 200 and d:
+            return "reel" if d[0].get("media_product_type") == "REELS" else "carrossel"
+    except Exception as e:
+        print(f"⚠️ Não foi possível ler o último post: {e}")
+    return None
+
+
+def publish_reel_from_dir(target_dir: Path, meta: Dict[str, Any], caption: str) -> str:
+    video = target_dir / meta.get("video", "reel.mp4")
+    if not video.exists():
+        print(f"❌ Vídeo do reel não encontrado: {video}")
+        sys.exit(1)
+    slug = meta.get("carousel_id", target_dir.name)
+    print(f"\n🎬 Reel: {slug} ({video.stat().st_size // 1_000_000} MB)")
+    print("  ☁️ Gerando link público do vídeo...")
+    video_url = upload_image_to_public_storage(video, remote_folder=f"otalogia/{slug}")
+    capa = target_dir / meta["capa"] if meta.get("capa") else None
+    cover_url = upload_image_to_public_storage(capa, remote_folder=f"otalogia/{slug}") if capa and capa.exists() else None
+    return InstagramClient().publish_reel(video_url, caption, cover_url)
+
+
 def test_meta_connection():
     """Função de teste para validar credenciais e imprimir diagnóstico."""
     print("==================================================")
@@ -508,119 +557,7 @@ def test_meta_connection():
         print(f"\n❌ Falha na conexão: {e}")
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Publicador de Carrosséis no Instagram via Meta Graph API (@otalogia)")
-    parser.add_argument("--test", action="store_true", help="Testa a conexão e valida o token com a Meta")
-    parser.add_argument("--setup-token", type=str, help="Token do usuário gerado no Graph Explorer para converter em token permanente")
-    parser.add_argument("--dir", type=str, help="Caminho da pasta do carrossel para postar")
-    parser.add_argument("--auto-next", action="store_true", help="Busca automaticamente o próximo carrossel da fila")
-    parser.add_argument("--queue-dir", type=str, help="Diretório da fila (padrão: 06-Aprovados-para-Postar de otalogia)")
-    parser.add_argument("--caption", type=str, help="Legenda customizada (sobrescreve metadata.json)")
-    parser.add_argument("--force", action="store_true", help="Ignora a trava de 1 post por dia e força a publicação")
-    parser.add_argument("--no-wait", action="store_true", help="Não aguarda a janela das 06:00 se executado antes desse horário")
-    parser.add_argument("--motion", action="store_true", help="Força o uso de slides em vídeo (motion)")
-    parser.add_argument("--static", action="store_true", help="Força o uso de imagens estáticas ignorando vídeos")
-
-    args = parser.parse_args()
-
-    if args.setup_token:
-        try:
-            res = exchange_and_setup_token(args.setup_token.strip())
-            print("\nResultado:")
-            print(json.dumps(res, indent=2, ensure_ascii=False))
-        except Exception as e:
-            print(f"❌ Erro ao configurar token: {e}")
-            sys.exit(1)
-        sys.exit(0)
-
-    if args.test or len(sys.argv) == 1:
-        test_meta_connection()
-        sys.exit(0)
-
-    # 🔒 TRAVA DE SEGURANÇA: Garante estritamente apenas 1 post por dia (Horário de Cuiabá)
-    if not args.force:
-        token = os.getenv("META_ACCESS_TOKEN", "").strip()
-        ig_id = os.getenv("INSTAGRAM_ACCOUNT_ID", "").strip()
-        if check_already_posted_today(ig_id, token):
-            import datetime
-            cuiaba_now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-4)))
-            print("======================================================================")
-            print(f"🛑 TRAVA DIÁRIA ATIVADA ({cuiaba_now.strftime('%d/%m/%Y %H:%M:%S')} Cuiabá)")
-            print("   Já existe 1 post publicado hoje no perfil @otalogia!")
-            print("   Para evitar postagens duplicadas, apenas 1 post por dia é permitido.")
-            print("   (Para forçar uma publicação extra no mesmo dia, use a flag --force).")
-            print("======================================================================")
-            sys.exit(0)
-
-    # ⏰ GARANTIA DA JANELA (06:00 - 08:00 Cuiabá): Se disparado antes das 06:00 para contornar filas, aguarda até as 06:00
-    if not args.force and not getattr(args, "no_wait", False):
-        import datetime
-        cuiaba_tz = datetime.timezone(datetime.timedelta(hours=-4))
-        now_cuiaba = datetime.datetime.now(cuiaba_tz)
-        if now_cuiaba.hour < 6:
-            target_time = now_cuiaba.replace(hour=6, minute=0, second=5, microsecond=0)
-            wait_seconds = (target_time - now_cuiaba).total_seconds()
-            if 0 < wait_seconds <= 3600:
-                print(f"⏳ Horário atual em Cuiabá ({now_cuiaba.strftime('%H:%M:%S')}) é anterior às 06:00.")
-                print(f"   Aguardando {int(wait_seconds)}s ({int(wait_seconds/60)} min) para publicar pontualmente na abertura da janela (06:00)...")
-                time.sleep(wait_seconds)
-
-    target_dir = None
-    gdrive_meta_file_id = None
-    gdrive_carousel_folder_id = None
-    gdrive_client = None
-
-    if args.dir:
-        target_dir = Path(args.dir)
-    elif args.auto_next:
-        # Se credenciais do Google Drive estiverem disponíveis, busca em tempo real na nuvem do Drive
-        from gdrive_live import GoogleDriveLive
-        gdrive = GoogleDriveLive()
-        if gdrive.is_configured():
-            print("🌐 [Modo Nuvem] Conectando diretamente à API do Google Drive em tempo real...")
-            base_temp = FILA_DIR
-            gdrive_res = gdrive.download_next_carousel(base_temp)
-            if not gdrive_res:
-                print("✨ Nenhum carrossel pendente no Google Drive no momento.")
-                sys.exit(0)
-            target_dir, gdrive_meta_file_id, gdrive_carousel_folder_id, _ = gdrive_res
-            gdrive_client = gdrive
-        else:
-            drive_path = Path(r"C:\Users\luizr\Meu Drive (aidealabbr@gmail.com)\Clientes\otalogia\06-Aprovados-para-Postar")
-            repo_path = FILA_DIR
-
-            if args.queue_dir:
-                default_queue = Path(args.queue_dir)
-            elif drive_path.exists():
-                default_queue = drive_path
-            elif repo_path.exists():
-                default_queue = repo_path
-            else:
-                default_queue = FILA_DIR
-
-            print(f"🔍 Procurando próximo carrossel pendente em: {default_queue}")
-            target_dir = find_next_carousel_to_post(default_queue)
-            if not target_dir:
-                print("✨ Nenhum carrossel pendente na fila no momento.")
-                sys.exit(0)
-            print(f"🎯 Próximo carrossel selecionado: {target_dir.name}")
-
-    if not target_dir or not target_dir.is_dir():
-        print(f"❌ Diretório inválido ou não especificado: {target_dir}")
-        sys.exit(1)
-
-    meta = load_carousel_metadata(target_dir)
-    if not meta:
-        print(f"❌ metadata.json não encontrado em {target_dir}")
-        sys.exit(1)
-
-    if meta.get("postado"):
-        print(f"ℹ️ Este carrossel já foi postado anteriormente em {meta.get('postado_em') or meta.get('data_postagem')}.")
-        sys.exit(0)
-
-    # Monta a legenda completa com hashtags
-    caption = format_caption(meta, args.caption)
-
+def publish_carousel_from_dir(target_dir: Path, meta: Dict[str, Any], caption: str, args) -> str:
     # Coleta e ordena os slides
     slides = meta.get("slides", [])
     slides_sorted = sorted(slides, key=lambda s: s.get("ordem", 99))
@@ -701,8 +638,132 @@ if __name__ == "__main__":
         item["url"] = public_url
 
     # Publica na Meta Graph API
-    client = InstagramClient()
-    post_id = client.publish_carousel(media_items, caption)
+    return InstagramClient().publish_carousel(media_items, caption)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Publicador de Carrosséis no Instagram via Meta Graph API (@otalogia)")
+    parser.add_argument("--test", action="store_true", help="Testa a conexão e valida o token com a Meta")
+    parser.add_argument("--setup-token", type=str, help="Token do usuário gerado no Graph Explorer para converter em token permanente")
+    parser.add_argument("--dir", type=str, help="Caminho da pasta do carrossel para postar")
+    parser.add_argument("--auto-next", action="store_true", help="Busca automaticamente o próximo carrossel da fila")
+    parser.add_argument("--queue-dir", type=str, help="Diretório da fila (padrão: 06-Aprovados-para-Postar de otalogia)")
+    parser.add_argument("--caption", type=str, help="Legenda customizada (sobrescreve metadata.json)")
+    parser.add_argument("--force", action="store_true", help="Ignora a trava de 1 post por dia e força a publicação")
+    parser.add_argument("--tipo", choices=["auto", "reel", "carrossel"], default="auto", help="auto = alterna com o último post; reel/carrossel = força o tipo")
+    parser.add_argument("--no-wait", action="store_true", help="Não aguarda a janela das 06:00 se executado antes desse horário")
+    parser.add_argument("--motion", action="store_true", help="Força o uso de slides em vídeo (motion)")
+    parser.add_argument("--static", action="store_true", help="Força o uso de imagens estáticas ignorando vídeos")
+
+    args = parser.parse_args()
+
+    if args.setup_token:
+        try:
+            res = exchange_and_setup_token(args.setup_token.strip())
+            print("\nResultado:")
+            print(json.dumps(res, indent=2, ensure_ascii=False))
+        except Exception as e:
+            print(f"❌ Erro ao configurar token: {e}")
+            sys.exit(1)
+        sys.exit(0)
+
+    if args.test or len(sys.argv) == 1:
+        test_meta_connection()
+        sys.exit(0)
+
+    # 🔒 TRAVA DE SEGURANÇA: Garante estritamente apenas 1 post por dia (Horário de Cuiabá)
+    if not args.force:
+        token = os.getenv("META_ACCESS_TOKEN", "").strip()
+        ig_id = os.getenv("INSTAGRAM_ACCOUNT_ID", "").strip()
+        if check_already_posted_today(ig_id, token):
+            import datetime
+            cuiaba_now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-4)))
+            print("======================================================================")
+            print(f"🛑 TRAVA DIÁRIA ATIVADA ({cuiaba_now.strftime('%d/%m/%Y %H:%M:%S')} Cuiabá)")
+            print("   Já existe 1 post publicado hoje no perfil @otalogia!")
+            print("   Para evitar postagens duplicadas, apenas 1 post por dia é permitido.")
+            print("   (Para forçar uma publicação extra no mesmo dia, use a flag --force).")
+            print("======================================================================")
+            sys.exit(0)
+
+    # ⏰ GARANTIA DA JANELA (06:00 - 08:00 Cuiabá): Se disparado antes das 06:00 para contornar filas, aguarda até as 06:00
+    if not args.force and not getattr(args, "no_wait", False):
+        import datetime
+        cuiaba_tz = datetime.timezone(datetime.timedelta(hours=-4))
+        now_cuiaba = datetime.datetime.now(cuiaba_tz)
+        if now_cuiaba.hour < 6:
+            target_time = now_cuiaba.replace(hour=6, minute=0, second=5, microsecond=0)
+            wait_seconds = (target_time - now_cuiaba).total_seconds()
+            if 0 < wait_seconds <= 3600:
+                print(f"⏳ Horário atual em Cuiabá ({now_cuiaba.strftime('%H:%M:%S')}) é anterior às 06:00.")
+                print(f"   Aguardando {int(wait_seconds)}s ({int(wait_seconds/60)} min) para publicar pontualmente na abertura da janela (06:00)...")
+                time.sleep(wait_seconds)
+
+    target_dir = None
+    gdrive_meta_file_id = None
+    gdrive_carousel_folder_id = None
+    gdrive_client = None
+
+    if args.dir:
+        target_dir = Path(args.dir)
+    elif args.auto_next:
+        # Se credenciais do Google Drive estiverem disponíveis, busca em tempo real na nuvem do Drive
+        from gdrive_live import GoogleDriveLive
+        gdrive = GoogleDriveLive()
+        if gdrive.is_configured():
+            print("🌐 [Modo Nuvem] Conectando diretamente à API do Google Drive em tempo real...")
+            base_temp = FILA_DIR
+            prefer = args.tipo
+            if prefer == "auto":
+                ult = last_post_kind(os.getenv("INSTAGRAM_ACCOUNT_ID", "").strip(), os.getenv("META_ACCESS_TOKEN", "").strip())
+                prefer = {"reel": "carrossel", "carrossel": "reel"}.get(ult)
+                print(f"🔁 Último post: {ult or 'desconhecido'} → preferência de hoje: {prefer or 'qualquer'}")
+            gdrive_res = gdrive.download_next_carousel(base_temp, prefer=prefer)
+            if not gdrive_res:
+                print("✨ Nenhum carrossel pendente no Google Drive no momento.")
+                sys.exit(0)
+            target_dir, gdrive_meta_file_id, gdrive_carousel_folder_id, _ = gdrive_res
+            gdrive_client = gdrive
+        else:
+            drive_path = Path(r"C:\Users\luizr\Meu Drive (aidealabbr@gmail.com)\Clientes\otalogia\06-Aprovados-para-Postar")
+            repo_path = FILA_DIR
+
+            if args.queue_dir:
+                default_queue = Path(args.queue_dir)
+            elif drive_path.exists():
+                default_queue = drive_path
+            elif repo_path.exists():
+                default_queue = repo_path
+            else:
+                default_queue = FILA_DIR
+
+            print(f"🔍 Procurando próximo carrossel pendente em: {default_queue}")
+            target_dir = find_next_carousel_to_post(default_queue)
+            if not target_dir:
+                print("✨ Nenhum carrossel pendente na fila no momento.")
+                sys.exit(0)
+            print(f"🎯 Próximo carrossel selecionado: {target_dir.name}")
+
+    if not target_dir or not target_dir.is_dir():
+        print(f"❌ Diretório inválido ou não especificado: {target_dir}")
+        sys.exit(1)
+
+    meta = load_carousel_metadata(target_dir)
+    if not meta:
+        print(f"❌ metadata.json não encontrado em {target_dir}")
+        sys.exit(1)
+
+    if meta.get("postado"):
+        print(f"ℹ️ Este carrossel já foi postado anteriormente em {meta.get('postado_em') or meta.get('data_postagem')}.")
+        sys.exit(0)
+
+    # Monta a legenda completa com hashtags
+    caption = format_caption(meta, args.caption)
+
+    if meta.get("tipo") == "reel":
+        post_id = publish_reel_from_dir(target_dir, meta, caption)
+    else:
+        post_id = publish_carousel_from_dir(target_dir, meta, caption, args)
 
     # Atualiza metadados locais
     now_iso = time.strftime("%Y-%m-%d %H:%M:%S")

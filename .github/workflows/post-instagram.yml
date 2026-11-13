@@ -16,6 +16,15 @@ on:
         description: 'Pasta em fila/ (vazio = próximo da fila)'
         required: false
         default: ''
+      tipo:
+        description: 'auto (alterna carrossel/reel), reel ou carrossel'
+        type: choice
+        options: [auto, reel, carrossel]
+        default: auto
+      force:
+        description: 'Ignorar a trava de 1 post por dia (posta mesmo já tendo postado hoje)'
+        type: boolean
+        default: false
   repository_dispatch:
     types: [daily_publish]
 
@@ -50,11 +59,14 @@ jobs:
           GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN || secrets.GOOGLE_DRIVE_REFRESH_TOKEN }}
           GDRIVE_FOLDER_ID_OTALOGIA: ${{ secrets.GDRIVE_FOLDER_ID_OTALOGIA }}
           PASTA: ${{ github.event.inputs.carousel_folder }}
+          TIPO: ${{ github.event.inputs.tipo || 'auto' }}
+          FORCE: ${{ github.event.inputs.force }}
         run: |
+          EXTRA=""; [ "$FORCE" = "true" ] && EXTRA="--force"
           if [ -n "$PASTA" ]; then
-            python publicador/instagram_publisher.py --dir "fila/$PASTA"
+            python publicador/instagram_publisher.py --dir "fila/$PASTA" $EXTRA
           else
-            python publicador/instagram_publisher.py --auto-next --queue-dir fila
+            python publicador/instagram_publisher.py --auto-next --queue-dir fila --tipo "$TIPO" $EXTRA
           fi
       - name: Registrar estado na fila (só texto)
         if: always()
