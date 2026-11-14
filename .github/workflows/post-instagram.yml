@@ -1,15 +1,12 @@
 name: post-instagram
 
 # Publica o próximo carrossel aprovado (Drive 06-Aprovados-para-Postar) no @otalogia.
-# Disparos escalonados: o agendador do GitHub atrasa; o publicador espera 06:00 Cuiabá
-# e a trava diária (consulta à Graph API) impede post duplicado.
+# O agendador do GitHub atrasa e descarta execuções; por isso o cron é denso (igual ao aidealab):
+# a cada 15 min de 04:05 a 13:50 UTC. O publicador espera 06:00 Cuiabá e a trava diária
+# (consulta à Graph API) impede post duplicado: disparos extras não fazem nada.
 on:
   schedule:
-    - cron: '42 8 * * *'   # 04:42 Cuiabá
-    - cron: '23 9 * * *'
-    - cron: '7 10 * * *'
-    - cron: '47 10 * * *'
-    - cron: '29 11 * * *'
+    - cron: '5,20,35,50 4-13 * * *'
   workflow_dispatch:
     inputs:
       carousel_folder:
