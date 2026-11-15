@@ -3,9 +3,9 @@
   "cliente": "otalogia",
   "data_criacao": "2026-11-02",
   "status": "rascunho",
-  "postado": false,
-  "postado_em": null,
-  "post_id": null,
+  "postado": true,
+  "postado_em": "2026-11-15 12:03:52",
+  "post_id": "18403175860207222",
   "ordem_fila": 30,
   "serie": "REFERÊNCIA",
   "tema": "A MESMA RESPOSTA SALVA. chega de digitar",
@@ -81,12 +81,12 @@
       "ordem": 9,
       "arquivo": "slide-09.mp4",
       "papel": "cta",
-      "texto": "QUER MODELOS DE RESPOSTA prontas? Comenta PRONTA que eu te mando no direct",
+      "texto": "QUER MODELOS DE RESPOSTA prontas? Comenta pronta que eu te mando no direct",
       "midia": "video",
       "origem": "slide-08.mp4"
     }
   ],
-  "legenda": "Todo dia o cliente pergunta preço, prazo e horário. Todo dia você digita a mesma coisa.\n\nO WhatsApp Business tem as respostas rápidas: você escreve a mensagem uma vez, salva com um atalho e usa na conversa quando precisar. A criação é feita pelo app WhatsApp Business no celular.\n\nComece pelo que mais chega: preço e formas de pagamento, prazo e entrega, horário e endereço, boas-vindas para cliente novo. Escreva do jeito que você fala no balcão.\n\nSalva pra montar as suas.\n\nComenta PRONTA que eu te mando modelos de resposta no direct.",
+  "legenda": "Todo dia o cliente pergunta preço, prazo e horário. Todo dia você digita a mesma coisa.\n\nO WhatsApp Business tem as respostas rápidas: você escreve a mensagem uma vez, salva com um atalho e usa na conversa quando precisar. A criação é feita pelo app WhatsApp Business no celular.\n\nComece pelo que mais chega: preço e formas de pagamento, prazo e entrega, horário e endereço, boas-vindas para cliente novo. Escreva do jeito que você fala no balcão.\n\nSalva pra montar as suas.\n\nComente pronta para receber o material gratuito em PDF por DM.\n",
   "hashtags": [
     "#otalogia",
     "#pequenosnegocios",
@@ -142,8 +142,21 @@
       "ordem": 8,
       "arquivo": "slide-08.png",
       "papel": "cta",
-      "texto": "QUER MODELOS DE RESPOSTA prontas? Comenta PRONTA que eu te mando no direct"
+      "texto": "QUER MODELOS DE RESPOSTA prontas? Comenta pronta que eu te mando no direct"
     }
   ],
-  "formato_midia": "motion-capa"
+  "formato_midia": "motion-capa",
+  "dm": {
+    "palavra": "PRONTA",
+    "titulo": "A MESMA RESPOSTA SALVA. chega de digitar",
+    "link": "https://drive.google.com/file/d/1CBm2nNgQ7Pu4Mpem8iH5KdnTBAP3D1eR/view",
+    "catalogo": {
+      "provedor": "supabase/ig_dm_catalog",
+      "perfil": "otalogia",
+      "palavra": "PRONTA",
+      "categoria": "ATENDIMENTO"
+    },
+    "material_pdf": "OTALOGIA_DM_PRONTA_RESPOSTAS.pdf",
+    "entrega": "apenas_se_seguidor_confirmado_pela_meta"
+  }
 }

@@ -6,4 +6,4 @@ Comece pelo que mais chega: preço e formas de pagamento, prazo e entrega, horá
 
 Salva pra montar as suas.
 
-Comenta PRONTA que eu te mando modelos de resposta no direct.
+Comente pronta para receber o material gratuito em PDF por DM.
