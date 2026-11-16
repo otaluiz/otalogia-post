@@ -5,8 +5,8 @@
   "data_criacao": "2026-11-09",
   "status": "rascunho",
   "postado": true,
-  "postado_em": "2026-11-13 03:37:43",
-  "post_id": "17996149737109868",
+  "postado_em": "2026-11-16 12:42:01",
+  "post_id": "17971839536964419",
   "ordem_fila": 1,
   "tema": "O copo da Stanley que sobreviveu a um incêndio",
   "pilar": "educacional",
@@ -15,7 +15,7 @@
   "duracao_s": 50.7,
   "video": "reel.mp4",
   "capa": "capa.jpg",
-  "legenda": "Um carro pegou fogo e o copo da Stanley sobrou inteiro, ainda com gelo.\n\nO vídeo da dona passou de 80 milhões de visualizações. No dia seguinte, o presidente da marca respondeu prometendo um carro novo para ela. A marca tinha 110 anos, e quem fez o anúncio foi a cliente.\n\nComente COPO para receber o material gratuito em PDF por DM.\n\n#marketingdigital #pequenosnegocios #branding #marketingdeconteudo #aidealab\n",
+  "legenda": "Um carro pegou fogo e o copo da Stanley sobrou inteiro, ainda com gelo.\n\nO vídeo da dona passou de 80 milhões de visualizações. No dia seguinte, o presidente da marca respondeu prometendo um carro novo para ela. A marca tinha 110 anos, e quem fez o anúncio foi a cliente.\n\nComente copo para receber o material gratuito em PDF por DM.\n\n#marketingdigital #pequenosnegocios #branding #marketingdeconteudo #aidealab\n",
   "hashtags": [
     "#marketingdigital",
     "#pequenosnegocios",
@@ -31,6 +31,14 @@
   "dm": {
     "palavra": "COPO",
     "titulo": "O copo da Stanley que sobreviveu a um incêndio",
-    "link": "https://drive.google.com/file/d/1qfwEhxQPrIO14fmU8CWPWgEWI0TaEaxg/view"
+    "link": "https://drive.google.com/file/d/1nPwPBN6ssFaFLwfz3HlyBbvTB7wV0FZ2/view",
+    "catalogo": {
+      "provedor": "supabase/ig_dm_catalog",
+      "perfil": "otalogia",
+      "palavra": "COPO",
+      "categoria": "CONTEUDO"
+    },
+    "material_pdf": "AIDEALAB_DM_COPO_CORUJA_GUIA_PREMIUM.pdf",
+    "entrega": "apenas_se_seguidor_confirmado_pela_meta"
   }
 }
