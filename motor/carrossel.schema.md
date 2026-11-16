@@ -121,3 +121,7 @@ Colisão (JS, depois do ajuste do display): se emocao/CTA/corpo/gancho tocam cab
 ## Tecido (`tecido`)
 
 Trama de pano (`assets/pano.png`, soft-light, opacidade `--tex-pano`) por cima de tudo. T1b camadas: padrão ligado (`"tecido": false` desliga). T1: padrão desligado (`"tecido": true` liga). T4 (CTA): padrão ligado (`"tecido": false` desliga).
+
+## Guia PDF junto do conteúdo
+
+`meta.guia` opcional seleciona `{"fonte":"guia/guia.json"}` ou `{"reutilizar":"caminho/guia.pdf"}`. Em conteúdo novo, `metadata.py` exige fonte editorial (padrão `guia/guia.json`) ou PDF de reuso e gera `png/guia.pdf`. `metadata.material_pdf` registra arquivo, marca aidealab, template, hash da fonte e estado de revisão. Leia [PDF.md](PDF.md). O cliente/handle do post segue o tema original; gerar PDF não cria registro de DM.

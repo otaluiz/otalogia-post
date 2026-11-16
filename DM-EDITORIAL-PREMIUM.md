@@ -38,3 +38,6 @@ O conteúdo de feed (Reels/carrossel) é a chamada de atenção e introdução. 
 - Guarde toda pesquisa e conteúdo em `iscas/<categoria>/brief.md`, `pesquisa.md`, `conteudo.md`; produção de PDF continua condicionada à revisão e à aprovação editorial, sem geração a partir dos slides.
 - Quando for um guia novo, mantenha `status: piloto_aguardando_aprovacao` em `iscas/categorias.json` até a aprovação. Nunca anuncie envio automático de um PDF ausente.
 - Não alterar legendas de postagens antigas em lote e não reaproveitar arquivos de outra marca.
+
+## Produção integrada do guia — template aprovado
+A geração em lote do template foi autorizada pelo usuário. Para novos conteúdos, gerar o PDF rascunho na mesma entrega pelo fluxo de `motor/PDF.md`. Esta regra substitui a limitação a um único piloto e a identidade individual dos PDFs: todos os PDFs usam somente assinatura aidealab, azul #6EC9F7/navy #0A0E16 e laranja #FF5A1F. Preserve identidade/handle do post. Geração do PDF ocorre antes da aprovação editorial; envio a 07-Iscas-DM, ativação do catálogo e promessa de DM continuam sujeitos à revisão do material. Pesquisa independente e reuso por categoria continuam obrigatórios.

@@ -1,0 +1,47 @@
+{
+  "titulo": "Do briefing à primeira seção",
+  "subtitulo": "Um roteiro de trabalho para transformar uma necessidade real em uma interface testável.",
+  "categoria": "SITES",
+  "como_usar": "Preencha o diagnóstico, monte uma seção com conteúdo real e faça os testes antes de expandir.",
+  "paginas": [
+    {
+      "titulo": "Comece pelo problema",
+      "texto": "Defina quem vai usar a página, qual necessidade ela resolve e qual ação deve ficar clara. Registre as respostas antes de escolher os componentes.",
+      "itens": [
+        "Público: quem precisa desta página?",
+        "Tarefa: o que essa pessoa quer concluir?",
+        "Ação principal: qual é o próximo passo?",
+        "Critério de revisão: como saber se a tarefa está clara?"
+      ],
+      "dica": "Exemplo ilustrativo: uma oficina precisa mostrar serviços, região atendida e um caminho simples para pedir orçamento."
+    },
+    {
+      "titulo": "Monte e teste uma seção",
+      "texto": "Use conteúdo real para conferir a hierarquia. Depois, verifique interação e legibilidade em situações diferentes.",
+      "recursos": [
+        {
+          "nome": "MDN Web Docs",
+          "url": "https://developer.mozilla.org/pt-BR/docs/Learn_web_development",
+          "descricao": "Consulte fundamentos de estrutura, estilo e interação."
+        },
+        {
+          "nome": "WebAIM",
+          "url": "https://webaim.org/resources/contrastchecker/",
+          "descricao": "Confira o contraste entre texto e fundo."
+        }
+      ],
+      "dica": "Teste teclado, zoom, celular e mensagens de erro dos formulários."
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "MDN — Aprendendo desenvolvimento web",
+      "url": "https://developer.mozilla.org/pt-BR/docs/Learn_web_development"
+    },
+    {
+      "titulo": "WebAIM — Contrast Checker",
+      "url": "https://webaim.org/resources/contrastchecker/"
+    }
+  ],
+  "nota_fontes": "Modelo de estrutura, não material editorial aprovado. Confira as fontes na pesquisa do seu guia antes da distribuição."
+}

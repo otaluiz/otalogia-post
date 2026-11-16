@@ -1,0 +1,58 @@
+name: DM PDFs - auditar ou atualizar Drive
+on:
+  push:
+    paths:
+      - '.github/workflows/dm-pdfs-drive.yml'
+      - 'motor/dm_drive.py'
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: Auditar primeiro; atualizar exige manifesto revisado no commit
+        type: choice
+        options: [auditar, atualizar]
+        default: auditar
+      manifesto:
+        description: Caminho do manifesto de PDFs revisados (somente atualizar)
+        type: string
+        default: iscas/entrega-pdfs/manifesto.json
+permissions:
+  contents: read
+concurrency:
+  group: dm-pdfs-drive
+  cancel-in-progress: false
+jobs:
+  drive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Dependências
+        run: pip install 'google-api-python-client>=2.100,<3' 'google-auth>=2.25,<3' 'pypdf>=5,<8'
+      - name: Conferir filas ou atualizar PDFs revisados
+        env:
+          GOOGLE_DRIVE_CLIENT_ID: ${{ secrets.GOOGLE_DRIVE_CLIENT_ID }}
+          GOOGLE_DRIVE_CLIENT_SECRET: ${{ secrets.GOOGLE_DRIVE_CLIENT_SECRET }}
+          GOOGLE_DRIVE_REFRESH_TOKEN: ${{ secrets.GOOGLE_DRIVE_REFRESH_TOKEN }}
+          MODO: ${{ inputs.modo || 'auditar' }}
+          MANIFESTO: ${{ inputs.manifesto }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "$MODO" = auditar ]; then
+            python motor/dm_drive.py auditar --saida artefatos-dm
+          elif [ "$MODO" = atualizar ]; then
+            python motor/dm_drive.py atualizar --manifesto "$MANIFESTO" --saida artefatos-dm
+          else
+            echo 'Modo inválido'; exit 1
+          fi
+      - name: Guardar auditoria, originais ou backups e resultado
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dm-pdfs-${{ inputs.modo || 'auditar' }}-${{ github.run_id }}
+          path: artefatos-dm/
+          if-no-files-found: warn
+          retention-days: 14

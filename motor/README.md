@@ -36,3 +36,7 @@ Recorte de sujeito (`recorte`, modo camadas) usa rembg, que roda local ou na nuv
 ## Uso como submódulo
 
 `git submodule add <url> motor` e apontar o render para o tema da marca, por exemplo `python ../../motor/render.py carrossel.json png --tema ../../design-system/tema`.
+
+## PDF junto do conteúdo
+
+O comando `metadata.py` também gera o guia editorial no template aidealab azul/laranja. Para conteúdo novo, prepare `guia/guia.json` ou indique um PDF canônico em `meta.guia.reutilizar`. Instruções e comandos em [PDF.md](PDF.md).

@@ -15,6 +15,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from guia_pdf import preparar_material
+
 PAPEIS = {"T1": "hook", "T1b": "hook", "T4": "cta"}
 
 
@@ -38,6 +40,10 @@ def gerar(json_path, tema, ordem_fila=None, hashtags=()):
     d = json.loads(json_path.read_text(encoding="utf-8"))
     pasta = json_path.parent
     png = pasta / "png"
+    destino = png / "metadata.json"
+    antigo = json.loads(destino.read_text(encoding="utf-8")) if destino.exists() else None
+    if antigo and (antigo.get("postado") or antigo.get("post_id") or antigo.get("postado_em")):
+        return destino  # nunca recriar PDF nem reescrever metadados publicados
     slides = d["slides"]
     n = len(slides)
     legenda_md = pasta / "legenda.md"
@@ -45,7 +51,7 @@ def gerar(json_path, tema, ordem_fila=None, hashtags=()):
         "carousel_id": d["id"],
         "cliente": tema["marca"],
         "data_criacao": date.today().isoformat(),
-        "status": "aprovado",
+        "status": "rascunho",
         "postado": False,
         "postado_em": None,
         "post_id": None,
@@ -73,9 +79,14 @@ def gerar(json_path, tema, ordem_fila=None, hashtags=()):
     destino = png / "metadata.json"
     if destino.exists():
         antigo = json.loads(destino.read_text(encoding="utf-8"))
-        for k in ("postado", "postado_em", "post_id", "data_criacao"):
+        for k in ("postado", "postado_em", "post_id", "data_criacao", "status"):
             if k in antigo:
                 meta[k] = antigo[k]
+    material = preparar_material(json_path, antigo)
+    if material:
+        meta["material_pdf"] = material
+    if antigo and "dm" in antigo:
+        meta["dm"] = antigo["dm"]  # gerar um arquivo não ativa entrega por DM
     destino.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     return destino
 
