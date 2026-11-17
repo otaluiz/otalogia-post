@@ -1,0 +1,44 @@
+{
+  "carousel_id": "reel-trafego-pago-mudou",
+  "tipo": "reel",
+  "cliente": "aidealab",
+  "data_criacao": "2026-11-09",
+  "status": "rascunho",
+  "postado": true,
+  "postado_em": "2026-11-17 13:13:08",
+  "post_id": "17907945606349989",
+  "ordem_fila": 2,
+  "tema": "Três mudanças no tráfego pago",
+  "pilar": "tendência",
+  "personagem": "",
+  "formato": "1080x1920",
+  "duracao_s": 51.1,
+  "video": "reel.mp4",
+  "capa": "capa.jpg",
+  "legenda": "Três mudanças no tráfego pago que quase ninguém percebeu.\n\nO ChatGPT começou a testar anúncios, e o Brasil já entrou na lista. As conversas com a IA da Meta viraram dado de anúncio. E a Meta quer que você mande só a foto do produto e o orçamento, segundo o Wall Street Journal.\n\nSe a máquina faz o anúncio, o que sobra para você é a oferta.\n\nComente OFERTA para receber o material gratuito em PDF por DM.\n\n#trafegopago #marketingdigital #pequenosnegocios #anuncios #aidealab\n",
+  "hashtags": [
+    "#trafegopago",
+    "#marketingdigital",
+    "#pequenosnegocios",
+    "#anuncios",
+    "#aidealab"
+  ],
+  "fontes": [
+    "https://digiday.com/marketing/expand-thoughtfully-openai-offers-chatgpt-ads-to-new-markets-including-the-u-k-brazil-and-japan/",
+    "https://www.theregister.com/2025/10/01/meta_ai_use_informs_ads/",
+    "The Wall Street Journal, junho de 2025"
+  ],
+  "fonte_tendencia": null,
+  "dm": {
+    "palavra": "OFERTA",
+    "titulo": "Três mudanças no tráfego pago",
+    "catalogo": {
+      "provedor": "supabase/ig_dm_catalog",
+      "perfil": "otalogia",
+      "palavra": "OFERTA",
+      "categoria": "TRAFEGO"
+    },
+    "material_pdf": "AIDEALAB_DM_OFERTA_GUIA_PREMIUM.pdf",
+    "entrega": "apenas_se_seguidor_confirmado_pela_meta"
+  }
+}
