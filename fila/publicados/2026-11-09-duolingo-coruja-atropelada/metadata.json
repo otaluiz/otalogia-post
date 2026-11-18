@@ -1,0 +1,43 @@
+{
+  "carousel_id": "reel-duolingo-coruja-atropelada",
+  "tipo": "reel",
+  "cliente": "aidealab",
+  "data_criacao": "2026-11-09",
+  "status": "rascunho",
+  "postado": true,
+  "postado_em": "2026-11-18 13:00:35",
+  "post_id": "18119049929047111",
+  "ordem_fila": 3,
+  "tema": "O Duolingo matou o próprio mascote",
+  "pilar": "educacional",
+  "personagem": "",
+  "formato": "1080x1920",
+  "duracao_s": 42.7,
+  "video": "reel.mp4",
+  "capa": "capa.jpg",
+  "legenda": "O Duolingo anunciou a morte do próprio mascote. Sem anúncio pago.\n\nEm duas semanas foram 1,7 bilhão de impressões orgânicas, segundo a empresa. E para trazer a coruja de volta, os usuários precisavam fazer lições. O Duolingo vendeu uma história que as pessoas queriam terminar.\n\nComente CORUJA para receber o material gratuito em PDF por DM.\n\n#marketingdigital #pequenosnegocios #branding #marketingdeconteudo #aidealab\n",
+  "hashtags": [
+    "#marketingdigital",
+    "#pequenosnegocios",
+    "#branding",
+    "#marketingdeconteudo",
+    "#aidealab"
+  ],
+  "fontes": [
+    "https://techcrunch.com/2025/02/18/duolingo-killed-its-mascot-with-a-cybertruck-and-its-going-weirdly-well/",
+    "https://www.fastcompany.com/91313082/duolingo-dead-duo-owl-social-media-campaign"
+  ],
+  "fonte_tendencia": null,
+  "dm": {
+    "palavra": "CORUJA",
+    "titulo": "O Duolingo matou o próprio mascote",
+    "catalogo": {
+      "provedor": "supabase/ig_dm_catalog",
+      "perfil": "otalogia",
+      "palavra": "CORUJA",
+      "categoria": "CONTEUDO"
+    },
+    "material_pdf": "AIDEALAB_DM_COPO_CORUJA_GUIA_PREMIUM.pdf",
+    "entrega": "apenas_se_seguidor_confirmado_pela_meta"
+  }
+}
