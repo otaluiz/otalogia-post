@@ -1,0 +1,44 @@
+{
+  "carousel_id": "reel-sistemas-pix-whatsapp",
+  "tipo": "reel",
+  "cliente": "aidealab",
+  "data_criacao": "2026-11-09",
+  "status": "rascunho",
+  "postado": true,
+  "postado_em": "2026-11-19 12:56:21",
+  "post_id": "18123151393991974",
+  "ordem_fila": 4,
+  "tema": "Os sistemas que fazem o seu negócio vender mudaram",
+  "pilar": "tendência",
+  "personagem": "",
+  "formato": "1080x1920",
+  "duracao_s": 48.9,
+  "video": "reel.mp4",
+  "capa": "capa.jpg",
+  "legenda": "Os sistemas que fazem o seu negócio vender já mudaram.\n\nO Pix bateu 318 milhões de transações num único dia, segundo o Banco Central. Com o Pix Automático, o cliente autoriza uma vez e a mensalidade cai todo mês. E o WhatsApp Business ganhou uma IA que atende, mas ela só responde com o que você ensinou.\n\nComente ZAP para receber o material gratuito em PDF por DM.\n\n#sistemas #tecnologia #pequenosnegocios #gestaoempresarial #aidealab\n",
+  "hashtags": [
+    "#sistemas",
+    "#tecnologia",
+    "#pequenosnegocios",
+    "#gestaoempresarial",
+    "#aidealab"
+  ],
+  "fontes": [
+    "https://gironews.com/negocios/pix-registra-recorde-de-318-milhoes-de-transacoes-em-um-dia/",
+    "https://olhardigital.com.br/2025/06/04/pro/agora-e-oficial-banco-central-apresenta-o-pix-automatico/",
+    "https://www.socialhub.pro/blog/business-ai-whatsapp-2026-meta-vs-plataforma/"
+  ],
+  "fonte_tendencia": null,
+  "dm": {
+    "palavra": "ZAP",
+    "titulo": "Os sistemas que fazem o seu negócio vender mudaram",
+    "catalogo": {
+      "provedor": "supabase/ig_dm_catalog",
+      "perfil": "otalogia",
+      "palavra": "ZAP",
+      "categoria": "ATENDIMENTO"
+    },
+    "material_pdf": "AIDEALAB_DM_ZAP_GUIA_PREMIUM.pdf",
+    "entrega": "apenas_se_seguidor_confirmado_pela_meta"
+  }
+}
