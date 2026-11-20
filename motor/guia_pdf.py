@@ -65,11 +65,12 @@ def montar(d):
         css = css.replace(f'fonts/{name}', f'data:font/ttf;base64,{data}')
     # O template não depende de fontes ou assets externos.
     total = len(d['paginas']) + 3  # capa, mapa e referências
-    brand = '<div class="brand">aidealab</div>'
+    marca = d.get('marca', 'aidealab')  # guia.json pode trazer a marca (otalogia); padrão aidealab
+    brand = f'<div class="brand">{texto(marca)}</div>'
     def top(label):
         return f'<div class="top">{brand}<div class="eyebrow">{texto(label)}</div></div>'
     def footer(i):
-        return f'<div class="footer"><span>AIDEALAB · GUIA {texto(d["categoria"])}</span><span><b>{i:02d}</b> / {total:02d}</span></div>'
+        return f'<div class="footer"><span>{texto(marca.upper())} · GUIA {texto(d["categoria"])}</span><span><b>{i:02d}</b> / {total:02d}</span></div>'
     pages = [f'<section class="page cover">{top("Guia prático")}<div class="cover-label eyebrow">Biblioteca de materiais · {texto(d["categoria"])}</div><div class="guide-intro"><h1 class="guide-title">{texto(d["titulo"])}</h1><p>{texto(d["subtitulo"])}</p></div><div class="cover-stat">{len(d["paginas"]):02d}<small>capítulos para consultar e aplicar</small></div>{footer(1)}</section>']
     toc = ''.join(f'<a href="#capitulo-{i}"><span class="tocno">{i:02d}</span><span>{texto(p["titulo"])}</span><span class="tocpage">{i+2:02d} ↗</span></a>' for i,p in enumerate(d['paginas'],1))
     pages.append(f'<section class="page">{top("Mapa do guia")}<div class="intro"><h2>Da ideia<br/>à <span class="serif">prática.</span></h2></div><nav class="toc">{toc}</nav><div class="tip"><strong>Como usar</strong>{texto(d.get("como_usar", "Escolha uma etapa, aplique no seu contexto e confira o resultado antes de continuar."))}</div>{footer(2)}</section>')
@@ -89,7 +90,7 @@ def montar(d):
     # Referências têm páginas próprias, com limite verificado no navegador.
     refs = ''.join(f'<a class="source" href="{url_segura(r["url"])}"><b>{texto(r["titulo"])}</b><span>{texto(r["url"])}</span></a>' for r in d['fontes'])
     pages.append(f'<section class="page end">{top("Referências")}<div class="intro"><h2>Para consultar<br/>e <span class="serif">aprofundar.</span></h2></div><div class="content">{refs}</div><div class="tip">{texto(d.get("nota_fontes", "Consulte as condições e atualizações de cada fonte antes de aplicar. Exemplos ilustrativos não representam resultados medidos."))}</div>{footer(total)}</section>')
-    return '<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>AIDEALAB — '+texto(d['titulo'])+'</title><style>'+css+'</style></head><body>'+''.join(pages)+'</body></html>', total
+    return '<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>'+texto(marca.upper())+' — '+texto(d['titulo'])+'</title><style>'+css+'</style></head><body>'+''.join(pages)+'</body></html>', total
 
 
 def gerar(fonte, destino=None, previews=None):
@@ -138,7 +139,7 @@ def gerar(fonte, destino=None, previews=None):
             p.unlink()
         for p in (temp/'previews').glob('*.png'):
             shutil.copyfile(p, previews/p.name)
-    return {'arquivo':destino.name, 'titulo':d['titulo'], 'categoria':d['categoria'], 'marca':'aidealab',
+    return {'arquivo':destino.name, 'titulo':d['titulo'], 'categoria':d['categoria'], 'marca':d.get('marca', 'aidealab'),
             'template':TEMPLATE_VERSION, 'paginas':total, 'fonte_sha256':hashlib.sha256(raw).hexdigest(),
             'status':'rascunho', 'revisao_visual':'pendente'}
 

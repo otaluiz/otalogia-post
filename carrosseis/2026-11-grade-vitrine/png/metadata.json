@@ -1,0 +1,79 @@
+{
+  "carousel_id": "2026-11-grade-vitrine",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-20",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 6,
+  "serie": "INSTAGRAM",
+  "tema": "SUA GRADE É VITRINE. o que está exposto?",
+  "familia_cor": "vice-sunset",
+  "template": "T1-T2-T3-T2-T3-T2c-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SUA GRADE É VITRINE. o que está exposto?"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "QUEM CHEGA OLHA OS PRIMEIROS POSTS e decide rápido."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "FIXE 3 O que você faz Prova: cliente ou resultado Como comprar ou chamar Troque quando outro vender mais"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "POST FIXADO VELHO é vitrine empoeirada."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "COMO FIXAR Abra o post no seu perfil Toque nos três pontinhos Escolha Fixar no perfil Repita até ter os 3"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "ARRUME A VITRINE antes de chamar gente."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "cta",
+      "texto": "QUER SABER QUAIS FIXAR NO SEU? Comenta VITRINE que eu te mando no direct"
+    }
+  ],
+  "legenda": "Sua grade é vitrine. O que está exposto nela agora?\n\nQuem chega no seu perfil olha os primeiros posts e decide rápido se fica.\n\nFixe 3:\n1. O que você faz\n2. Prova: cliente ou resultado\n3. Como comprar ou chamar\nE troque quando outro vender mais.\n\nPost fixado velho é vitrine empoeirada. Pra fixar: abra o post no seu perfil, toque nos três pontinhos, escolha \"Fixar no perfil\" e repita até ter os 3.\n\nArrume a vitrine antes de chamar gente.\n\nSalva pra arrumar a grade hoje.\n\nComenta VITRINE que eu te mando no direct quais posts fixar no seu perfil.\n\n#pequenosnegocios #instagramparanegocios #perfilprofissional #empreendedorismo #otalogia",
+  "hashtags": [
+    "#pequenosnegocios",
+    "#instagramparanegocios",
+    "#perfilprofissional",
+    "#empreendedorismo",
+    "#otalogia"
+  ],
+  "handle": "@otalogia",
+  "material_pdf": {
+    "arquivo": "guia.pdf",
+    "titulo": "Quais posts fixar no seu perfil",
+    "categoria": "INSTAGRAM",
+    "marca": "otalogia",
+    "template": "aidealab-azul-laranja-v1",
+    "paginas": 7,
+    "fonte_sha256": "5ca7b6a680c2a7761dfa08e014d54b084a309db0f7a97a29adadb0905fdbe3ff",
+    "status": "rascunho",
+    "revisao_visual": "pendente"
+  }
+}

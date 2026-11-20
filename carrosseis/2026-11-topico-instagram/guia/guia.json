@@ -1,0 +1,60 @@
+{
+ "marca": "otalogia",
+ "titulo": "Lista de assuntos pro seu perfil virar tópico",
+ "subtitulo": "Como escolher um assunto e repetir a mesma palavra até o Instagram entender do que você fala.",
+ "categoria": "INSTAGRAM",
+ "como_usar": "Leia um capítulo por vez e aplique no seu negócio antes de passar pro próximo.",
+ "fontes": [
+  {
+   "titulo": "Hypebeast: Instagram 'Seu algoritmo' coloca o controle do feed na mão do usuário",
+   "url": "https://hypebeast.com/pt/2026/6/instagram-your-algorithm-puts-main-feed-controls-first"
+  },
+  {
+   "titulo": "Tecnoblog: Instagram muda algoritmo e acaba com a farra da cópia de conteúdo",
+   "url": "https://tecnoblog.net/noticias/instagram-muda-algoritmo-e-acaba-a-com-farra-da-copia-de-conteudo/"
+  }
+ ],
+ "nota_fontes": "Material editorial otalogia, pesquisado em novembro de 2026 nas fontes acima. Confira as condições atuais de cada plataforma antes de aplicar.",
+ "paginas": [
+  {
+   "titulo": "Escolha um assunto",
+   "texto": "O cliente escolhe tópicos no feed. Seu perfil precisa caber em um.",
+   "itens": [
+    "Escreva em uma frase o que você resolve",
+    "Use a palavra que o cliente usaria",
+    "Corte o que não tem a ver"
+   ],
+   "dica": "Se você precisa explicar muito, o assunto está largo demais."
+  },
+  {
+   "titulo": "A mesma palavra em todo lugar",
+   "texto": "Repetição ajuda o Instagram e o cliente a te encaixar.",
+   "itens": [
+    "No nome do perfil",
+    "Na bio",
+    "Na primeira linha da legenda"
+   ],
+   "dica": "Troque sinônimo por repetição."
+  },
+  {
+   "titulo": "Post que ensina",
+   "texto": "Mostrar produto é bom; ensinar algo faz salvar.",
+   "itens": [
+    "Um erro comum do seu cliente",
+    "Um antes e depois explicado",
+    "Uma dúvida que chega todo dia"
+   ],
+   "dica": "Salvamento pesa mais que curtida."
+  },
+  {
+   "titulo": "Teste de 10 segundos",
+   "texto": "Abra seu perfil como cliente.",
+   "itens": [
+    "Olhe os 9 últimos posts",
+    "Dá pra dizer do que você fala?",
+    "Se não dá, refaça a grade com um assunto"
+   ],
+   "dica": "Repita o teste todo mês."
+  }
+ ]
+}

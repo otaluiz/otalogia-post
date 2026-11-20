@@ -1,0 +1,60 @@
+{
+ "marca": "otalogia",
+ "titulo": "10 ideias de post feitas por você",
+ "subtitulo": "Trocas práticas para sair do repost e postar conteúdo original sem gastar horas.",
+ "categoria": "INSTAGRAM",
+ "como_usar": "Leia um capítulo por vez e aplique no seu negócio antes de passar pro próximo.",
+ "fontes": [
+  {
+   "titulo": "Tecnoblog: Instagram muda algoritmo e acaba com a farra da cópia de conteúdo",
+   "url": "https://tecnoblog.net/noticias/instagram-muda-algoritmo-e-acaba-a-com-farra-da-copia-de-conteudo/"
+  },
+  {
+   "titulo": "Hypebeast: Instagram 'Seu algoritmo' coloca o controle do feed na mão do usuário",
+   "url": "https://hypebeast.com/pt/2026/6/instagram-your-algorithm-puts-main-feed-controls-first"
+  }
+ ],
+ "nota_fontes": "Material editorial otalogia, pesquisado em novembro de 2026 nas fontes acima. Confira as condições atuais de cada plataforma antes de aplicar.",
+ "paginas": [
+  {
+   "titulo": "Bastidor",
+   "texto": "Mostre o que acontece antes da entrega.",
+   "itens": [
+    "Preparando um pedido",
+    "Abrindo a loja",
+    "Organizando o estoque"
+   ],
+   "dica": "Celular na mão e luz natural bastam."
+  },
+  {
+   "titulo": "Sua opinião",
+   "texto": "Responda uma notícia ou tendência com a sua visão.",
+   "itens": [
+    "'Vi isso e no meu negócio funciona assim'",
+    "Cite a fonte na legenda",
+    "Fale em 30 segundos"
+   ],
+   "dica": "Opinião sua não tem como ser copiada."
+  },
+  {
+   "titulo": "Seu cliente",
+   "texto": "Com autorização, mostre quem compra.",
+   "itens": [
+    "Depoimento em vídeo curto",
+    "Antes e depois",
+    "Pergunta que ele fez"
+   ],
+   "dica": "Peça permissão sempre."
+  },
+  {
+   "titulo": "Sua versão do viral",
+   "texto": "Viu algo bom? Refaça do seu jeito.",
+   "itens": [
+    "Mesmo formato, seu assunto",
+    "Seu cenário",
+    "Sua legenda"
+   ],
+   "dica": "Inspirar é diferente de copiar."
+  }
+ ]
+}

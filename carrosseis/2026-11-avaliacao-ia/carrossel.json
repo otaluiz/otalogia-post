@@ -1,0 +1,162 @@
+{
+ "id": "2026-11-avaliacao-ia",
+ "meta": {
+  "serie": "GOOGLE",
+  "data": "2026/11",
+  "personagem": "luizota",
+  "guia": {
+   "fonte": "guia/guia.json"
+  }
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "O GOOGLE AGORA",
+    "AJUDA A RESPONDER"
+   ],
+   "emocao": {
+    "texto": "suas [avaliações].",
+    "posicao": "antes"
+   },
+   "imagem": "capa_orig.png",
+   "bloco": {
+    "y": 190,
+    "alinhar": "centro",
+    "largura": 936,
+    "manual": true
+   },
+   "recorte": "capa_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "rostos_sujeito": [
+     [
+      382,
+      519,
+      688,
+      800
+     ],
+     [
+      442,
+      907,
+      567,
+      1032
+     ]
+    ],
+    "cabeca": [
+     417,
+     494,
+     633,
+     717
+    ],
+    "caixa": [
+     117,
+     503,
+     937,
+     1439
+    ]
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "A IA ESCREVE",
+    "O RASCUNHO"
+   ],
+   "emocao": {
+    "texto": "você dá o {tom}.",
+    "posicao": "depois"
+   },
+   "imagem": null
+  },
+  {
+   "template": "T3",
+   "display": [
+    "RESPONDA {ASSIM}"
+   ],
+   "lista": [
+    "Agradeça pelo nome",
+    "Cite o que a pessoa elogiou",
+    "Na crítica, diga o que mudou",
+    "Termine convidando a voltar"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "AVALIAÇÃO SEM",
+    "RESPOSTA"
+   ],
+   "emocao": {
+    "texto": "parece loja {fechada}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "ESTA {SEMANA}"
+   ],
+   "lista": [
+    "Abra o Perfil da Empresa",
+    "Veja as avaliações sem resposta",
+    "Responda as 3 mais recentes",
+    "Revise o texto que a IA sugerir"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "QUEM RESPONDE"
+   ],
+   "emocao": {
+    "texto": "ganha o {próximo}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER 5 RESPOSTAS",
+    "PRONTAS?"
+   ],
+   "cta": {
+    "acao": "Comenta AVALIA",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta_orig.png",
+   "bloco": {
+    "y": 180,
+    "alinhar": "centro",
+    "largura": 936,
+    "manual": true,
+    "cta_y": 981
+   },
+   "sujeito": {
+    "rostos": [
+     [
+      352,
+      726,
+      673,
+      1022
+     ]
+    ],
+    "cabeca": [
+     390,
+     722,
+     601,
+     891
+    ],
+    "caixa": [
+     224,
+     729,
+     1079,
+     1439
+    ]
+   }
+  }
+ ]
+}

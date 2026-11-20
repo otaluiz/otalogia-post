@@ -1,0 +1,60 @@
+{
+ "marca": "otalogia",
+ "titulo": "5 respostas prontas para avaliações no Google",
+ "subtitulo": "Modelos pra adaptar, do elogio à crítica, mais o passo a passo pra responder com a ajuda da IA.",
+ "categoria": "GOOGLE",
+ "como_usar": "Leia um capítulo por vez e aplique no seu negócio antes de passar pro próximo.",
+ "fontes": [
+  {
+   "titulo": "Blog do Google: novas ferramentas do Gemini para o Perfil da Empresa",
+   "url": "https://blog.google/intl/pt-br/produtos/economize-tempo-e-impulsione-seu-negocio-com-as-novas-ferramentas-do-gemini/"
+  },
+  {
+   "titulo": "Meio & Mensagem: tendências de marketing e vendas para 2026 (do SEO ao GEO)",
+   "url": "https://www.meioemensagem.com.br/marketing/tendencias-que-devem-moldar-marketing-e-vendas-em-2026"
+  }
+ ],
+ "nota_fontes": "Material editorial otalogia, pesquisado em novembro de 2026 nas fontes acima. Confira as condições atuais de cada plataforma antes de aplicar.",
+ "paginas": [
+  {
+   "titulo": "Elogio",
+   "texto": "Agradeça pelo nome e cite o detalhe.",
+   "itens": [
+    "'Obrigado, Ana! Que bom que o bolo de cenoura fez sucesso.'",
+    "Convide a voltar",
+    "Responda em até 2 dias"
+   ],
+   "dica": "Detalhe mostra que uma pessoa leu."
+  },
+  {
+   "titulo": "Crítica",
+   "texto": "Reconheça, diga o que mudou, chame pro privado.",
+   "itens": [
+    "'Sentimos muito pela espera, João.'",
+    "'Reforçamos a equipe no sábado.'",
+    "'Me chama no WhatsApp pra resolver.'"
+   ],
+   "dica": "Nunca discuta em público."
+  },
+  {
+   "titulo": "Com a IA do Google",
+   "texto": "O Perfil da Empresa sugere um rascunho.",
+   "itens": [
+    "Abra as avaliações sem resposta",
+    "Gere o rascunho",
+    "Troque pelo seu jeito de falar antes de publicar"
+   ],
+   "dica": "A IA escreve, você assina."
+  },
+  {
+   "titulo": "Rotina da semana",
+   "texto": "10 minutos por semana.",
+   "itens": [
+    "Responda as 3 mais recentes",
+    "Veja as perguntas sem resposta",
+    "Peça avaliação para 2 clientes felizes"
+   ],
+   "dica": "Constância vale mais que volume."
+  }
+ ]
+}

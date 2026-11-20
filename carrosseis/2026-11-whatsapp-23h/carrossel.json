@@ -1,0 +1,147 @@
+{
+ "id": "2026-11-whatsapp-23h",
+ "meta": {
+  "serie": "WHATSAPP",
+  "data": "2026/11",
+  "personagem": "luizota",
+  "guia": {
+   "fonte": "guia/guia.json"
+  }
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "O CLIENTE MANDOU",
+    "\"OI\" ÀS 23H."
+   ],
+   "emocao": {
+    "texto": "quem [respondeu]?",
+    "posicao": "antes"
+   },
+   "imagem": "capa_orig.png",
+   "recorte": "capa_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     351,
+     635,
+     610,
+     881
+    ],
+    "caixa": [
+     212,
+     643,
+     1079,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 190,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "A IA DO WHATSAPP",
+    "RESPONDE SOZINHA"
+   ],
+   "emocao": {
+    "texto": "com o que você {ensinar}.",
+    "posicao": "depois"
+   },
+   "imagem": null
+  },
+  {
+   "template": "T3",
+   "display": [
+    "AS {4} REGRAS"
+   ],
+   "lista": [
+    "Horário: o que dizer fora dele",
+    "Preço: o que ela pode falar",
+    "Prazo: o que ela pode prometer",
+    "Quando chamar você"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "SEM REGRA,",
+    "ELA INVENTA"
+   ],
+   "emocao": {
+    "texto": "e quem paga é {você}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "ESCREVA {HOJE}"
+   ],
+   "lista": [
+    "As 5 perguntas que mais chegam",
+    "Sua resposta para cada uma",
+    "O que ela nunca deve prometer",
+    "Seu número para o caso difícil"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "ATENDIMENTO 24H"
+   ],
+   "emocao": {
+    "texto": "começa no {papel}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER O MODELO",
+    "DAS REGRAS?"
+   ],
+   "cta": {
+    "acao": "Comenta REGRAS",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta_orig.png",
+   "bloco": {
+    "y": 180,
+    "alinhar": "centro",
+    "largura": 936,
+    "manual": true,
+    "cta_y": 917
+   },
+   "sujeito": {
+    "rostos": [
+     [
+      389,
+      654,
+      622,
+      866
+     ]
+    ],
+    "cabeca": [
+     418,
+     639,
+     588,
+     827
+    ],
+    "caixa": [
+     0,
+     646,
+     725,
+     1439
+    ]
+   }
+  }
+ ]
+}

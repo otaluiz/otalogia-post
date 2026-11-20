@@ -19,3 +19,4 @@ fila/**/*.jpg
 fila/**/extras/
 publicador/.env
 carrosseis/*/motion/neon.*
+carrosseis/*/.compor_cache/

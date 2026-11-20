@@ -137,8 +137,11 @@ def main():
     argv = sys.argv[1:]
     tema = argv[argv.index("--tema") + 1] if "--tema" in argv else None
     args = [a for a in argv if not a.startswith("--") and a != tema]
-    if tema:
-        NEON = json.loads((Path(tema) / "tema.json").read_text(encoding="utf-8")).get("familia_cor") == "vice-sunset"
+    src0 = Path(args[0] if args else "carrossel.json").resolve()
+    # sem --tema: a família de cor gravada pelo metadata.py (png/metadata.json) decide o estilo
+    fonte = Path(tema) / "tema.json" if tema else src0.parent / "png" / "metadata.json"
+    if fonte.exists():
+        NEON = json.loads(fonte.read_text(encoding="utf-8")).get("familia_cor") == "vice-sunset"
     src = Path(args[0] if args else "carrossel.json").resolve()
     dest = src.parent / "motion" / "index.html"
     if dest.exists() and "--force" not in sys.argv:
