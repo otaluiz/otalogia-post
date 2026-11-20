@@ -1,0 +1,79 @@
+{
+  "carousel_id": "2026-11-site-3-segundos",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-20",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 7,
+  "serie": "SITES",
+  "tema": "SEU SITE DEMORA 3 SEGUNDOS? o cliente já foi.",
+  "familia_cor": "vice-sunset",
+  "template": "T1-T2-T3-T2-T3-T2c-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SEU SITE DEMORA 3 SEGUNDOS? o cliente já foi."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "NO CELULAR NINGUÉM ESPERA ele volta pro Google."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE PESA Foto enorme sem compressão Vídeo tocando sozinho no topo Plugin que ninguém usa Hospedagem barata demais"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "SITE LENTO SOME DA BUSCA o Google mede a velocidade."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "TESTE GRÁTIS Abra o PageSpeed Insights Cole o endereço do seu site Veja a nota no celular Comece pelo item vermelho"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "RÁPIDO VENDE lento só carrega."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "cta",
+      "texto": "QUER QUE EU OLHE O SEU SITE? Comenta SITE que eu te mando no direct"
+    }
+  ],
+  "legenda": "Seu site demora 3 segundos pra abrir? O cliente já foi.\n\nNo celular ninguém espera: ele volta pro Google e clica no próximo. E site lento some da busca, porque o Google mede a velocidade.\n\nO que pesa:\n1. Foto enorme sem compressão\n2. Vídeo tocando sozinho no topo\n3. Plugin que ninguém usa\n4. Hospedagem barata demais\n\nTeste grátis: abra o PageSpeed Insights, cole o endereço do seu site, veja a nota no celular e comece pelo item vermelho.\n\nRápido vende. Lento só carrega.\n\nSalva pra testar hoje.\n\nComenta SITE que eu olho o seu e te mando no direct o que arrumar primeiro.\n\n#criacaodesites #webdesignbrasil #pequenosnegocios #sites #otalogia",
+  "hashtags": [
+    "#criacaodesites",
+    "#webdesignbrasil",
+    "#pequenosnegocios",
+    "#sites",
+    "#otalogia"
+  ],
+  "handle": "@otalogia",
+  "material_pdf": {
+    "arquivo": "guia.pdf",
+    "titulo": "O que arrumar primeiro no site lento",
+    "categoria": "SITES",
+    "marca": "otalogia",
+    "template": "aidealab-azul-laranja-v1",
+    "paginas": 7,
+    "fonte_sha256": "aa3e9bd9388333879f86bb1962970a11ac7da3c922ccfe0cc3a97d8397a927e6",
+    "status": "rascunho",
+    "revisao_visual": "pendente"
+  }
+}

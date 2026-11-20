@@ -1,0 +1,156 @@
+{
+ "id": "2026-11-site-chatgpt",
+ "meta": {
+  "serie": "SITES",
+  "data": "2026/11",
+  "personagem": "luizota",
+  "guia": {
+   "fonte": "guia/guia.json"
+  }
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "SEU SITE RESPONDE",
+    "AO CHATGPT?"
+   ],
+   "emocao": {
+    "texto": "o cliente [perguntou] pra ele.",
+    "posicao": "antes"
+   },
+   "imagem": "capa_orig.png",
+   "bloco": {
+    "y": 190,
+    "alinhar": "centro",
+    "largura": 936,
+    "manual": true
+   },
+   "recorte": "capa_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "rostos_sujeito": [
+     [
+      371,
+      534,
+      702,
+      891
+     ]
+    ],
+    "cabeca": [
+     406,
+     522,
+     624,
+     737
+    ],
+    "caixa": [
+     74,
+     530,
+     1079,
+     1439
+    ]
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "O CLIENTE PERGUNTA",
+    "PRA IA"
+   ],
+   "emocao": {
+    "texto": "e a IA lê {sites}.",
+    "posicao": "depois"
+   },
+   "imagem": null
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE A IA {LÊ}"
+   ],
+   "lista": [
+    "O que você faz, logo no topo",
+    "Cidade e bairro escritos",
+    "Preço ou faixa de preço",
+    "Perguntas com resposta"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "SITE SÓ COM",
+    "FOTO BONITA"
+   ],
+   "emocao": {
+    "texto": "não responde {nada}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "TESTE {AGORA}"
+   ],
+   "lista": [
+    "Pergunte pra IA o melhor do seu ramo",
+    "Veja quem ela cita",
+    "Abra o site deles",
+    "Compare com o seu"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "ESCREVA A RESPOSTA"
+   ],
+   "emocao": {
+    "texto": "antes da {pergunta}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER O CHECKLIST",
+    "DO SITE?"
+   ],
+   "cta": {
+    "acao": "Comenta RESPONDE",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta_orig.png",
+   "bloco": {
+    "y": 180,
+    "alinhar": "centro",
+    "largura": 936,
+    "manual": true,
+    "cta_y": 913
+   },
+   "sujeito": {
+    "rostos": [
+     [
+      401,
+      644,
+      627,
+      855
+     ]
+    ],
+    "cabeca": [
+     424,
+     633,
+     581,
+     823
+    ],
+    "caixa": [
+     299,
+     641,
+     795,
+     1439
+    ]
+   }
+  }
+ ]
+}

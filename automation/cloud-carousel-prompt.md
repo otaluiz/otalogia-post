@@ -20,6 +20,9 @@ Siga `automation/daily-carousel-prompt.txt` do início ao fim, com estas diferen
   do roteiro (hook ≤ 10 palavras, sem número inventado, sem contraste "não é X, é Y", sem travessão).
 
 ## 2. Entregar
+- **Tema da semana:** de 23 a 29/11/2026 os carrosséis saem no `design-system/tema-gta` (visual GTA neon, já produzidos).
+  A partir de 30/11 volte ao `design-system/tema` (original). O motion é sempre obrigatório; o `gerar.py` escolhe o estilo
+  sozinho pela `familia_cor` do `png/metadata.json` (vice-sunset = neon; qualquer outra = motion padrão).
 - `status: "rascunho"` no `png/metadata.json` (aprovação é humana).
 - Motion (obrigatório, todo carrossel sai animado): na pasta do carrossel rode
   `python ../../motor/hyperframes/gerar.py carrossel.json` e confira que `motion/index.html` foi criado.

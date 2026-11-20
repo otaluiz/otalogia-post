@@ -1,0 +1,79 @@
+{
+  "carousel_id": "2026-11-whatsapp-23h",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-20",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 1,
+  "serie": "WHATSAPP",
+  "tema": "O CLIENTE MANDOU \"OI\" ÀS 23H. quem respondeu?",
+  "familia_cor": "vice-sunset",
+  "template": "T1-T2-T3-T2-T3-T2c-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "O CLIENTE MANDOU \"OI\" ÀS 23H. quem respondeu?"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "A IA DO WHATSAPP RESPONDE SOZINHA com o que você ensinar."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "AS 4 REGRAS Horário: o que dizer fora dele Preço: o que ela pode falar Prazo: o que ela pode prometer Quando chamar você"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "SEM REGRA, ELA INVENTA e quem paga é você."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "ESCREVA HOJE As 5 perguntas que mais chegam Sua resposta para cada uma O que ela nunca deve prometer Seu número para o caso difícil"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "ATENDIMENTO 24H começa no papel."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "cta",
+      "texto": "QUER O MODELO DAS REGRAS? Comenta REGRAS que eu te mando no direct"
+    }
+  ],
+  "legenda": "O cliente mandou \"oi\" às 23h. Quem respondeu? Se foi a IA do WhatsApp, ela respondeu com o que você ensinou.\n\nO WhatsApp Business ganhou uma IA que atende sozinha. Sem regra escrita, ela improvisa, e quem paga a conta é você.\n\nAs 4 regras antes de ligar:\n1. Horário: o que dizer fora dele\n2. Preço: o que ela pode falar\n3. Prazo: o que ela pode prometer\n4. Quando chamar você\n\nEscreva hoje as 5 perguntas que mais chegam, sua resposta para cada uma, o que ela nunca deve prometer e o seu número para o caso difícil.\n\nAtendimento 24h começa no papel.\n\nSalva pra escrever as regras essa semana.\n\nComenta REGRAS que eu te mando no direct um modelo pronto pra preencher.\n\n#pequenosnegocios #whatsappbusiness #atendimento #inteligenciaartificial #otalogia",
+  "hashtags": [
+    "#pequenosnegocios",
+    "#whatsappbusiness",
+    "#atendimento",
+    "#inteligenciaartificial",
+    "#otalogia"
+  ],
+  "handle": "@otalogia",
+  "material_pdf": {
+    "arquivo": "guia.pdf",
+    "titulo": "Regras da IA do WhatsApp: o que escrever antes de ligar",
+    "categoria": "ATENDIMENTO",
+    "marca": "otalogia",
+    "template": "aidealab-azul-laranja-v1",
+    "paginas": 7,
+    "fonte_sha256": "2d173607483ed74e9b9f4223d50ca856cce2c2e1d79fa41872b3f9e5c60c8a67",
+    "status": "rascunho",
+    "revisao_visual": "pendente"
+  }
+}

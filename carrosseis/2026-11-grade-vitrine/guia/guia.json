@@ -1,0 +1,60 @@
+{
+ "marca": "otalogia",
+ "titulo": "Quais posts fixar no seu perfil",
+ "subtitulo": "Como escolher os 3 fixados que fazem quem chega entender, confiar e chamar.",
+ "categoria": "INSTAGRAM",
+ "como_usar": "Leia um capítulo por vez e aplique no seu negócio antes de passar pro próximo.",
+ "fontes": [
+  {
+   "titulo": "Central de Ajuda do Instagram: fixar publicações no perfil",
+   "url": "https://help.instagram.com/"
+  },
+  {
+   "titulo": "Hypebeast: Instagram 'Seu algoritmo' coloca o controle do feed na mão do usuário",
+   "url": "https://hypebeast.com/pt/2026/6/instagram-your-algorithm-puts-main-feed-controls-first"
+  }
+ ],
+ "nota_fontes": "Material editorial otalogia, pesquisado em novembro de 2026 nas fontes acima. Confira as condições atuais de cada plataforma antes de aplicar.",
+ "paginas": [
+  {
+   "titulo": "Fixado 1: o que você faz",
+   "texto": "Um post que explica seu serviço em segundos.",
+   "itens": [
+    "Carrossel 'como funciona'",
+    "Vídeo se apresentando",
+    "Seu produto principal"
+   ],
+   "dica": "Quem chega não sabe nada de você."
+  },
+  {
+   "titulo": "Fixado 2: prova",
+   "texto": "Algo que mostre resultado.",
+   "itens": [
+    "Depoimento de cliente",
+    "Antes e depois",
+    "Números reais, se tiver"
+   ],
+   "dica": "Prova vale mais que promessa."
+  },
+  {
+   "titulo": "Fixado 3: como comprar",
+   "texto": "O caminho até você.",
+   "itens": [
+    "Como pedir ou agendar",
+    "Onde fica e horário",
+    "Link ou WhatsApp"
+   ],
+   "dica": "Não faça o cliente procurar."
+  },
+  {
+   "titulo": "Como fixar",
+   "texto": "No app do Instagram.",
+   "itens": [
+    "Abra o post no seu perfil",
+    "Toque nos três pontinhos",
+    "Escolha 'Fixar no perfil'"
+   ],
+   "dica": "Revise os fixados todo mês."
+  }
+ ]
+}

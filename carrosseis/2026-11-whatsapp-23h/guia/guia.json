@@ -1,0 +1,60 @@
+{
+ "marca": "otalogia",
+ "titulo": "Regras da IA do WhatsApp: o que escrever antes de ligar",
+ "subtitulo": "Um modelo pra preencher: o que a IA pode responder sozinha e quando ela chama você.",
+ "categoria": "ATENDIMENTO",
+ "como_usar": "Leia um capítulo por vez e aplique no seu negócio antes de passar pro próximo.",
+ "fontes": [
+  {
+   "titulo": "Forbes Brasil: WhatsApp Business lança IA agêntica para PMEs",
+   "url": "https://forbes.com.br/forbes-tech/2026/02/whatsapp-business-lanca-ia-agentica-para-pmes/"
+  },
+  {
+   "titulo": "Uai/Sebrae: automação do atendimento no WhatsApp entre os usos de IA dos pequenos",
+   "url": "https://www.uai.com.br/?p=189218"
+  }
+ ],
+ "nota_fontes": "Material editorial otalogia, pesquisado em novembro de 2026 nas fontes acima. Confira as condições atuais de cada plataforma antes de aplicar.",
+ "paginas": [
+  {
+   "titulo": "Horário",
+   "texto": "Diga quando uma pessoa volta a atender.",
+   "itens": [
+    "Modelo: 'Recebi sua mensagem. Respondo a partir das 8h.'",
+    "Nada de 'já já' fora do horário",
+    "Mesmo horário do Google e do Instagram"
+   ],
+   "dica": "Horário igual em todo lugar evita reclamação."
+  },
+  {
+   "titulo": "Preço",
+   "texto": "A IA só fala o preço que está na tabela.",
+   "itens": [
+    "Cole a tabela atualizada",
+    "Desconto e frete combinado ficam com você",
+    "Revise sempre que o preço mudar"
+   ],
+   "dica": "Preço velho na IA é o erro mais caro."
+  },
+  {
+   "titulo": "Prazo",
+   "texto": "Só prometa o que você controla.",
+   "itens": [
+    "Use faixa: 'de 2 a 4 dias úteis'",
+    "Prazo de terceiros vai como estimado",
+    "Pedido urgente: chame você"
+   ],
+   "dica": "Prometa menos e entregue antes."
+  },
+  {
+   "titulo": "Quando chamar você",
+   "texto": "Liste quando a IA para e passa a conversa.",
+   "itens": [
+    "Reclamação ou cliente irritado",
+    "Troca, devolução e cobrança",
+    "Pergunta que não está nas suas respostas"
+   ],
+   "dica": "Avise o cliente: 'Vou chamar alguém pra te ajudar.'"
+  }
+ ]
+}

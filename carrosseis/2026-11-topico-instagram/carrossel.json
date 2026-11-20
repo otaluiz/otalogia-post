@@ -1,0 +1,150 @@
+{
+ "id": "2026-11-topico-instagram",
+ "meta": {
+  "serie": "INSTAGRAM",
+  "data": "2026/11",
+  "personagem": "luizota",
+  "guia": {
+   "fonte": "guia/guia.json"
+  }
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "SEU CLIENTE ESCOLHE",
+    "O QUE VÊ."
+   ],
+   "emocao": {
+    "texto": "você é [tópico]?",
+    "posicao": "antes"
+   },
+   "imagem": "capa_orig.png",
+   "bloco": {
+    "y": 190,
+    "alinhar": "centro",
+    "largura": 936,
+    "manual": true
+   },
+   "recorte": "capa_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     405,
+     617,
+     617,
+     822
+    ],
+    "caixa": [
+     253,
+     625,
+     755,
+     1439
+    ]
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "O INSTAGRAM DEIXA",
+    "O USUÁRIO ESCOLHER"
+   ],
+   "emocao": {
+    "texto": "os {assuntos} do feed.",
+    "posicao": "depois"
+   },
+   "imagem": null
+  },
+  {
+   "template": "T3",
+   "display": [
+    "COMO SER",
+    "{ESCOLHIDO}"
+   ],
+   "lista": [
+    "Um assunto só no perfil",
+    "A mesma palavra na bio e na legenda",
+    "Post que ensina, não só mostra",
+    "Toda semana, sem sumir"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "PERFIL QUE FALA",
+    "DE TUDO"
+   ],
+   "emocao": {
+    "texto": "não é tópico de {ninguém}.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "TESTE DE",
+    "{10 SEGUNDOS}"
+   ],
+   "lista": [
+    "Abre seu perfil como cliente",
+    "Olha os 9 últimos posts",
+    "Dá pra dizer do que você fala?",
+    "Se não dá, escolha um assunto"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "O CLIENTE ESCOLHE"
+   ],
+   "emocao": {
+    "texto": "quem é {claro}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER A LISTA",
+    "DE ASSUNTOS?"
+   ],
+   "cta": {
+    "acao": "Comenta TOPICO",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta_orig.png",
+   "bloco": {
+    "y": 180,
+    "alinhar": "centro",
+    "largura": 936,
+    "manual": true,
+    "cta_y": 900
+   },
+   "sujeito": {
+    "rostos": [
+     [
+      376,
+      596,
+      672,
+      870
+     ]
+    ],
+    "cabeca": [
+     406,
+     576,
+     612,
+     779
+    ],
+    "caixa": [
+     231,
+     584,
+     786,
+     1439
+    ]
+   }
+  }
+ ]
+}

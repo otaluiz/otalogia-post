@@ -1,0 +1,60 @@
+{
+ "marca": "otalogia",
+ "titulo": "Checklist: seu site responde ao ChatGPT?",
+ "subtitulo": "O que a IA precisa encontrar no seu site para citar o seu negócio quando o cliente pergunta.",
+ "categoria": "SITES",
+ "como_usar": "Leia um capítulo por vez e aplique no seu negócio antes de passar pro próximo.",
+ "fontes": [
+  {
+   "titulo": "Meio & Mensagem: tendências de marketing e vendas para 2026 (do SEO ao GEO)",
+   "url": "https://www.meioemensagem.com.br/marketing/tendencias-que-devem-moldar-marketing-e-vendas-em-2026"
+  },
+  {
+   "titulo": "Baguete: trate o seu site como um produto",
+   "url": "https://www.baguete.com.br/noticias/trate-o-seu-site-como-um-produto"
+  }
+ ],
+ "nota_fontes": "Material editorial otalogia, pesquisado em novembro de 2026 nas fontes acima. Confira as condições atuais de cada plataforma antes de aplicar.",
+ "paginas": [
+  {
+   "titulo": "Topo da página",
+   "texto": "A primeira tela responde o que você faz e onde.",
+   "itens": [
+    "Serviço em uma frase",
+    "Cidade e bairro escritos",
+    "Botão de contato visível"
+   ],
+   "dica": "Se a IA não acha em 3 linhas, ela cita outro."
+  },
+  {
+   "titulo": "Preço e condições",
+   "texto": "Faixa de preço ajuda a responder 'quanto custa'.",
+   "itens": [
+    "'A partir de R$...' quando der",
+    "Formas de pagamento",
+    "Prazo médio"
+   ],
+   "dica": "Sem preço, a resposta vai pro concorrente."
+  },
+  {
+   "titulo": "Perguntas com resposta",
+   "texto": "Uma seção de perguntas frequentes no site.",
+   "itens": [
+    "As 5 perguntas que mais chegam",
+    "Resposta curta e direta",
+    "Atualize quando mudar"
+   ],
+   "dica": "Escreva como você responde no balcão."
+  },
+  {
+   "titulo": "Teste com a IA",
+   "texto": "Pergunte e compare.",
+   "itens": [
+    "'Qual o melhor [serviço] em [cidade]?'",
+    "Veja quem é citado",
+    "Compare o site deles com o seu"
+   ],
+   "dica": "Refaça o teste depois de cada ajuste."
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "marca": "otalogia",
+ "titulo": "O que arrumar primeiro no site lento",
+ "subtitulo": "Um roteiro pra medir a velocidade do seu site e começar pelos ajustes que mais pesam.",
+ "categoria": "SITES",
+ "como_usar": "Leia um capítulo por vez e aplique no seu negócio antes de passar pro próximo.",
+ "fontes": [
+  {
+   "titulo": "Google PageSpeed Insights",
+   "url": "https://pagespeed.web.dev/"
+  },
+  {
+   "titulo": "Baguete: trate o seu site como um produto",
+   "url": "https://www.baguete.com.br/noticias/trate-o-seu-site-como-um-produto"
+  }
+ ],
+ "nota_fontes": "Material editorial otalogia, pesquisado em novembro de 2026 nas fontes acima. Confira as condições atuais de cada plataforma antes de aplicar.",
+ "paginas": [
+  {
+   "titulo": "Meça",
+   "texto": "Use o PageSpeed Insights.",
+   "itens": [
+    "Cole o endereço do site",
+    "Olhe a nota do celular",
+    "Anote os itens em vermelho"
+   ],
+   "dica": "Meça antes de mexer, pra comparar depois."
+  },
+  {
+   "titulo": "Imagens",
+   "texto": "O vilão mais comum.",
+   "itens": [
+    "Comprima antes de subir",
+    "Use WebP quando der",
+    "Não suba foto de 5 MB"
+   ],
+   "dica": "Foto leve não perde qualidade na tela do celular."
+  },
+  {
+   "titulo": "Excessos",
+   "texto": "Tudo que carrega sem precisar.",
+   "itens": [
+    "Vídeo tocando sozinho no topo",
+    "Plugin que ninguém usa",
+    "Pop-up logo na entrada"
+   ],
+   "dica": "Cada item a menos é tempo a menos."
+  },
+  {
+   "titulo": "Hospedagem",
+   "texto": "Barato demais sai caro.",
+   "itens": [
+    "Veja o tempo de resposta do servidor",
+    "Ative cache",
+    "Considere trocar se a nota não sobe"
+   ],
+   "dica": "Site rápido segura o cliente que veio do Google."
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "id": "2026-11-repost-original",
+ "meta": {
+  "serie": "INSTAGRAM",
+  "data": "2026/11",
+  "personagem": "luizota",
+  "guia": {
+   "fonte": "guia/guia.json"
+  }
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "REPOST PERDE",
+    "ALCANCE."
+   ],
+   "emocao": {
+    "texto": "o original [ganha].",
+    "posicao": "antes"
+   },
+   "imagem": "capa_orig.png",
+   "bloco": {
+    "y": 190,
+    "alinhar": "centro",
+    "largura": 936,
+    "manual": true
+   },
+   "recorte": "capa_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "rostos_sujeito": [
+     [
+      398,
+      661,
+      655,
+      897
+     ]
+    ],
+    "cabeca": [
+     425,
+     645,
+     602,
+     832
+    ],
+    "caixa": [
+     284,
+     652,
+     758,
+     1439
+    ]
+   }
+  },
+  {
+   "template": "T2",
+   "display": [
+    "O INSTAGRAM DÁ CRÉDITO",
+    "A QUEM CRIOU"
+   ],
+   "emocao": {
+    "texto": "não a quem {copiou}.",
+    "posicao": "depois"
+   },
+   "imagem": null
+  },
+  {
+   "template": "T3",
+   "display": [
+    "O QUE {CONTA}"
+   ],
+   "lista": [
+    "Foto e vídeo feitos por você",
+    "Sua opinião sobre o assunto",
+    "Seu cliente, seu balcão, seu dia",
+    "Legenda escrita do seu jeito"
+   ],
+   "textura": "grain"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "PEGAR POST",
+    "PRONTO"
+   ],
+   "emocao": {
+    "texto": "virou {atalho} pro nada.",
+    "posicao": "depois"
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "DO REPOST AO {SEU}"
+   ],
+   "lista": [
+    "Viu algo bom? Grave sua versão",
+    "Mostre como funciona aí",
+    "Cite a fonte na legenda",
+    "Poste do seu celular"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2c",
+   "display": [
+    "FEITO POR VOCÊ"
+   ],
+   "emocao": {
+    "texto": "vale {mais}.",
+    "posicao": "depois"
+   },
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER 10 IDEIAS",
+    "DE POST SEU?"
+   ],
+   "cta": {
+    "acao": "Comenta ORIGINAL",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta_orig.png",
+   "bloco": {
+    "y": 180,
+    "alinhar": "centro",
+    "largura": 936,
+    "manual": true,
+    "cta_y": 915
+   },
+   "sujeito": {
+    "rostos": [
+     [
+      385,
+      645,
+      610,
+      858
+     ]
+    ],
+    "cabeca": [
+     408,
+     637,
+     574,
+     825
+    ],
+    "caixa": [
+     148,
+     644,
+     854,
+     1439
+    ]
+   }
+  }
+ ]
+}
