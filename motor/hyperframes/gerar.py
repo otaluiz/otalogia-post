@@ -68,10 +68,15 @@ def slide_html(i, s, n, meta):
         larg = bloco.get("largura", 760 if tp == "T2c" else 936)
         left = 230 if tp == "T2c" else 72
         tag = "h1" if i == 0 else "h2"
-        out.append(f'    <div class="conteudo" style="top: {top}px; left: {left}px; width: {larg}px">')
+        centro = " centro" if bloco.get("alinhar") == "centro" else ""
+        out.append(f'    <div class="conteudo{centro}" style="top: {top}px; left: {left}px; width: {larg}px">')
+        emo = s.get("emocao") and f'      <p class="emocao">{marcar(s["emocao"]["texto"])}</p>'
+        antes = emo and s["emocao"].get("posicao") == "antes"
+        if antes:
+            out.append(emo)
         out.append(f'      <{tag} class="display" data-layout-allow-overflow data-layout-allow-occlusion>{disp}</{tag}>')
-        if s.get("emocao"):
-            out.append(f'      <p class="emocao">{marcar(s["emocao"]["texto"])}</p>')
+        if emo and not antes:
+            out.append(emo)
         if lista:
             itens = "".join(f'<li><i class="fio"></i><span class="n">{k + 1:02d}</span><span class="t">{marcar(t)}</span></li>' for k, t in enumerate(s["lista"]))
             out.append(f'      <ul class="lista">{itens}</ul>')
