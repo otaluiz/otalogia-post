@@ -15,8 +15,9 @@ Para cada slide 1, 2 e último com `imagem`:
 4. Escolhe `bloco` {y, alinhar, largura}: y em 200..1000 (passo 100) x esquerda/direita x largura 936/720/560.
    Rejeita: bloco que toca cabeça/rosto (+24u), fora de 190..1280 (meta em y<150, rodapé em y>1318), display com mais de 40% sob o
    sujeito (precisa ficar >= 60% visível). Pontua: agitação da imagem (Sobel médio na área visível do bloco), display
-   encolhido, e, sem recorte, sobreposição com o sujeito. Com recorte, sobrepor 10-35% do display ganha bônus
-   (profundidade). No T4 o bloco inclui a pill (+200u).
+   encolhido, e, sem recorte, sobreposição com o sujeito. Com recorte, o display só passa atrás da CABEÇA (nunca do
+   tronco/costas) e título 8-30% atrás da cabeça ganha bônus forte (capa de revista); alinhar "centro" entra como opção e
+   `texto_frente` sai. No T4 o bloco inclui a pill (+200u).
 Slides só de texto: `textura: "led"` nos de `lista` e no de conclusão (último texto antes do CTA).
 Guarda carrossel.json.bak uma vez (o original; re-rodar parte dele). Ajustes manuais que sobrevivem a re-rodar:
 `sujeito.rostos_manual` (caixas extras), `sujeito.rostos_so_manual: true` (ignora o Haar), `sujeito.cabeca_manual` (caixa da cabeça) e `bloco.manual: true` (bloco mantido).
@@ -142,10 +143,24 @@ def estimar(s, larg, fs0):
     return {"fs": fs, "linhas": linhas, "emo": eg, "h": y, "frente0": f0, "w": max([w for _, w, _, _ in linhas] + ([eg[0]] if eg else []))}
 
 
-def escolher(s, template, fs0, mask, sob, cab, rostos, recorte, propr=()):
+def escolher(s, template, fs0, mask, sob, cab, rostos, recorte, propr=(), fixo=None):
+    """Com recorte, o display só pode passar atrás do TOPO DA CABEÇA (cabelo/testa, 40% de cima da caixa da cabeça;
+    capa de revista), nunca atrás do rosto nem do tronco/costas: cobertura por rosto/tronco <= 4% por palavra; pelo
+    topo da cabeça <= 35% por palavra e <= 30% no total. Título atrás da cabeça
+    (8-30% coberto) ganha bônus forte: é o layout preferido sempre que couber. Regra das camadas: bold (display) atrás,
+    handwritten (emocao) na frente; emoção 10-60% sobre o corpo ganha bônus. `fixo` = bloco manual {y, alinhar, largura}:
+    só confere esse bloco (None = não cabe)."""
+    mcab = np.zeros_like(mask)
+    if recorte and cab:
+        topo = cab[1] + 0.40 * (cab[3] - cab[1])  # só cabelo/testa: o rosto conta como tronco (o título nunca cobre o rosto)
+        mcab[max(0, cab[1]):min(H, int(topo)), max(0, cab[0]):min(W, cab[2])] = True
+        mcab &= mask
+    mtor = mask & ~mcab
     ii_s = np.pad(np.cumsum(np.cumsum(sob * (~mask if recorte else 1), 0), 1), ((1, 0), (1, 0)))
     ii_c = np.pad(np.cumsum(np.cumsum((~mask if recorte else np.ones_like(mask)).astype(float), 0), 1), ((1, 0), (1, 0)))
     ii_m = np.pad(np.cumsum(np.cumsum(mask.astype(float), 0), 1), ((1, 0), (1, 0)))
+    ii_h = np.pad(np.cumsum(np.cumsum(mcab.astype(float), 0), 1), ((1, 0), (1, 0)))
+    ii_t = np.pad(np.cumsum(np.cumsum(mtor.astype(float), 0), 1), ((1, 0), (1, 0)))
 
     def soma(ii, b):
         x0, y0, x1, y1 = [int(round(v)) for v in b]
@@ -158,14 +173,15 @@ def escolher(s, template, fs0, mask, sob, cab, rostos, recorte, propr=()):
     # display atrás do sujeito pode passar pela cabeça do recorte (a cabeça fica por cima); texto à frente (emocao/pill) não:
     # o JS desloca, então aqui é só penalidade. Sem recorte, o bloco inteiro evita cabeça e rostos.
     melhor = None
-    for larg in (936, 720, 560):
+    largs = (fixo.get("largura", 936),) if fixo else (936, 720, 560)
+    for larg in largs:
         g = estimar(s, larg, fs0)
         fs = g["fs"]
-        for y in range(200, 1001, 100):
-            for al in ("esquerda", "direita"):
+        for y in ((fixo["y"],) if fixo else range(200 if not recorte else 190, 1001, 100 if not recorte else 30)):
+            for al in ((fixo.get("alinhar", "esquerda"),) if fixo else ("esquerda", "direita") + (("centro",) if recorte else ())):
                 if y < 190 or y + g["h"] > 1280:
                     continue
-                X = (lambda w: 72) if al == "esquerda" else (lambda w: 1008 - w)
+                X = {"esquerda": lambda w: 72, "direita": lambda w: 1008 - w, "centro": lambda w: (1080 - w) / 2}[al]
                 rd = []  # retângulos do display (por linha) e das palavras
                 for txt, w, y0, y1 in g["linhas"]:
                     rd.append(([X(w), y + y0, X(w) + w, y + y1], txt))
@@ -173,7 +189,8 @@ def escolher(s, template, fs0, mask, sob, cab, rostos, recorte, propr=()):
                 if g["emo"]:
                     w, y0, y1 = g["emo"]; fr.append([X(w), y + y0, X(w) + w, y + y1])
                 if g["h"] > g["frente0"]:
-                    fr.append([72 if al == "esquerda" else 1008 - 400, y + g["frente0"], (72 if al == "esquerda" else 1008) + (400 if al == "esquerda" else 0), y + g["h"]])
+                    x0 = {"esquerda": 72, "direita": 1008 - 400, "centro": 340}[al]
+                    fr.append([x0, y + g["frente0"], x0 + 400, y + g["h"]])
                 if any(cruza(b, f, 24) for b, _ in rd for f in rostos + ([] if recorte else list(propr) + ([cab] if cab else []))):
                     continue
                 pen = 0.0
@@ -182,29 +199,33 @@ def escolher(s, template, fs0, mask, sob, cab, rostos, recorte, propr=()):
                         pen += 0.6
                     else:
                         continue
-                # visibilidade do display atrás do sujeito: por palavra (nenhuma palavra > 12% coberta)
-                cov_max, cov_tot, atot = 0.0, 0.0, 0.0
+                # visibilidade do display atrás do sujeito, por palavra (altura das maiúsculas)
+                cov_max, cov_tot, atot, tor_max, cab_max, cab_tot = 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
                 for b, txt in rd:
                     lw = b[2] - b[0]
                     pos = 0
                     for palavra in txt.split(" "):
                         a = b[0] + lw * pos / max(len(txt), 1)
                         z = b[0] + lw * (pos + len(palavra)) / max(len(txt), 1)
-                        wb = [a, b[1] + 0.05 * (b[3] - b[1]), z, b[3] - 0.15 * (b[3] - b[1])]  # altura das maiúsculas
-                        c = soma(ii_m, wb) / max(area(wb), 1)
-                        cov_max = max(cov_max, c)
-                        cov_tot += soma(ii_m, wb); atot += area(wb)
+                        wb = [a, b[1] + 0.05 * (b[3] - b[1]), z, b[3] - 0.15 * (b[3] - b[1])]
+                        aw = max(area(wb), 1)
+                        cov_max = max(cov_max, soma(ii_m, wb) / aw)
+                        tor_max = max(tor_max, soma(ii_t, wb) / aw)
+                        cab_max = max(cab_max, soma(ii_h, wb) / aw)
+                        cov_tot += soma(ii_m, wb); cab_tot += soma(ii_h, wb); atot += area(wb)
                         pos += len(palavra) + 1
-                cov = cov_tot / max(atot, 1)
-                if recorte and (cov_max > 0.12 or cov > 0.25):
+                cov, cov_cab = cov_tot / max(atot, 1), cab_tot / max(atot, 1)
+                if recorte and (tor_max > 0.04 or cab_max > 0.35 or cov > 0.30):
                     continue
-                bb = [72 if al == "esquerda" else 1008 - g["w"], y, (72 if al == "esquerda" else 1008) , y + g["h"]]
-                bb = [bb[0], y, bb[0] + g["w"], y + g["h"]]
+                bb = [X(g["w"]), y, X(g["w"]) + g["w"], y + g["h"]]
                 vis = soma(ii_c, bb)
                 busy = (soma(ii_s, bb) / max(vis, 1)) / 40.0
                 sc = busy + pen + 0.8 * (1 - fs / fs0)
                 if recorte:
-                    sc -= 0.15 * min(cov, 0.35) / 0.35 if cov >= 0.10 else 0
+                    sc -= 0.6 if 0.08 <= cov_cab <= 0.30 else 0  # bold atrás da cabeça: layout preferido
+                    if g["emo"]:  # handwritten na frente, sobre o corpo (nunca o rosto): dá a profundidade
+                        eb = fr[0]
+                        sc -= 0.2 if 0.10 <= soma(ii_t, eb) / max(area(eb), 1) <= 0.60 else 0
                 else:
                     sc += 1.5 * soma(ii_m, bb) / max(area(bb), 1)
                 sc += 0.02 * (al == "direita") + 0.0003 * y
@@ -221,6 +242,8 @@ def main():
     ap.add_argument("json", nargs="+", help="um ou mais carrossel.json (compartilham --led e --sem-recorte)")
     ap.add_argument("--led", default="")
     ap.add_argument("--sem-recorte", action="store_true")
+    ap.add_argument("--alfa-duro", action="store_true",
+                    help="binariza o alfa do rembg (ilustração com contorno de tinta: a borda semitransparente vira dura)")
     a = ap.parse_args()
     for j in a.json:
         print(f"== {j}")
@@ -264,10 +287,14 @@ def compor(jp, a):
             rgba = Image.open(cache).convert("RGBA")
         else:
             if not _sessao:
-                _sessao.append(new_session())
+                _sessao.append(new_session("u2net"))  # explícito: o padrão do rembg 2.0.8x é bria-rmbg (1 GB, mata o processo por memória)
             rgba = remove(limpa, session=_sessao[0])
             cache.parent.mkdir(exist_ok=True)
             rgba.save(cache)
+        if a.alfa_duro:
+            r_, g_, b_, al = rgba.split()
+            al = al.point(lambda v: 255 if v > 127 else 0).filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.MinFilter(3))
+            rgba = Image.merge("RGBA", (r_, g_, b_, al))
         m_ruim, met = avaliar(rgba, area_max=0.85)
         mask = mascara(rgba)
         recorte = False
@@ -310,6 +337,10 @@ def compor(jp, a):
 
         cab, rostos, propr = classificar(recorte)
         r = None if manual_bloco else escolher(s, t0, fs0, mask, sob, cab, rostos, recorte, propr)
+        if recorte and manual_bloco and not escolher(s, t0, fs0, mask, sob, cab, rostos, True, propr, fixo=at["bloco"]):
+            recorte, motivo = False, "bloco manual deixaria o display atrás do corpo"
+            s.pop("recorte", None)
+            cab, rostos, propr = classificar(False)
         if recorte and not manual_bloco and not r:
             # sem lugar para o display atrás do sujeito (cabeça/corpo ocupam o quadro): foto inteira + texto, sem recorte
             recorte, motivo = False, "sem espaço para o display atrás do sujeito (palavras ficariam cobertas)"
@@ -340,6 +371,8 @@ def compor(jp, a):
             dec = f"bloco manual {s['bloco']}"
         elif r:
             s["bloco"] = {"y": r[1], "alinhar": r[2], "largura": r[3]}
+            if recorte:
+                s.pop("texto_frente", None)  # o layout já põe o display atrás só da cabeça
             dec = f"bloco y={r[1]} {r[2]} larg={r[3]} (agitação {r[4]}, display sob sujeito {r[5]:.0%}, fonte ~{r[6]})"
         else:
             s.pop("bloco", None)

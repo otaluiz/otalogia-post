@@ -1,6 +1,7 @@
 """Gera carrosseis/<slug>/motion/index.html (HyperFrames) a partir do carrossel.json do motor.
 
-Uso (da pasta do carrossel): python ../../motor/hyperframes/gerar.py carrossel.json [--force]
+Uso (da pasta do carrossel): python ../../motor/hyperframes/gerar.py carrossel.json [--force] [--tema ../../design-system/tema-gta]
+(--tema com familia_cor "vice-sunset" liga a variante neon: neon.css + neon.js, sem brasas.)
 
 Cada template ganha o motion padrão do tema (otalogia.js): foto acendendo com push-in e brasas (T1/T1b/T2 com foto/T4),
 título em cascata, frase manuscrita se escrevendo, marca-texto varrendo, lista em cascata, navegador nos T5 e pílula
@@ -14,6 +15,7 @@ import sys
 from pathlib import Path
 
 S = 6  # segundos por slide
+NEON = False  # tema vice-sunset (tema-gta): neon.css/neon.js por cima do motion padrão
 FOTO = {"T1", "T1b", "T2", "T4"}
 
 
@@ -73,9 +75,12 @@ def slide_html(i, s, n, meta):
         if lista:
             itens = "".join(f'<li><i class="fio"></i><span class="n">{k + 1:02d}</span><span class="t">{marcar(t)}</span></li>' for k, t in enumerate(s["lista"]))
             out.append(f'      <ul class="lista">{itens}</ul>')
-        if s.get("cta"):
-            out.append(f'      <div class="cta"><div class="pill">{html.escape(s["cta"]["acao"])}</div><p class="cta-txt">{html.escape(s["cta"]["texto"])}</p></div>')
+        cta = s.get("cta") and f'<div class="cta"><div class="pill">{html.escape(s["cta"]["acao"])}</div><p class="cta-txt">{html.escape(s["cta"]["texto"])}</p></div>'
+        if cta and not bloco.get("cta_y"):
+            out.append(f"      {cta}")
         out.append("    </div>")
+        if cta and bloco.get("cta_y"):  # CTA fora do bloco do título (ex.: título acima da cabeça, pílula nos ombros)
+            out.append(f'    <div class="conteudo" style="top: {bloco["cta_y"]}px; left: {left}px; width: {larg}px"><div style="text-align: center">{cta}</div></div>' if bloco.get("alinhar") == "centro" else f'    <div class="conteudo" style="top: {bloco["cta_y"]}px; left: {left}px; width: {larg}px">{cta}</div>')
         if foto and s.get("recorte") and not s.get("texto_frente"):
             out.append(f'    <img data-layout-allow-occlusion class="recorte" src="img/{s["recorte"]}" alt="" />')
         if i == 0:
@@ -98,7 +103,7 @@ def slide_js(i, s):
         return f'  m.referencia("{sid}", {t});'
     js = []
     if foto:
-        js.append(f'  m.foto("{sid}", {t}, {{ z: {1.06 if s.get("recorte") else 1.14}, brasas: {40 if tp in ("T1", "T1b") else 28} }});')
+        js.append(f'  m.foto("{sid}", {t}, {{ z: {1.06 if s.get("recorte") else 1.14}, brasas: {0 if NEON else 40 if tp in ("T1", "T1b") else 28} }});')
     if s.get("textura") == "led":
         js.append(f'  m.respira("#{sid} .led", {t});')
     if tp == "T2c":
@@ -122,11 +127,18 @@ def slide_js(i, s):
     if i == 0:
         js.append(f'  m.sobe("#{sid} .arrasta", {t + 2.6});')
         js.append(f'  tl.fromTo("#{sid} .arrasta b", {{ x: 0 }}, {{ x: 14, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 3 }}, {t + 3.1});')
+    if NEON:
+        js.append(f'  neon("{sid}", {t});')
     return "\n".join(js)
 
 
 def main():
-    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    global NEON
+    argv = sys.argv[1:]
+    tema = argv[argv.index("--tema") + 1] if "--tema" in argv else None
+    args = [a for a in argv if not a.startswith("--") and a != tema]
+    if tema:
+        NEON = json.loads((Path(tema) / "tema.json").read_text(encoding="utf-8")).get("familia_cor") == "vice-sunset"
     src = Path(args[0] if args else "carrossel.json").resolve()
     dest = src.parent / "motion" / "index.html"
     if dest.exists() and "--force" not in sys.argv:
@@ -138,6 +150,8 @@ def main():
     titulo = " ".join(capa.get("display", [])).capitalize()
     corpo = "\n\n".join(slide_html(i, s, n, meta) for i, s in enumerate(slides))
     timeline = "\n\n".join(slide_js(i, s) for i, s in enumerate(slides))
+    extra_head = '\n<link rel="stylesheet" href="neon.css" />\n<script src="neon.js"></script>' if NEON else ""
+    extra_js = "\n  const neon = otaNeon(tl, S, m);" if NEON else ""
     dest.parent.mkdir(exist_ok=True)
     dest.write_text(f"""<!doctype html>
 <html lang="pt-BR">
@@ -147,7 +161,7 @@ def main():
 <title>{html.escape(titulo)} (motion)</title>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <link rel="stylesheet" href="otalogia.css" />
-<script src="otalogia.js"></script>
+<script src="otalogia.js"></script>{extra_head}
 <style>
   #s1 .display {{ font-size: 132px; }}
 </style>
@@ -164,7 +178,7 @@ def main():
 
 <script>
   const tl = gsap.timeline({{ paused: true }});
-  const S = {S}, m = otaMotion(tl, S);
+  const S = {S}, m = otaMotion(tl, S);{extra_js}
   m.ajusta();
 
 {timeline}

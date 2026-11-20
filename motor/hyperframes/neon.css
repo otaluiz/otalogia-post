@@ -1,0 +1,28 @@
+/* Variante neon (tema-gta, vice-sunset): entra depois do otalogia.css quando gerar.py vê familia_cor "vice-sunset".
+   Mesmos tokens do design-system/tema-gta/tema.css; Anton só tem peso 400 (sem negrito sintético). */
+@font-face { font-family: "Anton"; src: url(fonts/Anton-Regular.ttf) format("truetype"); }
+@font-face { font-family: "Yellowtail"; src: url(fonts/Yellowtail-Regular.ttf) format("truetype"); }
+:root {
+  --ink: #1A0B2E; --papel: #F6E7D3; --branco: #FFF6EE;
+  --quente: #FF2E88; --quente-papel: #B3165B; --apoio: #19D3C5; --apoio-papel: #A64B00;
+  --f-display: "Anton", Impact, sans-serif; --f-serif: "Yellowtail", cursive;
+}
+.display { font-weight: 400; letter-spacing: .015em; line-height: .98; }
+.emocao, .rodape, .arrasta { font-style: normal; }
+.hl { color: var(--ink); }
+.slide:not(.papel) .display { text-shadow: 0 0 14px rgba(255, 46, 136, .35); }
+.com-foto .display, .com-foto .emocao, .com-foto .cta-txt { text-shadow: 0 3px 0 #1A0B2E, 0 0 18px rgba(26, 11, 46, .85); }
+.led { background-image: radial-gradient(rgba(255, 46, 136, .32) 1.7px, transparent 2px); }
+.papel .led { background-image: radial-gradient(rgba(179, 22, 91, .30) 1.7px, transparent 2px); }
+.lista .fio { background: rgba(25, 211, 197, .45); }
+.pill { font-weight: 400; letter-spacing: .03em; box-shadow: 0 0 0 rgba(25, 211, 197, 0); }
+
+/* pôr do sol que varre de baixo pra cima na entrada (só slides com foto ou ink) */
+.sol { position: absolute; left: 0; right: 0; bottom: 0; height: 100%; z-index: 5; pointer-events: none; mix-blend-mode: screen;
+  background: linear-gradient(0deg, rgba(255, 46, 136, .55), rgba(255, 154, 60, .35) 35%, rgba(255, 154, 60, 0) 70%); transform-origin: bottom; }
+/* scanlines leves de tela CRT */
+.scan { position: absolute; inset: 0; z-index: 6; pointer-events: none; opacity: .10;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, .9) 0 2px, transparent 2px 5px); }
+.papel .scan { display: none; }
+/* lista e texto do CTA seguem no corpo da marca, como no PNG estático */
+.lista li, .cta-txt { font-family: "Inter Tight", sans-serif; }
