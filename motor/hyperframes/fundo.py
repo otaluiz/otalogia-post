@@ -13,6 +13,12 @@ import numpy as np  # noqa: E402
 foto, rec = sys.argv[1], sys.argv[2]
 img = cv2.imread(foto)
 alfa = cv2.imread(rec, cv2.IMREAD_UNCHANGED)[:, :, 3]
+if img.shape[:2] != alfa.shape[:2]:  # foto _orig inteira: mesmo corte cover do compor (centro) para casar com o recorte
+    H, W = alfa.shape[:2]
+    k = max(W / img.shape[1], H / img.shape[0])
+    img = cv2.resize(img, (round(img.shape[1] * k), round(img.shape[0] * k)), interpolation=cv2.INTER_AREA)
+    y0, x0 = (img.shape[0] - H) // 2, (img.shape[1] - W) // 2
+    img = img[y0:y0 + H, x0:x0 + W]
 h, w = img.shape[:2]
 mask = cv2.dilate((alfa > 24).astype(np.uint8) * 255, np.ones((25, 25), np.uint8))
 # inpaint em meia resolução (área grande fica mais suave e rápida) e devolve só onde havia sujeito

@@ -5,11 +5,11 @@
 set -e
 DIR=$(cd "$1/motion" && pwd); HF=$(cd "$(dirname "$0")" && pwd)
 cd "$DIR"
-cp -r "$HF/fonts" "$HF/otalogia.css" "$HF/otalogia.js" .
+cp -r "$HF/fonts" "$HF/otalogia.css" "$HF/otalogia.js" "$HF/neon.css" "$HF/neon.js" .
 mkdir -p img out && cp ../*.png img/
 # foto com recorte em uso: tira o sujeito do fundo para o parallax (ver fundo.py)
 for r in $(grep -o 'img/[^"]*_recorte\.png' index.html | sort -u); do
-  f=${r%_recorte.png}.png; [ -f "$f" ] && python3 "$HF/fundo.py" "$f" "$r"
+  for f in ${r%_recorte.png}.png ${r%_recorte.png}_orig.png; do [ -f "$f" ] && python3 "$HF/fundo.py" "$f" "$r"; done
 done
 # texto nunca sobre rosto (com o parallax em movimento); SEM_CHECAR=1 pula
 [ -n "$SEM_CHECAR" ] || python3 "$HF/checar_rostos.py" "$DIR/.."

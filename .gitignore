@@ -18,3 +18,4 @@ fila/**/*.mp4
 fila/**/*.jpg
 fila/**/extras/
 publicador/.env
+carrosseis/*/motion/neon.*
