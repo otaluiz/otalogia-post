@@ -1,0 +1,44 @@
+{
+  "carousel_id": "reel-liquid-death-agua-em-lata",
+  "tipo": "reel",
+  "cliente": "aidealab",
+  "data_criacao": "2026-11-09",
+  "status": "rascunho",
+  "postado": true,
+  "postado_em": "2026-11-20 12:47:48",
+  "post_id": "17893633059460479",
+  "ordem_fila": 5,
+  "tema": "A Liquid Death testou a ideia antes de fabricar",
+  "pilar": "educacional",
+  "personagem": "",
+  "formato": "1080x1920",
+  "duracao_s": 45.3,
+  "video": "reel.mp4",
+  "capa": "capa.jpg",
+  "legenda": "Água em lata, com uma caveira e o nome Morte Líquida. Parecia uma ideia ruim.\n\nO fundador não tinha fábrica nem produto. Tinha um comercial de US$ 1.500, que passou de 1 milhão de visualizações em menos de dois meses, e distribuidores pedindo um produto que ainda nem existia. Em 2024, a marca valia US$ 1,4 bilhão.\n\nComente TESTE para receber o material gratuito em PDF por DM.\n\n#marketingdigital #pequenosnegocios #branding #marketingdeconteudo #aidealab\n",
+  "hashtags": [
+    "#marketingdigital",
+    "#pequenosnegocios",
+    "#branding",
+    "#marketingdeconteudo",
+    "#aidealab"
+  ],
+  "fontes": [
+    "https://fortune.com/2024/03/15/liquid-death-ceo-mike-cessario-interview-beverage-unicorn-water-beer/",
+    "https://www.bevnet.com/news/2019/liquid-death-comes-to-life-online",
+    "https://www.businesswire.com/news/home/20240310837019/en"
+  ],
+  "fonte_tendencia": null,
+  "dm": {
+    "palavra": "TESTE",
+    "titulo": "A Liquid Death testou a ideia antes de fabricar",
+    "catalogo": {
+      "provedor": "supabase/ig_dm_catalog",
+      "perfil": "otalogia",
+      "palavra": "TESTE",
+      "categoria": "VALIDACAO"
+    },
+    "material_pdf": "AIDEALAB_DM_TESTE_GUIA_PREMIUM.pdf",
+    "entrega": "apenas_se_seguidor_confirmado_pela_meta"
+  }
+}
