@@ -264,7 +264,7 @@ def compor(jp, a):
     from rembg import new_session, remove
     cores = [hex2rgb(c) for c in MAPA_LED.split(",")]
 
-    for i in sorted({0, 1, n - 1}):
+    for i in sorted({0, 1, n - 1} | {k for k, x in enumerate(data["slides"]) if x.get("imagem")}):
         s, at = data["slides"][i], atual["slides"][i]
         if not s.get("imagem"):
             print(f"slide {i + 1}: sem imagem, ignorado")

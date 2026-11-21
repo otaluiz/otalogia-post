@@ -1,0 +1,197 @@
+{
+  "id": "2026-11-prompt-neon",
+  "meta": {
+    "serie": "PROMPTS",
+    "data": "2026/11",
+    "personagem": "luizota",
+    "guia": {
+      "fonte": "guia/guia.json"
+    }
+  },
+  "slides": [
+    {
+      "template": "T1",
+      "display": [
+        "ESSA FOTO SAIU",
+        "DE UM PROMPT."
+      ],
+      "emocao": {
+        "texto": "copia o [meu].",
+        "posicao": "depois"
+      },
+      "imagem": "capa_orig.png",
+      "bloco": {
+        "y": 190,
+        "alinhar": "centro",
+        "largura": 936,
+        "manual": true
+      },
+      "recorte": "capa_recorte.png",
+      "sujeito": {
+        "rostos": [],
+        "cabeca": [
+          385,
+          637,
+          610,
+          858
+        ],
+        "caixa": [
+          148,
+          644,
+          854,
+          1439
+        ]
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O PROMPT",
+        "{DA CAPA}"
+      ],
+      "lista": [
+        "Sua foto + arte de tela de jogo pintada à mão",
+        "Contorno grosso de tinta, cel-shading",
+        "Pôr do sol neon magenta, laranja e teal",
+        "Você embaixo, céu livre em cima"
+      ],
+      "imagem": null
+    },
+    {
+      "template": "T2",
+      "display": [
+        "MUDA SÓ",
+        "A CENA"
+      ],
+      "emocao": {
+        "texto": "o {estilo} continua.",
+        "posicao": "depois"
+      },
+      "imagem": "slide3_orig.png",
+      "recorte": "slide3_recorte.png",
+      "sujeito": {
+        "rostos": [],
+        "cabeca": [
+          405,
+          617,
+          617,
+          822
+        ],
+        "caixa": [
+          253,
+          625,
+          755,
+          1439
+        ]
+      },
+      "bloco": {
+        "y": 190,
+        "alinhar": "esquerda",
+        "largura": 936,
+        "manual": true
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "A CENA",
+        "{DO VIADUTO}"
+      ],
+      "lista": [
+        "A 1ª imagem como referência de estilo",
+        "Em pé num viaduto ao pôr do sol",
+        "Rastros de luz dos carros embaixo",
+        "Câmera baixa, de baixo pra cima"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "O CELULAR",
+        "NA MÃO CERTA"
+      ],
+      "emocao": {
+        "texto": "o detalhe que {salva}.",
+        "posicao": "depois"
+      },
+      "imagem": "slide5_orig.png",
+      "recorte": "slide5_recorte.png",
+      "sujeito": {
+        "rostos": [],
+        "cabeca": [
+          351,
+          635,
+          610,
+          881
+        ],
+        "caixa": [
+          212,
+          643,
+          1079,
+          1439
+        ]
+      },
+      "bloco": {
+        "y": 190,
+        "alinhar": "esquerda",
+        "largura": 936
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O TRUQUE",
+        "{DO CELULAR}"
+      ],
+      "lista": [
+        "Escreva \"natural grip\"",
+        "E \"screen facing him\"",
+        "Sem isso a IA vira a tela",
+        "Feche com: sem texto, sem logo"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER OS",
+        "3 PROMPTS?"
+      ],
+      "cta": {
+        "acao": "Comenta NEON",
+        "texto": "que eu te mando no direct"
+      },
+      "imagem": "cta_orig.png",
+      "bloco": {
+        "y": 180,
+        "alinhar": "centro",
+        "largura": 936,
+        "manual": true,
+        "cta_y": 997
+      },
+      "sujeito": {
+        "rostos": [
+          [
+            389,
+            654,
+            622,
+            866
+          ]
+        ],
+        "cabeca": [
+          418,
+          639,
+          588,
+          827
+        ],
+        "caixa": [
+          0,
+          646,
+          725,
+          1439
+        ]
+      }
+    }
+  ]
+}
