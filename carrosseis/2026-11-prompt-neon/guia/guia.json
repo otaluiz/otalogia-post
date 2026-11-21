@@ -1,0 +1,49 @@
+{
+  "marca": "otalogia",
+  "titulo": "3 prompts pra virar arte de videogame",
+  "subtitulo": "Os prompts exatos das imagens do carrossel, prontos pra colar com a sua foto.",
+  "categoria": "PROMPTS",
+  "como_usar": "Cole um prompt por vez, com a sua foto anexada, e só troque a cena.",
+  "fontes": [
+    {
+      "titulo": "OpenAI: guia de geração de imagens (GPT Image)",
+      "url": "https://platform.openai.com/docs/guides/image-generation"
+    },
+    {
+      "titulo": "Higgsfield: geração de imagem com personagem de referência",
+      "url": "https://higgsfield.ai"
+    }
+  ],
+  "nota_fontes": "Material editorial otalogia, prompts usados nas imagens do carrossel (novembro de 2026). Resultados variam por modelo.",
+  "paginas": [
+    {
+      "titulo": "Prompt 1: a capa (conversível)",
+      "texto": "O prompt base. Ele define o estilo que os outros copiam.",
+      "codigo": "[sua foto de referência] as a hand-painted video-game loading-screen illustration, bold ink outlines, cel-shaded, saturated neon sunset over a Miami-style coastal city, palm trees, magenta, orange and teal palette, he leans on the hood of a vintage convertible holding a smartphone, confident editorial pose, low camera angle, the figure in the lower half of the frame, his head at the vertical middle of the picture, a large empty sunset sky fills the upper half, mouth closed, not smiling, serious determined look. No text, no letters, no logos, no glasses, no hat, no jewelry.",
+      "dica": "Guarde a imagem que sair: ela vira a referência de estilo dos próximos."
+    },
+    {
+      "titulo": "Prompt 2: o viaduto",
+      "texto": "Mesmo estilo, cena nova. Anexe a imagem do prompt 1 como referência.",
+      "codigo": "[sua foto de referência] in the exact same illustration style as the reference image: hand-painted video-game loading-screen art, bold ink outlines, cel-shaded, magenta/orange/teal neon sunset palette. He stands on a highway overpass at sunset holding a smartphone naturally at his side, car light trails streaking below, low angle, the figure in the lower half, head at vertical middle, large empty sunset sky above. Mouth closed, not smiling. No text, no letters, no logos, no glasses, no hat, no jewelry.",
+      "dica": "Mude só a cena. Se mexer no estilo, as fotos deixam de combinar no feed."
+    },
+    {
+      "titulo": "Prompt 3: a torre de salva-vidas",
+      "texto": "O detalhe do celular: sem \"natural grip, the screen facing him\" a IA costuma virar a tela pro lado errado.",
+      "codigo": "[sua foto de referência] in the exact same illustration style as the reference image: hand-painted video-game loading-screen art, bold ink outlines, cel-shaded, magenta/orange/teal neon sunset palette. He sits on a pastel lifeguard tower on the beach scrolling a smartphone held in a natural grip, the screen facing him, the figure in the lower half, head at vertical middle, empty sunset sky above. Mouth closed, not smiling. No text, no letters, no logos, no glasses, no hat, no jewelry.",
+      "dica": "Sempre feche com: no text, no letters, no logos."
+    },
+    {
+      "titulo": "Como usar os prompts",
+      "texto": "Funciona em qualquer gerador que aceite foto de referência (GPT Image no ChatGPT, Higgsfield, Nano Banana).",
+      "itens": [
+        "Anexe uma foto sua, de frente, com boa luz",
+        "Cole o prompt e troque [sua foto de referência] pela foto anexada",
+        "Nos prompts 2 e 3, anexe também a imagem do prompt 1 como referência de estilo",
+        "Formato 3:4 e qualidade alta"
+      ],
+      "dica": "Se a mulher for a protagonista, troque he/his por she/her."
+    }
+  ]
+}
