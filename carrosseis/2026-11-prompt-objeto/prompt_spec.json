@@ -1,0 +1,94 @@
+{
+ "slug": "prompt-objeto",
+ "ordem": 12,
+ "tema": "tema",
+ "tags": [
+  "#inteligenciaartificial",
+  "#dicasdeia",
+  "#pequenosnegocios",
+  "#instagramparanegocios",
+  "#otalogia"
+ ],
+ "capa": {
+  "display": [
+   "UM OBJETO",
+   "CONTA O ASSUNTO."
+  ],
+  "emocao": "sem [legenda]."
+ },
+ "fotos": [
+  {
+   "id": "d294feeb",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261119_214052_d294feeb-2227-4ef1-a9ac-5ef139b0742a.png",
+   "prompt": "<<<65730766-9399-4986-9ce8-42813729df44>>> in the exact same illustration style as the reference image: hand-painted video-game loading-screen art, bold ink outlines, cel-shaded, magenta/orange/teal neon palette. He stands in front of a shop window arranged as a grid of nine glowing blank frames at dusk, arms crossed, the figure in the lower half, head at vertical middle, empty upper area. Mouth closed, not smiling. No text, no letters, no logos, no glasses, no hat, no jewelry."
+  },
+  {
+   "id": "4b4c1437",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261111_091436_4b4c1437-93e3-43d5-95df-f8b6381bc809.png",
+   "prompt": "Editorial studio portrait, vertical 3:4. A man (Luiz) from chest up holds a large blank cut-out paper star in burnt orange in front of his chest, calm confident look at camera. Keep his own short dark textured hair fully visible, no hat, no glasses. Plain black sweater. Seamless deep navy ink studio backdrop with a warm burnt-orange rim light from the side. The top of his head sits at about 40 percent of the frame height, upper part is clean empty backdrop. Deep shadows pushed to blue-black ink, warm burnt-orange highlights, natural film grain. No text, no letters, no logos, no watermark anywhere."
+  },
+  {
+   "id": "0e88f716",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261021_015926_0e88f716-9437-41a9-8226-d546c215c5ec.png",
+   "prompt": "Editorial fashion portrait, vertical 3:4, studio with a seamless deep navy blue-black backdrop. Medium shot from the waist up, he holds a fan of many identical completely blank white cards spread wide in front of his chest like a magician, one eyebrow raised, skeptical half smile looking straight at the camera. Keep his own short dark textured hair fully visible, no hat, no glasses. Plain black t-shirt. Warm burnt-orange rim light from the right, soft key light. The top of his head sits at about 40 percent of the frame height, upper part is clean empty backdrop. Deep shadows pushed to blue-black ink, warm burnt-orange highlights, natural film grain. Cards completely blank. No text, no letters, no logos, no watermark anywhere."
+  },
+  {
+   "id": "1c1cf99e",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261101_091353_1c1cf99e-1158-4607-9c32-092e6b658cd8.png",
+   "prompt": "Editorial studio portrait, vertical 3:4. Luiz, bust from chest up, holds a large blank white paper speech bubble cut-out in front of his chest with both hands, looking calmly into the lens with a curious raised eyebrow. Keep his own short dark textured hair fully visible, no hat, no glasses. Neutral black crew-neck sweater. Smooth deep navy-ink studio backdrop, warm burnt-orange rim light from the left side. The top of his head sits at about 40 percent of the frame height, the upper part is clean empty backdrop. Deep shadows pushed to blue-black ink, warm burnt-orange highlights, natural film grain. The speech bubble is completely blank. No text, no letters, no logos, no watermark anywhere."
+  }
+ ],
+ "pares": [
+  {
+   "titulo": "{VIDEOGAME}",
+   "lista": [
+    "Foto de referência + arte de tela de jogo",
+    "Vitrine com 9 quadros brilhando",
+    "Quadros em branco, sem nada escrito",
+    "Braços cruzados, céu de fim de tarde"
+   ],
+   "guia": "O prompt no estilo arte de videogame. Anexe sua foto e, se tiver, uma imagem nesse estilo como referência.",
+   "dica": "Sempre feche com: no text, no letters, no logos.",
+   "nome": "videogame, na vitrine"
+  },
+  {
+   "display": [
+    "UMA ESTRELA",
+    "DE PAPEL"
+   ],
+   "emocao": "fala de {avaliação}.",
+   "titulo": "{DA ESTRELA}",
+   "nome": "a estrela de papel",
+   "lista": [
+    "Retrato do peito pra cima",
+    "Estrela de papel laranja, em branco",
+    "Fundo escuro, luz laranja de lado",
+    "Grão de filme, sem texto, sem logo"
+   ],
+   "guia": "Estrela fala de avaliação e destaque sem escrever nada.",
+   "dica": "Peça o objeto \"blank\": em branco, sem letras."
+  },
+  {
+   "display": [
+    "CARTAS",
+    "EM BRANCO"
+   ],
+   "emocao": "fala de {escolha}.",
+   "titulo": "{DAS CARTAS}",
+   "nome": "o leque de cartas",
+   "lista": [
+    "Leque de cartas brancas, como mágico",
+    "Sobrancelha erguida, meio sorriso",
+    "Fundo azul-escuro, luz laranja",
+    "Cabeça a 40% do quadro"
+   ],
+   "guia": "O leque de cartas vira \"escolha\", \"opções\", \"qual você prefere\".",
+   "dica": "Troque pelo objeto do seu negócio: caneca, chave, tesoura, caixa."
+  }
+ ],
+ "guia_titulo": "3 prompts de foto com objeto",
+ "guia_sub": "Um no estilo videogame e dois de retrato com objeto, prontos pra trocar pelo objeto do seu negócio.",
+ "legenda": "Um objeto na mão conta o assunto do post antes de qualquer legenda.\n\nQuadros numa vitrine no estilo videogame, uma estrela de papel e um leque de cartas. Tudo em branco, sem letra nenhuma, pra IA não inventar texto torto. Troque pelo objeto do seu negócio e mantenha o resto do prompt.\n\nSalva pra testar hoje.\n\nComenta {PALAVRA} que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
+ "blocos": {},
+ "sujeitos": {}
+}

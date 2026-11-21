@@ -323,6 +323,61 @@
       "aliases": [
         "OFERTA"
       ]
+    },
+    "PROMPT": {
+      "palavra": "PROMPT",
+      "assuntos": [
+        "prompts de imagem",
+        "fotos com IA",
+        "edição de foto com IA",
+        "estilo videogame",
+        "ensaio de estúdio com IA"
+      ],
+      "regra": "Todo conteúdo de prompt usa a palavra PROMPT. A DM manda os PDFs desta categoria (até 5 por palavra). Ao passar de 5, juntar os mais antigos num PDF de biblioteca.",
+      "guias": [
+        {
+          "id": "prompt-prompt-neon",
+          "titulo": "3 prompts pra virar arte de videogame",
+          "arquivo": "PROMPT_PROMPT_NEON.pdf",
+          "origem": "carrosseis/2026-11-prompt-neon/png/guia.pdf",
+          "status": "piloto_aguardando_aprovacao"
+        },
+        {
+          "id": "prompt-prompt-cenario",
+          "titulo": "3 prompts de foto com cenário",
+          "arquivo": "PROMPT_PROMPT_CENARIO.pdf",
+          "origem": "carrosseis/2026-11-prompt-cenario/png/guia.pdf",
+          "status": "piloto_aguardando_aprovacao"
+        },
+        {
+          "id": "prompt-prompt-luz",
+          "titulo": "3 prompts de foto com luz",
+          "arquivo": "PROMPT_PROMPT_LUZ.pdf",
+          "origem": "carrosseis/2026-11-prompt-luz/png/guia.pdf",
+          "status": "piloto_aguardando_aprovacao"
+        },
+        {
+          "id": "prompt-prompt-salto",
+          "titulo": "3 prompts de foto com movimento",
+          "arquivo": "PROMPT_PROMPT_SALTO.pdf",
+          "origem": "carrosseis/2026-11-prompt-salto/png/guia.pdf",
+          "status": "piloto_aguardando_aprovacao"
+        },
+        {
+          "id": "prompt-prompt-objeto",
+          "titulo": "3 prompts de foto com objeto",
+          "arquivo": "PROMPT_PROMPT_OBJETO.pdf",
+          "origem": "carrosseis/2026-11-prompt-objeto/png/guia.pdf",
+          "status": "piloto_aguardando_aprovacao"
+        }
+      ],
+      "posts_relevantes": [
+        "prompt-neon",
+        "prompt-cenario",
+        "prompt-luz",
+        "prompt-salto",
+        "prompt-objeto"
+      ]
     }
   }
 }

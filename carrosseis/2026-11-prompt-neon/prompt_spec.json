@@ -1,0 +1,92 @@
+{
+ "slug": "prompt-neon",
+ "ordem": 8,
+ "tema": "tema-gta",
+ "tags": [
+  "#inteligenciaartificial",
+  "#dicasdeia",
+  "#pequenosnegocios",
+  "#instagramparanegocios",
+  "#otalogia"
+ ],
+ "capa": {
+  "display": [
+   "ESSA FOTO SAIU",
+   "DE UM PROMPT."
+  ],
+  "emocao": "copia o [meu]."
+ },
+ "fotos": [
+  {
+   "id": "0c1d4f10",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261119_142928_0c1d4f10-8256-4b2a-b961-4d15398b4b46.png",
+   "prompt": "<<<x>>> as a hand-painted video-game loading-screen illustration, bold ink outlines, cel-shaded, saturated neon sunset over a Miami-style coastal city, palm trees, magenta, orange and teal palette, he leans on the hood of a vintage convertible holding a smartphone, confident editorial pose, low camera angle, the figure in the lower half of the frame, his head at the vertical middle of the picture, a large empty sunset sky fills the upper half, mouth closed, not smiling, serious determined look. No text, no letters, no logos, no glasses, no hat, no jewelry."
+  },
+  {
+   "id": "1b8f7734",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261119_190727_1b8f7734-0e11-4800-9d66-abc935bd95b1.png",
+   "prompt": "<<<65730766-9399-4986-9ce8-42813729df44>>> in the exact same illustration style as the reference image: hand-painted video-game loading-screen art, bold ink outlines, cel-shaded, magenta/orange/teal neon sunset palette. He stands on a highway overpass at sunset holding a smartphone naturally at his side, car light trails streaking below, low angle, the figure in the lower half, head at vertical middle, large empty sunset sky above. Mouth closed, not smiling. No text, no letters, no logos, no glasses, no hat, no jewelry."
+  },
+  {
+   "id": "b7ce7a51",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261119_211754_b7ce7a51-09a5-4f43-968c-4852130711cf.png",
+   "prompt": "<<<65730766-9399-4986-9ce8-42813729df44>>> in the exact same illustration style as the reference image: hand-painted video-game loading-screen art, bold ink outlines, cel-shaded, magenta/orange/teal neon sunset palette. He sits on a pastel lifeguard tower on the beach scrolling a smartphone held in a natural grip, the screen facing him, the figure in the lower half, head at vertical middle, empty sunset sky above. Mouth closed, not smiling. No text, no letters, no logos, no glasses, no hat, no jewelry."
+  },
+  {
+   "id": "f7c3fbfe",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261119_173921_f7c3fbfe-59fe-45ea-a8ed-3225eca581b0.png",
+   "prompt": "<<<65730766-9399-4986-9ce8-42813729df44>>> in the exact same illustration style as the reference image: hand-painted video-game loading-screen art, bold ink outlines, cel-shaded, magenta/orange/teal neon sunset palette. He sits on a motorcycle on a beach boardwalk at sunset, looking straight at the camera, low angle, the figure in the lower half, head at vertical middle, large empty sunset sky above. Mouth closed, not smiling. No text, no letters, no logos, no glasses, no hat, no jewelry."
+  }
+ ],
+ "pares": [
+  {
+   "titulo": "{DA CAPA}",
+   "lista": [
+    "Sua foto + arte de tela de jogo pintada à mão",
+    "Contorno grosso de tinta, cel-shading",
+    "Pôr do sol neon magenta, laranja e teal",
+    "Você embaixo, céu livre em cima"
+   ],
+   "nome": "a capa (conversível)",
+   "guia": "O prompt base. Ele define o estilo que os outros copiam.",
+   "dica": "Guarde a imagem que sair: ela vira a referência de estilo dos próximos."
+  },
+  {
+   "display": [
+    "MUDA SÓ",
+    "A CENA"
+   ],
+   "emocao": "o {estilo} continua.",
+   "titulo": "{DO VIADUTO}",
+   "lista": [
+    "A 1ª imagem como referência de estilo",
+    "Em pé num viaduto ao pôr do sol",
+    "Rastros de luz dos carros embaixo",
+    "Câmera baixa, de baixo pra cima"
+   ],
+   "nome": "o viaduto",
+   "guia": "Mesmo estilo, cena nova. Anexe a imagem do prompt 1 como referência.",
+   "dica": "Mude só a cena. Se mexer no estilo, as fotos deixam de combinar no feed."
+  },
+  {
+   "display": [
+    "O CELULAR",
+    "NA MÃO CERTA"
+   ],
+   "emocao": "o detalhe que {salva}.",
+   "titulo": "{DO CELULAR}",
+   "lista": [
+    "Escreva \"natural grip\"",
+    "E \"screen facing him\"",
+    "Sem isso a IA vira a tela",
+    "Feche com: sem texto, sem logo"
+   ],
+   "nome": "a torre de salva-vidas",
+   "guia": "O detalhe do celular: sem \"natural grip, the screen facing him\" a IA costuma virar a tela pro lado errado.",
+   "dica": "Sempre feche com: no text, no letters, no logos."
+  }
+ ],
+ "guia_titulo": "3 prompts pra virar arte de videogame",
+ "guia_sub": "Os prompts exatos das imagens do carrossel, prontos pra colar com a sua foto.",
+ "legenda": "Essa foto minha saiu de um prompt. E eu te passo ele inteiro.\n\nUsei uma foto minha de referência e pedi arte de tela de jogo pintada à mão: contorno grosso, pôr do sol neon, eu embaixo e céu livre em cima. Depois foi só trocar a cena e manter o estilo, pra todas as fotos combinarem no feed.\n\nUm detalhe que salva: com celular na mão, escreva \"natural grip, the screen facing him\". Sem isso a IA vira a tela.\n\nServe pra capa de carrossel, foto de perfil ou divulgação do seu negócio, sem fotógrafo.\n\nSalva pra testar hoje.\n\nComenta {PALAVRA} que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia\n"
+}

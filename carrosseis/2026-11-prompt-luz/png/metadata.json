@@ -53,10 +53,10 @@
       "ordem": 7,
       "arquivo": "slide-07.png",
       "papel": "cta",
-      "texto": "QUER OS 3 PROMPTS? Comenta LUZ que eu te mando no direct"
+      "texto": "QUER OS 3 PROMPTS? Comenta PROMPT que eu te mando no direct"
     }
   ],
-  "legenda": "A luz certa muda a foto inteira. Essas 3 saíram de prompts.\n\nNeon de diner no estilo videogame, um feixe de luz caindo de uma claraboia e luz laranja desfocada na frente da lente. O truque é sempre dizer de onde a luz vem e qual a cor dela.\n\nSalva pra testar hoje.\n\nComenta LUZ que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
+  "legenda": "A luz certa muda a foto inteira. Essas 3 saíram de prompts.\n\nNeon de diner no estilo videogame, um feixe de luz caindo de uma claraboia e luz laranja desfocada na frente da lente. O truque é sempre dizer de onde a luz vem e qual a cor dela.\n\nSalva pra testar hoje.\n\nComenta PROMPT que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
   "hashtags": [
     "#inteligenciaartificial",
     "#dicasdeia",
@@ -68,11 +68,11 @@
   "material_pdf": {
     "arquivo": "guia.pdf",
     "titulo": "3 prompts de foto com luz",
-    "categoria": "PROMPTS",
+    "categoria": "PROMPT",
     "marca": "otalogia",
     "template": "aidealab-azul-laranja-v1",
     "paginas": 7,
-    "fonte_sha256": "c524081af9c3323a0e8528a247e681c906ea78c5acf833b19abd2f9c96bc7564",
+    "fonte_sha256": "c9ad7bb80c51a1e0d1201b488e2d09ff17fb95f83bb095c1ef70d6fd1cf4741a",
     "status": "rascunho",
     "revisao_visual": "pendente"
   }

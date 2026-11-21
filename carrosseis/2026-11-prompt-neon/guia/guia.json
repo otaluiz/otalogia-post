@@ -2,8 +2,8 @@
   "marca": "otalogia",
   "titulo": "3 prompts pra virar arte de videogame",
   "subtitulo": "Os prompts exatos das imagens do carrossel, prontos pra colar com a sua foto.",
-  "categoria": "PROMPTS",
-  "como_usar": "Cole um prompt por vez, com a sua foto anexada, e só troque a cena.",
+  "categoria": "PROMPT",
+  "como_usar": "Cole um prompt por vez, com a foto anexada, e só depois ajuste.",
   "fontes": [
     {
       "titulo": "OpenAI: guia de geração de imagens (GPT Image)",
@@ -14,7 +14,7 @@
       "url": "https://higgsfield.ai"
     }
   ],
-  "nota_fontes": "Material editorial otalogia, prompts usados nas imagens do carrossel (novembro de 2026). Resultados variam por modelo.",
+  "nota_fontes": "Material editorial otalogia, prompts usados nas imagens do carrossel. Resultados variam por modelo.",
   "paginas": [
     {
       "titulo": "Prompt 1: a capa (conversível)",
@@ -40,10 +40,10 @@
       "itens": [
         "Anexe uma foto sua, de frente, com boa luz",
         "Cole o prompt e troque [sua foto de referência] pela foto anexada",
-        "Nos prompts 2 e 3, anexe também a imagem do prompt 1 como referência de estilo",
-        "Formato 3:4 e qualidade alta"
+        "Formato 3:4 e qualidade alta",
+        "Mude uma coisa por vez: pose, roupa ou objeto"
       ],
-      "dica": "Se a mulher for a protagonista, troque he/his por she/her."
+      "dica": "Se for uma mulher, troque he/his por she/her."
     }
   ]
 }

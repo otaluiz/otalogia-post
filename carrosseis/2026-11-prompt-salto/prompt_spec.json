@@ -1,0 +1,94 @@
+{
+ "slug": "prompt-salto",
+ "ordem": 11,
+ "tema": "tema",
+ "tags": [
+  "#inteligenciaartificial",
+  "#dicasdeia",
+  "#pequenosnegocios",
+  "#instagramparanegocios",
+  "#otalogia"
+ ],
+ "capa": {
+  "display": [
+   "FOTO PARADA",
+   "NINGUÉM PARA."
+  ],
+  "emocao": "3 prompts com [movimento]."
+ },
+ "fotos": [
+  {
+   "id": "f7c3fbfe",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261119_173921_f7c3fbfe-59fe-45ea-a8ed-3225eca581b0.png",
+   "prompt": "<<<65730766-9399-4986-9ce8-42813729df44>>> in the exact same illustration style as the reference image: hand-painted video-game loading-screen art, bold ink outlines, cel-shaded, magenta/orange/teal neon sunset palette. He sits on a motorcycle on a beach boardwalk at sunset, looking straight at the camera, low angle, the figure in the lower half, head at vertical middle, large empty sunset sky above. Mouth closed, not smiling. No text, no letters, no logos, no glasses, no hat, no jewelry."
+  },
+  {
+   "id": "b34ce930",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261008_174009_b34ce930-1073-4140-99bf-017f33b66895.png",
+   "prompt": "Extreme low angle editorial fashion photograph from the grass: a young man with short dark textured hair leaping in mid-air with knees tucked and both arms stretched out to the sides, holding a smartphone in one hand, plain navy t-shirt, wide light grey trousers, black boots, intense focused face, mouth closed, not smiling. Vast clean deep blue sky. The figure is small, in the lower half of the frame, his head at the vertical middle of the picture, a huge empty sky fills the whole upper half above him. Crisp sunlight, deep navy and cyan color grading. No text, no letters, no logos, no glasses, no hat"
+  },
+  {
+   "id": "d43370b6",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261008_173131_d43370b6-3d27-47ae-931e-1978ed83617e.png",
+   "prompt": "Extreme low angle editorial fashion photograph shot from the grass looking up: a young man with short dark textured hair leaping high in mid-air against a vast deep blue sky with a few soft white clouds, knees bent, one arm stretched up holding a smartphone, the other arm out for balance, plain navy t-shirt, wide light grey trousers, black boots, intense focused face, mouth closed, not smiling, his body in the lower half of the frame with huge open sky above his head, crisp sunlight, deep navy and cyan color grading, no text, no letters, no logos, no glasses, no hat"
+  },
+  {
+   "id": "657cbfd7",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261119_111529_657cbfd7-828c-4d89-b0d4-9717840ee0c4.png",
+   "prompt": "Editorial fashion photograph, medium shot: a young man with short dark textured hair sits on a brushed metal cube in the lower half of the frame, legs wide apart, one hand on his chin, decided serious expression, mouth closed, not smiling, wearing a plain oversized black suit jacket over a completely plain solid black crew-neck t-shirt, no print, no pattern, no graphic. Plain deep navy studio backdrop with cyan rim light, deep navy and cyan color grading. His head is at the vertical middle of the picture, generous headroom, a large plain dark navy backdrop fills the upper 45% of the frame above his head. Whole head inside the frame. No text, no letters, no logos, no glasses, no hat, no jewelry."
+  }
+ ],
+ "pares": [
+  {
+   "titulo": "{VIDEOGAME}",
+   "lista": [
+    "Foto de referência + arte de tela de jogo",
+    "Na moto, no calçadão ao pôr do sol",
+    "Olhando direto pra câmera",
+    "Câmera baixa, céu enorme em cima"
+   ],
+   "guia": "O prompt no estilo arte de videogame. Anexe sua foto e, se tiver, uma imagem nesse estilo como referência.",
+   "dica": "Sempre feche com: no text, no letters, no logos.",
+   "nome": "videogame, na moto"
+  },
+  {
+   "display": [
+    "NO AR,",
+    "CONTRA O CÉU"
+   ],
+   "emocao": "sem {cenário}.",
+   "titulo": "{DO SALTO}",
+   "nome": "o salto no céu",
+   "lista": [
+    "Câmera rente à grama, de baixo",
+    "Pulando com os joelhos dobrados",
+    "Braços abertos, céu azul limpo",
+    "Figura pequena, muito céu em cima"
+   ],
+   "guia": "Câmera baixa e céu limpo: o salto parece mais alto.",
+   "dica": "\"Extreme low angle from the grass\" é a frase que faz o efeito."
+  },
+  {
+   "display": [
+    "UM PULO",
+    "MAIS ALTO"
+   ],
+   "emocao": "com {nuvens}.",
+   "titulo": "{DO PULO}",
+   "nome": "o pulo com nuvens",
+   "lista": [
+    "Pulo alto, um braço esticado pra cima",
+    "Céu azul com nuvens brancas",
+    "Calça larga clara, camiseta lisa",
+    "Luz de sol nítida"
+   ],
+   "guia": "Movimento parado no ar prende o olho no feed.",
+   "dica": "Peça a roupa larga: ela mostra o movimento."
+  }
+ ],
+ "guia_titulo": "3 prompts de foto com movimento",
+ "guia_sub": "Um no estilo videogame e dois de salto e movimento, prontos pra colar com a sua foto.",
+ "legenda": "Foto parada, ninguém para. Essas 3 têm movimento e saíram de prompts.\n\nUma na moto no estilo videogame, duas no meio de um pulo com a câmera rente ao chão. Câmera baixa e muito céu fazem o salto parecer mais alto.\n\nSalva pra testar hoje.\n\nComenta {PALAVRA} que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
+ "blocos": {},
+ "sujeitos": {}
+}
