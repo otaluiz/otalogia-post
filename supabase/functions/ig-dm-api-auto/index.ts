@@ -124,14 +124,6 @@ async function followerStatus(a: Account, scopedUserId: string) {
   return verifyFollow({ scopedId: scopedUserId, token: a.token, facebook: a.facebook, version: V });
 }
 
-function promptToReply(a: Account, keyword: string): string {
-  const profile = a.name === "otalogia" ? "@otalogia" : "@idea_lab7";
-  return "Recebi seu comentário sobre " + keyword + "! 📩\n" +
-         "Para proteger o material exclusivo de quem segue " + profile +
-         ", responda esta mensagem com " + keyword + ". " +
-         "Vou confirmar que você segue o perfil antes de enviar o PDF.";
-}
-
 function documentText(item: Material): string {
   const docs = documents(item);
   const title = item.categoria ? "Materiais da categoria " + item.categoria : "Aqui está seu material";
@@ -194,24 +186,30 @@ async function publishPublicCommentReply(a: Account, commentId: string): Promise
   }
 }
 
-async function deliverIfFollower(a: Account, senderId: string, item: Material, word: string, mid: string) {
-  // Não confiar em texto "já sigo", botão ou cache: consulta real em CADA tentativa.
+function commentOptInText(profile: Account["name"], word: string): string {
+  const handle = profile === "otalogia" ? "@otalogia" : "@idea_lab7";
+  return "Recebi seu comentário " + word + "! 📩\n\n" +
+    "O material é exclusivo para seguidores de " + handle +
+    ". Siga o perfil e responda aqui com " + word +
+    " para eu confirmar e te enviar o PDF.";
+}
+
+async function deliverIfFollower(a: Account, senderId: string, item: Material,
+                                 word: string, mid: string) {
   const status = await followerStatus(a, senderId);
-  const recipient = { id: senderId };
-  if (!canDeliverLinks(status)) {
-    const profile = a.name === "otalogia" ? "@otalogia" : "@idea_lab7";
-    const message = status === "not_following"
-      ? "O material é exclusivo para seguidores. Siga " + profile +
-        " e envie " + word + " novamente aqui na DM para eu confirmar."
-      : "Ainda não consegui confirmar seu follow em " + profile +
-        ". Por segurança não envio links sem confirmação. Tente novamente em alguns minutos.";
-    await sendText(a, recipient, message, "notice:" + mid);
+  if (canDeliverLinks(status) && documents(item).length) {
+    await sendText(a, { id: senderId }, documentText(item), "dm:" + mid);
+    console.log("ig_dm_document_sent", a.name, word);
     return;
   }
-  const docs = documents(item);
-  if (!docs.length) return;
-  // Único caminho pelo qual o webhook entrega URLs de arquivos.
-  await sendText(a, recipient, documentText(item), "dm:" + mid);
+  const handle = a.name === "otalogia" ? "@otalogia" : "@idea_lab7";
+  const notice = status === "not_following"
+    ? "O PDF é exclusivo para seguidores. Siga " + handle +
+      " e envie " + word + " novamente aqui para eu confirmar."
+    : "Ainda não consegui confirmar que você segue " + handle +
+      ". Por segurança não envio o link sem essa confirmação. Tente novamente.";
+  await sendText(a, { id: senderId }, notice, "notice:" + mid);
+  console.log("ig_dm_document_blocked", a.name, word, status);
 }
 
 Deno.serve(async (req: Request) => {
@@ -223,10 +221,8 @@ Deno.serve(async (req: Request) => {
       return new Response("forbidden", { status: 403 });
     }
     // A Meta recebe o segredo de verificação; apenas seu hash é armazenado no código.
-    const hashBytes = new Uint8Array(
-      await crypto.subtle.digest("SHA-256", new TextEncoder().encode(token)));
-    const tokenHash = Array.from(hashBytes, byte => byte.toString(16).padStart(2, "0")).join("");
-    if (tokenHash !== "421cdb2aa087e00b2c5358658583dcc4d7f61e72975ee3b888fffe4850b1462f") {
+    const expectedToken = env("API_AUTO_VERIFY_TOKEN");
+    if (!expectedToken || token !== expectedToken) {
       return new Response("forbidden", { status: 403 });
     }
     return new Response(challenge, { status: 200 });
@@ -236,7 +232,8 @@ Deno.serve(async (req: Request) => {
   if (body.length > 1_000_000) return new Response("large body", { status: 413 });
   const signature = req.headers.get("x-hub-signature-256") || "";
   // Somente a assinatura HMAC emitida pelo APP SECRET do API_AUTO autoriza o evento.
-  const ok = await signatureOk(body, signature, env("API_AUTO_APP_SECRET"));
+  const ok = await signatureOk(body, signature, env("API_AUTO_APP_SECRET")) ||
+             await signatureOk(body, signature, env("API_AUTO_IG_APP_SECRET"));
   if (!ok) return new Response("bad signature", { status: 401 });
   let data: { entry?: Record<string, any>[] };
   try { data = JSON.parse(body); } catch { return new Response("invalid json", { status: 400 }); }
@@ -251,18 +248,19 @@ Deno.serve(async (req: Request) => {
         const c = change.value || {};
         const word = keyword(String(c.text || ""), links);
         if (!c.id || !word || c.parent_id || String(c.from?.id || "") === id) continue;
-        // Tentativa de follow real: a Meta só libera User Profile quando o usuário já
-        // iniciou conversa anteriormente. Sem consentimento, devolve UNKNOWN => sem link.
+        // A primeira resposta privada é permitida pelo comentário, sem liberar link
+        // quando ainda não for possível confirmar que a pessoa segue o perfil.
+        // Somente após a resposta voluntária do usuário é possível verificar o IGSID
+        // e entregar o PDF, respeitando is_user_follow_business === true.
         const commenter = String(c.from?.id || "");
         const commentFollow = commenter ? await followerStatus(a, commenter) : "unknown";
-        const privateReply = canDeliverLinks(commentFollow)
+        const privateText = canDeliverLinks(commentFollow)
           ? documentText(links[word])
-          : promptToReply(a, word);
-        // Meta permite apenas uma private reply por comentário.
-        await sendText(a, { comment_id: String(c.id) }, privateReply, "comment:" + c.id);
-        // Somente depois da mensagem privada aceita pela Meta, responder publicamente.
-        // Se o usuário ainda não foi verificado como seguidor, a DM contém orientações,
-        // nunca o PDF; a resposta pública confirma apenas que existe uma DM.
+          : commentOptInText(a.name, word);
+        console.log("ig_comment_keyword", a.name, word,
+                    canDeliverLinks(commentFollow) ? "eligible" : "awaiting_dm_follow_check");
+        // Meta permite uma private reply por comentário; public reply só após sucesso.
+        await sendText(a, { comment_id: String(c.id) }, privateText, "comment:" + c.id);
         await publishPublicCommentReply(a, String(c.id));
       }
       for (const msg of entry.messaging || []) {
