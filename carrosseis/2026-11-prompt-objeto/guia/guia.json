@@ -2,7 +2,7 @@
   "marca": "otalogia",
   "titulo": "3 prompts de foto com objeto",
   "subtitulo": "Um no estilo videogame e dois de retrato com objeto, prontos pra trocar pelo objeto do seu negócio.",
-  "categoria": "PROMPTS",
+  "categoria": "PROMPT",
   "como_usar": "Cole um prompt por vez, com a foto anexada, e só depois ajuste.",
   "fontes": [
     {
@@ -14,7 +14,7 @@
       "url": "https://higgsfield.ai"
     }
   ],
-  "nota_fontes": "Material editorial otalogia, prompts usados nas imagens do carrossel (novembro de 2026). Resultados variam por modelo.",
+  "nota_fontes": "Material editorial otalogia, prompts usados nas imagens do carrossel. Resultados variam por modelo.",
   "paginas": [
     {
       "titulo": "Prompt 1: videogame, na vitrine",

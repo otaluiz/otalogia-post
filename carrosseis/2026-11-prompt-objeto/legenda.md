@@ -4,6 +4,6 @@ Quadros numa vitrine no estilo videogame, uma estrela de papel e um leque de car
 
 Salva pra testar hoje.
 
-Comenta OBJETO que eu te mando no direct o PDF com os 3 prompts completos.
+Comenta PROMPT que eu te mando no direct o PDF com os 3 prompts completos.
 
 #inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia

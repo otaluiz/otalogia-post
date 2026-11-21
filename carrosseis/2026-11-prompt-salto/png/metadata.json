@@ -53,10 +53,10 @@
       "ordem": 7,
       "arquivo": "slide-07.png",
       "papel": "cta",
-      "texto": "QUER OS 3 PROMPTS? Comenta SALTO que eu te mando no direct"
+      "texto": "QUER OS 3 PROMPTS? Comenta PROMPT que eu te mando no direct"
     }
   ],
-  "legenda": "Foto parada, ninguém para. Essas 3 têm movimento e saíram de prompts.\n\nUma na moto no estilo videogame, duas no meio de um pulo com a câmera rente ao chão. Câmera baixa e muito céu fazem o salto parecer mais alto.\n\nSalva pra testar hoje.\n\nComenta SALTO que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
+  "legenda": "Foto parada, ninguém para. Essas 3 têm movimento e saíram de prompts.\n\nUma na moto no estilo videogame, duas no meio de um pulo com a câmera rente ao chão. Câmera baixa e muito céu fazem o salto parecer mais alto.\n\nSalva pra testar hoje.\n\nComenta PROMPT que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
   "hashtags": [
     "#inteligenciaartificial",
     "#dicasdeia",
@@ -68,11 +68,11 @@
   "material_pdf": {
     "arquivo": "guia.pdf",
     "titulo": "3 prompts de foto com movimento",
-    "categoria": "PROMPTS",
+    "categoria": "PROMPT",
     "marca": "otalogia",
     "template": "aidealab-azul-laranja-v1",
     "paginas": 7,
-    "fonte_sha256": "7f2f1924fa9349b0a145415d5e7a4e7298881a22299e8ba4594af28423e2da33",
+    "fonte_sha256": "5f641fb586609e490887d1127bcb9fb3a7482491316f2f4efa786a7cc934e185",
     "status": "rascunho",
     "revisao_visual": "pendente"
   }

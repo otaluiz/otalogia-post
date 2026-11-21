@@ -4,6 +4,6 @@ Uma no estilo videogame, uma num muro de concreto com sombra longa, uma num corr
 
 Salva pra testar hoje.
 
-Comenta CENARIO que eu te mando no direct o PDF com os 3 prompts completos.
+Comenta PROMPT que eu te mando no direct o PDF com os 3 prompts completos.
 
 #inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia

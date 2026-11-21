@@ -23,7 +23,7 @@
       "ordem": 2,
       "arquivo": "slide-02.png",
       "papel": "tensao",
-      "texto": "O PROMPT DA CAPA Sua foto + arte de tela de jogo pintada à mão Contorno grosso de tinta, cel-shading Pôr do sol neon magenta, laranja e teal Você embaixo, céu livre em cima"
+      "texto": "PROMPT 1 DA CAPA Sua foto + arte de tela de jogo pintada à mão Contorno grosso de tinta, cel-shading Pôr do sol neon magenta, laranja e teal Você embaixo, céu livre em cima"
     },
     {
       "ordem": 3,
@@ -35,7 +35,7 @@
       "ordem": 4,
       "arquivo": "slide-04.png",
       "papel": "desenvolvimento",
-      "texto": "A CENA DO VIADUTO A 1ª imagem como referência de estilo Em pé num viaduto ao pôr do sol Rastros de luz dos carros embaixo Câmera baixa, de baixo pra cima"
+      "texto": "PROMPT 2 DO VIADUTO A 1ª imagem como referência de estilo Em pé num viaduto ao pôr do sol Rastros de luz dos carros embaixo Câmera baixa, de baixo pra cima"
     },
     {
       "ordem": 5,
@@ -47,16 +47,16 @@
       "ordem": 6,
       "arquivo": "slide-06.png",
       "papel": "desenvolvimento",
-      "texto": "O TRUQUE DO CELULAR Escreva \"natural grip\" E \"screen facing him\" Sem isso a IA vira a tela Feche com: sem texto, sem logo"
+      "texto": "PROMPT 3 DO CELULAR Escreva \"natural grip\" E \"screen facing him\" Sem isso a IA vira a tela Feche com: sem texto, sem logo"
     },
     {
       "ordem": 7,
       "arquivo": "slide-07.png",
       "papel": "cta",
-      "texto": "QUER OS 3 PROMPTS? Comenta NEON que eu te mando no direct"
+      "texto": "QUER OS 3 PROMPTS? Comenta PROMPT que eu te mando no direct"
     }
   ],
-  "legenda": "Essa foto minha saiu de um prompt. E eu te passo ele inteiro.\n\nUsei uma foto minha de referência e pedi arte de tela de jogo pintada à mão: contorno grosso, pôr do sol neon, eu embaixo e céu livre em cima. Depois foi só trocar a cena e manter o estilo, pra todas as fotos combinarem no feed.\n\nUm detalhe que salva: com celular na mão, escreva \"natural grip, the screen facing him\". Sem isso a IA vira a tela.\n\nServe pra capa de carrossel, foto de perfil ou divulgação do seu negócio, sem fotógrafo.\n\nSalva pra testar hoje.\n\nComenta NEON que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
+  "legenda": "Essa foto minha saiu de um prompt. E eu te passo ele inteiro.\n\nUsei uma foto minha de referência e pedi arte de tela de jogo pintada à mão: contorno grosso, pôr do sol neon, eu embaixo e céu livre em cima. Depois foi só trocar a cena e manter o estilo, pra todas as fotos combinarem no feed.\n\nUm detalhe que salva: com celular na mão, escreva \"natural grip, the screen facing him\". Sem isso a IA vira a tela.\n\nServe pra capa de carrossel, foto de perfil ou divulgação do seu negócio, sem fotógrafo.\n\nSalva pra testar hoje.\n\nComenta PROMPT que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
   "hashtags": [
     "#inteligenciaartificial",
     "#dicasdeia",
@@ -68,11 +68,11 @@
   "material_pdf": {
     "arquivo": "guia.pdf",
     "titulo": "3 prompts pra virar arte de videogame",
-    "categoria": "PROMPTS",
+    "categoria": "PROMPT",
     "marca": "otalogia",
     "template": "aidealab-azul-laranja-v1",
     "paginas": 7,
-    "fonte_sha256": "f6acfc1ca93fe5fe8af5e607903d4f4839d8953aa976e13b5938bdf9ba52c7d5",
+    "fonte_sha256": "a2c1bd33bea33abd5a0c9156d6608d58617ad076e54fe9accdc5b47470dcd0b0",
     "status": "rascunho",
     "revisao_visual": "pendente"
   }

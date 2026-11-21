@@ -53,10 +53,10 @@
       "ordem": 7,
       "arquivo": "slide-07.png",
       "papel": "cta",
-      "texto": "QUER OS 3 PROMPTS? Comenta OBJETO que eu te mando no direct"
+      "texto": "QUER OS 3 PROMPTS? Comenta PROMPT que eu te mando no direct"
     }
   ],
-  "legenda": "Um objeto na mão conta o assunto do post antes de qualquer legenda.\n\nQuadros numa vitrine no estilo videogame, uma estrela de papel e um leque de cartas. Tudo em branco, sem letra nenhuma, pra IA não inventar texto torto. Troque pelo objeto do seu negócio e mantenha o resto do prompt.\n\nSalva pra testar hoje.\n\nComenta OBJETO que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
+  "legenda": "Um objeto na mão conta o assunto do post antes de qualquer legenda.\n\nQuadros numa vitrine no estilo videogame, uma estrela de papel e um leque de cartas. Tudo em branco, sem letra nenhuma, pra IA não inventar texto torto. Troque pelo objeto do seu negócio e mantenha o resto do prompt.\n\nSalva pra testar hoje.\n\nComenta PROMPT que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
   "hashtags": [
     "#inteligenciaartificial",
     "#dicasdeia",
@@ -68,11 +68,11 @@
   "material_pdf": {
     "arquivo": "guia.pdf",
     "titulo": "3 prompts de foto com objeto",
-    "categoria": "PROMPTS",
+    "categoria": "PROMPT",
     "marca": "otalogia",
     "template": "aidealab-azul-laranja-v1",
     "paginas": 7,
-    "fonte_sha256": "77a7b474212d17c5ba27a141710d09abed3c1759ffc5064004eebb05771e70ef",
+    "fonte_sha256": "2dad64bd907a21e46ba9e2b7cfa12307f4d012aadc7cd23b5112db8b7422d494",
     "status": "rascunho",
     "revisao_visual": "pendente"
   }

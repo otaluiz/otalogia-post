@@ -8,6 +8,6 @@ Serve pra capa de carrossel, foto de perfil ou divulgação do seu negócio, sem
 
 Salva pra testar hoje.
 
-Comenta NEON que eu te mando no direct o PDF com os 3 prompts completos.
+Comenta PROMPT que eu te mando no direct o PDF com os 3 prompts completos.
 
 #inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia

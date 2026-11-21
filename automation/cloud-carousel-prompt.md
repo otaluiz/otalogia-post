@@ -48,7 +48,7 @@ Leia `DM-EDITORIAL-PREMIUM.md` antes de planejar CTAs de materiais. O documento 
 
 
 ## PRÉ-VALIDAÇÃO DE CATEGORIA E NÃO REPETIÇÃO
-ANTES de gerar/carregar novo carrossel, Reels ou PDF, leia `iscas/categorias.json` e rode: `python automation/avaliar_categorias.py --titulo "<tema planejado>" --categoria <CATEGORIA> --json`. Verifique `posts_possivelmente_duplicados` e `guias_existentes`. Se houve post sobre o mesmo problema, diferencie o ângulo ou cancele. Se já existe guia aprovado para a categoria, reuso obrigatório; não gerar documento novo. Gere o PDF rascunho junto do conteúdo após pesquisa independente; revise todas as páginas antes da aprovação de distribuição. Palavra-chave de comentário = palavra da categoria, não do post. Não prometa PDF inexistente.
+ANTES de gerar/carregar novo carrossel, Reels ou PDF, leia `iscas/categorias.json` e rode: `python automation/avaliar_categorias.py --titulo "<tema planejado>" --categoria <CATEGORIA> --json`. Verifique `posts_possivelmente_duplicados` e `guias_existentes`. Se houve post sobre o mesmo problema, diferencie o ângulo ou cancele. Se já existe guia aprovado para a categoria, reuso obrigatório; não gerar documento novo. Gere o PDF rascunho junto do conteúdo após pesquisa independente; revise todas as páginas antes da aprovação de distribuição. Palavra-chave de comentário = palavra da categoria, não do post. Conteúdo de prompt usa sempre a categoria/palavra PROMPT (motor/carrossel_prompts.py). Não prometa PDF inexistente.
 
 
 ## PDF obrigatório na entrega de conteúdo novo

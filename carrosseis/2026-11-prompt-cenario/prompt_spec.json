@@ -1,0 +1,94 @@
+{
+ "slug": "prompt-cenario",
+ "ordem": 9,
+ "tema": "tema",
+ "tags": [
+  "#inteligenciaartificial",
+  "#dicasdeia",
+  "#pequenosnegocios",
+  "#instagramparanegocios",
+  "#otalogia"
+ ],
+ "capa": {
+  "display": [
+   "O CENÁRIO",
+   "FAZ A FOTO."
+  ],
+  "emocao": "3 prompts pra [copiar]."
+ },
+ "fotos": [
+  {
+   "id": "c6a30279",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261119_211753_c6a30279-a259-4212-8447-f6bfef802303.png",
+   "prompt": "<<<65730766-9399-4986-9ce8-42813729df44>>> in the exact same illustration style as the reference image: hand-painted video-game loading-screen art, bold ink outlines, cel-shaded, magenta/orange/teal neon palette. He sits at a café terrace on an ocean drive at night with an open laptop on the table in front of him, the laptop screen facing him (we see the back of the lid), neon glow on his face, the figure in the lower half, head at vertical middle. Mouth closed, not smiling. No text, no letters, no logos, no glasses, no hat, no jewelry."
+  },
+  {
+   "id": "ea78187e",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261009_174728_ea78187e-2ba8-4a7a-ac79-a838a6fd099c.png",
+   "prompt": "Editorial fashion photograph, full body, architectural: a young man with short dark textured hair walks past a huge raw concrete wall in hard late-afternoon sun, looking down at the smartphone in his hand, his long sharp shadow cast on the wall behind him, serious focused expression, mouth closed, not smiling. Plain navy overcoat, plain white t-shirt, dark trousers, black shoes. Small figure in the lower third, the massive concrete wall and a strip of deep blue sky fill the upper part of the frame. Deep navy and cyan color grading. No text, no letters, no logos, no glasses, no hat, no jewelry"
+  },
+  {
+   "id": "2df66f00",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261008_173238_2df66f00-44bd-46ab-b548-3a597e90fdf5.png",
+   "prompt": "Editorial fashion photograph: a young man with short dark textured hair walks toward the camera through a very narrow corridor between two tall smooth white walls that open to a deep blue sky with soft clouds, looking down at the smartphone in his hand, eyes visible, focused and serious, mouth closed, not smiling. Plain navy suit, plain white t-shirt, dark shoes. Figure in the lower half of the frame, tall walls and sky above him. Deep navy and cyan color grading, crisp sunlight. No text, no letters, no logos, no sunglasses, no eyewear, no hat, no jewelry"
+  },
+  {
+   "id": "78876823",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3HjQfefFKc80uBRIq0tanTSM6Qk/hf_20261008_172838_78876823-99e5-4a79-86ea-f01d2541e5e8.png",
+   "prompt": "A low-angle full-body shot features a Latino / Hispanic adult man walking confidently down a tapering, light-blue architectural corridor beneath a vivid blue sky with wispy clouds. He is dressed in a sharp, light grey pinstriped suit over a crisp white dress shirt, paired with brown leather shoes. His hands are relaxed by his sides, and he wears dark sunglasses that shield his eyes and add a touch of modern sophistication. The corridor’s surfaces have a matte, textured finish, catching the midday sunlight to cast soft highlights and subtle shadows, creating a dramatic geometric frame that leads the viewer’s gaze upward toward the sky. The dominating colors are cool cyan-blue, pale grey, and a rich sky blue, offset by the warmth of his shoes and skin. The composition uses converging lines and extreme perspective, elongating the subject with a sense of grandeur and clarity. Captured by a digital camera with a wide-angle lens, there is mild barrel distortion and deep focus throughout the image, yielding crisp detail on both the man and the surrounding architecture. The mood conveys confidence, power, and modern professionalism with a slightly surreal, aspirational quality.\nHEX VALUES: [\"#345880\", \"#93a3b0\", \"#889aa8\", \"#a0afbb\", \"#7e909f\", \"#b0bcc5\", \"#dbe0e4\", \"#748596\", \"#66798d\", \"#c3cdd4\", \"#586b7d\", \"#416489\", \"#ebedee\"]"
+  }
+ ],
+ "pares": [
+  {
+   "titulo": "{VIDEOGAME}",
+   "lista": [
+    "Foto de referência + arte de tela de jogo",
+    "Café de calçadão à noite, notebook",
+    "Tela virada pra ele, brilho neon",
+    "Feche com: sem texto, sem logo"
+   ],
+   "guia": "O prompt no estilo arte de videogame. Anexe sua foto e, se tiver, uma imagem nesse estilo como referência.",
+   "dica": "Sempre feche com: no text, no letters, no logos.",
+   "nome": "videogame, no café"
+  },
+  {
+   "display": [
+    "MURO DE",
+    "CONCRETO"
+   ],
+   "emocao": "e a {sombra} longa.",
+   "titulo": "{DO CONCRETO}",
+   "nome": "o muro de concreto",
+   "lista": [
+    "Plano aberto, figura pequena embaixo",
+    "Muro de concreto bruto, sol de fim de tarde",
+    "Sombra longa projetada no muro",
+    "Faixa de céu azul em cima"
+   ],
+   "guia": "Figura pequena e cenário grande: a arquitetura vira o assunto.",
+   "dica": "\"Small figure in the lower third\" deixa o alto livre pro título."
+  },
+  {
+   "display": [
+    "UM CORREDOR",
+    "BRANCO"
+   ],
+   "emocao": "e o céu no {fim}.",
+   "titulo": "{DO CORREDOR}",
+   "nome": "o corredor branco",
+   "lista": [
+    "Corredor estreito entre paredes brancas",
+    "Andando na direção da câmera",
+    "Céu azul com nuvens no alto",
+    "Luz de sol bem nítida"
+   ],
+   "guia": "Linhas que convergem levam o olho direto pra pessoa.",
+   "dica": "Peça \"crisp sunlight\" pra sombra ficar desenhada."
+  }
+ ],
+ "guia_titulo": "3 prompts de foto com cenário",
+ "guia_sub": "Um no estilo videogame e dois de arquitetura, prontos pra colar com a sua foto.",
+ "legenda": "O cenário faz a foto. Essas 3 saíram de prompts, sem sair de casa.\n\nUma no estilo videogame, uma num muro de concreto com sombra longa, uma num corredor branco com céu no fim. Em todas, a pessoa é pequena e o cenário é grande, e o alto da foto fica livre pro título do post.\n\nSalva pra testar hoje.\n\nComenta {PALAVRA} que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
+ "blocos": {},
+ "sujeitos": {}
+}

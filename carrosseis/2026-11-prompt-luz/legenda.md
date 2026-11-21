@@ -4,6 +4,6 @@ Neon de diner no estilo videogame, um feixe de luz caindo de uma claraboia e luz
 
 Salva pra testar hoje.
 
-Comenta LUZ que eu te mando no direct o PDF com os 3 prompts completos.
+Comenta PROMPT que eu te mando no direct o PDF com os 3 prompts completos.
 
 #inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia
