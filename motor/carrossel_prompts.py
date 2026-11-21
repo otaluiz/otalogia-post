@@ -2,7 +2,7 @@
 carrossel_prompts.py — monta um carrossel de PROMPTS (imagem -> prompt que a gerou) e o PDF da DM.
 
 Regra fixa: todo conteúdo de prompt usa a categoria PROMPT de iscas/categorias.json, e a palavra do CTA
-é a palavra dessa categoria ("PROMPT"). Os PDFs de prompt são todos registrados nessa categoria, e a DM
+é a palavra dessa categoria ("PROMPT"). Os PDFs de prompt são únicos (os da aidealab, que o otalogia reaproveita) e registrados nessa categoria, e a DM
 manda os PDFs da categoria pela mesma palavra. Nunca criar palavra nova por post.
 
 Uso (na raiz do repo): python motor/carrossel_prompts.py <spec.json> --marca otalogia|aidealab
@@ -54,10 +54,13 @@ def registrar(slug, titulo, pasta):
     p = RAIZ / "iscas/categorias.json"
     cfg = json.loads(p.read_text(encoding="utf-8"))
     cat = cfg["categorias"][CATEGORIA]
-    gid = f"prompt-{slug}"
+    nome = slug.upper().replace("PROMPT-", "").replace("-", "_")
+    gid = "prompt-" + nome.lower()
     if not any(g.get("id") == gid for g in cat["guias"]):
-        cat["guias"].append({"id": gid, "titulo": titulo, "arquivo": f"PROMPT_{slug.upper().replace('-', '_')}.pdf",
-                             "origem": f"{pasta}/png/guia.pdf", "status": "piloto_aguardando_aprovacao"})
+        g = {"id": gid, "titulo": titulo, "arquivo": f"PROMPT_{nome}.pdf", "status": "piloto_aguardando_aprovacao"}
+        # PDF de prompt é um só: o da aidealab (07-Iscas-DM). O otalogia aponta para o mesmo arquivo, sem cópia.
+        g["origem"] = f"{pasta}/png/guia.pdf" if RAIZ.name.startswith("aidealab") or (RAIZ / "agente aidealab").exists() else "Google Drive/Clientes/aidealab/07-Iscas-DM"
+        cat["guias"].append(g)
     if slug not in cat.setdefault("posts_relevantes", []):
         cat["posts_relevantes"].append(slug)
     p.write_text(json.dumps(cfg, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
