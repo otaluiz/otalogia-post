@@ -1,156 +1,186 @@
 {
- "id": "2026-11-grade-vitrine",
- "meta": {
-  "serie": "INSTAGRAM",
-  "data": "2026/11",
-  "personagem": "luizota",
-  "guia": {
-   "fonte": "guia/guia.json"
-  }
- },
- "slides": [
-  {
-   "template": "T1",
-   "display": [
-    "SUA GRADE",
-    "É VITRINE."
-   ],
-   "emocao": {
-    "texto": "o que está [exposto]?",
-    "posicao": "antes"
-   },
-   "imagem": "capa_orig.png",
-   "bloco": {
-    "y": 190,
-    "alinhar": "centro",
-    "largura": 936,
-    "manual": true
-   },
-   "recorte": "capa_recorte.png",
-   "sujeito": {
-    "rostos": [],
-    "rostos_sujeito": [
-     [
-      402,
-      719,
-      670,
-      973
-     ]
-    ],
-    "cabeca": [
-     434,
-     718,
-     619,
-     888
-    ],
-    "caixa": [
-     289,
-     725,
-     767,
-     1439
-    ]
-   }
+  "id": "2026-11-grade-vitrine",
+  "meta": {
+    "serie": "INSTAGRAM",
+    "data": "2026/11",
+    "personagem": "luizota",
+    "guia": {
+      "fonte": "guia/guia.json"
+    }
   },
-  {
-   "template": "T2",
-   "display": [
-    "QUEM CHEGA OLHA",
-    "OS PRIMEIROS POSTS"
-   ],
-   "emocao": {
-    "texto": "e decide {rápido}.",
-    "posicao": "depois"
-   },
-   "imagem": null
-  },
-  {
-   "template": "T3",
-   "display": [
-    "FIXE {3}"
-   ],
-   "lista": [
-    "O que você faz",
-    "Prova: cliente ou resultado",
-    "Como comprar ou chamar",
-    "Troque quando outro vender mais"
-   ],
-   "textura": "grain"
-  },
-  {
-   "template": "T2",
-   "display": [
-    "POST FIXADO",
-    "VELHO"
-   ],
-   "emocao": {
-    "texto": "é vitrine {empoeirada}.",
-    "posicao": "depois"
-   }
-  },
-  {
-   "template": "T3",
-   "display": [
-    "COMO {FIXAR}"
-   ],
-   "lista": [
-    "Abra o post no seu perfil",
-    "Toque nos três pontinhos",
-    "Escolha Fixar no perfil",
-    "Repita até ter os 3"
-   ],
-   "textura": "led"
-  },
-  {
-   "template": "T2c",
-   "display": [
-    "ARRUME A VITRINE"
-   ],
-   "emocao": {
-    "texto": "antes de chamar {gente}.",
-    "posicao": "depois"
-   },
-   "textura": "led"
-  },
-  {
-   "template": "T4",
-   "display": [
-    "QUER SABER QUAIS",
-    "FIXAR NO SEU?"
-   ],
-   "cta": {
-    "acao": "Comenta VITRINE",
-    "texto": "que eu te mando no direct"
-   },
-   "imagem": "cta_orig.png",
-   "bloco": {
-    "y": 180,
-    "alinhar": "centro",
-    "largura": 936,
-    "manual": true,
-    "cta_y": 978
-   },
-   "sujeito": {
-    "rostos": [
-     [
-      402,
-      719,
-      670,
-      973
-     ]
-    ],
-    "cabeca": [
-     434,
-     718,
-     619,
-     888
-    ],
-    "caixa": [
-     289,
-     725,
-     767,
-     1439
-    ]
-   }
-  }
- ]
+  "slides": [
+    {
+      "template": "T1",
+      "display": [
+        "SUA GRADE",
+        "É VITRINE."
+      ],
+      "emocao": {
+        "texto": "o que está [exposto]?",
+        "posicao": "antes"
+      },
+      "imagem": "capa_orig.png",
+      "bloco": {
+        "y": 190,
+        "alinhar": "centro",
+        "largura": 936,
+        "manual": true
+      },
+      "recorte": "capa_recorte.png",
+      "sujeito": {
+        "rostos": [],
+        "rostos_sujeito": [
+          [
+            402,
+            719,
+            670,
+            973
+          ]
+        ],
+        "cabeca": [
+          434,
+          718,
+          619,
+          888
+        ],
+        "caixa": [
+          289,
+          725,
+          767,
+          1439
+        ]
+      }
+    },
+    {
+      "template": "T2",
+      "display": [
+        "QUEM CHEGA OLHA",
+        "OS PRIMEIROS POSTS"
+      ],
+      "emocao": {
+        "texto": "e decide {rápido}.",
+        "posicao": "depois"
+      },
+      "imagem": "slide2_orig.png",
+      "recorte": "slide2_recorte.png",
+      "sujeito": {
+        "rostos": [],
+        "rostos_sujeito": [
+          [
+            376,
+            596,
+            672,
+            870
+          ]
+        ],
+        "cabeca": [
+          406,
+          576,
+          612,
+          779
+        ],
+        "caixa": [
+          231,
+          584,
+          786,
+          1439
+        ]
+      },
+      "bloco": {
+        "y": 190,
+        "alinhar": "esquerda",
+        "largura": 936,
+        "manual": true
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "FIXE {3}"
+      ],
+      "lista": [
+        "O que você faz",
+        "Prova: cliente ou resultado",
+        "Como comprar ou chamar",
+        "Troque quando outro vender mais"
+      ],
+      "textura": "grain"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "POST FIXADO",
+        "VELHO"
+      ],
+      "emocao": {
+        "texto": "é vitrine {empoeirada}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "COMO {FIXAR}"
+      ],
+      "lista": [
+        "Abra o post no seu perfil",
+        "Toque nos três pontinhos",
+        "Escolha Fixar no perfil",
+        "Repita até ter os 3"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "ARRUME A VITRINE"
+      ],
+      "emocao": {
+        "texto": "antes de chamar {gente}.",
+        "posicao": "depois"
+      },
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER SABER QUAIS",
+        "FIXAR NO SEU?"
+      ],
+      "cta": {
+        "acao": "Comenta VITRINE",
+        "texto": "que eu te mando no direct"
+      },
+      "imagem": "cta_orig.png",
+      "bloco": {
+        "y": 180,
+        "alinhar": "centro",
+        "largura": 936,
+        "manual": true,
+        "cta_y": 1058
+      },
+      "sujeito": {
+        "rostos": [
+          [
+            402,
+            719,
+            670,
+            973
+          ]
+        ],
+        "cabeca": [
+          434,
+          718,
+          619,
+          888
+        ],
+        "caixa": [
+          289,
+          725,
+          767,
+          1439
+        ]
+      }
+    }
+  ]
 }

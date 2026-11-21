@@ -1,148 +1,170 @@
 {
- "id": "2026-11-site-3-segundos",
- "meta": {
-  "serie": "SITES",
-  "data": "2026/11",
-  "personagem": "luizota",
-  "guia": {
-   "fonte": "guia/guia.json"
-  }
- },
- "slides": [
-  {
-   "template": "T1",
-   "display": [
-    "SEU SITE DEMORA",
-    "3 SEGUNDOS?"
-   ],
-   "emocao": {
-    "texto": "o cliente já [foi].",
-    "posicao": "antes"
-   },
-   "imagem": "capa_orig.png",
-   "bloco": {
-    "y": 190,
-    "alinhar": "centro",
-    "largura": 936,
-    "manual": true
-   },
-   "recorte": "capa_recorte.png",
-   "sujeito": {
-    "rostos": [],
-    "cabeca": [
-     376,
-     635,
-     640,
-     891
-    ],
-    "caixa": [
-     237,
-     643,
-     798,
-     1439
-    ]
-   }
+  "id": "2026-11-site-3-segundos",
+  "meta": {
+    "serie": "SITES",
+    "data": "2026/11",
+    "personagem": "luizota",
+    "guia": {
+      "fonte": "guia/guia.json"
+    }
   },
-  {
-   "template": "T2",
-   "display": [
-    "NO CELULAR",
-    "NINGUÉM ESPERA"
-   ],
-   "emocao": {
-    "texto": "ele volta pro {Google}.",
-    "posicao": "depois"
-   },
-   "imagem": null
-  },
-  {
-   "template": "T3",
-   "display": [
-    "O QUE {PESA}"
-   ],
-   "lista": [
-    "Foto enorme sem compressão",
-    "Vídeo tocando sozinho no topo",
-    "Plugin que ninguém usa",
-    "Hospedagem barata demais"
-   ],
-   "textura": "grain"
-  },
-  {
-   "template": "T2",
-   "display": [
-    "SITE LENTO",
-    "SOME DA BUSCA"
-   ],
-   "emocao": {
-    "texto": "o Google mede a {velocidade}.",
-    "posicao": "depois"
-   }
-  },
-  {
-   "template": "T3",
-   "display": [
-    "TESTE {GRÁTIS}"
-   ],
-   "lista": [
-    "Abra o PageSpeed Insights",
-    "Cole o endereço do seu site",
-    "Veja a nota no celular",
-    "Comece pelo item vermelho"
-   ],
-   "textura": "led"
-  },
-  {
-   "template": "T2c",
-   "display": [
-    "RÁPIDO VENDE"
-   ],
-   "emocao": {
-    "texto": "lento só {carrega}.",
-    "posicao": "depois"
-   },
-   "textura": "led"
-  },
-  {
-   "template": "T4",
-   "display": [
-    "QUER QUE EU OLHE",
-    "O SEU SITE?"
-   ],
-   "cta": {
-    "acao": "Comenta SITE",
-    "texto": "que eu te mando no direct"
-   },
-   "imagem": "cta_orig.png",
-   "bloco": {
-    "y": 180,
-    "alinhar": "centro",
-    "largura": 936,
-    "manual": true,
-    "cta_y": 915
-   },
-   "sujeito": {
-    "rostos": [
-     [
-      376,
-      636,
-      640,
-      891
-     ]
-    ],
-    "cabeca": [
-     400,
-     635,
-     596,
-     825
-    ],
-    "caixa": [
-     237,
-     643,
-     798,
-     1439
-    ]
-   }
-  }
- ]
+  "slides": [
+    {
+      "template": "T1",
+      "display": [
+        "SEU SITE DEMORA",
+        "3 SEGUNDOS?"
+      ],
+      "emocao": {
+        "texto": "o cliente já [foi].",
+        "posicao": "antes"
+      },
+      "imagem": "capa_orig.png",
+      "bloco": {
+        "y": 190,
+        "alinhar": "centro",
+        "largura": 936,
+        "manual": true
+      },
+      "recorte": "capa_recorte.png",
+      "sujeito": {
+        "rostos": [],
+        "cabeca": [
+          376,
+          635,
+          640,
+          891
+        ],
+        "caixa": [
+          237,
+          643,
+          798,
+          1439
+        ]
+      }
+    },
+    {
+      "template": "T2",
+      "display": [
+        "NO CELULAR",
+        "NINGUÉM ESPERA"
+      ],
+      "emocao": {
+        "texto": "ele volta pro {Google}.",
+        "posicao": "depois"
+      },
+      "imagem": "slide2_orig.png",
+      "recorte": "slide2_recorte.png",
+      "sujeito": {
+        "rostos": [],
+        "cabeca": [
+          401,
+          633,
+          627,
+          855
+        ],
+        "caixa": [
+          299,
+          641,
+          795,
+          1439
+        ]
+      },
+      "bloco": {
+        "y": 190,
+        "alinhar": "esquerda",
+        "largura": 936,
+        "manual": true
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "O QUE {PESA}"
+      ],
+      "lista": [
+        "Foto enorme sem compressão",
+        "Vídeo tocando sozinho no topo",
+        "Plugin que ninguém usa",
+        "Hospedagem barata demais"
+      ],
+      "textura": "grain"
+    },
+    {
+      "template": "T2",
+      "display": [
+        "SITE LENTO",
+        "SOME DA BUSCA"
+      ],
+      "emocao": {
+        "texto": "o Google mede a {velocidade}.",
+        "posicao": "depois"
+      }
+    },
+    {
+      "template": "T3",
+      "display": [
+        "TESTE {GRÁTIS}"
+      ],
+      "lista": [
+        "Abra o PageSpeed Insights",
+        "Cole o endereço do seu site",
+        "Veja a nota no celular",
+        "Comece pelo item vermelho"
+      ],
+      "textura": "led"
+    },
+    {
+      "template": "T2c",
+      "display": [
+        "RÁPIDO VENDE"
+      ],
+      "emocao": {
+        "texto": "lento só {carrega}.",
+        "posicao": "depois"
+      },
+      "textura": "led"
+    },
+    {
+      "template": "T4",
+      "display": [
+        "QUER QUE EU OLHE",
+        "O SEU SITE?"
+      ],
+      "cta": {
+        "acao": "Comenta SITE",
+        "texto": "que eu te mando no direct"
+      },
+      "imagem": "cta_orig.png",
+      "bloco": {
+        "y": 180,
+        "alinhar": "centro",
+        "largura": 936,
+        "manual": true,
+        "cta_y": 995
+      },
+      "sujeito": {
+        "rostos": [
+          [
+            376,
+            636,
+            640,
+            891
+          ]
+        ],
+        "cabeca": [
+          400,
+          635,
+          596,
+          825
+        ],
+        "caixa": [
+          237,
+          643,
+          798,
+          1439
+        ]
+      }
+    }
+  ]
 }

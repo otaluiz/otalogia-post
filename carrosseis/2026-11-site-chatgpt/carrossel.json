@@ -61,7 +61,28 @@
     "texto": "e a IA lê {sites}.",
     "posicao": "depois"
    },
-   "imagem": null
+   "imagem": "slide2_orig.png",
+   "recorte": "slide2_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     320,
+     1121,
+     799,
+     1189
+    ],
+    "caixa": [
+     257,
+     1124,
+     927,
+     1411
+    ]
+   },
+   "bloco": {
+    "y": 190,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
   },
   {
    "template": "T3",
@@ -127,7 +148,7 @@
     "alinhar": "centro",
     "largura": 936,
     "manual": true,
-    "cta_y": 913
+    "cta_y": 993
    },
    "sujeito": {
     "rostos": [

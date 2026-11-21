@@ -61,7 +61,27 @@
     "texto": "não a quem {copiou}.",
     "posicao": "depois"
    },
-   "imagem": null
+   "imagem": "slide2_orig.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     388,
+     939,
+     614,
+     981
+    ],
+    "caixa": [
+     393,
+     941,
+     606,
+     1120
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
   },
   {
    "template": "T3",
@@ -127,7 +147,7 @@
     "alinhar": "centro",
     "largura": 936,
     "manual": true,
-    "cta_y": 915
+    "cta_y": 995
    },
    "sujeito": {
     "rostos": [

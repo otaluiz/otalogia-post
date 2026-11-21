@@ -67,7 +67,27 @@
     "texto": "você dá o {tom}.",
     "posicao": "depois"
    },
-   "imagem": null
+   "imagem": "slide2_orig.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     339,
+     962,
+     487,
+     1045
+    ],
+    "caixa": [
+     323,
+     966,
+     516,
+     1313
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
   },
   {
    "template": "T3",
@@ -133,7 +153,7 @@
     "alinhar": "centro",
     "largura": 936,
     "manual": true,
-    "cta_y": 981
+    "cta_y": 1061
    },
    "sujeito": {
     "rostos": [
