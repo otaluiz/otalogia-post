@@ -35,12 +35,16 @@
     <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
   </section>
 
-  <section id="s2" class="slide clip papel" data-start="6" data-duration="6" data-track-index="0">
-    <div class="dobra"></div>
-    <div class="conteudo" style="top: 520px; left: 72px; width: 936px">
+  <section id="s2" class="slide clip com-foto" data-start="6" data-duration="6" data-track-index="0">
+    <img class="foto" src="img/slide2_orig.png" alt="" />
+    <img class="bloom" src="img/slide2_orig.png" alt="" />
+    <div class="vinheta"></div>
+    <div class="brasas" data-layout-allow-overflow></div>
+    <div class="conteudo" style="top: 190px; left: 72px; width: 936px">
       <h2 class="display" data-layout-allow-overflow data-layout-allow-occlusion><span class="linha"><span>QUEM CHEGA OLHA</span></span><span class="linha"><span>OS PRIMEIROS POSTS</span></span></h2>
       <p class="emocao">e decide <span class="hl">rápido</span>.</p>
     </div>
+    <img data-layout-allow-occlusion class="recorte" src="img/slide2_recorte.png" alt="" />
     <div class="topo"><span>otalogia</span><span>instagram</span><span>2026/11</span></div>
     <div class="rodape"><span>@otalogia</span><span class="salva">salva pra depois</span><span class="dots"><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span></div>
     <svg class="grao" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#ruido)" /></svg>
@@ -123,10 +127,11 @@
   tl.fromTo("#s1 .arrasta b", { x: 0 }, { x: 14, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 3 }, 3.1);
   neon("s1", 0);
 
-  m.linhas("s2", 6.15);
-  m.marcas("#s2 .display .hl", 6.99);
-  m.escreve("#s2 .emocao", 7.09);
-  m.marcas("#s2 .emocao .hl", 8.09);
+  m.foto("s2", 6, { z: 1.06, brasas: 0 });
+  m.linhas("s2", 6.45);
+  m.marcas("#s2 .display .hl", 7.29);
+  m.escreve("#s2 .emocao", 7.39);
+  m.marcas("#s2 .emocao .hl", 8.39);
   neon("s2", 6);
 
   m.linhas("s3", 12.15);

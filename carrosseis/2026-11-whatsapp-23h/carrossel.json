@@ -52,7 +52,36 @@
     "texto": "com o que você {ensinar}.",
     "posicao": "depois"
    },
-   "imagem": null
+   "imagem": "slide2_orig.png",
+   "recorte": "slide2_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "rostos_sujeito": [
+     [
+      352,
+      726,
+      673,
+      1022
+     ]
+    ],
+    "cabeca": [
+     390,
+     722,
+     601,
+     891
+    ],
+    "caixa": [
+     224,
+     729,
+     1079,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 190,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
   },
   {
    "template": "T3",

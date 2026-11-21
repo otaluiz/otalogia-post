@@ -53,7 +53,28 @@
     "texto": "os {assuntos} do feed.",
     "posicao": "depois"
    },
-   "imagem": null
+   "imagem": "slide2_orig.png",
+   "recorte": "slide2_recorte.png",
+   "sujeito": {
+    "rostos": [],
+    "cabeca": [
+     376,
+     635,
+     640,
+     891
+    ],
+    "caixa": [
+     237,
+     643,
+     798,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 190,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
   },
   {
    "template": "T3",
