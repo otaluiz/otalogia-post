@@ -1,0 +1,49 @@
+{
+  "marca": "otalogia",
+  "titulo": "3 prompts de foto com luz",
+  "subtitulo": "Um no estilo videogame e dois de luz de estúdio, prontos pra colar com a sua foto.",
+  "categoria": "PROMPTS",
+  "como_usar": "Cole um prompt por vez, com a foto anexada, e só depois ajuste.",
+  "fontes": [
+    {
+      "titulo": "OpenAI: guia de geração de imagens (GPT Image)",
+      "url": "https://platform.openai.com/docs/guides/image-generation"
+    },
+    {
+      "titulo": "Higgsfield: geração de imagem com personagem de referência",
+      "url": "https://higgsfield.ai"
+    }
+  ],
+  "nota_fontes": "Material editorial otalogia, prompts usados nas imagens do carrossel (novembro de 2026). Resultados variam por modelo.",
+  "paginas": [
+    {
+      "titulo": "Prompt 1: videogame, no diner",
+      "texto": "O prompt no estilo arte de videogame. Anexe sua foto e, se tiver, uma imagem nesse estilo como referência.",
+      "codigo": "[sua foto de referência] in the exact same illustration style as the reference image: hand-painted video-game loading-screen art, bold ink outlines, cel-shaded, magenta/orange/teal neon palette. Late night, he sits in a neon-lit retro diner booth holding a smartphone in one hand in a natural way, the screen facing HIM (we see only the back of the phone, its glow lighting his face from below), palm trees through the window, the figure in the lower half, head at vertical middle, empty upper half. Mouth closed, not smiling. No text, no letters, no logos, no glasses, no hat, no jewelry.",
+      "dica": "Sempre feche com: no text, no letters, no logos."
+    },
+    {
+      "titulo": "Prompt 2: o feixe de luz",
+      "texto": "Uma única fonte de luz forte cria o clima de cinema.",
+      "codigo": "Editorial fashion photograph, dramatic low angle: [sua foto de referência] stands inside a dark minimalist room under a sharp triangular skylight that pours bright cyan light down on him, he looks down at the camera holding a smartphone, intense serious expression, mouth closed, not smiling. Plain dark navy suit, plain black t-shirt. The figure in the lower half of the frame, his head at the vertical middle, the dark ceiling and the glowing triangular opening fill the upper half above his head. Deep navy and cyan palette. No text, no letters, no logos, no glasses, no hat, no jewelry",
+      "dica": "Descreva de onde a luz vem e a cor dela."
+    },
+    {
+      "titulo": "Prompt 3: o bokeh laranja",
+      "texto": "Luz desfocada na frente da lente dá um ar artístico.",
+      "codigo": "A centered medium portrait depicts [sua foto de referência] set against a plain dark gradient background. He is dressed in a dark, formal suit jacket, with his hair closely cropped and neatly styled. The shot features a distinctly artistic overlay: an orange diffusion effect and multiple soft, round, glowing red-orange light spill patterns that obscure much of his torso and partially veil the lower third of his face, evoking a surreal, dreamy atmosphere. The subject is illuminated by soft, diffuse lighting from above and the front, leading to gentle, gradual shadows that subtly shape his facial features and blend his dark attire into the background. The overall color palette consists of muted dark grays and blacks highlighted with vibrant orange-red. The image has a smooth, matte finish with very little digital noise or grain, suggesting it was captured on a modern digital camera and has been artistically altered in post-production to create a moody, mysterious, and avant-garde mood.\nHEX VALUES: [\"#282d30\", \"#1f1f20\", \"#1b0906\", \"#32393c\", \"#a32e13\", \"#872812\", \"#3f4b4b\", \"#060404\", \"#40130b\", \"#496467\", \"#641b0d\", \"#69382a\", \"#6a534b\"]",
+      "dica": "Use \"soft round glowing light spill\" pro efeito bokeh."
+    },
+    {
+      "titulo": "Como usar os prompts",
+      "texto": "Funciona em qualquer gerador que aceite foto de referência (GPT Image no ChatGPT, Higgsfield, Nano Banana).",
+      "itens": [
+        "Anexe uma foto sua, de frente, com boa luz",
+        "Cole o prompt e troque [sua foto de referência] pela foto anexada",
+        "Formato 3:4 e qualidade alta",
+        "Mude uma coisa por vez: pose, roupa ou objeto"
+      ],
+      "dica": "Se for uma mulher, troque he/his por she/her."
+    }
+  ]
+}

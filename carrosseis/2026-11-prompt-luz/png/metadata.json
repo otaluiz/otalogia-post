@@ -1,0 +1,79 @@
+{
+  "carousel_id": "2026-11-prompt-luz",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-21",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 10,
+  "serie": "PROMPTS",
+  "tema": "A LUZ CERTA MUDA A FOTO. 3 prompts pra copiar.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T3-T2-T3-T2-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "A LUZ CERTA MUDA A FOTO. 3 prompts pra copiar."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "PROMPT 1 VIDEOGAME Foto de referência + arte de tela de jogo Diner retrô à noite, luz de neon Celular com a tela virada pra ele O brilho da tela ilumina o rosto"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "UM FEIXE DE LUZ vindo de cima."
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "PROMPT 2 DA CLARABOIA Sala escura e minimalista Claraboia triangular jogando luz ciano Câmera baixa olhando pra cima Terno escuro, camiseta preta lisa"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "LUZ DESFOCADA cara de sonho."
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "PROMPT 3 DO BOKEH Retrato médio, fundo escuro em degradê Bolas de luz laranja desfocadas Luz suave de cima e da frente Blazer escuro, cabelo curto"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "cta",
+      "texto": "QUER OS 3 PROMPTS? Comenta LUZ que eu te mando no direct"
+    }
+  ],
+  "legenda": "A luz certa muda a foto inteira. Essas 3 saíram de prompts.\n\nNeon de diner no estilo videogame, um feixe de luz caindo de uma claraboia e luz laranja desfocada na frente da lente. O truque é sempre dizer de onde a luz vem e qual a cor dela.\n\nSalva pra testar hoje.\n\nComenta LUZ que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
+  "hashtags": [
+    "#inteligenciaartificial",
+    "#dicasdeia",
+    "#pequenosnegocios",
+    "#instagramparanegocios",
+    "#otalogia"
+  ],
+  "handle": "@otalogia",
+  "material_pdf": {
+    "arquivo": "guia.pdf",
+    "titulo": "3 prompts de foto com luz",
+    "categoria": "PROMPTS",
+    "marca": "otalogia",
+    "template": "aidealab-azul-laranja-v1",
+    "paginas": 7,
+    "fonte_sha256": "c524081af9c3323a0e8528a247e681c906ea78c5acf833b19abd2f9c96bc7564",
+    "status": "rascunho",
+    "revisao_visual": "pendente"
+  }
+}

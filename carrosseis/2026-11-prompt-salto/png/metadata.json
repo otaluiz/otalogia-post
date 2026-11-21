@@ -1,0 +1,79 @@
+{
+  "carousel_id": "2026-11-prompt-salto",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-21",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 11,
+  "serie": "PROMPTS",
+  "tema": "FOTO PARADA NINGUÉM PARA. 3 prompts com movimento.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T3-T2-T3-T2-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "FOTO PARADA NINGUÉM PARA. 3 prompts com movimento."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "PROMPT 1 VIDEOGAME Foto de referência + arte de tela de jogo Na moto, no calçadão ao pôr do sol Olhando direto pra câmera Câmera baixa, céu enorme em cima"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "NO AR, CONTRA O CÉU sem cenário."
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "PROMPT 2 DO SALTO Câmera rente à grama, de baixo Pulando com os joelhos dobrados Braços abertos, céu azul limpo Figura pequena, muito céu em cima"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "UM PULO MAIS ALTO com nuvens."
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "PROMPT 3 DO PULO Pulo alto, um braço esticado pra cima Céu azul com nuvens brancas Calça larga clara, camiseta lisa Luz de sol nítida"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "cta",
+      "texto": "QUER OS 3 PROMPTS? Comenta SALTO que eu te mando no direct"
+    }
+  ],
+  "legenda": "Foto parada, ninguém para. Essas 3 têm movimento e saíram de prompts.\n\nUma na moto no estilo videogame, duas no meio de um pulo com a câmera rente ao chão. Câmera baixa e muito céu fazem o salto parecer mais alto.\n\nSalva pra testar hoje.\n\nComenta SALTO que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
+  "hashtags": [
+    "#inteligenciaartificial",
+    "#dicasdeia",
+    "#pequenosnegocios",
+    "#instagramparanegocios",
+    "#otalogia"
+  ],
+  "handle": "@otalogia",
+  "material_pdf": {
+    "arquivo": "guia.pdf",
+    "titulo": "3 prompts de foto com movimento",
+    "categoria": "PROMPTS",
+    "marca": "otalogia",
+    "template": "aidealab-azul-laranja-v1",
+    "paginas": 7,
+    "fonte_sha256": "7f2f1924fa9349b0a145415d5e7a4e7298881a22299e8ba4594af28423e2da33",
+    "status": "rascunho",
+    "revisao_visual": "pendente"
+  }
+}

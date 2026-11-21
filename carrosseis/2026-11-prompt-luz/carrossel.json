@@ -1,0 +1,221 @@
+{
+ "id": "2026-11-prompt-luz",
+ "meta": {
+  "serie": "PROMPTS",
+  "data": "2026/11",
+  "personagem": "luizota",
+  "guia": {
+   "fonte": "guia/guia.json"
+  }
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "A LUZ CERTA",
+    "MUDA A FOTO."
+   ],
+   "emocao": {
+    "texto": "3 prompts pra [copiar].",
+    "posicao": "depois"
+   },
+   "imagem": "capa_orig.png",
+   "sujeito": {
+    "rostos": [
+     [
+      352,
+      726,
+      673,
+      1022
+     ]
+    ],
+    "cabeca": [
+     390,
+     722,
+     601,
+     891
+    ],
+    "caixa": [
+     224,
+     729,
+     1079,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "PROMPT 1",
+    "{VIDEOGAME}"
+   ],
+   "lista": [
+    "Foto de referência + arte de tela de jogo",
+    "Diner retrô à noite, luz de neon",
+    "Celular com a tela virada pra ele",
+    "O brilho da tela ilumina o rosto"
+   ],
+   "imagem": null
+  },
+  {
+   "template": "T2",
+   "display": [
+    "UM FEIXE",
+    "DE LUZ"
+   ],
+   "emocao": {
+    "texto": "vindo de {cima}.",
+    "posicao": "depois"
+   },
+   "imagem": "slide3_orig.png",
+   "sujeito": {
+    "rostos": [
+     [
+      311,
+      692,
+      723,
+      1032
+     ]
+    ],
+    "cabeca": [
+     406,
+     673,
+     641,
+     853
+    ],
+    "caixa": [
+     138,
+     680,
+     1009,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "PROMPT 2",
+    "{DA CLARABOIA}"
+   ],
+   "lista": [
+    "Sala escura e minimalista",
+    "Claraboia triangular jogando luz ciano",
+    "Câmera baixa olhando pra cima",
+    "Terno escuro, camiseta preta lisa"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "LUZ",
+    "DESFOCADA"
+   ],
+   "emocao": {
+    "texto": "cara de {sonho}.",
+    "posicao": "depois"
+   },
+   "imagem": "slide5_orig.png",
+   "bloco": {
+    "y": 720,
+    "alinhar": "esquerda",
+    "largura": 936,
+    "manual": true
+   },
+   "sujeito": {
+    "rostos": [
+     [
+      270,
+      261,
+      716,
+      669
+     ]
+    ],
+    "cabeca": [
+     348,
+     169,
+     669,
+     468
+    ],
+    "caixa": [
+     101,
+     181,
+     992,
+     1439
+    ],
+    "rostos_manual": [
+     [
+      270,
+      261,
+      716,
+      669
+     ]
+    ],
+    "rostos_so_manual": true
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "PROMPT 3",
+    "{DO BOKEH}"
+   ],
+   "lista": [
+    "Retrato médio, fundo escuro em degradê",
+    "Bolas de luz laranja desfocadas",
+    "Luz suave de cima e da frente",
+    "Blazer escuro, cabelo curto"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER OS",
+    "3 PROMPTS?"
+   ],
+   "cta": {
+    "acao": "Comenta LUZ",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta_orig.png",
+   "sujeito": {
+    "rostos": [
+     [
+      399,
+      585,
+      659,
+      845
+     ]
+    ],
+    "cabeca": [
+     398,
+     539,
+     668,
+     751
+    ],
+    "caixa": [
+     197,
+     547,
+     886,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 900,
+    "alinhar": "esquerda",
+    "largura": 560
+   }
+  }
+ ]
+}
