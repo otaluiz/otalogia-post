@@ -1,0 +1,49 @@
+{
+  "marca": "otalogia",
+  "titulo": "3 prompts de foto com cenário",
+  "subtitulo": "Um no estilo videogame e dois de arquitetura, prontos pra colar com a sua foto.",
+  "categoria": "PROMPTS",
+  "como_usar": "Cole um prompt por vez, com a foto anexada, e só depois ajuste.",
+  "fontes": [
+    {
+      "titulo": "OpenAI: guia de geração de imagens (GPT Image)",
+      "url": "https://platform.openai.com/docs/guides/image-generation"
+    },
+    {
+      "titulo": "Higgsfield: geração de imagem com personagem de referência",
+      "url": "https://higgsfield.ai"
+    }
+  ],
+  "nota_fontes": "Material editorial otalogia, prompts usados nas imagens do carrossel (novembro de 2026). Resultados variam por modelo.",
+  "paginas": [
+    {
+      "titulo": "Prompt 1: videogame, no café",
+      "texto": "O prompt no estilo arte de videogame. Anexe sua foto e, se tiver, uma imagem nesse estilo como referência.",
+      "codigo": "[sua foto de referência] in the exact same illustration style as the reference image: hand-painted video-game loading-screen art, bold ink outlines, cel-shaded, magenta/orange/teal neon palette. He sits at a café terrace on an ocean drive at night with an open laptop on the table in front of him, the laptop screen facing him (we see the back of the lid), neon glow on his face, the figure in the lower half, head at vertical middle. Mouth closed, not smiling. No text, no letters, no logos, no glasses, no hat, no jewelry.",
+      "dica": "Sempre feche com: no text, no letters, no logos."
+    },
+    {
+      "titulo": "Prompt 2: o muro de concreto",
+      "texto": "Figura pequena e cenário grande: a arquitetura vira o assunto.",
+      "codigo": "Editorial fashion photograph, full body, architectural: [sua foto de referência] walks past a huge raw concrete wall in hard late-afternoon sun, looking down at the smartphone in his hand, his long sharp shadow cast on the wall behind him, serious focused expression, mouth closed, not smiling. Plain navy overcoat, plain white t-shirt, dark trousers, black shoes. Small figure in the lower third, the massive concrete wall and a strip of deep blue sky fill the upper part of the frame. Deep navy and cyan color grading. No text, no letters, no logos, no glasses, no hat, no jewelry",
+      "dica": "\"Small figure in the lower third\" deixa o alto livre pro título."
+    },
+    {
+      "titulo": "Prompt 3: o corredor branco",
+      "texto": "Linhas que convergem levam o olho direto pra pessoa.",
+      "codigo": "Editorial fashion photograph: [sua foto de referência] walks toward the camera through a very narrow corridor between two tall smooth white walls that open to a deep blue sky with soft clouds, looking down at the smartphone in his hand, eyes visible, focused and serious, mouth closed, not smiling. Plain navy suit, plain white t-shirt, dark shoes. Figure in the lower half of the frame, tall walls and sky above him. Deep navy and cyan color grading, crisp sunlight. No text, no letters, no logos, no sunglasses, no eyewear, no hat, no jewelry",
+      "dica": "Peça \"crisp sunlight\" pra sombra ficar desenhada."
+    },
+    {
+      "titulo": "Como usar os prompts",
+      "texto": "Funciona em qualquer gerador que aceite foto de referência (GPT Image no ChatGPT, Higgsfield, Nano Banana).",
+      "itens": [
+        "Anexe uma foto sua, de frente, com boa luz",
+        "Cole o prompt e troque [sua foto de referência] pela foto anexada",
+        "Formato 3:4 e qualidade alta",
+        "Mude uma coisa por vez: pose, roupa ou objeto"
+      ],
+      "dica": "Se for uma mulher, troque he/his por she/her."
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+ "id": "2026-11-prompt-objeto",
+ "meta": {
+  "serie": "PROMPTS",
+  "data": "2026/11",
+  "personagem": "luizota",
+  "guia": {
+   "fonte": "guia/guia.json"
+  }
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "UM OBJETO",
+    "CONTA O ASSUNTO."
+   ],
+   "emocao": {
+    "texto": "sem [legenda].",
+    "posicao": "depois"
+   },
+   "imagem": "capa_orig.png",
+   "sujeito": {
+    "rostos": [
+     [
+      402,
+      719,
+      670,
+      973
+     ]
+    ],
+    "cabeca": [
+     434,
+     718,
+     619,
+     888
+    ],
+    "caixa": [
+     289,
+     725,
+     767,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "PROMPT 1",
+    "{VIDEOGAME}"
+   ],
+   "lista": [
+    "Foto de referência + arte de tela de jogo",
+    "Vitrine com 9 quadros brilhando",
+    "Quadros em branco, sem nada escrito",
+    "Braços cruzados, céu de fim de tarde"
+   ],
+   "imagem": null
+  },
+  {
+   "template": "T2",
+   "display": [
+    "UMA ESTRELA",
+    "DE PAPEL"
+   ],
+   "emocao": {
+    "texto": "fala de {avaliação}.",
+    "posicao": "depois"
+   },
+   "imagem": "slide3_orig.png",
+   "sujeito": {
+    "rostos": [
+     [
+      322,
+      242,
+      714,
+      598
+     ]
+    ],
+    "cabeca": [
+     401,
+     188,
+     677,
+     482
+    ],
+    "caixa": [
+     121,
+     199,
+     995,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 700,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "PROMPT 2",
+    "{DA ESTRELA}"
+   ],
+   "lista": [
+    "Retrato do peito pra cima",
+    "Estrela de papel laranja, em branco",
+    "Fundo escuro, luz laranja de lado",
+    "Grão de filme, sem texto, sem logo"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "CARTAS",
+    "EM BRANCO"
+   ],
+   "emocao": {
+    "texto": "fala de {escolha}.",
+    "posicao": "depois"
+   },
+   "imagem": "slide5_orig.png",
+   "sujeito": {
+    "rostos": [
+     [
+      276,
+      210,
+      793,
+      684
+     ]
+    ],
+    "cabeca": [
+     386,
+     183,
+     700,
+     478
+    ],
+    "caixa": [
+     110,
+     194,
+     947,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 1000,
+    "alinhar": "direita",
+    "largura": 560
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "PROMPT 3",
+    "{DAS CARTAS}"
+   ],
+   "lista": [
+    "Leque de cartas brancas, como mágico",
+    "Sobrancelha erguida, meio sorriso",
+    "Fundo azul-escuro, luz laranja",
+    "Cabeça a 40% do quadro"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER OS",
+    "3 PROMPTS?"
+   ],
+   "cta": {
+    "acao": "Comenta OBJETO",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta_orig.png",
+   "sujeito": {
+    "rostos": [
+     [
+      290,
+      240,
+      798,
+      748
+     ]
+    ],
+    "cabeca": [
+     355,
+     213,
+     708,
+     475
+    ],
+    "caixa": [
+     43,
+     223,
+     1066,
+     1326
+    ]
+   },
+   "bloco": {
+    "y": 800,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  }
+ ]
+}

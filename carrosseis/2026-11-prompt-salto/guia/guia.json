@@ -1,0 +1,49 @@
+{
+  "marca": "otalogia",
+  "titulo": "3 prompts de foto com movimento",
+  "subtitulo": "Um no estilo videogame e dois de salto e movimento, prontos pra colar com a sua foto.",
+  "categoria": "PROMPTS",
+  "como_usar": "Cole um prompt por vez, com a foto anexada, e só depois ajuste.",
+  "fontes": [
+    {
+      "titulo": "OpenAI: guia de geração de imagens (GPT Image)",
+      "url": "https://platform.openai.com/docs/guides/image-generation"
+    },
+    {
+      "titulo": "Higgsfield: geração de imagem com personagem de referência",
+      "url": "https://higgsfield.ai"
+    }
+  ],
+  "nota_fontes": "Material editorial otalogia, prompts usados nas imagens do carrossel (novembro de 2026). Resultados variam por modelo.",
+  "paginas": [
+    {
+      "titulo": "Prompt 1: videogame, na moto",
+      "texto": "O prompt no estilo arte de videogame. Anexe sua foto e, se tiver, uma imagem nesse estilo como referência.",
+      "codigo": "[sua foto de referência] in the exact same illustration style as the reference image: hand-painted video-game loading-screen art, bold ink outlines, cel-shaded, magenta/orange/teal neon sunset palette. He sits on a motorcycle on a beach boardwalk at sunset, looking straight at the camera, low angle, the figure in the lower half, head at vertical middle, large empty sunset sky above. Mouth closed, not smiling. No text, no letters, no logos, no glasses, no hat, no jewelry.",
+      "dica": "Sempre feche com: no text, no letters, no logos."
+    },
+    {
+      "titulo": "Prompt 2: o salto no céu",
+      "texto": "Câmera baixa e céu limpo: o salto parece mais alto.",
+      "codigo": "Extreme low angle editorial fashion photograph from the grass: [sua foto de referência] leaping in mid-air with knees tucked and both arms stretched out to the sides, holding a smartphone in one hand, plain navy t-shirt, wide light grey trousers, black boots, intense focused face, mouth closed, not smiling. Vast clean deep blue sky. The figure is small, in the lower half of the frame, his head at the vertical middle of the picture, a huge empty sky fills the whole upper half above him. Crisp sunlight, deep navy and cyan color grading. No text, no letters, no logos, no glasses, no hat",
+      "dica": "\"Extreme low angle from the grass\" é a frase que faz o efeito."
+    },
+    {
+      "titulo": "Prompt 3: o pulo com nuvens",
+      "texto": "Movimento parado no ar prende o olho no feed.",
+      "codigo": "Extreme low angle editorial fashion photograph shot from the grass looking up: [sua foto de referência] leaping high in mid-air against a vast deep blue sky with a few soft white clouds, knees bent, one arm stretched up holding a smartphone, the other arm out for balance, plain navy t-shirt, wide light grey trousers, black boots, intense focused face, mouth closed, not smiling, his body in the lower half of the frame with huge open sky above his head, crisp sunlight, deep navy and cyan color grading, no text, no letters, no logos, no glasses, no hat",
+      "dica": "Peça a roupa larga: ela mostra o movimento."
+    },
+    {
+      "titulo": "Como usar os prompts",
+      "texto": "Funciona em qualquer gerador que aceite foto de referência (GPT Image no ChatGPT, Higgsfield, Nano Banana).",
+      "itens": [
+        "Anexe uma foto sua, de frente, com boa luz",
+        "Cole o prompt e troque [sua foto de referência] pela foto anexada",
+        "Formato 3:4 e qualidade alta",
+        "Mude uma coisa por vez: pose, roupa ou objeto"
+      ],
+      "dica": "Se for uma mulher, troque he/his por she/her."
+    }
+  ]
+}

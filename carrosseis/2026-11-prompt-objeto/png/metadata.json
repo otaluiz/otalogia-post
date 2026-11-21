@@ -1,0 +1,79 @@
+{
+  "carousel_id": "2026-11-prompt-objeto",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-21",
+  "status": "rascunho",
+  "postado": false,
+  "postado_em": null,
+  "post_id": null,
+  "ordem_fila": 12,
+  "serie": "PROMPTS",
+  "tema": "UM OBJETO CONTA O ASSUNTO. sem legenda.",
+  "familia_cor": "ink-laranja",
+  "template": "T1-T3-T2-T3-T2-T3-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "UM OBJETO CONTA O ASSUNTO. sem legenda."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "PROMPT 1 VIDEOGAME Foto de referência + arte de tela de jogo Vitrine com 9 quadros brilhando Quadros em branco, sem nada escrito Braços cruzados, céu de fim de tarde"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "UMA ESTRELA DE PAPEL fala de avaliação."
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "PROMPT 2 DA ESTRELA Retrato do peito pra cima Estrela de papel laranja, em branco Fundo escuro, luz laranja de lado Grão de filme, sem texto, sem logo"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "CARTAS EM BRANCO fala de escolha."
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "PROMPT 3 DAS CARTAS Leque de cartas brancas, como mágico Sobrancelha erguida, meio sorriso Fundo azul-escuro, luz laranja Cabeça a 40% do quadro"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "cta",
+      "texto": "QUER OS 3 PROMPTS? Comenta OBJETO que eu te mando no direct"
+    }
+  ],
+  "legenda": "Um objeto na mão conta o assunto do post antes de qualquer legenda.\n\nQuadros numa vitrine no estilo videogame, uma estrela de papel e um leque de cartas. Tudo em branco, sem letra nenhuma, pra IA não inventar texto torto. Troque pelo objeto do seu negócio e mantenha o resto do prompt.\n\nSalva pra testar hoje.\n\nComenta OBJETO que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
+  "hashtags": [
+    "#inteligenciaartificial",
+    "#dicasdeia",
+    "#pequenosnegocios",
+    "#instagramparanegocios",
+    "#otalogia"
+  ],
+  "handle": "@otalogia",
+  "material_pdf": {
+    "arquivo": "guia.pdf",
+    "titulo": "3 prompts de foto com objeto",
+    "categoria": "PROMPTS",
+    "marca": "otalogia",
+    "template": "aidealab-azul-laranja-v1",
+    "paginas": 7,
+    "fonte_sha256": "77a7b474212d17c5ba27a141710d09abed3c1759ffc5064004eebb05771e70ef",
+    "status": "rascunho",
+    "revisao_visual": "pendente"
+  }
+}

@@ -1,0 +1,217 @@
+{
+ "id": "2026-11-prompt-cenario",
+ "meta": {
+  "serie": "PROMPTS",
+  "data": "2026/11",
+  "personagem": "luizota",
+  "guia": {
+   "fonte": "guia/guia.json"
+  }
+ },
+ "slides": [
+  {
+   "template": "T1",
+   "display": [
+    "O CENÁRIO",
+    "FAZ A FOTO."
+   ],
+   "emocao": {
+    "texto": "3 prompts pra [copiar].",
+    "posicao": "depois"
+   },
+   "imagem": "capa_orig.png",
+   "sujeito": {
+    "rostos": [
+     [
+      371,
+      534,
+      702,
+      891
+     ]
+    ],
+    "cabeca": [
+     406,
+     522,
+     624,
+     737
+    ],
+    "caixa": [
+     74,
+     530,
+     1079,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 720
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "PROMPT 1",
+    "{VIDEOGAME}"
+   ],
+   "lista": [
+    "Foto de referência + arte de tela de jogo",
+    "Café de calçadão à noite, notebook",
+    "Tela virada pra ele, brilho neon",
+    "Feche com: sem texto, sem logo"
+   ],
+   "imagem": null
+  },
+  {
+   "template": "T2",
+   "display": [
+    "MURO DE",
+    "CONCRETO"
+   ],
+   "emocao": {
+    "texto": "e a {sombra} longa.",
+    "posicao": "depois"
+   },
+   "imagem": "slide3_orig.png",
+   "sujeito": {
+    "rostos": [
+     [
+      580,
+      911,
+      872,
+      1203
+     ],
+     [
+      145,
+      648,
+      555,
+      1058
+     ]
+    ],
+    "cabeca": [
+     442,
+     773,
+     647,
+     930
+    ],
+    "caixa": [
+     413,
+     779,
+     686,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "PROMPT 2",
+    "{DO CONCRETO}"
+   ],
+   "lista": [
+    "Plano aberto, figura pequena embaixo",
+    "Muro de concreto bruto, sol de fim de tarde",
+    "Sombra longa projetada no muro",
+    "Faixa de céu azul em cima"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T2",
+   "display": [
+    "UM CORREDOR",
+    "BRANCO"
+   ],
+   "emocao": {
+    "texto": "e o céu no {fim}.",
+    "posicao": "depois"
+   },
+   "imagem": "slide5_orig.png",
+   "sujeito": {
+    "rostos": [
+     [
+      417,
+      1239,
+      561,
+      1383
+     ]
+    ],
+    "cabeca": [
+     432,
+     772,
+     653,
+     929
+    ],
+    "caixa": [
+     412,
+     778,
+     679,
+     1439
+    ]
+   },
+   "bloco": {
+    "y": 200,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  },
+  {
+   "template": "T3",
+   "display": [
+    "PROMPT 3",
+    "{DO CORREDOR}"
+   ],
+   "lista": [
+    "Corredor estreito entre paredes brancas",
+    "Andando na direção da câmera",
+    "Céu azul com nuvens no alto",
+    "Luz de sol bem nítida"
+   ],
+   "textura": "led"
+  },
+  {
+   "template": "T4",
+   "display": [
+    "QUER OS",
+    "3 PROMPTS?"
+   ],
+   "cta": {
+    "acao": "Comenta CENARIO",
+    "texto": "que eu te mando no direct"
+   },
+   "imagem": "cta_orig.png",
+   "sujeito": {
+    "rostos": [
+     [
+      283,
+      543,
+      470,
+      730
+     ]
+    ],
+    "cabeca": [
+     390,
+     381,
+     689,
+     627
+    ],
+    "caixa": [
+     380,
+     391,
+     701,
+     1425
+    ]
+   },
+   "bloco": {
+    "y": 800,
+    "alinhar": "esquerda",
+    "largura": 936
+   }
+  }
+ ]
+}
