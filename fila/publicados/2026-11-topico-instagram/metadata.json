@@ -1,0 +1,146 @@
+{
+  "carousel_id": "2026-11-topico-instagram",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-20",
+  "status": "rascunho",
+  "postado": true,
+  "postado_em": "2026-11-22 12:37:27",
+  "post_id": "17916455166287313",
+  "ordem_fila": 2,
+  "serie": "INSTAGRAM",
+  "tema": "SEU CLIENTE ESCOLHE O QUE VÊ. você é tópico?",
+  "familia_cor": "vice-sunset",
+  "template": "T1-T2-T3-T2-T3-T2c-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SEU CLIENTE ESCOLHE O QUE VÊ. você é tópico?",
+      "midia": "imagem",
+      "origem": "slide-01.png"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.mp4",
+      "papel": "hook-animado",
+      "texto": "SEU CLIENTE ESCOLHE O QUE VÊ. você é tópico?",
+      "midia": "video",
+      "origem": "slide-01.mp4"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.mp4",
+      "papel": "tensao",
+      "texto": "O INSTAGRAM DEIXA O USUÁRIO ESCOLHER os assuntos do feed.",
+      "midia": "video",
+      "origem": "slide-02.mp4"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.mp4",
+      "papel": "desenvolvimento",
+      "texto": "COMO SER ESCOLHIDO Um assunto só no perfil A mesma palavra na bio e na legenda Post que ensina, não só mostra Toda semana, sem sumir",
+      "midia": "video",
+      "origem": "slide-03.mp4"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.mp4",
+      "papel": "desenvolvimento",
+      "texto": "PERFIL QUE FALA DE TUDO não é tópico de ninguém.",
+      "midia": "video",
+      "origem": "slide-04.mp4"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.mp4",
+      "papel": "desenvolvimento",
+      "texto": "TESTE DE 10 SEGUNDOS Abre seu perfil como cliente Olha os 9 últimos posts Dá pra dizer do que você fala? Se não dá, escolha um assunto",
+      "midia": "video",
+      "origem": "slide-05.mp4"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.mp4",
+      "papel": "desenvolvimento",
+      "texto": "O CLIENTE ESCOLHE quem é claro.",
+      "midia": "video",
+      "origem": "slide-06.mp4"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.mp4",
+      "papel": "cta",
+      "texto": "QUER A LISTA DE ASSUNTOS? Comenta TOPICO que eu te mando no direct",
+      "midia": "video",
+      "origem": "slide-07.mp4"
+    }
+  ],
+  "legenda": "Agora o seu cliente escolhe os assuntos que aparecem no feed dele. A pergunta é se o seu perfil é um desses assuntos.\n\nO Instagram passou a deixar a pessoa ajustar os tópicos do próprio feed (\"Seu algoritmo\"). Quem escolhe \"doces\", \"reforma\" ou \"cabelo\" passa a ver mais de quem fala disso com clareza.\n\nPerfil que fala de tudo não é tópico de ninguém.\n\nComo ser escolhido:\n1. Um assunto só no perfil\n2. A mesma palavra na bio e na legenda\n3. Post que ensina, não só mostra\n4. Toda semana, sem sumir\n\nTeste de 10 segundos: abre seu perfil como se fosse cliente e olha os 9 últimos posts. Dá pra dizer do que você fala? Se não dá, escolha um assunto.\n\nSalva pra fazer o teste hoje.\n\nComenta TOPICO que eu te mando no direct uma lista de assuntos pro seu tipo de negócio.\n\n#pequenosnegocios #instagramparanegocios #empreendedorismo #marketingdigital #otalogia",
+  "hashtags": [
+    "#pequenosnegocios",
+    "#instagramparanegocios",
+    "#empreendedorismo",
+    "#marketingdigital",
+    "#otalogia"
+  ],
+  "handle": "@otalogia",
+  "material_pdf": {
+    "arquivo": "guia.pdf",
+    "titulo": "Lista de assuntos pro seu perfil virar tópico",
+    "categoria": "INSTAGRAM",
+    "marca": "otalogia",
+    "template": "aidealab-azul-laranja-v1",
+    "paginas": 7,
+    "fonte_sha256": "06871e3ffa693a0127397af5d46ea28882419ab19ec1077631e5a6046e7083ff",
+    "status": "rascunho",
+    "revisao_visual": "pendente"
+  },
+  "slides_estatico": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SEU CLIENTE ESCOLHE O QUE VÊ. você é tópico?"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "O INSTAGRAM DEIXA O USUÁRIO ESCOLHER os assuntos do feed."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "COMO SER ESCOLHIDO Um assunto só no perfil A mesma palavra na bio e na legenda Post que ensina, não só mostra Toda semana, sem sumir"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "PERFIL QUE FALA DE TUDO não é tópico de ninguém."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "TESTE DE 10 SEGUNDOS Abre seu perfil como cliente Olha os 9 últimos posts Dá pra dizer do que você fala? Se não dá, escolha um assunto"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "O CLIENTE ESCOLHE quem é claro."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "cta",
+      "texto": "QUER A LISTA DE ASSUNTOS? Comenta TOPICO que eu te mando no direct"
+    }
+  ],
+  "formato_midia": "motion-capa"
+}
