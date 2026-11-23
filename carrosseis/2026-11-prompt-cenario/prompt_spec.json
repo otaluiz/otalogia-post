@@ -14,7 +14,8 @@
    "O CENÁRIO",
    "FAZ A FOTO."
   ],
-  "emocao": "3 prompts pra [copiar]."
+  "emocao": "3 prompts pra [copiar].",
+  "posicao": "antes"
  },
  "fotos": [
   {
@@ -89,6 +90,13 @@
  "guia_titulo": "3 prompts de foto com cenário",
  "guia_sub": "Um no estilo videogame e dois de arquitetura, prontos pra colar com a sua foto.",
  "legenda": "O cenário faz a foto. Essas 3 saíram de prompts, sem sair de casa.\n\nUma no estilo videogame, uma num muro de concreto com sombra longa, uma num corredor branco com céu no fim. Em todas, a pessoa é pequena e o cenário é grande, e o alto da foto fica livre pro título do post.\n\nSalva pra testar hoje.\n\nComenta {PALAVRA} que eu te mando no direct o PDF com os 3 prompts completos.\n\n#inteligenciaartificial #dicasdeia #pequenosnegocios #instagramparanegocios #otalogia",
- "blocos": {},
+ "blocos": {
+  "0": {
+   "y": 190,
+   "alinhar": "esquerda",
+   "largura": 600,
+   "manual": true
+  }
+ },
  "sujeitos": {}
 }

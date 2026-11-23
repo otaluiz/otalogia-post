@@ -83,7 +83,7 @@ def main():
         if not (d / f"{nome}_orig.png").exists():
             urllib.request.urlretrieve(f["url"], d / f"{nome}_orig.png")
     P = spec["pares"]
-    slides = [{"template": "T1", "display": spec["capa"]["display"], "emocao": {"texto": spec["capa"]["emocao"], "posicao": "depois"}, "imagem": "capa_orig.png"},
+    slides = [{"template": "T1", "display": spec["capa"]["display"], "emocao": {"texto": spec["capa"]["emocao"], "posicao": spec["capa"].get("posicao", "depois")}, "imagem": "capa_orig.png"},
               {"template": "T3", "display": ["PROMPT 1", P[0]["titulo"]], "lista": P[0]["lista"], "imagem": None}]
     for k, img in ((1, "slide3_orig.png"), (2, "slide5_orig.png")):
         slides += [{"template": "T2", "display": P[k]["display"], "emocao": {"texto": P[k]["emocao"], "posicao": "depois"}, "imagem": img},
