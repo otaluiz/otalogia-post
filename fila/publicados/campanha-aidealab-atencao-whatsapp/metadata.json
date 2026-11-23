@@ -1,0 +1,35 @@
+{
+  "id": "otalogia-campanha-aidealab-atencao-whatsapp",
+  "carousel_id": "otalogia-campanha-aidealab-atencao-whatsapp",
+  "cliente": "otalogia",
+  "handle": "@otalogia",
+  "tipo": "reel",
+  "data_criacao": "2026-11-22",
+  "tema": "Bastidores: uso pontual de IA na edição",
+  "formato": "1080x1920",
+  "duracao_s": 74.606009,
+  "legenda": "Usei IA pontualmente na edição deste vídeo, em alguns trechos. A gravação é nossa, e as decisões de ritmo e montagem ficaram com a gente.\n\nQuero saber: em que trecho você achou que tinha IA?",
+  "hashtags": [
+    "#otalogia",
+    "#edicaodevideo",
+    "#inteligenciaartificial"
+  ],
+  "ordem_fila": -1,
+  "status": "aprovado",
+  "status_publicacao": "na_fila",
+  "publicacao_habilitada": true,
+  "data_sugerida": null,
+  "agendado_para": null,
+  "fuso": "America/Cuiaba",
+  "postado": true,
+  "postado_em": "2026-11-23 13:05:19",
+  "post_id": "17922959328532022",
+  "bloqueios": [],
+  "video": "reel.mp4",
+  "capa": "capa.jpg",
+  "origem": {
+    "arquivo": "campanha.mp4",
+    "sha256": "a69b41bc4f4d3e498245b8756b47304a3f6f43b5e3d8ffa8ca9d608f4ce3ff21"
+  },
+  "fonte_tendencia": null
+}
