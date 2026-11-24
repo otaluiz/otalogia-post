@@ -1,0 +1,146 @@
+{
+  "carousel_id": "2026-11-avaliacao-ia",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-20",
+  "status": "rascunho",
+  "postado": true,
+  "postado_em": "2026-11-24 14:52:47",
+  "post_id": "18091035200295316",
+  "ordem_fila": 3,
+  "serie": "GOOGLE",
+  "tema": "O GOOGLE AGORA AJUDA A RESPONDER suas avaliações.",
+  "familia_cor": "vice-sunset",
+  "template": "T1-T2-T3-T2-T3-T2c-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "O GOOGLE AGORA AJUDA A RESPONDER suas avaliações.",
+      "midia": "imagem",
+      "origem": "slide-01.png"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.mp4",
+      "papel": "hook-animado",
+      "texto": "O GOOGLE AGORA AJUDA A RESPONDER suas avaliações.",
+      "midia": "video",
+      "origem": "slide-01.mp4"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.mp4",
+      "papel": "tensao",
+      "texto": "A IA ESCREVE O RASCUNHO você dá o tom.",
+      "midia": "video",
+      "origem": "slide-02.mp4"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.mp4",
+      "papel": "desenvolvimento",
+      "texto": "RESPONDA ASSIM Agradeça pelo nome Cite o que a pessoa elogiou Na crítica, diga o que mudou Termine convidando a voltar",
+      "midia": "video",
+      "origem": "slide-03.mp4"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.mp4",
+      "papel": "desenvolvimento",
+      "texto": "AVALIAÇÃO SEM RESPOSTA parece loja fechada.",
+      "midia": "video",
+      "origem": "slide-04.mp4"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.mp4",
+      "papel": "desenvolvimento",
+      "texto": "ESTA SEMANA Abra o Perfil da Empresa Veja as avaliações sem resposta Responda as 3 mais recentes Revise o texto que a IA sugerir",
+      "midia": "video",
+      "origem": "slide-05.mp4"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.mp4",
+      "papel": "desenvolvimento",
+      "texto": "QUEM RESPONDE ganha o próximo.",
+      "midia": "video",
+      "origem": "slide-06.mp4"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.mp4",
+      "papel": "cta",
+      "texto": "QUER 5 RESPOSTAS PRONTAS? Comenta AVALIA que eu te mando no direct",
+      "midia": "video",
+      "origem": "slide-07.mp4"
+    }
+  ],
+  "legenda": "O Google agora ajuda a responder suas avaliações. A IA escreve o rascunho, você dá o tom.\n\nO Perfil da Empresa ganhou o Gemini, que sugere resposta para avaliação e aponta pergunta sem resposta. Mas a resposta continua sendo sua.\n\nResponda assim:\n1. Agradeça pelo nome\n2. Cite o que a pessoa elogiou\n3. Na crítica, diga o que mudou\n4. Termine convidando a voltar\n\nAvaliação sem resposta parece loja fechada. Esta semana: abra o Perfil da Empresa, veja as que estão sem resposta, responda as 3 mais recentes e revise o texto que a IA sugerir.\n\nQuem responde ganha o próximo cliente.\n\nSalva pra responder hoje.\n\nComenta AVALIA que eu te mando no direct 5 respostas prontas pra adaptar.\n\n#pequenosnegocios #googlemeunegocio #avaliacoes #marketinglocal #otalogia",
+  "hashtags": [
+    "#pequenosnegocios",
+    "#googlemeunegocio",
+    "#avaliacoes",
+    "#marketinglocal",
+    "#otalogia"
+  ],
+  "handle": "@otalogia",
+  "material_pdf": {
+    "arquivo": "guia.pdf",
+    "titulo": "5 respostas prontas para avaliações no Google",
+    "categoria": "GOOGLE",
+    "marca": "otalogia",
+    "template": "aidealab-azul-laranja-v1",
+    "paginas": 7,
+    "fonte_sha256": "056ffded81d9af4c8d187e030298cfd666d904f6279bea3b515313654c4e94d6",
+    "status": "rascunho",
+    "revisao_visual": "pendente"
+  },
+  "slides_estatico": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "O GOOGLE AGORA AJUDA A RESPONDER suas avaliações."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "A IA ESCREVE O RASCUNHO você dá o tom."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "RESPONDA ASSIM Agradeça pelo nome Cite o que a pessoa elogiou Na crítica, diga o que mudou Termine convidando a voltar"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "AVALIAÇÃO SEM RESPOSTA parece loja fechada."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "ESTA SEMANA Abra o Perfil da Empresa Veja as avaliações sem resposta Responda as 3 mais recentes Revise o texto que a IA sugerir"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "QUEM RESPONDE ganha o próximo."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "cta",
+      "texto": "QUER 5 RESPOSTAS PRONTAS? Comenta AVALIA que eu te mando no direct"
+    }
+  ],
+  "formato_midia": "motion-capa"
+}
