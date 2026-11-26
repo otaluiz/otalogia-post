@@ -1,0 +1,146 @@
+{
+  "carousel_id": "2026-11-site-chatgpt",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-20",
+  "status": "rascunho",
+  "postado": true,
+  "postado_em": "2026-11-26 13:53:56",
+  "post_id": "18075064385496382",
+  "ordem_fila": 4,
+  "serie": "SITES",
+  "tema": "SEU SITE RESPONDE AO CHATGPT? o cliente perguntou pra ele.",
+  "familia_cor": "vice-sunset",
+  "template": "T1-T2-T3-T2-T3-T2c-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SEU SITE RESPONDE AO CHATGPT? o cliente perguntou pra ele.",
+      "midia": "imagem",
+      "origem": "slide-01.png"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.mp4",
+      "papel": "hook-animado",
+      "texto": "SEU SITE RESPONDE AO CHATGPT? o cliente perguntou pra ele.",
+      "midia": "video",
+      "origem": "slide-01.mp4"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.mp4",
+      "papel": "tensao",
+      "texto": "O CLIENTE PERGUNTA PRA IA e a IA lê sites.",
+      "midia": "video",
+      "origem": "slide-02.mp4"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.mp4",
+      "papel": "desenvolvimento",
+      "texto": "O QUE A IA LÊ O que você faz, logo no topo Cidade e bairro escritos Preço ou faixa de preço Perguntas com resposta",
+      "midia": "video",
+      "origem": "slide-03.mp4"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.mp4",
+      "papel": "desenvolvimento",
+      "texto": "SITE SÓ COM FOTO BONITA não responde nada.",
+      "midia": "video",
+      "origem": "slide-04.mp4"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.mp4",
+      "papel": "desenvolvimento",
+      "texto": "TESTE AGORA Pergunte pra IA o melhor do seu ramo Veja quem ela cita Abra o site deles Compare com o seu",
+      "midia": "video",
+      "origem": "slide-05.mp4"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.mp4",
+      "papel": "desenvolvimento",
+      "texto": "ESCREVA A RESPOSTA antes da pergunta.",
+      "midia": "video",
+      "origem": "slide-06.mp4"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.mp4",
+      "papel": "cta",
+      "texto": "QUER O CHECKLIST DO SITE? Comenta RESPONDE que eu te mando no direct",
+      "midia": "video",
+      "origem": "slide-07.mp4"
+    }
+  ],
+  "legenda": "Seu site responde ao ChatGPT? O cliente já pergunta pra IA qual é o melhor do seu ramo na cidade.\n\nE a IA responde lendo sites. Site só com foto bonita não responde nada.\n\nO que a IA lê:\n1. O que você faz, logo no topo\n2. Cidade e bairro escritos\n3. Preço ou faixa de preço\n4. Perguntas com resposta\n\nTeste agora: pergunte pra IA o melhor do seu ramo na sua cidade, veja quem ela cita, abra o site deles e compare com o seu.\n\nEscreva a resposta antes da pergunta.\n\nSalva pra fazer o teste hoje.\n\nComenta RESPONDE que eu te mando no direct o checklist do site.\n\n#criacaodesites #webdesignbrasil #pequenosnegocios #chatgpt #otalogia",
+  "hashtags": [
+    "#criacaodesites",
+    "#webdesignbrasil",
+    "#pequenosnegocios",
+    "#chatgpt",
+    "#otalogia"
+  ],
+  "handle": "@otalogia",
+  "material_pdf": {
+    "arquivo": "guia.pdf",
+    "titulo": "Checklist: seu site responde ao ChatGPT?",
+    "categoria": "SITES",
+    "marca": "otalogia",
+    "template": "aidealab-azul-laranja-v1",
+    "paginas": 7,
+    "fonte_sha256": "c4a62bc32ffdc15bb0e256623a1cd0a109f3f584a44a2092c574617c3ebfc773",
+    "status": "rascunho",
+    "revisao_visual": "pendente"
+  },
+  "slides_estatico": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "SEU SITE RESPONDE AO CHATGPT? o cliente perguntou pra ele."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "O CLIENTE PERGUNTA PRA IA e a IA lê sites."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE A IA LÊ O que você faz, logo no topo Cidade e bairro escritos Preço ou faixa de preço Perguntas com resposta"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "SITE SÓ COM FOTO BONITA não responde nada."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "TESTE AGORA Pergunte pra IA o melhor do seu ramo Veja quem ela cita Abra o site deles Compare com o seu"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "ESCREVA A RESPOSTA antes da pergunta."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "cta",
+      "texto": "QUER O CHECKLIST DO SITE? Comenta RESPONDE que eu te mando no direct"
+    }
+  ],
+  "formato_midia": "motion-capa"
+}
