@@ -1,0 +1,146 @@
+{
+  "carousel_id": "2026-11-repost-original",
+  "cliente": "otalogia",
+  "data_criacao": "2026-11-20",
+  "status": "rascunho",
+  "postado": true,
+  "postado_em": "2026-11-28 13:00:19",
+  "post_id": "18076759619492620",
+  "ordem_fila": 5,
+  "serie": "INSTAGRAM",
+  "tema": "REPOST PERDE ALCANCE. o original ganha.",
+  "familia_cor": "vice-sunset",
+  "template": "T1-T2-T3-T2-T3-T2c-T4",
+  "formato": "1080x1440",
+  "slides": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "REPOST PERDE ALCANCE. o original ganha.",
+      "midia": "imagem",
+      "origem": "slide-01.png"
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.mp4",
+      "papel": "hook-animado",
+      "texto": "REPOST PERDE ALCANCE. o original ganha.",
+      "midia": "video",
+      "origem": "slide-01.mp4"
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.mp4",
+      "papel": "tensao",
+      "texto": "O INSTAGRAM DÁ CRÉDITO A QUEM CRIOU não a quem copiou.",
+      "midia": "video",
+      "origem": "slide-02.mp4"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.mp4",
+      "papel": "desenvolvimento",
+      "texto": "O QUE CONTA Foto e vídeo feitos por você Sua opinião sobre o assunto Seu cliente, seu balcão, seu dia Legenda escrita do seu jeito",
+      "midia": "video",
+      "origem": "slide-03.mp4"
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.mp4",
+      "papel": "desenvolvimento",
+      "texto": "PEGAR POST PRONTO virou atalho pro nada.",
+      "midia": "video",
+      "origem": "slide-04.mp4"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.mp4",
+      "papel": "desenvolvimento",
+      "texto": "DO REPOST AO SEU Viu algo bom? Grave sua versão Mostre como funciona aí Cite a fonte na legenda Poste do seu celular",
+      "midia": "video",
+      "origem": "slide-05.mp4"
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.mp4",
+      "papel": "desenvolvimento",
+      "texto": "FEITO POR VOCÊ vale mais.",
+      "midia": "video",
+      "origem": "slide-06.mp4"
+    },
+    {
+      "ordem": 8,
+      "arquivo": "slide-08.mp4",
+      "papel": "cta",
+      "texto": "QUER 10 IDEIAS DE POST SEU? Comenta ORIGINAL que eu te mando no direct",
+      "midia": "video",
+      "origem": "slide-07.mp4"
+    }
+  ],
+  "legenda": "Repost perde alcance. O original ganha.\n\nO Instagram passou a dar o crédito para quem criou o conteúdo, não para quem copiou. Pegar post pronto virou atalho pro nada.\n\nO que conta:\n1. Foto e vídeo feitos por você\n2. Sua opinião sobre o assunto\n3. Seu cliente, seu balcão, seu dia\n4. Legenda escrita do seu jeito\n\nViu algo bom? Grave a sua versão, mostre como funciona no seu negócio, cite a fonte na legenda e poste do seu celular.\n\nFeito por você vale mais.\n\nSalva pra lembrar antes do próximo repost.\n\nComenta ORIGINAL que eu te mando no direct 10 ideias de post feitas por você.\n\n#pequenosnegocios #instagramparanegocios #conteudo #empreendedorismo #otalogia",
+  "hashtags": [
+    "#pequenosnegocios",
+    "#instagramparanegocios",
+    "#conteudo",
+    "#empreendedorismo",
+    "#otalogia"
+  ],
+  "handle": "@otalogia",
+  "material_pdf": {
+    "arquivo": "guia.pdf",
+    "titulo": "10 ideias de post feitas por você",
+    "categoria": "INSTAGRAM",
+    "marca": "otalogia",
+    "template": "aidealab-azul-laranja-v1",
+    "paginas": 7,
+    "fonte_sha256": "03784fadea65810a12edda436c570c14cb2b16f9780b2d7cdfa58c95543caa6b",
+    "status": "rascunho",
+    "revisao_visual": "pendente"
+  },
+  "slides_estatico": [
+    {
+      "ordem": 1,
+      "arquivo": "slide-01.png",
+      "papel": "hook",
+      "texto": "REPOST PERDE ALCANCE. o original ganha."
+    },
+    {
+      "ordem": 2,
+      "arquivo": "slide-02.png",
+      "papel": "tensao",
+      "texto": "O INSTAGRAM DÁ CRÉDITO A QUEM CRIOU não a quem copiou."
+    },
+    {
+      "ordem": 3,
+      "arquivo": "slide-03.png",
+      "papel": "desenvolvimento",
+      "texto": "O QUE CONTA Foto e vídeo feitos por você Sua opinião sobre o assunto Seu cliente, seu balcão, seu dia Legenda escrita do seu jeito"
+    },
+    {
+      "ordem": 4,
+      "arquivo": "slide-04.png",
+      "papel": "desenvolvimento",
+      "texto": "PEGAR POST PRONTO virou atalho pro nada."
+    },
+    {
+      "ordem": 5,
+      "arquivo": "slide-05.png",
+      "papel": "desenvolvimento",
+      "texto": "DO REPOST AO SEU Viu algo bom? Grave sua versão Mostre como funciona aí Cite a fonte na legenda Poste do seu celular"
+    },
+    {
+      "ordem": 6,
+      "arquivo": "slide-06.png",
+      "papel": "desenvolvimento",
+      "texto": "FEITO POR VOCÊ vale mais."
+    },
+    {
+      "ordem": 7,
+      "arquivo": "slide-07.png",
+      "papel": "cta",
+      "texto": "QUER 10 IDEIAS DE POST SEU? Comenta ORIGINAL que eu te mando no direct"
+    }
+  ],
+  "formato_midia": "motion-capa"
+}
